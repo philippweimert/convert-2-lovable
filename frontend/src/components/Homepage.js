@@ -2,7 +2,6 @@ import React from "react";
 import Header from "./Header";
 import HeroSection from "./HeroSection";
 import BenefitsSection from "./BenefitsSection";
-import BusinessBenefitsSection from "./BusinessBenefitsSection";
 import ProcessSection from "./ProcessSection";
 import SolutionsSection from "./SolutionsSection";
 import CustomerSegments from "./CustomerSegments";
