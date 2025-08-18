@@ -1,6 +1,6 @@
 import React from "react";
 import { Button } from "./ui/button";
-import { CheckCircle, Clock, Shield, Play, ArrowRight } from "lucide-react";
+import { CheckCircle, Clock, Shield, ArrowRight } from "lucide-react";
 
 const HeroSection = () => {
   const quickBenefits = [
