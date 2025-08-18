@@ -91,26 +91,57 @@ const HeroSection = () => {
             </div>
           </div>
 
-          {/* Right content - Enhanced video placeholder */}
+          {/* Right content - Enhanced video player */}
           <div className="flex justify-center lg:justify-end">
-            <div className="w-full max-w-md aspect-video bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl flex items-center justify-center border border-slate-600/50 hover:border-orange-400/50 transition-all duration-500 relative overflow-hidden shadow-2xl group backdrop-blur-sm">
-              {/* Enhanced background pattern */}
-              <div className="absolute inset-0 bg-gradient-to-br from-slate-800/50 to-slate-900/50"></div>
-              
-              {/* Animated glow effect */}
-              <div className="absolute inset-0 bg-gradient-to-r from-orange-500/10 via-transparent to-orange-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-              
-              <div className="text-center relative z-10">
-                <div className="w-20 h-20 bg-gradient-to-br from-orange-500 to-orange-600 rounded-full flex items-center justify-center mx-auto mb-6 hover:from-orange-600 hover:to-orange-700 cursor-pointer transition-all duration-300 group-hover:scale-110 shadow-lg hover:shadow-xl">
-                  <Play className="w-8 h-8 text-white ml-1 group-hover:scale-110 transition-transform duration-300" fill="currentColor" />
-                </div>
-                <p className="text-slate-300 text-lg font-semibold mb-1">Produktdemo ansehen</p>
-                <p className="text-slate-500 text-sm">2 Minuten Überblick</p>
+            <div className="w-full max-w-lg relative group">
+              {/* Video Container */}
+              <div className="aspect-video bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl overflow-hidden border border-slate-600/50 hover:border-orange-400/50 transition-all duration-500 shadow-2xl backdrop-blur-sm relative">
+                
+                {/* Video Element */}
+                <video 
+                  className="w-full h-full object-cover rounded-2xl"
+                  controls
+                  preload="metadata"
+                  poster="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjQwIiBoZWlnaHQ9IjM2MCIgdmlld0JveD0iMCAwIDY0MCAzNjAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSI2NDAiIGhlaWdodD0iMzYwIiBmaWxsPSJ1cmwoI2dyYWRpZW50KSIvPgo8Y2lyY2xlIGN4PSIzMjAiIGN5PSIxODAiIHI9IjQwIiBmaWxsPSIjRjk3MzE2Ii8+Cjxwb2x5Z29uIHBvaW50cz0iMzEwLDE2NSAzNDUsMTgwIDMxMCwxOTUiIGZpbGw9IndoaXRlIi8+CjxkZWZzPgo8bGluZWFyR3JhZGllbnQgaWQ9ImdyYWRpZW50IiB4MT0iMCIgeTE9IjAiIHgyPSIxIiB5Mj0iMSI+CjxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiMxRTI5M0IiLz4KPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMEYxNzJBIi8+CjwvbGluZWFyR3JhZGllbnQ+CjwvZGVmcz4KPC9zdmc+"
+                >
+                  <source 
+                    src="https://customer-assets.emergentagent.com/job_better-acencia/artifacts/b3s3n0vk_Betriebliche%20Altersvorsorge%20einfach%20einrichten%20und%20verwalten%20Ace.mp4" 
+                    type="video/mp4" 
+                  />
+                  <p className="text-slate-300 text-center p-8">
+                    Ihr Browser unterstützt das Video-Format nicht. 
+                    <br />
+                    <a 
+                      href="https://customer-assets.emergentagent.com/job_better-acencia/artifacts/b3s3n0vk_Betriebliche%20Altersvorsorge%20einfach%20einrichten%20und%20verwalten%20Ace.mp4"
+                      className="text-orange-400 hover:text-orange-300 underline"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Video direkt ansehen
+                    </a>
+                  </p>
+                </video>
+
+                {/* Video Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-r from-orange-500/5 via-transparent to-orange-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
+                
+                {/* Corner decorations */}
+                <div className="absolute top-4 right-4 w-2 h-2 bg-orange-400 rounded-full animate-pulse"></div>
+                <div className="absolute bottom-4 left-4 w-1 h-1 bg-orange-300 rounded-full animate-ping"></div>
               </div>
 
-              {/* Corner decoration */}
-              <div className="absolute top-4 right-4 w-2 h-2 bg-orange-400 rounded-full animate-pulse"></div>
-              <div className="absolute bottom-4 left-4 w-1 h-1 bg-orange-300 rounded-full animate-ping"></div>
+              {/* Video Info */}
+              <div className="mt-4 text-center">
+                <p className="text-slate-300 font-semibold mb-1">
+                  Betriebliche Altersvorsorge einfach einrichten
+                </p>
+                <p className="text-slate-500 text-sm">
+                  Sehen Sie, wie ACENCIA Ihre bAV digitalisiert
+                </p>
+              </div>
+
+              {/* Enhanced glow effect */}
+              <div className="absolute -inset-1 bg-gradient-to-r from-orange-500/20 via-purple-500/10 to-orange-500/20 rounded-2xl blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-700 -z-10"></div>
             </div>
           </div>
         </div>
