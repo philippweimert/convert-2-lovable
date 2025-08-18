@@ -14,9 +14,14 @@ export const companyInfo = {
 
 export const heroSection = {
   title: "Wir machen bAV einfach!",
-  subtitle: "Als echter Partner machen wir die betriebliche Vorsorge zum Highlight für Personalabteilung und Mitarbeitende.",
-  ctaText: "Jetzt Termin vereinbaren",
-  videoPlaceholder: true
+  subtitle: "Entlasten Sie Ihr HR-Team mit unserer vollautomatisierten, digitalen All-in-One-Plattform für die betriebliche Altersvorsorge.",
+  ctaText: "Kostenlose Demo buchen",
+  videoPlaceholder: true,
+  quickBenefits: [
+    "100% digitale Verwaltung",
+    "Vollautomatisierte Prozesse", 
+    "DSGVO-konform & rechtssicher"
+  ]
 };
 
 export const processSteps = [
