@@ -269,6 +269,7 @@ const AboutPage = () => {
       </section>
 
       <Footer />
+      </div>
     </div>
   );
 };
