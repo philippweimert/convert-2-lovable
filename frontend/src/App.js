@@ -6,6 +6,7 @@ import AboutPage from "./components/AboutPage";
 import ContactPage from "./components/ContactPage";
 import PrivacyPage from "./components/PrivacyPage";
 import ImprintPage from "./components/ImprintPage";
+import EmployerObligationsPage from "./components/EmployerObligationsPage";
 import { Toaster } from "./components/ui/toaster";
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Homepage />} />
           <Route path="/ueber-uns" element={<AboutPage />} />
+          <Route path="/arbeitgeber-pflichten" element={<EmployerObligationsPage />} />
           <Route path="/kontakt" element={<ContactPage />} />
           <Route path="/datenschutz" element={<PrivacyPage />} />
           <Route path="/datenschutzerklaerung" element={<PrivacyPage />} />
