@@ -263,6 +263,7 @@ const ContactPage = () => {
       </section>
 
       <Footer />
+      </div>
     </div>
   );
 };
