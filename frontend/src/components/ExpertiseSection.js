@@ -16,12 +16,11 @@ const ExpertiseSection = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center">
           <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
-            Wir lösen Ihre individuellen Herausforderungen und machen die 
-            bAV zum echten Unternehmensmehrwert.
+            Ihre Experten für betriebliche Altersvorsorge
           </h2>
           <p className="text-lg text-orange-100 mb-8 max-w-3xl mx-auto leading-relaxed">
-            Wir entlasten die Personalabteilung und machen die betriebliche Vorsorge 
-            zum echten Mitarbeiter-Benefit für Ihr Unternehmen.
+            Mit über 30 Jahren Erfahrung unterstützen wir Unternehmen dabei, 
+            die betriebliche Altersvorsorge effizient und rechtssicher zu verwalten.
           </p>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
