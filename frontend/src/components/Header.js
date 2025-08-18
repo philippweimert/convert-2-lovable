@@ -102,13 +102,6 @@ const Header = () => {
               Pflichten des Arbeitgebers
             </Link>
             <Link
-              to="/unternehmen-vorteile"
-              className="block px-6 py-3 text-white hover:text-orange-400 hover:bg-white/5 rounded-xl transition-all duration-300 font-medium"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Unternehmen Vorteile
-            </Link>
-            <Link
               to="/kontakt"
               className="block px-6 py-3 text-white hover:text-orange-400 hover:bg-white/5 rounded-xl transition-all duration-300 font-medium"
               onClick={() => setIsMenuOpen(false)}
