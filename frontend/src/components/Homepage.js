@@ -12,13 +12,16 @@ const Homepage = () => {
   return (
     <div className="min-h-screen bg-slate-900">
       <Header />
-      <HeroSection />
-      <BenefitsSection />
-      <ProcessSection />
-      <SolutionsSection />
-      <CustomerSegments />
-      <ExpertiseSection />
-      <Footer />
+      {/* Add padding-top to account for fixed header */}
+      <div className="pt-20">
+        <HeroSection />
+        <BenefitsSection />
+        <ProcessSection />
+        <SolutionsSection />
+        <CustomerSegments />
+        <ExpertiseSection />
+        <Footer />
+      </div>
     </div>
   );
 };
