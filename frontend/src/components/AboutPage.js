@@ -59,24 +59,29 @@ const AboutPage = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl font-bold text-slate-900 mb-6">
-                Wir machen bAV einfach
+                Über uns
               </h2>
               <p className="text-lg text-slate-700 mb-4 leading-relaxed">
-                ACENCIA GmbH ist ein führender Anbieter von Dienstleistungen im Bereich der 
-                betrieblichen Altersvorsorge (bAV) mit über 30 Jahren Erfahrung. Unser 
-                Unternehmen bietet umfassende Lösungen für Unternehmen jeder Größe.
+                Mit über 30 Jahren Erfahrung sind wir einer der führenden Anbieter für 
+                Dienstleistungen im Rahmen der betrieblichen (Alters-)Vorsorge. Für 
+                Unternehmen übernehmen wir die gesamte Prozesskette der bAV – von der 
+                Einrichtung, Optimierung & rechtlichen Prüfung über die komplette digitale 
+                Verwaltung bis hin zur Mitarbeiterinformation und Beratung.
               </p>
-              <p className="text-lg text-slate-700 mb-6 leading-relaxed">
-                Von der Einrichtung und rechtlichen Prüfung über die digitale Verwaltung bis 
-                hin zur Mitarbeiterkommunikation und -beratung – wir sind Ihr Partner für alle 
-                Aspekte der betrieblichen Altersvorsorge.
-              </p>
+              <div className="bg-orange-50 border-l-4 border-orange-500 p-4 rounded-r-lg mb-6">
+                <h3 className="font-semibold text-slate-900 mb-2">Unsere Philosophie</h3>
+                <p className="text-slate-700 text-sm leading-relaxed">
+                  Wir machen betriebliche Vorsorge 'einfach'. Wir begleiten unsere Kunden 
+                  als echter Partner entlang der gesamten 'bAV-Reise' und bieten alle zentralen 
+                  Lösungen aus einer Hand, zugeschnitten auf die individuellen Unternehmensbedürfnisse.
+                </p>
+              </div>
               <Button 
                 size="lg"
                 className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3"
                 onClick={() => window.open('https://outlook.office365.com/owa/calendar/ACENCIAde@acencia.de/bookings/', '_blank')}
               >
-                Jetzt Beratung vereinbaren
+                Jetzt Kontakt aufnehmen
               </Button>
             </div>
             <div className="flex justify-center">
