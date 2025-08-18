@@ -138,6 +138,7 @@ const ImprintPage = () => {
       </section>
 
       <Footer />
+      </div>
     </div>
   );
 };
