@@ -181,6 +181,8 @@ export const solutions = [
     description: "Durchgängiger Datenfluss in bestehende HR-Systeme"
   }
 ];
+
+export const footerLinks = {
   legal: [
     { text: "Datenschutzerklärung", path: "/datenschutz" },
     { text: "Impressum", path: "/impressum" },
