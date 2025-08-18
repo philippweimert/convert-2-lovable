@@ -199,3 +199,82 @@ export const externalUrls = {
   appointmentBooking: "https://outlook.office365.com/owa/calendar/ACENCIAde@acencia.de/bookings/",
   originalWebsite: "https://www.acencia.de/"
 };
+
+export const keyBenefits = [
+  {
+    title: "Vollautomatisierte Abwicklung",
+    description: "Automatisierung sämtlicher bAV-Prozesse über alle Durchführungswege hinweg - minimiert Fehleranfälligkeit und reduziert den administrativen Aufwand erheblich.",
+    highlight: "Bis zu 80% Zeitersparnis",
+    icon: "Zap"
+  },
+  {
+    title: "DSGVO-konform & Rechtssicher", 
+    description: "Einhaltung aller gesetzlichen Bestimmungen und Datenschutzrichtlinien. Rechtssichere Verwaltung ist besonders in sensiblen Bereichen wie der Altersvorsorge essenziell.",
+    highlight: "100% Compliance",
+    icon: "Shield"
+  },
+  {
+    title: "Nahtlose System-Integration",
+    description: "Direkte Anbindung an bestehende HR- und Lohnbuchhaltungssysteme ermöglicht einen durchgängigen Informationsfluss ohne Medienbrüche.",
+    highlight: "Plug & Play",
+    icon: "Settings"
+  },
+  {
+    title: "100% Digitale Dokumentenverwaltung",
+    description: "Vollständige Digitalisierung und strukturierte Ablage aller bAV-Dokumente sorgt für schnelle Zugänglichkeit und bessere Nachvollziehbarkeit.",
+    highlight: "Papierlos",
+    icon: "FileText"
+  },
+  {
+    title: "Automatisierte Kommunikation",
+    description: "Die Plattform übernimmt die Kommunikation mit Mitarbeitenden und Versorgungsträgern, was die Informationsweitergabe beschleunigt und standardisiert.",
+    highlight: "24/7 verfügbar",
+    icon: "Users"
+  },
+  {
+    title: "Skalierbar für jede Unternehmensgröße",
+    description: "Flexibel einsetzbar von Start-ups bis Konzerne. Passt sich individuell an die Bedürfnisse und das Wachstum Ihres Unternehmens an.",
+    highlight: "Zukunftssicher", 
+    icon: "TrendingUp"
+  }
+];
+
+export const challenges = [
+  {
+    title: "Komplexe Verwaltung",
+    description: "bAV-Verwaltung ist administrativ sehr komplex und fehleranfällig"
+  },
+  {
+    title: "Zeitaufwand",
+    description: "Manuelle Prozesse binden wertvolle HR-Ressourcen"
+  },
+  {
+    title: "Rechtsunsicherheit", 
+    description: "Ständige Gesetzesänderungen erfordern permanente Überwachung"
+  },
+  {
+    title: "Systembrüche",
+    description: "Fehlende Integration führt zu Medienbrüchen und Doppelerfassung"
+  }
+];
+
+export const solutions = [
+  {
+    title: "Digitale Automatisierung",
+    description: "Vollautomatisierte Abwicklung eliminiert Fehlerquellen"
+  },
+  {
+    title: "HR-Entlastung",
+    description: "Bis zu 80% Zeitersparnis durch intelligente Automatisierung"
+  },
+  {
+    title: "Compliance-Sicherheit", 
+    description: "Immer aktuell und rechtssicher durch permanente Updates"
+  },
+  {
+    title: "Nahtlose Integration",
+    description: "Durchgängiger Datenfluss in bestehende HR-Systeme"
+  }
+];
+
+export const footerLinks = {
