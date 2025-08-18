@@ -1,81 +1,102 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "./ui/button";
 import { Menu, X } from "lucide-react";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
-    <header className="relative bg-slate-900 border-b border-slate-800">
+    <header className={`fixed top-0 w-full z-50 transition-all duration-500 ${
+      isScrolled 
+        ? 'bg-slate-900/95 backdrop-blur-lg border-b border-slate-700/50 shadow-lg' 
+        : 'bg-transparent'
+    }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
-          {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2">
-            <div className="flex flex-col text-white">
-              <span className="text-xs tracking-wider">≡</span>
+        <div className="flex items-center justify-between h-20">
+          {/* Enhanced Logo */}
+          <Link to="/" className="flex items-center space-x-3 group">
+            <div className="flex flex-col text-white group-hover:text-orange-400 transition-colors duration-300">
+              <span className="text-lg tracking-wider transform group-hover:scale-110 transition-transform duration-300">≡</span>
             </div>
             <div className="text-white">
-              <span className="text-xl font-bold tracking-wider">ACENCIA</span>
-              <div className="text-xs text-slate-400 tracking-widest">WIR MACHEN bAV EINFACH</div>
+              <span className="text-2xl font-bold tracking-wider group-hover:text-orange-400 transition-colors duration-300">
+                ACENCIA
+              </span>
+              <div className="text-xs text-slate-400 tracking-widest group-hover:text-orange-300 transition-colors duration-300">
+                WIR MACHEN bAV EINFACH
+              </div>
             </div>
           </Link>
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          {/* Enhanced Desktop Navigation */}
+          <div className="hidden md:flex items-center space-x-10">
             <Link 
               to="/ueber-uns" 
-              className="text-white hover:text-orange-400 transition-colors duration-200"
+              className="relative text-white hover:text-orange-400 transition-colors duration-300 font-medium group py-2"
             >
-              Über uns
+              <span>Über uns</span>
+              <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-orange-400 to-orange-500 group-hover:w-full transition-all duration-300"></div>
             </Link>
             <Link 
               to="/kontakt" 
-              className="text-white hover:text-orange-400 transition-colors duration-200"
+              className="relative text-white hover:text-orange-400 transition-colors duration-300 font-medium group py-2"
             >
-              Kontakt
+              <span>Kontakt</span>
+              <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-orange-400 to-orange-500 group-hover:w-full transition-all duration-300"></div>
             </Link>
             <Button 
-              className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-md transition-colors duration-200"
+              className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-8 py-3 rounded-xl font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg shadow-md"
               onClick={() => window.open('https://outlook.office365.com/owa/calendar/ACENCIAde@acencia.de/bookings/', '_blank')}
             >
               Login Portal
             </Button>
           </div>
 
-          {/* Mobile menu button */}
+          {/* Enhanced Mobile menu button */}
           <div className="md:hidden">
             <Button
               variant="ghost"
               size="sm"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-white hover:text-orange-400"
+              className="text-white hover:text-orange-400 hover:bg-white/10 p-3 rounded-xl transition-all duration-300"
             >
               {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </Button>
           </div>
         </div>
 
-        {/* Mobile Navigation */}
-        {isMenuOpen && (
-          <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 bg-slate-800 rounded-lg mt-2">
-              <Link
-                to="/ueber-uns"
-                className="block px-3 py-2 text-white hover:text-orange-400 transition-colors duration-200"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Über uns
-              </Link>
-              <Link
-                to="/kontakt"
-                className="block px-3 py-2 text-white hover:text-orange-400 transition-colors duration-200"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Kontakt
-              </Link>
+        {/* Enhanced Mobile Navigation */}
+        <div className={`md:hidden transition-all duration-300 overflow-hidden ${
+          isMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+        }`}>
+          <div className="px-2 pt-2 pb-6 space-y-1 bg-slate-800/95 backdrop-blur-lg rounded-2xl mt-4 border border-slate-700/50 shadow-xl">
+            <Link
+              to="/ueber-uns"
+              className="block px-6 py-3 text-white hover:text-orange-400 hover:bg-white/5 rounded-xl transition-all duration-300 font-medium"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Über uns
+            </Link>
+            <Link
+              to="/kontakt"
+              className="block px-6 py-3 text-white hover:text-orange-400 hover:bg-white/5 rounded-xl transition-all duration-300 font-medium"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Kontakt
+            </Link>
+            <div className="pt-2">
               <Button 
-                className="w-full mt-2 bg-orange-500 hover:bg-orange-600 text-white"
+                className="w-full bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-semibold rounded-xl py-3 transition-all duration-300"
                 onClick={() => {
                   window.open('https://outlook.office365.com/owa/calendar/ACENCIAde@acencia.de/bookings/', '_blank');
                   setIsMenuOpen(false);
@@ -85,7 +106,7 @@ const Header = () => {
               </Button>
             </div>
           </div>
-        )}
+        </div>
       </div>
     </header>
   );
