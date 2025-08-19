@@ -638,10 +638,10 @@ const InteractiveMainSections = () => {
                         <div className="text-center mt-6">
                           <Link 
                             to="/der-service#vorteile"
-                            className="inline-flex items-center bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-xl font-semibold transition-all duration-300 hover:scale-105 text-sm"
+                            className="btn-primary inline-flex items-center bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-xl font-semibold transition-all duration-400 hover:scale-105 text-body-small smooth-slide"
                           >
                             Mehr zu den Vorteilen
-                            <ArrowRight className="w-4 h-4 ml-2" />
+                            <ArrowRight className="w-4 h-4 ml-2 transition-transform duration-300 group-hover:translate-x-1" />
                           </Link>
                         </div>
                       </div>
