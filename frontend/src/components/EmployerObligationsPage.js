@@ -20,6 +20,11 @@ import {
 } from "lucide-react";
 
 const EmployerObligationsPage = () => {
+  const [expandedObligation, setExpandedObligation] = useState(null);
+
+  const toggleObligation = (index) => {
+    setExpandedObligation(expandedObligation === index ? null : index);
+  };
   const obligations = [
     {
       icon: <FileText className="w-8 h-8" />,
