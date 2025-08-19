@@ -338,7 +338,7 @@ const EmployerObligationsPage = () => {
               </p>
               <Button 
                 size="lg"
-                className="bg-white text-red-600 hover:bg-red-50 px-8 py-3 font-semibold"
+                className="btn-primary bg-white text-red-600 hover:bg-red-50 px-8 py-3 font-semibold transition-all duration-400 hover:scale-105"
                 onClick={() => window.open('https://outlook.office365.com/owa/calendar/ACENCIAde@acencia.de/bookings/', '_blank')}
               >
                 Jetzt Compliance sicherstellen
