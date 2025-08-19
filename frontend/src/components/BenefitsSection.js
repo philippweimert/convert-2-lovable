@@ -178,6 +178,24 @@ const BenefitsSection = () => {
           ))}
         </div>
 
+        {/* Compact summary section */}
+        <div className="text-center bg-slate-50 rounded-2xl p-8 max-w-4xl mx-auto">
+          <h3 className="text-2xl font-bold text-slate-900 mb-4">
+            Ihre Vorteile auf einen Blick
+          </h3>
+          <p className="text-slate-600 mb-6">
+            Unsere digitale bAV-Plattform automatisiert komplexe Prozesse, reduziert Ihren Verwaltungsaufwand 
+            und sorgt für 100%ige Rechtskonformität - damit Sie sich auf Ihr Kerngeschäft konzentrieren können.
+          </p>
+          <div className="flex flex-wrap justify-center gap-3">
+            <span className="bg-orange-100 text-orange-800 px-4 py-2 rounded-full text-sm font-semibold">80% Zeitersparnis</span>
+            <span className="bg-green-100 text-green-800 px-4 py-2 rounded-full text-sm font-semibold">100% Compliance</span>
+            <span className="bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-semibold">Plug & Play</span>
+            <span className="bg-purple-100 text-purple-800 px-4 py-2 rounded-full text-sm font-semibold">24/7 verfügbar</span>
+            <span className="bg-indigo-100 text-indigo-800 px-4 py-2 rounded-full text-sm font-semibold">Zukunftssicher</span>
+          </div>
+        </div>
+
       </div>
     </section>
   );
