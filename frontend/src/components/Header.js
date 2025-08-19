@@ -109,11 +109,11 @@ const Header = () => {
               Pflichten des Arbeitgebers
             </Link>
             <Link
-              to="/vorteile"
+              to="/der-service"
               className="block px-6 py-3 text-white hover:text-orange-400 hover:bg-white/5 rounded-xl transition-all duration-300 font-medium"
               onClick={() => setIsMenuOpen(false)}
             >
-              Vorteile
+              Der Service
             </Link>
             <Link
               to="/aktuelles"
