@@ -240,20 +240,20 @@ const InteractiveMainSections = () => {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Main section header */}
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center space-x-3 bg-gradient-to-r from-orange-100 to-amber-100 px-6 py-3 rounded-full mb-8 shadow-lg">
+        <div className="text-center mb-16 animate-fade-in">
+          <div className="inline-flex items-center space-x-3 bg-gradient-to-r from-orange-100 to-amber-100 px-6 py-3 rounded-full mb-8 shadow-lg micro-bounce">
             <Sparkles className="w-5 h-5 text-orange-600 animate-pulse" />
-            <span className="text-orange-800 font-semibold text-sm tracking-wide uppercase">Entlastung für HR-Teams</span>
+            <span className="text-orange-800 font-semibold text-caption">Entlastung für HR-Teams</span>
           </div>
           
-          <h2 className="text-4xl lg:text-6xl font-bold mb-8 leading-tight">
+          <h2 className="text-5xl lg:text-6xl font-extrabold mb-8 leading-tight text-display">
             <span className="text-slate-900">Ihre </span>
-            <span className="bg-gradient-to-r from-orange-500 via-orange-600 to-red-500 bg-clip-text text-transparent">
+            <span className="text-emphasis">
               digitale bAV-Lösung
             </span>
           </h2>
           
-          <p className="text-xl text-slate-600 max-w-4xl mx-auto leading-relaxed font-light">
+          <p className="text-body-large text-slate-600 max-w-4xl mx-auto leading-relaxed font-light">
             Die betriebliche Altersvorsorge ist verpflichtend, aber ihre Verwaltung muss nicht 
             komplex und zeitaufwendig sein. Klicken Sie auf die Bereiche, um mehr zu erfahren.
           </p>
