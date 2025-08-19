@@ -20,12 +20,17 @@ import { Link } from 'react-router-dom';
 const InteractiveMainSections = () => {
   const [activeSection, setActiveSection] = useState(null);
   const [expandedCards, setExpandedCards] = useState({});
+  const [expandedMainSection, setExpandedMainSection] = useState(null);
 
   const toggleCard = (index) => {
     setExpandedCards(prev => ({
       ...prev,
       [index]: !prev[index]
     }));
+  };
+
+  const toggleMainSection = (sectionName) => {
+    setExpandedMainSection(expandedMainSection === sectionName ? null : sectionName);
   };
 
   // Ursprüngliche ausklappbare Benefits
