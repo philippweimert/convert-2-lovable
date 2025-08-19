@@ -462,7 +462,7 @@ const InteractiveMainSections = () => {
                   </p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                   {mainSections[2].content.keyFeatures.map((feature, index) => (
                     <div key={index} className="bg-slate-800 rounded-2xl p-6 border border-slate-700">
                       <div className={`w-12 h-12 ${feature.bgColor} rounded-lg flex items-center justify-center mb-4`}>
@@ -481,36 +481,88 @@ const InteractiveMainSections = () => {
                     </div>
                   ))}
                 </div>
+
+                {/* Button zu Vorteilen */}
+                <div className="text-center mt-8">
+                  <Link 
+                    to="/der-service#vorteile"
+                    className="inline-flex items-center bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-xl font-semibold transition-all duration-300 hover:scale-105"
+                  >
+                    Mehr zu den Vorteilen
+                    <ArrowRight className="w-4 h-4 ml-2" />
+                  </Link>
+                </div>
               </div>
             )}
           </div>
         )}
 
-        {/* Call to Action */}
-        <div className="text-center">
-          <div className="bg-gradient-to-r from-orange-500 to-orange-600 rounded-3xl p-12 text-center">
-            <h3 className="text-3xl font-bold text-white mb-6">
-              Bereit für die digitale bAV-Revolution?
-            </h3>
-            <p className="text-orange-100 text-lg mb-8 max-w-2xl mx-auto">
-              Lassen Sie sich zeigen, wie unsere Lösung auch Ihr Unternehmen entlastet.
-              Kostenlose Demo buchen und überzeugen lassen.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button 
-                className="bg-white text-orange-600 px-8 py-3 rounded-xl font-semibold hover:bg-orange-50 transition-all duration-300 hover:scale-105"
-                onClick={() => window.open('https://outlook.office365.com/owa/calendar/ACENCIAde@acencia.de/bookings/', '_blank')}
-              >
-                Kostenlose Demo buchen
-              </button>
-              <button 
-                className="border-2 border-white text-white hover:bg-white hover:text-orange-600 px-8 py-3 rounded-xl font-semibold transition-all duration-300"
-                onClick={() => window.open('https://outlook.office365.com/owa/calendar/ACENCIAde@acencia.de/bookings/', '_blank')}
-              >
-                Jetzt beraten lassen
-              </button>
+        {/* Ursprüngliche ausklappbare Benefits */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+          {benefits.map((benefit, index) => (
+            <div 
+              key={index} 
+              className="group relative"
+              style={{
+                animationDelay: `${index * 100}ms`
+              }}
+            >
+              {/* Compact card with click-to-expand */}
+              <div className="bg-white rounded-2xl p-6 h-full shadow-md hover:shadow-xl transition-all duration-300 border border-slate-100 hover:border-slate-200 relative overflow-hidden cursor-pointer"
+                   onClick={() => toggleCard(index)}>
+                
+                {/* Animated background gradient */}
+                <div className={`absolute inset-0 bg-gradient-to-br ${benefit.color} opacity-0 group-hover:opacity-[0.02] transition-opacity duration-300`}></div>
+                
+                {/* Compact header */}
+                <div className="flex items-start justify-between mb-4">
+                  <div className={`${benefit.iconBg} rounded-xl p-3 inline-block group-hover:scale-105 transition-transform duration-300`}>
+                    <div className="text-slate-700">
+                      {benefit.icon}
+                    </div>
+                  </div>
+                  
+                  {/* Expand/Collapse indicator */}
+                  <div className="text-slate-400 group-hover:text-slate-600 transition-colors">
+                    {expandedCards[index] ? (
+                      <ChevronUp className="w-5 h-5" />
+                    ) : (
+                      <ChevronDown className="w-5 h-5" />
+                    )}
+                  </div>
+                </div>
+                
+                {/* Title and highlight */}
+                <h3 className="text-lg font-bold text-slate-900 mb-2 leading-tight group-hover:text-slate-800 transition-colors duration-300">
+                  {benefit.title}
+                </h3>
+                
+                {/* Always visible highlight badge */}
+                <div className="mb-4">
+                  <span className={`${benefit.bgColor} text-slate-700 px-3 py-1 rounded-full text-xs font-bold tracking-wide uppercase`}>
+                    {benefit.highlight}
+                  </span>
+                </div>
+                
+                {/* Expandable description */}
+                <div className={`overflow-hidden transition-all duration-300 ${
+                  expandedCards[index] ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+                }`}>
+                  <p className="text-slate-600 leading-relaxed mb-4">
+                    {benefit.description}
+                  </p>
+                </div>
+                
+                {/* Show/Hide hint */}
+                <div className="text-xs text-slate-500 font-medium">
+                  {expandedCards[index] ? 'Klicken zum Einklappen' : 'Klicken für Details'}
+                </div>
+
+                {/* Bottom accent line */}
+                <div className={`absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r ${benefit.color} transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left`}></div>
+              </div>
             </div>
-          </div>
+          ))}
         </div>
       </div>
     </section>
