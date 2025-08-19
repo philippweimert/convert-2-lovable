@@ -384,7 +384,7 @@ const EmployerObligationsPage = () => {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button 
                   size="lg"
-                  className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-10 py-4 text-lg font-semibold rounded-xl transition-all duration-300 hover:scale-105"
+                  className="btn-primary bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-10 py-4 text-lg font-semibold rounded-xl transition-all duration-400 hover:scale-105"
                   onClick={() => window.open('https://outlook.office365.com/owa/calendar/ACENCIAde@acencia.de/bookings/', '_blank')}
                 >
                   Kostenlose Beratung buchen
@@ -392,7 +392,7 @@ const EmployerObligationsPage = () => {
                 <Button 
                   size="lg"
                   variant="outline"
-                  className="border-2 border-slate-600 text-slate-300 hover:bg-slate-600 hover:text-white px-10 py-4 text-lg font-semibold rounded-xl transition-all duration-300"
+                  className="border-2 border-slate-600 text-slate-300 hover:bg-slate-600 hover:text-white px-10 py-4 text-lg font-semibold rounded-xl transition-all duration-400 micro-bounce"
                   onClick={() => window.open('tel:+4967179658O', '_self')}
                 >
                   +49 671 79 65 8 0
