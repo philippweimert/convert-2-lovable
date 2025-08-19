@@ -263,31 +263,31 @@ const InteractiveMainSections = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           
           {/* Left Section: Unsere digitale Lösung */}
-          <div className="bg-white rounded-3xl shadow-xl border border-slate-200 overflow-hidden">
+          <div className="bg-white rounded-3xl shadow-xl border border-slate-200 overflow-hidden card-hover animate-slide-in-left stagger-item">
             {/* Clickable Header */}
             <div 
-              className="p-8 cursor-pointer hover:bg-slate-50 transition-colors duration-300 border-b border-slate-200"
+              className="p-8 cursor-pointer hover:bg-slate-50 transition-colors duration-300 border-b border-slate-200 btn-hover-lift"
               onClick={() => toggleMainSection('solution')}
             >
               <div className="flex items-center justify-between">
                 <div>
                   <div className="flex items-center space-x-3 mb-4">
-                    <div className="bg-orange-100 rounded-xl p-3">
+                    <div className="bg-orange-100 rounded-xl p-3 icon-hover">
                       <Sparkles className="w-6 h-6 text-orange-600" />
                     </div>
-                    <span className="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wide">
+                    <span className="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-caption">
                       Unsere Stärken
                     </span>
                   </div>
-                  <h3 className="text-2xl lg:text-3xl font-bold text-slate-900 mb-3">
+                  <h3 className="text-2xl lg:text-3xl font-bold text-slate-900 mb-3 text-headline">
                     Unsere digitale Lösung
                   </h3>
-                  <p className="text-slate-600 text-sm">
+                  <p className="text-slate-600 text-body-small">
                     6 entscheidende Vorteile für Ihr Unternehmen - vollautomatisiert, rechtssicher und skalierbar
                   </p>
                 </div>
-                <div className={`text-slate-400 transition-transform duration-300 ${
-                  expandedMainSection === 'solution' ? 'rotate-180' : ''
+                <div className={`text-slate-400 transition-all duration-400 ease-bounce-in ${
+                  expandedMainSection === 'solution' ? 'rotate-180 text-orange-500' : 'hover:text-slate-600'
                 }`}>
                   <ChevronDown className="w-6 h-6" />
                 </div>
@@ -295,8 +295,8 @@ const InteractiveMainSections = () => {
             </div>
 
             {/* Expandable Content */}
-            <div className={`overflow-hidden transition-all duration-500 ${
-              expandedMainSection === 'solution' ? 'max-h-[2000px] opacity-100' : 'max-h-0 opacity-0'
+            <div className={`overflow-hidden accordion-content transition-all duration-600 ease-smooth ${
+              expandedMainSection === 'solution' ? 'max-h-[2000px] opacity-100 expanded' : 'max-h-0 opacity-0 collapsed'
             }`}>
               <div className="p-8 bg-gradient-to-br from-slate-50 to-white">
                 {/* Benefits Grid */}
