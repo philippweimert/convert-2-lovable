@@ -15,6 +15,13 @@ import {
 
 const BenefitsSection = () => {
   const [expandedCards, setExpandedCards] = useState({});
+  const toggleCard = (index) => {
+    setExpandedCards(prev => ({
+      ...prev,
+      [index]: !prev[index]
+    }));
+  };
+
   const benefits = [
     {
       icon: <Zap className="w-8 h-8" />,
