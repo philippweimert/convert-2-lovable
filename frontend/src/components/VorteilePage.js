@@ -20,12 +20,97 @@ import {
   Zap,
   Globe,
   ArrowRight,
-  ChevronRight
+  ChevronRight,
+  Rocket,
+  Building2,
+  Sparkles,
+  Settings
 } from 'lucide-react';
 
-const VorteilePage = () => {
+const ServicePage = () => {
   const [activeTab, setActiveTab] = useState('unternehmen');
 
+  // Die Herausforderung - Customer Segments Data (kompakte Version)
+  const herausforderungen = [
+    {
+      icon: <Rocket className="w-6 h-6" />,
+      title: "Start-up",
+      subtitle: "5-50 Mitarbeiter",
+      description: "Flexible und skalierbare bAV-Lösungen für junge Unternehmen mit schnellem Wachstum",
+      features: [
+        "Schnelle Implementierung",
+        "Skalierbare Architektur",
+        "Kostengünstige Einstiegslösung"
+      ],
+      highlight: "Flexibel & Skalierbar",
+      gradient: "from-blue-500 to-cyan-500"
+    },
+    {
+      icon: <Building className="w-6 h-6" />,
+      title: "Mittelstand",
+      subtitle: "50-1000 Mitarbeiter",
+      description: "Bewährte Konzepte für etablierte mittelständische Betriebe mit komplexeren Anforderungen",
+      features: [
+        "Umfassende Integration",
+        "Erweiterte Automatisierung",
+        "Multi-Standort-Fähigkeit"
+      ],
+      highlight: "Bewährt & Effizient",
+      gradient: "from-orange-500 to-amber-500"
+    },
+    {
+      icon: <Building2 className="w-6 h-6" />,
+      title: "Konzern",
+      subtitle: "1000+ Mitarbeiter",
+      description: "Komplexe Enterprise-Lösungen für große Unternehmensstrukturen mit höchsten Anforderungen",
+      features: [
+        "Enterprise-Integration",
+        "Multi-Mandanten-Fähigkeit",
+        "Erweiterte Compliance"
+      ],
+      highlight: "Enterprise & Komplex",
+      gradient: "from-purple-500 to-violet-500"
+    }
+  ];
+
+  // 3-Stufen-Prozess
+  const processSteps = [
+    {
+      icon: <CheckCircle className="w-6 h-6" />,
+      title: "Rechtliche Prüfung",
+      subtitle: "& Einrichtung bAV",
+      description: "Unter Berücksichtigung aller rechtlichen Aspekte ermitteln wir unabhängig das optimale Vorsorgemodell für Unternehmen und Mitarbeitende - individuell zugeschnitten mit innovativen Produktoptionen.",
+      keyPoints: [
+        "Vollständige Compliance-Prüfung",
+        "Individuelle Bedarfsanalyse", 
+        "Rechtssichere Dokumentation"
+      ]
+    },
+    {
+      icon: <Settings className="w-6 h-6" />,
+      title: "Digitale bAV-Verwaltung",
+      subtitle: "& laufender Support",
+      description: "Wir richten Ihre bAV-Verwaltung ein, digitalisieren und automatisieren Ihre Prozesse. Nahtlose Integration in bestehende HR-Systeme und vollautomatisierte Abwicklung aller Prozesse.",
+      keyPoints: [
+        "System-Integration (HR)",
+        "Vollautomatisierte Prozesse",
+        "24/7 digitaler Support"
+      ]
+    },
+    {
+      icon: <Users className="w-6 h-6" />,
+      title: "Mitarbeiterkommunikation",
+      subtitle: "& (digitale) Beratung", 
+      description: "Automatisierte Kommunikation mit Mitarbeitenden und Versorgungsträgern. Moderne Informationsmaßnahmen und auf Wunsch individuelle Beratung - digital oder vor Ort.",
+      keyPoints: [
+        "Automatisierte Kommunikation",
+        "Digitale Mitarbeiter-Portale",
+        "Persönliche Beratung verfügbar"
+      ]
+    }
+  ];
+
+  // Vorteile für Unternehmen
   const unternehmensVorteile = [
     {
       icon: <TrendingUp className="w-8 h-8" />,
@@ -62,45 +147,10 @@ const VorteilePage = () => {
         "Automatisierte Prüfmechanismen sorgen für korrekte Umsetzung gesetzlicher Vorgaben",
         "Minimierung von Haftungsrisiken für das Unternehmen"
       ]
-    },
-    {
-      icon: <Target className="w-8 h-8" />,
-      title: "Transparenz und Reporting",
-      color: "from-purple-500 to-purple-600",
-      bgColor: "bg-purple-50",
-      iconBg: "bg-purple-100",
-      benefits: [
-        "Digitale Plattformen bieten Echtzeit-Zugriff auf Daten und Auswertungen",
-        "Standardisierte Reports erleichtern die interne Kontrolle und strategische Planung",
-        "Mitarbeiter erhalten verständliche und transparente Informationen zu ihrer bAV"
-      ]
-    },
-    {
-      icon: <Award className="w-8 h-8" />,
-      title: "Mitarbeiterzufriedenheit und Arbeitgeberattraktivität",
-      color: "from-orange-500 to-orange-600",
-      bgColor: "bg-orange-50",
-      iconBg: "bg-orange-100",
-      benefits: [
-        "Verbesserte Kommunikation und Self-Service-Portale stärken das Vertrauen der Mitarbeitenden",
-        "Schnelle und kompetente Betreuung durch den Dienstleister erhöht die Zufriedenheit",
-        "Professionelle bAV-Verwaltung wirkt positiv auf das Employer Branding"
-      ]
-    },
-    {
-      icon: <Globe className="w-8 h-8" />,
-      title: "Skalierbarkeit und Zukunftssicherheit",
-      color: "from-indigo-500 to-indigo-600",
-      bgColor: "bg-indigo-50",
-      iconBg: "bg-indigo-100",
-      benefits: [
-        "Der Dienstleister kann flexibel auf Unternehmenswachstum oder -veränderungen reagieren",
-        "Digitale Lösungen sind zukunftsfähig und können leicht erweitert oder angepasst werden",
-        "Innovationspotenzial durch KI-gestützte Analysen und Prognosen"
-      ]
     }
   ];
 
+  // Vorteile für Mitarbeitende
   const mitarbeiterVorteile = [
     {
       icon: <Headphones className="w-8 h-8" />,
@@ -125,88 +175,6 @@ const VorteilePage = () => {
         "Self-Service-Funktionen für einfache Änderungen oder Anfragen",
         "Regelmäßige Updates und verständliche Kommunikation"
       ]
-    },
-    {
-      icon: <Lock className="w-8 h-8" />,
-      title: "Erhöhte Sicherheit und Vertrauen",
-      color: "from-red-500 to-red-600",
-      bgColor: "bg-red-50",
-      iconBg: "bg-red-100",
-      benefits: [
-        "Professionelle Betreuung durch Experten",
-        "Vermeidung von Fehlern oder Missverständnissen bei Vertragsdetails",
-        "Verlässliche Ansprechpartner bei Fragen oder Problemen"
-      ]
-    },
-    {
-      icon: <Clock className="w-8 h-8" />,
-      title: "Zeitersparnis und Komfort",
-      color: "from-orange-500 to-orange-600",
-      bgColor: "bg-orange-50",
-      iconBg: "bg-orange-100",
-      benefits: [
-        "Kein Papierkram, keine langen Wartezeiten",
-        "Digitale Tools ermöglichen schnellen Zugriff auf Informationen",
-        "Beratung auch außerhalb klassischer Bürozeiten möglich"
-      ]
-    }
-  ];
-
-  const hrVorteile = [
-    {
-      icon: <UserCheck className="w-8 h-8" />,
-      title: "Entlastung im Tagesgeschäft",
-      color: "from-purple-500 to-purple-600",
-      bgColor: "bg-purple-50",
-      iconBg: "bg-purple-100",
-      benefits: [
-        "Keine manuelle Verwaltung von Verträgen, Änderungen oder Rückfragen",
-        "Fokus auf strategische HR-Themen statt operativer bAV-Verwaltung"
-      ]
-    },
-    {
-      icon: <Briefcase className="w-8 h-8" />,
-      title: "Professionelle Kommunikation",
-      color: "from-indigo-500 to-indigo-600",
-      bgColor: "bg-indigo-50",
-      iconBg: "bg-indigo-100",
-      benefits: [
-        "Der Dienstleister übernimmt die Mitarbeiterkommunikation zur bAV",
-        "Einheitliche und rechtssichere Informationsweitergabe"
-      ]
-    },
-    {
-      icon: <Shield className="w-8 h-8" />,
-      title: "Rechtssicherheit und Aktualität",
-      color: "from-red-500 to-red-600",
-      bgColor: "bg-red-50",
-      iconBg: "bg-red-100",
-      benefits: [
-        "Automatische Berücksichtigung gesetzlicher Änderungen",
-        "Minimierung von Haftungsrisiken durch Expertenwissen"
-      ]
-    },
-    {
-      icon: <BarChart3 className="w-8 h-8" />,
-      title: "Reporting und Steuerung",
-      color: "from-green-500 to-green-600",
-      bgColor: "bg-green-50",
-      iconBg: "bg-green-100",
-      benefits: [
-        "Zugriff auf digitale Dashboards und Auswertungen",
-        "Unterstützung bei Audits, Jahresabschlüssen und internen Analysen"
-      ]
-    },
-    {
-      icon: <Star className="w-8 h-8" />,
-      title: "Employer Branding",
-      color: "from-yellow-500 to-yellow-600",
-      bgColor: "bg-yellow-50",
-      iconBg: "bg-yellow-100",
-      benefits: [
-        "Hochwertige bAV-Beratung als Teil eines attraktiven Gesamtpakets",
-        "Stärkung der Arbeitgebermarke durch moderne und mitarbeiterorientierte Services"
-      ]
     }
   ];
 
@@ -222,73 +190,288 @@ const VorteilePage = () => {
         <div className="max-w-4xl mx-auto text-center">
           <div className="flex items-center justify-center space-x-3 mb-6">
             <Star className="w-8 h-8 text-orange-400" />
-            <span className="text-orange-400 font-semibold text-lg tracking-wide">Win-Win für alle Beteiligten</span>
+            <span className="text-orange-400 font-semibold text-lg tracking-wide">Was wir für Sie tun können</span>
           </div>
           
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
-            Vorteile der{' '}
-            <span className="text-orange-500">betrieblichen Altersvorsorge</span>
+            Der{' '}
+            <span className="text-orange-500">Service</span>
           </h1>
           <p className="text-xl text-gray-300 mb-12">
-            Entdecken Sie, wie unsere digitale bAV-Lösung Unternehmen und Mitarbeitende 
-            gleichermaßen profitieren lässt.
+            Von der rechtlichen Einrichtung bis zur vollständigen Digitalisierung - 
+            wir machen bAV einfach und effizient für jede Unternehmensgröße.
           </p>
         </div>
       </div>
 
-      {/* Tab Navigation */}
-      <div className="container mx-auto px-6 mb-16">
-        <div className="max-w-4xl mx-auto">
-          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-2 border border-white/20">
-            <div className="grid grid-cols-2 gap-2">
-              <button
-                onClick={() => setActiveTab('unternehmen')}
-                className={`flex items-center justify-center space-x-2 px-6 py-4 rounded-xl font-semibold transition-all duration-300 ${
-                  activeTab === 'unternehmen'
-                    ? 'bg-orange-500 text-white shadow-lg'
-                    : 'text-gray-300 hover:bg-white/10'
-                }`}
-              >
-                <Building className="w-5 h-5" />
-                <span>Für Unternehmen</span>
-              </button>
-              <button
-                onClick={() => setActiveTab('mitarbeiter')}
-                className={`flex items-center justify-center space-x-2 px-6 py-4 rounded-xl font-semibold transition-all duration-300 ${
-                  activeTab === 'mitarbeiter'
-                    ? 'bg-orange-500 text-white shadow-lg'
-                    : 'text-gray-300 hover:bg-white/10'
-                }`}
-              >
-                <Users className="w-5 h-5" />
-                <span>Für Mitarbeitende & HR</span>
-              </button>
+      {/* Die Herausforderung Section */}
+      <div className="bg-white py-20">
+        <div className="container mx-auto px-6">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-16">
+              <div className="inline-flex items-center space-x-3 bg-gradient-to-r from-slate-100 to-slate-200 px-6 py-3 rounded-full mb-8 shadow-lg">
+                <Users className="w-5 h-5 text-slate-600" />
+                <span className="text-slate-700 font-semibold text-sm tracking-wide uppercase">Die Herausforderung</span>
+              </div>
+              
+              <h2 className="text-4xl lg:text-5xl font-bold mb-8 leading-tight">
+                <span className="text-slate-900">Für jede </span>
+                <span className="bg-gradient-to-r from-orange-500 via-orange-600 to-red-500 bg-clip-text text-transparent">
+                  Unternehmensgröße
+                </span>
+                <span className="text-slate-900"> die passende Lösung</span>
+              </h2>
+              
+              <p className="text-xl text-slate-600 max-w-4xl mx-auto leading-relaxed">
+                Von Start-ups bis zu Konzernen - jede Unternehmensgröße bringt spezifische 
+                Herausforderungen bei der betrieblichen Altersvorsorge mit sich.
+              </p>
+            </div>
+
+            {/* Kompakte Herausforderungen Cards */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+              {herausforderungen.map((challenge, index) => (
+                <div 
+                  key={index} 
+                  className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-slate-100 hover:-translate-y-1"
+                  style={{ animationDelay: `${index * 150}ms` }}
+                >
+                  <div className={`bg-gradient-to-br ${challenge.gradient} p-4 rounded-xl mb-4 inline-block`}>
+                    <div className="text-white">
+                      {challenge.icon}
+                    </div>
+                  </div>
+                  
+                  <h3 className="text-xl font-bold text-slate-900 mb-2">
+                    {challenge.title}
+                  </h3>
+                  <p className="text-orange-600 font-medium mb-3 text-sm">
+                    {challenge.subtitle}
+                  </p>
+                  
+                  <p className="text-slate-600 leading-relaxed mb-4 text-sm">
+                    {challenge.description}
+                  </p>
+
+                  {/* Features */}
+                  <div className="space-y-2">
+                    {challenge.features.map((feature, featureIndex) => (
+                      <div key={featureIndex} className="flex items-center space-x-2">
+                        <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0" />
+                        <span className="text-slate-600 text-sm">{feature}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* Überleitung zum 3-Stufen-Prozess */}
+            <div className="text-center bg-slate-50 rounded-2xl p-8 mb-16">
+              <ArrowRight className="w-8 h-8 text-orange-500 mx-auto mb-4" />
+              <p className="text-lg text-slate-700">
+                Genau hier setzen wir an: Mit unserem bewährten 3-Stufen-Prozess lösen wir 
+                diese Herausforderungen systematisch und effizient.
+              </p>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Content Based on Active Tab */}
-      <div className="container mx-auto px-6 pb-20">
-        <div className="max-w-7xl mx-auto">
-          
-          {activeTab === 'unternehmen' && (
-            <div>
-              <div className="text-center mb-16">
-                <h2 className="text-3xl font-bold text-white mb-4">
-                  Warum Unternehmen auf externe bAV-Verwaltung setzen
-                </h2>
-                <p className="text-gray-300 text-lg max-w-3xl mx-auto">
-                  Durch die Auslagerung an einen hoch automatisierten und digital versierten Dienstleister 
-                  profitieren Unternehmen von einer Vielzahl strategischer Vorteile.
-                </p>
+      {/* 3-Stufen-Prozess Section */}
+      <div className="bg-slate-900 py-20">
+        <div className="container mx-auto px-6">
+          <div className="max-w-6xl mx-auto">
+            {/* Section header */}
+            <div className="text-center mb-16">
+              <div className="inline-flex items-center space-x-2 bg-orange-500/10 border border-orange-500/20 px-4 py-2 rounded-full mb-6">
+                <span className="w-2 h-2 bg-orange-500 rounded-full animate-pulse"></span>
+                <span className="text-orange-400 font-medium text-sm">Unser bewährter 3-Stufen-Prozess</span>
               </div>
+              <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
+                Als Partner begleiten wir Sie entlang des gesamten bAV-Prozesses
+              </h2>
+              <p className="text-lg text-slate-300 max-w-3xl mx-auto">
+                Von der rechtlichen Einrichtung bis zur vollständigen Digitalisierung - 
+                wir machen bAV einfach und effizient.
+              </p>
+              <div className="w-24 h-1 bg-orange-500 mx-auto mt-6"></div>
+            </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Process steps */}
+            <div className="space-y-8">
+              {processSteps.map((step, index) => (
+                <div key={index} className="relative">
+                  <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                    {/* Step number and icon */}
+                    <div className="lg:col-span-2 flex flex-col items-center lg:items-start">
+                      <div className="flex items-center space-x-4 mb-4">
+                        <div className="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center text-white font-bold text-lg">
+                          {index + 1}
+                        </div>
+                        <div className="text-orange-500">
+                          {step.icon}
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Content */}
+                    <div className="lg:col-span-7">
+                      <div className="bg-slate-800 rounded-2xl p-8 h-full hover:bg-slate-700 transition-colors duration-300 border border-slate-700 hover:border-orange-500/50">
+                        <h3 className="text-2xl font-bold text-white mb-2">
+                          {step.title}
+                        </h3>
+                        <p className="text-orange-400 font-medium mb-4 text-lg">
+                          {step.subtitle}
+                        </p>
+                        <p className="text-slate-300 leading-relaxed mb-6">
+                          {step.description}
+                        </p>
+                        
+                        {/* Key points */}
+                        <div className="space-y-2">
+                          <h4 className="text-sm font-semibold text-slate-400 uppercase tracking-wider">
+                            Zentrale Vorteile:
+                          </h4>
+                          {step.keyPoints.map((point, pointIndex) => (
+                            <div key={pointIndex} className="flex items-center space-x-2">
+                              <CheckCircle className="w-4 h-4 text-orange-500 flex-shrink-0" />
+                              <span className="text-slate-300 text-sm">{point}</span>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Arrow or CTA */}
+                    <div className="lg:col-span-3 flex justify-center">
+                      {index < processSteps.length - 1 ? (
+                        <div className="hidden lg:flex items-center justify-center">
+                          <div className="flex flex-col items-center space-y-2">
+                            <ArrowRight className="w-8 h-8 text-orange-500" />
+                            <span className="text-xs text-slate-500 text-center">
+                              Nächster<br/>Schritt
+                            </span>
+                          </div>
+                        </div>
+                      ) : (
+                        <div className="flex flex-col space-y-4">
+                          <button 
+                            className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105 shadow-lg"
+                            onClick={() => window.open('https://outlook.office365.com/owa/calendar/ACENCIAde@acencia.de/bookings/', '_blank')}
+                          >
+                            Jetzt starten
+                          </button>
+                          <button 
+                            className="border-2 border-slate-600 text-slate-300 hover:bg-slate-600 hover:text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 text-sm"
+                            onClick={() => window.open('https://outlook.office365.com/owa/calendar/ACENCIAde@acencia.de/bookings/', '_blank')}
+                          >
+                            Demo buchen
+                          </button>
+                        </div>
+                      )}
+                    </div>
+                  </div>
+
+                  {/* Mobile arrow */}
+                  {index < processSteps.length - 1 && (
+                    <div className="flex lg:hidden justify-center my-6">
+                      <div className="w-8 h-8 bg-orange-500 rounded-full flex items-center justify-center">
+                        <ArrowRight className="w-4 h-4 text-white rotate-90" />
+                      </div>
+                    </div>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Vorteile Section */}
+      <div className="bg-white py-20">
+        <div className="container mx-auto px-6">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl lg:text-4xl font-bold text-slate-900 mb-4">
+                Die konkreten Vorteile für Sie
+              </h2>
+              <p className="text-lg text-slate-600 max-w-3xl mx-auto">
+                Erfahren Sie, welche spezifischen Vorteile unser Service für Ihr Unternehmen 
+                und Ihre Mitarbeitenden bringt.
+              </p>
+            </div>
+
+            {/* Tab Navigation */}
+            <div className="mb-16">
+              <div className="bg-slate-50 rounded-2xl p-2 border border-slate-200 max-w-md mx-auto">
+                <div className="grid grid-cols-2 gap-2">
+                  <button
+                    onClick={() => setActiveTab('unternehmen')}
+                    className={`flex items-center justify-center space-x-2 px-4 py-3 rounded-xl font-semibold transition-all duration-300 ${
+                      activeTab === 'unternehmen'
+                        ? 'bg-orange-500 text-white shadow-lg'
+                        : 'text-slate-600 hover:bg-slate-100'
+                    }`}
+                  >
+                    <Building className="w-4 h-4" />
+                    <span>Unternehmen</span>
+                  </button>
+                  <button
+                    onClick={() => setActiveTab('mitarbeiter')}
+                    className={`flex items-center justify-center space-x-2 px-4 py-3 rounded-xl font-semibold transition-all duration-300 ${
+                      activeTab === 'mitarbeiter'
+                        ? 'bg-orange-500 text-white shadow-lg'
+                        : 'text-slate-600 hover:bg-slate-100'
+                    }`}
+                  >
+                    <Users className="w-4 h-4" />
+                    <span>Mitarbeitende</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            {/* Vorteile Content */}
+            {activeTab === 'unternehmen' && (
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 {unternehmensVorteile.map((vorteil, index) => (
                   <div 
                     key={index}
-                    className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2"
+                    className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-slate-100 hover:-translate-y-1"
+                    style={{ animationDelay: `${index * 100}ms` }}
+                  >
+                    <div className={`${vorteil.iconBg} rounded-xl p-3 mb-4 inline-block`}>
+                      <div className="text-gray-700">
+                        {vorteil.icon}
+                      </div>
+                    </div>
+                    
+                    <h3 className="text-lg font-bold text-slate-900 mb-4 leading-tight">
+                      {vorteil.title}
+                    </h3>
+                    
+                    <ul className="space-y-2">
+                      {vorteil.benefits.map((benefit, benefitIndex) => (
+                        <li key={benefitIndex} className="flex items-start space-x-2">
+                          <CheckCircle className="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0" />
+                          <span className="text-slate-600 text-sm leading-relaxed">
+                            {benefit}
+                          </span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
+              </div>
+            )}
+
+            {activeTab === 'mitarbeiter' && (
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                {mitarbeiterVorteile.map((vorteil, index) => (
+                  <div 
+                    key={index}
+                    className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-slate-100 hover:-translate-y-1"
                     style={{ animationDelay: `${index * 100}ms` }}
                   >
                     <div className={`${vorteil.iconBg} rounded-xl p-4 mb-6 inline-block`}>
@@ -305,7 +488,7 @@ const VorteilePage = () => {
                       {vorteil.benefits.map((benefit, benefitIndex) => (
                         <li key={benefitIndex} className="flex items-start space-x-3">
                           <CheckCircle className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" />
-                          <span className="text-gray-600 text-sm leading-relaxed">
+                          <span className="text-slate-600 leading-relaxed">
                             {benefit}
                           </span>
                         </li>
@@ -314,100 +497,8 @@ const VorteilePage = () => {
                   </div>
                 ))}
               </div>
-            </div>
-          )}
-
-          {activeTab === 'mitarbeiter' && (
-            <div>
-              <div className="text-center mb-16">
-                <h2 className="text-3xl font-bold text-white mb-4">
-                  Vorteile für Mitarbeitende und HR-Abteilungen
-                </h2>
-                <p className="text-gray-300 text-lg max-w-3xl mx-auto">
-                  Die Partnerschaft mit einem externen, digital versierten Dienstleister bringt 
-                  sowohl für Mitarbeitende als auch für HR-Teams zahlreiche Vorteile mit sich.
-                </p>
-              </div>
-
-              {/* Mitarbeiter Vorteile */}
-              <div className="mb-16">
-                <div className="flex items-center space-x-3 mb-8">
-                  <Users className="w-6 h-6 text-orange-400" />
-                  <h3 className="text-2xl font-bold text-white">Vorteile für Mitarbeitende</h3>
-                </div>
-                
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-                  {mitarbeiterVorteile.map((vorteil, index) => (
-                    <div 
-                      key={index}
-                      className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2"
-                      style={{ animationDelay: `${index * 100}ms` }}
-                    >
-                      <div className={`${vorteil.iconBg} rounded-xl p-4 mb-6 inline-block`}>
-                        <div className="text-gray-700">
-                          {vorteil.icon}
-                        </div>
-                      </div>
-                      
-                      <h4 className="text-lg font-bold text-slate-900 mb-4 leading-tight">
-                        {vorteil.title}
-                      </h4>
-                      
-                      <ul className="space-y-3">
-                        {vorteil.benefits.map((benefit, benefitIndex) => (
-                          <li key={benefitIndex} className="flex items-start space-x-3">
-                            <CheckCircle className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" />
-                            <span className="text-gray-600 text-sm leading-relaxed">
-                              {benefit}
-                            </span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              {/* HR Vorteile */}
-              <div>
-                <div className="flex items-center space-x-3 mb-8">
-                  <Briefcase className="w-6 h-6 text-orange-400" />
-                  <h3 className="text-2xl font-bold text-white">Vorteile für die HR-Abteilung</h3>
-                </div>
-                
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                  {hrVorteile.map((vorteil, index) => (
-                    <div 
-                      key={index}
-                      className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2"
-                      style={{ animationDelay: `${index * 100}ms` }}
-                    >
-                      <div className={`${vorteil.iconBg} rounded-xl p-3 mb-4 inline-block`}>
-                        <div className="text-gray-700">
-                          {vorteil.icon}
-                        </div>
-                      </div>
-                      
-                      <h4 className="text-lg font-bold text-slate-900 mb-3 leading-tight">
-                        {vorteil.title}
-                      </h4>
-                      
-                      <ul className="space-y-2">
-                        {vorteil.benefits.map((benefit, benefitIndex) => (
-                          <li key={benefitIndex} className="flex items-start space-x-2">
-                            <CheckCircle className="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0" />
-                            <span className="text-gray-600 text-sm leading-relaxed">
-                              {benefit}
-                            </span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-          )}
+            )}
+          </div>
         </div>
       </div>
 
@@ -416,24 +507,24 @@ const VorteilePage = () => {
         <div className="max-w-4xl mx-auto">
           <div className="bg-gradient-to-r from-orange-500 to-orange-600 rounded-3xl p-12 text-center">
             <h3 className="text-3xl font-bold text-white mb-6">
-              Bereit für die Vorteile der digitalen bAV?
+              Bereit für unseren Service?
             </h3>
             <p className="text-orange-100 text-lg mb-8 max-w-2xl mx-auto">
-              Lassen Sie sich in einem persönlichen Gespräch zeigen, wie Ihr Unternehmen und 
-              Ihre Mitarbeitenden von unserer Lösung profitieren können.
+              Lassen Sie uns gemeinsam die optimale bAV-Lösung für Ihr Unternehmen entwickeln. 
+              Kostenloses Beratungsgespräch vereinbaren.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button 
                 className="bg-white text-orange-600 px-8 py-3 rounded-xl font-semibold hover:bg-orange-50 transition-all duration-300 hover:scale-105"
                 onClick={() => window.open('https://outlook.office365.com/owa/calendar/ACENCIAde@acencia.de/bookings/', '_blank')}
               >
-                Kostenlose Demo buchen
+                Kostenlose Beratung buchen
               </button>
               <button 
                 className="border-2 border-white text-white hover:bg-white hover:text-orange-600 px-8 py-3 rounded-xl font-semibold transition-all duration-300"
                 onClick={() => window.open('https://outlook.office365.com/owa/calendar/ACENCIAde@acencia.de/bookings/', '_blank')}
               >
-                Jetzt beraten lassen
+                Demo anfordern
               </button>
             </div>
           </div>
@@ -445,4 +536,4 @@ const VorteilePage = () => {
   );
 };
 
-export default VorteilePage;
+export default ServicePage;
