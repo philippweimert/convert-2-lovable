@@ -8,6 +8,7 @@ import PrivacyPage from "./components/PrivacyPage";
 import ImprintPage from "./components/ImprintPage";
 import EmployerObligationsPage from "./components/EmployerObligationsPage";
 import AktuellesPage from "./components/AktuellesPage";
+import VorteilePage from "./components/VorteilePage";
 import { Toaster } from "./components/ui/toaster";
 
 function App() {
