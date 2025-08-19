@@ -14,6 +14,7 @@ import {
 } from "lucide-react";
 
 const BenefitsSection = () => {
+  const [expandedCards, setExpandedCards] = useState({});
   const benefits = [
     {
       icon: <Zap className="w-8 h-8" />,
