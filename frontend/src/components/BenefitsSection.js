@@ -110,8 +110,8 @@ const BenefitsSection = () => {
           </p>
         </div>
 
-        {/* Enhanced benefits grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
+        {/* Compact benefits grid with expandable cards */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
           {benefits.map((benefit, index) => (
             <div 
               key={index} 
@@ -120,39 +120,59 @@ const BenefitsSection = () => {
                 animationDelay: `${index * 100}ms`
               }}
             >
-              {/* Card with enhanced styling */}
-              <div className="bg-white rounded-3xl p-8 h-full shadow-lg hover:shadow-2xl transition-all duration-500 border border-slate-100 hover:border-slate-200 relative overflow-hidden group-hover:-translate-y-2 backdrop-blur-sm">
+              {/* Compact card with click-to-expand */}
+              <div className="bg-white rounded-2xl p-6 h-full shadow-md hover:shadow-xl transition-all duration-300 border border-slate-100 hover:border-slate-200 relative overflow-hidden cursor-pointer"
+                   onClick={() => toggleCard(index)}>
                 
                 {/* Animated background gradient */}
-                <div className={`absolute inset-0 bg-gradient-to-br ${benefit.color} opacity-0 group-hover:opacity-[0.03] transition-opacity duration-500`}></div>
+                <div className={`absolute inset-0 bg-gradient-to-br ${benefit.color} opacity-0 group-hover:opacity-[0.02] transition-opacity duration-300`}></div>
                 
-                {/* Highlight badge with improved styling */}
-                <div className="absolute top-6 right-6">
-                  <span className={`${benefit.bgColor} text-slate-700 px-4 py-2 rounded-full text-xs font-bold tracking-wide uppercase shadow-sm`}>
+                {/* Compact header */}
+                <div className="flex items-start justify-between mb-4">
+                  <div className={`${benefit.iconBg} rounded-xl p-3 inline-block group-hover:scale-105 transition-transform duration-300`}>
+                    <div className="text-slate-700">
+                      {benefit.icon}
+                    </div>
+                  </div>
+                  
+                  {/* Expand/Collapse indicator */}
+                  <div className="text-slate-400 group-hover:text-slate-600 transition-colors">
+                    {expandedCards[index] ? (
+                      <ChevronUp className="w-5 h-5" />
+                    ) : (
+                      <ChevronDown className="w-5 h-5" />
+                    )}
+                  </div>
+                </div>
+                
+                {/* Title and highlight */}
+                <h3 className="text-lg font-bold text-slate-900 mb-2 leading-tight group-hover:text-slate-800 transition-colors duration-300">
+                  {benefit.title}
+                </h3>
+                
+                {/* Always visible highlight badge */}
+                <div className="mb-4">
+                  <span className={`${benefit.bgColor} text-slate-700 px-3 py-1 rounded-full text-xs font-bold tracking-wide uppercase`}>
                     {benefit.highlight}
                   </span>
                 </div>
                 
-                {/* Enhanced icon */}
-                <div className={`${benefit.iconBg} rounded-2xl p-4 mb-6 inline-block group-hover:scale-110 transition-transform duration-300 shadow-sm`}>
-                  <div className="text-slate-700 group-hover:scale-110 transition-transform duration-300">
-                    {benefit.icon}
-                  </div>
+                {/* Expandable description */}
+                <div className={`overflow-hidden transition-all duration-300 ${
+                  expandedCards[index] ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+                }`}>
+                  <p className="text-slate-600 leading-relaxed mb-4">
+                    {benefit.description}
+                  </p>
                 </div>
                 
-                {/* Content */}
-                <h3 className="text-xl font-bold text-slate-900 mb-4 leading-tight group-hover:text-slate-800 transition-colors duration-300">
-                  {benefit.title}
-                </h3>
-                <p className="text-slate-600 leading-relaxed group-hover:text-slate-700 transition-colors duration-300">
-                  {benefit.description}
-                </p>
+                {/* Show/Hide hint */}
+                <div className="text-xs text-slate-500 font-medium">
+                  {expandedCards[index] ? 'Klicken zum Einklappen' : 'Klicken für Details'}
+                </div>
 
-                {/* Animated bottom accent */}
+                {/* Bottom accent line */}
                 <div className={`absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r ${benefit.color} transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left`}></div>
-                
-                {/* Corner decoration */}
-                <div className="absolute top-4 left-4 w-2 h-2 bg-gradient-to-r from-orange-400 to-orange-500 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 animate-pulse"></div>
               </div>
             </div>
           ))}
