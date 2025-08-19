@@ -255,7 +255,106 @@ const InteractiveMainSections = () => {
           </p>
         </div>
 
-        {/* Interactive Main Sections */}
+        {/* Ursprüngliche ausklappbare Benefits */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+          {benefits.map((benefit, index) => (
+            <div 
+              key={index} 
+              className="group relative"
+              style={{
+                animationDelay: `${index * 100}ms`
+              }}
+            >
+              {/* Compact card with click-to-expand */}
+              <div className="bg-white rounded-2xl p-6 h-full shadow-md hover:shadow-xl transition-all duration-300 border border-slate-100 hover:border-slate-200 relative overflow-hidden cursor-pointer"
+                   onClick={() => toggleCard(index)}>
+                
+                {/* Animated background gradient */}
+                <div className={`absolute inset-0 bg-gradient-to-br ${benefit.color} opacity-0 group-hover:opacity-[0.02] transition-opacity duration-300`}></div>
+                
+                {/* Compact header */}
+                <div className="flex items-start justify-between mb-4">
+                  <div className={`${benefit.iconBg} rounded-xl p-3 inline-block group-hover:scale-105 transition-transform duration-300`}>
+                    <div className="text-slate-700">
+                      {benefit.icon}
+                    </div>
+                  </div>
+                  
+                  {/* Expand/Collapse indicator */}
+                  <div className="text-slate-400 group-hover:text-slate-600 transition-colors">
+                    {expandedCards[index] ? (
+                      <ChevronUp className="w-5 h-5" />
+                    ) : (
+                      <ChevronDown className="w-5 h-5" />
+                    )}
+                  </div>
+                </div>
+                
+                {/* Title and highlight */}
+                <h3 className="text-lg font-bold text-slate-900 mb-2 leading-tight group-hover:text-slate-800 transition-colors duration-300">
+                  {benefit.title}
+                </h3>
+                
+                {/* Always visible highlight badge */}
+                <div className="mb-4">
+                  <span className={`${benefit.bgColor} text-slate-700 px-3 py-1 rounded-full text-xs font-bold tracking-wide uppercase`}>
+                    {benefit.highlight}
+                  </span>
+                </div>
+                
+                {/* Expandable description */}
+                <div className={`overflow-hidden transition-all duration-300 ${
+                  expandedCards[index] ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+                }`}>
+                  <p className="text-slate-600 leading-relaxed mb-4">
+                    {benefit.description}
+                  </p>
+                </div>
+                
+                {/* Show/Hide hint */}
+                <div className="text-xs text-slate-500 font-medium">
+                  {expandedCards[index] ? 'Klicken zum Einklappen' : 'Klicken für Details'}
+                </div>
+
+                {/* Bottom accent line */}
+                <div className={`absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r ${benefit.color} transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left`}></div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    {/* Separate Section: Was können wir für Sie tun? */}
+    <section className="bg-gradient-to-b from-white to-slate-50 py-20 relative overflow-hidden">
+      {/* Background elements */}
+      <div className="absolute inset-0 opacity-[0.02]">
+        <div className="absolute top-20 right-10 w-72 h-72 bg-orange-400 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-20 left-10 w-96 h-96 bg-blue-400 rounded-full blur-3xl"></div>
+      </div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        {/* New section header */}
+        <div className="text-center mb-16">
+          <div className="inline-flex items-center space-x-3 bg-gradient-to-r from-blue-100 to-indigo-100 px-6 py-3 rounded-full mb-8 shadow-lg">
+            <Users className="w-5 h-5 text-blue-600" />
+            <span className="text-blue-800 font-semibold text-sm tracking-wide uppercase">Unser Service</span>
+          </div>
+          
+          <h2 className="text-4xl lg:text-5xl font-bold mb-6 leading-tight">
+            <span className="text-slate-900">Was können wir </span>
+            <span className="bg-gradient-to-r from-blue-500 via-blue-600 to-indigo-500 bg-clip-text text-transparent">
+              für Sie tun?
+            </span>
+          </h2>
+          
+          <p className="text-xl text-slate-600 max-w-4xl mx-auto leading-relaxed font-light">
+            Von der Analyse Ihrer Herausforderungen bis zur maßgeschneiderten Lösung - 
+            entdecken Sie unseren bewährten Ansatz.
+          </p>
+        </div>
+
+        {/* Interactive Service Sections */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
           {mainSections.map((section, index) => (
             <div key={section.id} className="relative">
@@ -263,8 +362,8 @@ const InteractiveMainSections = () => {
               <div 
                 className={`bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer border-2 hover:-translate-y-1 ${
                   activeSection === section.id 
-                    ? 'border-orange-500 ring-2 ring-orange-200' 
-                    : 'border-slate-200 hover:border-orange-300'
+                    ? 'border-blue-500 ring-2 ring-blue-200' 
+                    : 'border-slate-200 hover:border-blue-300'
                 }`}
                 onClick={() => toggleSection(section.id)}
               >
@@ -286,10 +385,10 @@ const InteractiveMainSections = () => {
 
                 {/* Click indicator */}
                 <div className="flex items-center justify-between">
-                  <span className="text-orange-600 font-medium text-sm">
+                  <span className="text-blue-600 font-medium text-sm">
                     {activeSection === section.id ? 'Details ausblenden' : 'Details anzeigen'}
                   </span>
-                  <div className={`text-orange-600 transition-transform duration-300 ${
+                  <div className={`text-blue-600 transition-transform duration-300 ${
                     activeSection === section.id ? 'rotate-180' : ''
                   }`}>
                     <ChevronDown className="w-5 h-5" />
@@ -496,74 +595,6 @@ const InteractiveMainSections = () => {
             )}
           </div>
         )}
-
-        {/* Ursprüngliche ausklappbare Benefits */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
-          {benefits.map((benefit, index) => (
-            <div 
-              key={index} 
-              className="group relative"
-              style={{
-                animationDelay: `${index * 100}ms`
-              }}
-            >
-              {/* Compact card with click-to-expand */}
-              <div className="bg-white rounded-2xl p-6 h-full shadow-md hover:shadow-xl transition-all duration-300 border border-slate-100 hover:border-slate-200 relative overflow-hidden cursor-pointer"
-                   onClick={() => toggleCard(index)}>
-                
-                {/* Animated background gradient */}
-                <div className={`absolute inset-0 bg-gradient-to-br ${benefit.color} opacity-0 group-hover:opacity-[0.02] transition-opacity duration-300`}></div>
-                
-                {/* Compact header */}
-                <div className="flex items-start justify-between mb-4">
-                  <div className={`${benefit.iconBg} rounded-xl p-3 inline-block group-hover:scale-105 transition-transform duration-300`}>
-                    <div className="text-slate-700">
-                      {benefit.icon}
-                    </div>
-                  </div>
-                  
-                  {/* Expand/Collapse indicator */}
-                  <div className="text-slate-400 group-hover:text-slate-600 transition-colors">
-                    {expandedCards[index] ? (
-                      <ChevronUp className="w-5 h-5" />
-                    ) : (
-                      <ChevronDown className="w-5 h-5" />
-                    )}
-                  </div>
-                </div>
-                
-                {/* Title and highlight */}
-                <h3 className="text-lg font-bold text-slate-900 mb-2 leading-tight group-hover:text-slate-800 transition-colors duration-300">
-                  {benefit.title}
-                </h3>
-                
-                {/* Always visible highlight badge */}
-                <div className="mb-4">
-                  <span className={`${benefit.bgColor} text-slate-700 px-3 py-1 rounded-full text-xs font-bold tracking-wide uppercase`}>
-                    {benefit.highlight}
-                  </span>
-                </div>
-                
-                {/* Expandable description */}
-                <div className={`overflow-hidden transition-all duration-300 ${
-                  expandedCards[index] ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
-                }`}>
-                  <p className="text-slate-600 leading-relaxed mb-4">
-                    {benefit.description}
-                  </p>
-                </div>
-                
-                {/* Show/Hide hint */}
-                <div className="text-xs text-slate-500 font-medium">
-                  {expandedCards[index] ? 'Klicken zum Einklappen' : 'Klicken für Details'}
-                </div>
-
-                {/* Bottom accent line */}
-                <div className={`absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r ${benefit.color} transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left`}></div>
-              </div>
-            </div>
-          ))}
-        </div>
       </div>
     </section>
   );
