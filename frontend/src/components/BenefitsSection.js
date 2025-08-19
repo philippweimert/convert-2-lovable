@@ -34,7 +34,7 @@ const BenefitsSection = () => {
     {
       icon: <Settings className="w-8 h-8" />,
       title: "Nahtlose System-Integration",
-      description: "Direkte Anbindung an bestehende HR- und Lohnbuchhaltungssysteme ermöglicht einen durchgängigen Informationsfluss ohne Medienbrüche.",
+      description: "Direkte Anbindung an bestehende HR-Systeme ermöglicht einen durchgängigen Informationsfluss ohne Medienbrüche.",
       highlight: "Plug & Play",
       color: "from-purple-500 to-violet-500",
       bgColor: "bg-purple-50",
