@@ -15,9 +15,76 @@ import {
   FileText,
   Shield
 } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const InteractiveMainSections = () => {
   const [activeSection, setActiveSection] = useState(null);
+  const [expandedCards, setExpandedCards] = useState({});
+
+  const toggleCard = (index) => {
+    setExpandedCards(prev => ({
+      ...prev,
+      [index]: !prev[index]
+    }));
+  };
+
+  // Ursprüngliche ausklappbare Benefits
+  const benefits = [
+    {
+      icon: <Zap className="w-8 h-8" />,
+      title: "Vollautomatisierte Abwicklung",
+      description: "Automatisierung sämtlicher bAV-Prozesse über alle Durchführungswege hinweg - minimiert Fehleranfälligkeit und reduziert den administrativen Aufwand erheblich.",
+      highlight: "Bis zu 80% Zeitersparnis",
+      color: "from-blue-500 to-cyan-500",
+      bgColor: "bg-blue-50",
+      iconBg: "bg-blue-100"
+    },
+    {
+      icon: <Shield className="w-8 h-8" />,
+      title: "DSGVO-konform & Rechtssicher",
+      description: "Einhaltung aller gesetzlichen Bestimmungen und Datenschutzrichtlinien. Rechtssichere Verwaltung ist besonders in sensiblen Bereichen wie der Altersvorsorge essenziell.",
+      highlight: "100% Compliance",
+      color: "from-green-500 to-emerald-500",
+      bgColor: "bg-green-50",
+      iconBg: "bg-green-100"
+    },
+    {
+      icon: <Settings className="w-8 h-8" />,
+      title: "Nahtlose System-Integration",
+      description: "Direkte Anbindung an bestehende HR-Systeme ermöglicht einen durchgängigen Informationsfluss ohne Medienbrüche.",
+      highlight: "Plug & Play",
+      color: "from-purple-500 to-violet-500",
+      bgColor: "bg-purple-50",
+      iconBg: "bg-purple-100"
+    },
+    {
+      icon: <FileText className="w-8 h-8" />,
+      title: "100% Digitale Dokumentenverwaltung",
+      description: "Vollständige Digitalisierung und strukturierte Ablage aller bAV-Dokumente sorgt für schnelle Zugänglichkeit und bessere Nachvollziehbarkeit.",
+      highlight: "Papierlos",
+      color: "from-amber-500 to-orange-500",
+      bgColor: "bg-amber-50",
+      iconBg: "bg-amber-100"
+    },
+    {
+      icon: <Users className="w-8 h-8" />,
+      title: "Automatisierte Kommunikation",
+      description: "Die Plattform übernimmt die Kommunikation mit Mitarbeitenden und Versorgungsträgern, was die Informationsweitergabe beschleunigt und standardisiert.",
+      highlight: "24/7 verfügbar",
+      color: "from-rose-500 to-pink-500",
+      bgColor: "bg-rose-50",
+      iconBg: "bg-rose-100"
+    },
+    {
+      icon: <TrendingUp className="w-8 h-8" />,
+      title: "Skalierbar für jede Unternehmensgröße",
+      description: "Flexibel einsetzbar von Start-ups bis Konzerne. Passt sich individuell an die Bedürfnisse und das Wachstum Ihres Unternehmens an.",
+      highlight: "Zukunftssicher",
+      color: "from-indigo-500 to-blue-500",
+      bgColor: "bg-indigo-50",
+      iconBg: "bg-indigo-100"
+    }
+  ];
 
   // Die drei Hauptbereiche 
   const mainSections = [
