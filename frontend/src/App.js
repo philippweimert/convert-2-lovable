@@ -7,6 +7,7 @@ import ContactPage from "./components/ContactPage";
 import PrivacyPage from "./components/PrivacyPage";
 import ImprintPage from "./components/ImprintPage";
 import EmployerObligationsPage from "./components/EmployerObligationsPage";
+import AktuellesPage from "./components/AktuellesPage";
 import { Toaster } from "./components/ui/toaster";
 
 function App() {
