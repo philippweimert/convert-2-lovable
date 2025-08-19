@@ -371,31 +371,31 @@ const InteractiveMainSections = () => {
           </div>
 
           {/* Right Section: Was können wir für Sie tun? */}
-          <div className="bg-white rounded-3xl shadow-xl border border-slate-200 overflow-hidden">
+          <div className="bg-white rounded-3xl shadow-xl border border-slate-200 overflow-hidden card-hover animate-slide-in-right stagger-item">
             {/* Clickable Header */}
             <div 
-              className="p-8 cursor-pointer hover:bg-slate-50 transition-colors duration-300 border-b border-slate-200"
+              className="p-8 cursor-pointer hover:bg-slate-50 transition-colors duration-400 border-b border-slate-200 btn-hover-lift"
               onClick={() => toggleMainSection('services')}
             >
               <div className="flex items-center justify-between">
                 <div>
                   <div className="flex items-center space-x-3 mb-4">
-                    <div className="bg-blue-100 rounded-xl p-3">
+                    <div className="bg-blue-100 rounded-xl p-3 icon-hover">
                       <Users className="w-6 h-6 text-blue-600" />
                     </div>
-                    <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wide">
+                    <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-caption">
                       Unser Service
                     </span>
                   </div>
-                  <h3 className="text-2xl lg:text-3xl font-bold text-slate-900 mb-3">
+                  <h3 className="text-2xl lg:text-3xl font-bold text-slate-900 mb-3 text-headline">
                     Was können wir für Sie tun?
                   </h3>
-                  <p className="text-slate-600 text-sm">
+                  <p className="text-slate-600 text-body-small">
                     Unser bewährter 3-Stufen-Prozess - von der Herausforderung bis zur maßgeschneiderten Lösung
                   </p>
                 </div>
-                <div className={`text-slate-400 transition-transform duration-300 ${
-                  expandedMainSection === 'services' ? 'rotate-180' : ''
+                <div className={`text-slate-400 transition-all duration-400 ease-bounce-in ${
+                  expandedMainSection === 'services' ? 'rotate-180 text-blue-500' : 'hover:text-slate-600'
                 }`}>
                   <ChevronDown className="w-6 h-6" />
                 </div>
