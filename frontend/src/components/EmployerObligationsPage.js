@@ -217,45 +217,46 @@ const EmployerObligationsPage = () => {
               </p>
             </div>
 
-            <div className="space-y-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {obligations.map((obligation, index) => (
                 <div key={index} className="stagger-item" style={{ animationDelay: `${index * 0.1}s` }}>
-                  <div className="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden card-hover">
+                  <div className="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden card-hover h-full">
                     
                     {/* Clickable Header */}
                     <div 
                       className="p-6 cursor-pointer hover:bg-slate-50 transition-colors duration-400 btn-hover-lift"
                       onClick={() => toggleObligation(index)}
                     >
-                      <div className="flex items-center justify-between">
-                        <div className="flex items-center space-x-4">
-                          {/* Icon */}
-                          <div className={`bg-gradient-to-br ${obligation.gradient} rounded-xl p-3 icon-hover transition-transform duration-400`}>
-                            <div className="text-white">
-                              {obligation.icon}
-                            </div>
-                          </div>
-                          
-                          {/* Title and Description */}
-                          <div className="flex-grow">
-                            <h3 className="text-xl font-bold text-slate-900 mb-2 leading-tight text-headline">
-                              {obligation.title}
-                            </h3>
-                            <p className="text-slate-600 text-body">
-                              {obligation.description}
-                            </p>
-                            <span className="text-caption text-slate-500 bg-slate-100 px-3 py-1 rounded-full mt-2 inline-block">
-                              {obligation.legal}
-                            </span>
-                          </div>
+                      {/* Icon */}
+                      <div className={`bg-gradient-to-br ${obligation.gradient} rounded-xl p-4 mb-6 inline-block icon-hover transition-transform duration-400`}>
+                        <div className="text-white">
+                          {obligation.icon}
                         </div>
-                        
-                        {/* Expand/Collapse Indicator */}
+                      </div>
+                      
+                      {/* Title and Description */}
+                      <h3 className="text-xl font-bold text-slate-900 mb-3 leading-tight text-headline">
+                        {obligation.title}
+                      </h3>
+                      <p className="text-slate-600 mb-4 text-body">
+                        {obligation.description}
+                      </p>
+                      
+                      {/* Legal Reference and Expand Indicator */}
+                      <div className="flex items-center justify-between mb-2">
+                        <span className="text-caption text-slate-500 bg-slate-100 px-3 py-1 rounded-full">
+                          {obligation.legal}
+                        </span>
                         <div className={`text-slate-400 transition-all duration-400 ease-bounce-in ${
                           expandedObligation === index ? 'rotate-180 text-orange-500' : 'hover:text-slate-600'
                         }`}>
-                          <ChevronDown className="w-6 h-6" />
+                          <ChevronDown className="w-5 h-5" />
                         </div>
+                      </div>
+                      
+                      {/* Click hint */}
+                      <div className="text-xs text-slate-500 text-center text-caption">
+                        {expandedObligation === index ? 'Klicken zum Einklappen' : 'Klicken für Details'}
                       </div>
                     </div>
 
@@ -264,30 +265,33 @@ const EmployerObligationsPage = () => {
                       expandedObligation === index ? 'max-h-96 opacity-100 expanded' : 'max-h-0 opacity-0 collapsed'
                     }`}>
                       <div className="px-6 pb-6 bg-gradient-to-br from-slate-50 to-white">
-                        <div className="border-t border-slate-200 pt-6">
-                          <div className="bg-gradient-to-r from-slate-100 to-slate-50 rounded-xl p-6 mb-4">
-                            <h4 className="text-base font-semibold text-slate-900 mb-3 flex items-center text-headline">
-                              <FileText className="w-5 h-5 mr-2 text-orange-500" />
+                        <div className="border-t border-slate-200 pt-4">
+                          <div className="bg-gradient-to-r from-slate-100 to-slate-50 rounded-xl p-4 mb-4">
+                            <h4 className="text-sm font-semibold text-slate-900 mb-2 flex items-center text-headline">
+                              <FileText className="w-4 h-4 mr-2 text-orange-500" />
                               Details zur gesetzlichen Verpflichtung
                             </h4>
-                            <p className="text-slate-700 leading-relaxed text-body animate-fade-in">
+                            <p className="text-slate-700 leading-relaxed text-body-small animate-fade-in">
                               {obligation.details}
                             </p>
                           </div>
                           
-                          {/* Status Check */}
-                          <div className="flex items-center justify-between pt-4">
+                          {/* Status Check and CTA */}
+                          <div className="flex items-center justify-between">
                             <div className="flex items-center space-x-2">
-                              <CheckCircle className={`w-5 h-5 text-${obligation.color}-500`} />
-                              <span className="text-body-small text-slate-600 font-medium">
-                                Mit ACENCIA automatisch erfüllt
+                              <CheckCircle className={`w-4 h-4 text-${obligation.color}-500`} />
+                              <span className="text-xs text-slate-600 font-medium">
+                                Mit ACENCIA erfüllt
                               </span>
                             </div>
                             <button 
-                              className="btn-primary bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-lg font-medium transition-all duration-400 hover:scale-105 text-body-small"
-                              onClick={() => window.open('https://outlook.office365.com/owa/calendar/ACENCIAde@acencia.de/bookings/', '_blank')}
+                              className="btn-primary bg-orange-500 hover:bg-orange-600 text-white px-3 py-1 rounded-md font-medium transition-all duration-400 hover:scale-105 text-xs"
+                              onClick={(e) => {
+                                e.stopPropagation();
+                                window.open('https://outlook.office365.com/owa/calendar/ACENCIAde@acencia.de/bookings/', '_blank');
+                              }}
                             >
-                              Beratung buchen
+                              Beratung
                             </button>
                           </div>
                         </div>
