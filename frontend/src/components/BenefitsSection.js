@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { 
   Zap, 
   Shield, 
@@ -8,7 +8,9 @@ import {
   TrendingUp,
   Clock,
   CheckCircle2,
-  Sparkles
+  Sparkles,
+  ChevronDown,
+  ChevronUp
 } from "lucide-react";
 
 const BenefitsSection = () => {
