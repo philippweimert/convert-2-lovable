@@ -225,6 +225,7 @@ const InteractiveMainSections = () => {
   };
 
   return (
+    <>
     <section className="bg-gradient-to-b from-slate-50 to-white py-24 relative overflow-hidden">
       {/* Enhanced background elements */}
       <div className="absolute inset-0 opacity-[0.03]">
