@@ -112,7 +112,7 @@ const Header = () => {
               <Button 
                 className="w-full bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-semibold rounded-xl py-3 transition-all duration-300"
                 onClick={() => {
-                  window.open('https://outlook.office365.com/owa/calendar/ACENCIAde@acencia.de/bookings/', '_blank');
+                  window.open('https://www.smartcloudservices.de/acencia/login/login.do', '_blank');
                   setIsMenuOpen(false);
                 }}
               >
