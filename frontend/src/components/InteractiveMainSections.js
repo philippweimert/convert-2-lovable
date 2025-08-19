@@ -310,24 +310,24 @@ const InteractiveMainSections = () => {
                       }}
                     >
                       {/* Compact card with click-to-expand */}
-                      <div className="bg-white rounded-xl p-4 shadow-sm hover:shadow-md transition-all duration-300 border border-slate-100 hover:border-slate-200 relative overflow-hidden cursor-pointer"
+                      <div className="bg-white rounded-xl p-4 shadow-sm hover:shadow-md transition-all duration-400 border border-slate-100 hover:border-slate-200 relative overflow-hidden cursor-pointer micro-bounce"
                            onClick={() => toggleCard(index)}>
                         
                         {/* Animated background gradient */}
-                        <div className={`absolute inset-0 bg-gradient-to-br ${benefit.color} opacity-0 group-hover:opacity-[0.02] transition-opacity duration-300`}></div>
+                        <div className={`absolute inset-0 bg-gradient-to-br ${benefit.color} opacity-0 group-hover:opacity-[0.02] transition-opacity duration-400`}></div>
                         
                         {/* Compact header */}
                         <div className="flex items-start justify-between mb-3">
-                          <div className={`${benefit.iconBg} rounded-lg p-2 inline-block group-hover:scale-105 transition-transform duration-300`}>
+                          <div className={`${benefit.iconBg} rounded-lg p-2 inline-block transition-transform duration-400 ease-bounce-in group-hover:scale-110 icon-hover`}>
                             <div className="text-slate-700">
                               {benefit.icon}
                             </div>
                           </div>
                           
                           {/* Expand/Collapse indicator */}
-                          <div className="text-slate-400 group-hover:text-slate-600 transition-colors">
+                          <div className="text-slate-400 group-hover:text-slate-600 transition-all duration-300">
                             {expandedCards[index] ? (
-                              <ChevronUp className="w-4 h-4" />
+                              <ChevronUp className="w-4 h-4 animate-bounce-subtle" />
                             ) : (
                               <ChevronDown className="w-4 h-4" />
                             )}
@@ -335,33 +335,33 @@ const InteractiveMainSections = () => {
                         </div>
                         
                         {/* Title and highlight */}
-                        <h4 className="text-base font-bold text-slate-900 mb-2 leading-tight group-hover:text-slate-800 transition-colors duration-300">
+                        <h4 className="text-base font-bold text-slate-900 mb-2 leading-tight group-hover:text-slate-800 transition-colors duration-300 text-headline">
                           {benefit.title}
                         </h4>
                         
                         {/* Always visible highlight badge */}
                         <div className="mb-3">
-                          <span className={`${benefit.bgColor} text-slate-700 px-2 py-1 rounded-full text-xs font-bold tracking-wide uppercase`}>
+                          <span className={`${benefit.bgColor} text-slate-700 px-2 py-1 rounded-full text-xs font-bold tracking-wide uppercase text-caption`}>
                             {benefit.highlight}
                           </span>
                         </div>
                         
                         {/* Expandable description */}
-                        <div className={`overflow-hidden transition-all duration-300 ${
+                        <div className={`overflow-hidden accordion-content transition-all duration-400 ${
                           expandedCards[index] ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
                         }`}>
-                          <p className="text-slate-600 leading-relaxed mb-3 text-sm">
+                          <p className="text-slate-600 leading-relaxed mb-3 text-body-small animate-fade-in">
                             {benefit.description}
                           </p>
                         </div>
                         
                         {/* Show/Hide hint */}
-                        <div className="text-xs text-slate-500 font-medium">
+                        <div className="text-xs text-slate-500 font-medium text-caption">
                           {expandedCards[index] ? 'Klicken zum Einklappen' : 'Klicken für Details'}
                         </div>
 
                         {/* Bottom accent line */}
-                        <div className={`absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r ${benefit.color} transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left`}></div>
+                        <div className={`absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r ${benefit.color} transform scale-x-0 group-hover:scale-x-100 transition-transform duration-600 origin-left`}></div>
                       </div>
                     </div>
                   ))}
