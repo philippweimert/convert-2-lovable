@@ -207,48 +207,91 @@ const EmployerObligationsPage = () => {
         {/* Obligations Section */}
         <section id="obligations" className="bg-white py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl lg:text-5xl font-bold text-slate-900 mb-6">
-                Ihre <span className="text-orange-500">gesetzlichen Pflichten</span> im Überblick
+            <div className="text-center mb-16 animate-fade-in">
+              <h2 className="text-3xl lg:text-5xl font-bold text-slate-900 mb-6 text-display">
+                Ihre <span className="text-emphasis">gesetzlichen Pflichten</span> im Überblick
               </h2>
-              <p className="text-xl text-slate-600 max-w-3xl mx-auto">
+              <p className="text-body-large text-slate-600 max-w-3xl mx-auto">
                 Diese Verpflichtungen ergeben sich aus dem Betriebsrentengesetz (BetrAVG) 
-                und weiteren arbeitsrechtlichen Bestimmungen.
+                und weiteren arbeitsrechtlichen Bestimmungen. Klicken Sie auf eine Pflicht für Details.
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="space-y-4">
               {obligations.map((obligation, index) => (
-                <div key={index} className="group">
-                  <div className="bg-white rounded-2xl p-8 h-full shadow-lg hover:shadow-2xl transition-all duration-500 border border-slate-200 hover:border-slate-300 group-hover:-translate-y-2">
+                <div key={index} className="stagger-item" style={{ animationDelay: `${index * 0.1}s` }}>
+                  <div className="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden card-hover">
                     
-                    {/* Header */}
-                    <div className={`bg-gradient-to-br ${obligation.gradient} rounded-xl p-4 mb-6 inline-block`}>
-                      <div className="text-white">
-                        {obligation.icon}
+                    {/* Clickable Header */}
+                    <div 
+                      className="p-6 cursor-pointer hover:bg-slate-50 transition-colors duration-400 btn-hover-lift"
+                      onClick={() => toggleObligation(index)}
+                    >
+                      <div className="flex items-center justify-between">
+                        <div className="flex items-center space-x-4">
+                          {/* Icon */}
+                          <div className={`bg-gradient-to-br ${obligation.gradient} rounded-xl p-3 icon-hover transition-transform duration-400`}>
+                            <div className="text-white">
+                              {obligation.icon}
+                            </div>
+                          </div>
+                          
+                          {/* Title and Description */}
+                          <div className="flex-grow">
+                            <h3 className="text-xl font-bold text-slate-900 mb-2 leading-tight text-headline">
+                              {obligation.title}
+                            </h3>
+                            <p className="text-slate-600 text-body">
+                              {obligation.description}
+                            </p>
+                            <span className="text-caption text-slate-500 bg-slate-100 px-3 py-1 rounded-full mt-2 inline-block">
+                              {obligation.legal}
+                            </span>
+                          </div>
+                        </div>
+                        
+                        {/* Expand/Collapse Indicator */}
+                        <div className={`text-slate-400 transition-all duration-400 ease-bounce-in ${
+                          expandedObligation === index ? 'rotate-180 text-orange-500' : 'hover:text-slate-600'
+                        }`}>
+                          <ChevronDown className="w-6 h-6" />
+                        </div>
                       </div>
                     </div>
 
-                    {/* Content */}
-                    <h3 className="text-xl font-bold text-slate-900 mb-3 leading-tight">
-                      {obligation.title}
-                    </h3>
-                    
-                    <p className="text-slate-600 mb-4 leading-relaxed">
-                      {obligation.description}
-                    </p>
-
-                    <div className="bg-slate-50 rounded-lg p-4 mb-4">
-                      <p className="text-slate-700 text-sm leading-relaxed">
-                        {obligation.details}
-                      </p>
-                    </div>
-
-                    <div className="flex items-center justify-between">
-                      <span className="text-xs font-semibold text-slate-500 bg-slate-100 px-3 py-1 rounded-full">
-                        {obligation.legal}
-                      </span>
-                      <CheckCircle className={`w-5 h-5 text-${obligation.color}-500`} />
+                    {/* Expandable Content */}
+                    <div className={`overflow-hidden accordion-content transition-all duration-600 ease-smooth ${
+                      expandedObligation === index ? 'max-h-96 opacity-100 expanded' : 'max-h-0 opacity-0 collapsed'
+                    }`}>
+                      <div className="px-6 pb-6 bg-gradient-to-br from-slate-50 to-white">
+                        <div className="border-t border-slate-200 pt-6">
+                          <div className="bg-gradient-to-r from-slate-100 to-slate-50 rounded-xl p-6 mb-4">
+                            <h4 className="text-base font-semibold text-slate-900 mb-3 flex items-center text-headline">
+                              <FileText className="w-5 h-5 mr-2 text-orange-500" />
+                              Details zur gesetzlichen Verpflichtung
+                            </h4>
+                            <p className="text-slate-700 leading-relaxed text-body animate-fade-in">
+                              {obligation.details}
+                            </p>
+                          </div>
+                          
+                          {/* Status Check */}
+                          <div className="flex items-center justify-between pt-4">
+                            <div className="flex items-center space-x-2">
+                              <CheckCircle className={`w-5 h-5 text-${obligation.color}-500`} />
+                              <span className="text-body-small text-slate-600 font-medium">
+                                Mit ACENCIA automatisch erfüllt
+                              </span>
+                            </div>
+                            <button 
+                              className="btn-primary bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-lg font-medium transition-all duration-400 hover:scale-105 text-body-small"
+                              onClick={() => window.open('https://outlook.office365.com/owa/calendar/ACENCIAde@acencia.de/bookings/', '_blank')}
+                            >
+                              Beratung buchen
+                            </button>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
