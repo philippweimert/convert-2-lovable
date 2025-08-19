@@ -601,3 +601,7 @@ const InteractiveMainSections = () => {
 };
 
 export default InteractiveMainSections;
+  );
+};
+
+export default InteractiveMainSections;
