@@ -41,10 +41,10 @@ const Header = () => {
           {/* Enhanced Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-10">
             <Link 
-              to="/ueber-uns" 
+              to="/arbeitgeber-pflichten" 
               className="relative text-white hover:text-orange-400 transition-colors duration-300 font-medium group py-2"
             >
-              <span>Über uns</span>
+              <span>Pflichten des Arbeitgebers</span>
               <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-orange-400 to-orange-500 group-hover:w-full transition-all duration-300"></div>
             </Link>
             <Link 
@@ -55,17 +55,17 @@ const Header = () => {
               <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-orange-400 to-orange-500 group-hover:w-full transition-all duration-300"></div>
             </Link>
             <Link 
-              to="/arbeitgeber-pflichten" 
-              className="relative text-white hover:text-orange-400 transition-colors duration-300 font-medium group py-2"
-            >
-              <span>Pflichten des Arbeitgebers</span>
-              <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-orange-400 to-orange-500 group-hover:w-full transition-all duration-300"></div>
-            </Link>
-            <Link 
               to="/aktuelles" 
               className="relative text-white hover:text-orange-400 transition-colors duration-300 font-medium group py-2"
             >
               <span>Aktuelles</span>
+              <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-orange-400 to-orange-500 group-hover:w-full transition-all duration-300"></div>
+            </Link>
+            <Link 
+              to="/ueber-uns" 
+              className="relative text-white hover:text-orange-400 transition-colors duration-300 font-medium group py-2"
+            >
+              <span>Über uns</span>
               <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-orange-400 to-orange-500 group-hover:w-full transition-all duration-300"></div>
             </Link>
             <Link 
