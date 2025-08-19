@@ -148,47 +148,6 @@ const BenefitsSection = () => {
           ))}
         </div>
 
-        {/* Enhanced bottom CTA */}
-        <div className="text-center">
-          <div className="bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 rounded-3xl p-10 max-w-5xl mx-auto shadow-2xl relative overflow-hidden">
-            {/* Animated background elements */}
-            <div className="absolute inset-0 bg-gradient-to-r from-orange-500/5 via-transparent to-orange-500/5"></div>
-            <div className="absolute top-0 left-1/4 w-64 h-64 bg-orange-500/10 rounded-full blur-3xl"></div>
-            <div className="absolute bottom-0 right-1/4 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl"></div>
-            
-            <div className="relative z-10">
-              <div className="flex items-center justify-center space-x-3 mb-6">
-                <CheckCircle2 className="w-7 h-7 text-orange-400 animate-pulse" />
-                <span className="text-orange-400 font-semibold text-lg tracking-wide">Bereit für die Digitalisierung?</span>
-              </div>
-              
-              <h3 className="text-3xl lg:text-4xl font-bold text-white mb-6 leading-tight">
-                Erleben Sie die Zukunft der bAV-Verwaltung
-              </h3>
-              
-              <p className="text-slate-300 mb-8 max-w-3xl mx-auto text-lg leading-relaxed">
-                Lassen Sie sich in einer kostenlosen Demo zeigen, wie Sie Ihr HR-Team entlasten 
-                und die bAV-Verwaltung vollständig digitalisieren können.
-              </p>
-              
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button 
-                  className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-10 py-4 rounded-xl font-semibold transition-all duration-300 hover:scale-105 hover:shadow-xl shadow-lg group text-lg"
-                  onClick={() => window.open('https://outlook.office365.com/owa/calendar/ACENCIAde@acencia.de/bookings/', '_blank')}
-                >
-                  <span>Kostenlose Demo buchen</span>
-                  <Sparkles className="w-5 h-5 ml-2 inline animate-pulse" />
-                </button>
-                <button 
-                  className="border-2 border-slate-600 text-slate-300 hover:bg-slate-600 hover:text-white hover:border-slate-500 px-10 py-4 rounded-xl font-semibold transition-all duration-300 backdrop-blur-sm text-lg"
-                  onClick={() => window.open('https://outlook.office365.com/owa/calendar/ACENCIAde@acencia.de/bookings/', '_blank')}
-                >
-                  Beratung vereinbaren
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   );
