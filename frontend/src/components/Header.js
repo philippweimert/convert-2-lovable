@@ -24,15 +24,15 @@ const Header = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Enhanced Logo */}
-          <Link to="/" className="flex items-center space-x-3 group">
-            <div className="flex flex-col text-white group-hover:text-orange-400 transition-colors duration-300">
-              <span className="text-lg tracking-wider transform group-hover:scale-110 transition-transform duration-300">≡</span>
+          <Link to="/" className="flex items-center space-x-3 group smooth-slide">
+            <div className="flex flex-col text-white group-hover:text-orange-400 transition-colors duration-400">
+              <span className="text-lg tracking-wider transform group-hover:scale-110 transition-transform duration-400 icon-hover">≡</span>
             </div>
             <div className="text-white">
-              <span className="text-2xl font-bold tracking-wider group-hover:text-orange-400 transition-colors duration-300">
+              <span className="text-2xl font-extrabold tracking-wider group-hover:text-orange-400 transition-colors duration-400 text-headline">
                 ACENCIA
               </span>
-              <div className="text-xs text-slate-400 tracking-widest group-hover:text-orange-300 transition-colors duration-300">
+              <div className="text-xs text-slate-400 tracking-widest group-hover:text-orange-300 transition-colors duration-400 text-caption">
                 WIR MACHEN bAV EINFACH
               </div>
             </div>
