@@ -50,7 +50,7 @@ const ExpertiseSection = () => {
               <Button 
                 size="lg"
                 variant="outline"
-                className="btn-primary bg-transparent border-2 border-slate-600 text-slate-300 hover:bg-slate-700 hover:text-white hover:border-slate-500 px-6 py-2 font-medium rounded-lg transition-all duration-400 hover:scale-105 micro-bounce text-body"
+                className="btn-primary bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white border-0 px-6 py-2 font-medium rounded-lg transition-all duration-400 hover:scale-105 micro-bounce text-body shadow-lg"
                 onClick={() => window.open('https://outlook.office365.com/owa/calendar/ACENCIAde@acencia.de/bookings/', '_blank')}
               >
                 Jetzt beraten lassen
