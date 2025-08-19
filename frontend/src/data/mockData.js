@@ -39,7 +39,7 @@ export const keyBenefits = [
   },
   {
     title: "Nahtlose System-Integration",
-    description: "Direkte Anbindung an bestehende HR- und Lohnbuchhaltungssysteme ermöglicht einen durchgängigen Informationsfluss ohne Medienbrüche.",
+    description: "Direkte Anbindung an bestehende HR-Systeme ermöglicht einen durchgängigen Informationsfluss ohne Medienbrüche.",
     highlight: "Plug & Play",
     icon: "Settings"
   },
