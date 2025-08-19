@@ -55,6 +55,13 @@ const Header = () => {
               <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-orange-400 to-orange-500 group-hover:w-full transition-all duration-300"></div>
             </Link>
             <Link 
+              to="/aktuelles" 
+              className="relative text-white hover:text-orange-400 transition-colors duration-300 font-medium group py-2"
+            >
+              <span>Aktuelles</span>
+              <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-orange-400 to-orange-500 group-hover:w-full transition-all duration-300"></div>
+            </Link>
+            <Link 
               to="/kontakt" 
               className="relative text-white hover:text-orange-400 transition-colors duration-300 font-medium group py-2"
             >
