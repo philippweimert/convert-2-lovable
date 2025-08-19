@@ -586,13 +586,13 @@ const InteractiveMainSections = () => {
                         {/* CTA Buttons */}
                         <div className="flex flex-col sm:flex-row gap-3 justify-center mt-8">
                           <button 
-                            className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-lg font-semibold transition-all duration-300 hover:scale-105 shadow-lg text-sm"
+                            className="btn-primary bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-lg font-semibold transition-all duration-400 hover:scale-105 shadow-lg text-body-small"
                             onClick={() => window.open('https://outlook.office365.com/owa/calendar/ACENCIAde@acencia.de/bookings/', '_blank')}
                           >
                             Jetzt starten
                           </button>
                           <button 
-                            className="border-2 border-slate-600 text-slate-300 hover:bg-slate-600 hover:text-white px-6 py-2 rounded-lg font-semibold transition-all duration-300 text-sm"
+                            className="border-2 border-slate-600 text-slate-300 hover:bg-slate-600 hover:text-white px-6 py-2 rounded-lg font-semibold transition-all duration-400 hover:scale-105 text-body-small micro-bounce"
                             onClick={() => window.open('https://outlook.office365.com/owa/calendar/ACENCIAde@acencia.de/bookings/', '_blank')}
                           >
                             Demo buchen
