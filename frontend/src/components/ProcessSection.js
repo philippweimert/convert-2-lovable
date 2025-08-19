@@ -20,7 +20,7 @@ const ProcessSection = () => {
       subtitle: "& laufender Support",
       description: "Wir richten Ihre bAV-Verwaltung ein, digitalisieren und automatisieren Ihre Prozesse. Nahtlose Integration in bestehende HR-Systeme und vollautomatisierte Abwicklung aller Prozesse.",
       keyPoints: [
-        "System-Integration (HR/Lohn)",
+        "System-Integration (HR)",
         "Vollautomatisierte Prozesse",
         "24/7 digitaler Support"
       ]
