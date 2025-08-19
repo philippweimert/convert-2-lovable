@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Header from "./Header";
 import Footer from "./Footer";
 import { Button } from "./ui/button";
@@ -14,7 +14,9 @@ import {
   Calendar,
   Calculator,
   Lightbulb,
-  ArrowRight
+  ArrowRight,
+  ChevronDown,
+  ChevronUp
 } from "lucide-react";
 
 const EmployerObligationsPage = () => {
