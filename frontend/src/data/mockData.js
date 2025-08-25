@@ -15,7 +15,7 @@ export const companyInfo = {
 export const heroSection = {
   title: "Wir machen bAV einfach!",
   subtitle: "Entlasten Sie Ihr HR-Team mit unserer vollautomatisierten, digitalen All-in-One-Plattform für die betriebliche Altersvorsorge.",
-  ctaText: "Kostenlose Demo buchen",
+  ctaText: "Jetzt starten",
   videoPlaceholder: true,
   quickBenefits: [
     "100% digitale Verwaltung",
