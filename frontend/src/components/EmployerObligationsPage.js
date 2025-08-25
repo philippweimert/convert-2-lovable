@@ -140,7 +140,7 @@ const EmployerObligationsPage = () => {
                     {/* Angebotspflicht */}
                     <div className="bg-white rounded-xl p-6 border-l-4 border-red-500">
                       <div className="flex items-start justify-between mb-3">
-                        <h4 className="text-lg font-bold text-slate-900">1. Angebotspflicht für Entgeltumwandlung</h4>
+                        <h4 className="text-lg font-bold text-slate-900">1. Rechtsanspruch auf Entgeltumwandlung</h4>
                         <a 
                           href="https://www.gesetze-im-internet.de/betravg/__1a.html"
                           target="_blank"
