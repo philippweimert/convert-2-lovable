@@ -52,7 +52,7 @@ const EmployerObligationsPage = () => {
                 Überblick über Ihre gesetzlichen Verpflichtungen als Arbeitgeber
               </p>
 
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
                 <Button 
                   size="lg"
                   className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-8 py-3 text-base font-semibold rounded-xl transition-all duration-400 hover:scale-105 shadow-lg"
@@ -70,6 +70,14 @@ const EmployerObligationsPage = () => {
                   Gesetzestext BetrAVG
                   <ExternalLink className="w-3 h-3 ml-2" />
                 </Button>
+              </div>
+
+              {/* Rechtlicher Hinweis direkt unter den Buttons */}
+              <div className="flex items-center justify-center space-x-2 text-slate-400">
+                <Gavel className="w-4 h-4" />
+                <p className="text-sm">
+                  Information im Rahmen der Tätigkeit als Versicherungsmakler gemäß § 93 HGB
+                </p>
               </div>
             </div>
           </div>
