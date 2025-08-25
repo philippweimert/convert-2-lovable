@@ -72,7 +72,7 @@ const CustomerSegments = () => {
             <span className="text-slate-700 font-semibold text-sm tracking-wide uppercase">Für jede Unternehmensgröße</span>
           </div>
           
-          <h2 className="text-4xl lg:text-6xl font-bold mb-8 leading-tight">
+          <h2 className="text-3xl lg:text-4xl font-bold mb-8 leading-tight">
             <span className="text-slate-900">Unsere </span>
             <span className="bg-gradient-to-r from-orange-500 via-orange-600 to-red-500 bg-clip-text text-transparent">
               Kunden
