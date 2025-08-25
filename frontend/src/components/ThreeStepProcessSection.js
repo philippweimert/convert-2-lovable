@@ -163,26 +163,6 @@ const ThreeStepProcessSection = () => {
           ))}
         </div>
 
-        {/* Call to Action - Without Demo buchen button */}
-        <div className="text-center">
-          <div className="inline-flex flex-col sm:flex-row gap-4">
-            <Button 
-              size="lg"
-              className="btn-primary bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-8 py-3 text-lg font-semibold rounded-xl transition-all duration-400 hover:scale-105 shadow-lg text-body"
-              onClick={() => window.open('https://outlook.office365.com/owa/calendar/ACENCIAde@acencia.de/bookings/', '_blank')}
-            >
-              Jetzt starten
-            </Button>
-            <Button 
-              size="lg"
-              variant="outline"
-              className="border-2 border-slate-300 text-slate-700 hover:bg-slate-50 hover:border-slate-400 px-8 py-3 text-lg font-semibold rounded-xl transition-all duration-400 micro-bounce text-body"
-              onClick={() => window.open('https://outlook.office365.com/owa/calendar/ACENCIAde@acencia.de/bookings/', '_blank')}
-            >
-              Beratung buchen
-            </Button>
-          </div>
-        </div>
       </div>
     </section>
   );
