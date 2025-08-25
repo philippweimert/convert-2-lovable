@@ -196,7 +196,7 @@ const CustomerSegments = () => {
                   className="border-2 border-slate-600 text-slate-300 hover:bg-slate-600 hover:text-white hover:border-slate-500 px-10 py-4 rounded-xl font-semibold transition-all duration-300 backdrop-blur-sm text-lg"
                   onClick={() => window.open('https://outlook.office365.com/owa/calendar/ACENCIAde@acencia.de/bookings/', '_blank')}
                 >
-                  Demo anfordern
+                  Beratung anfordern
                 </button>
               </div>
             </div>
