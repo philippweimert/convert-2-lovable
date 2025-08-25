@@ -155,8 +155,18 @@ const EmployerObligationsPage = () => {
               
               {/* Pflichten des Arbeitgebers */}
               <div>
-                <div className="bg-red-50 rounded-2xl p-8 h-full">
-                  <div className="flex items-center space-x-3 mb-8">
+                <div className="bg-red-50 rounded-2xl p-8 h-full relative overflow-hidden">
+                  {/* Subtle background design for red/white areas */}
+                  <div className="absolute inset-0 opacity-[0.04]">
+                    <svg className="absolute top-10 right-10 w-40 h-40" viewBox="0 0 400 400">
+                      <polygon points="200,40 300,100 300,180 200,240 100,180 100,100" 
+                               fill="none" stroke="#dc2626" strokeWidth="1"/>
+                    </svg>
+                    <div className="absolute bottom-10 left-10 w-2 h-2 bg-red-300 rounded-full animate-pulse"></div>
+                    <div className="absolute top-1/3 left-1/4 w-1 h-1 bg-red-400 rounded-full animate-ping"></div>
+                  </div>
+                  
+                  <div className="flex items-center space-x-3 mb-8 relative z-10">
                     <Scale className="w-8 h-8 text-red-600" />
                     <h3 className="text-2xl font-bold text-red-800">Ihre rechtlichen Pflichten</h3>
                   </div>
