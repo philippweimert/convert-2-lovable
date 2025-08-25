@@ -84,8 +84,8 @@ const ThreeStepProcessSection = () => {
           </p>
         </div>
 
-        {/* 3-Step Process - Compact Expandable */}
-        <div className="max-w-4xl mx-auto space-y-4 mb-16">
+        {/* 3-Step Process - Horizontal Expandable */}
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-16">
           {processSteps.map((step, index) => (
             <div key={index} className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-400 border border-slate-200 hover:border-orange-300">
               {/* Compact Header - Always visible */}
@@ -93,36 +93,34 @@ const ThreeStepProcessSection = () => {
                 className="p-6 cursor-pointer"
                 onClick={() => toggleStep(index)}
               >
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center space-x-4">
-                    {/* Step Number */}
-                    <div className="w-10 h-10 bg-orange-500 rounded-full flex items-center justify-center text-white font-bold text-sm">
-                      {index + 1}
+                <div className="flex flex-col items-center text-center">
+                  {/* Step Number */}
+                  <div className="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center text-white font-bold text-lg mb-4">
+                    {index + 1}
+                  </div>
+                  
+                  {/* Icon */}
+                  <div className="bg-gradient-to-br from-orange-100 to-amber-100 rounded-xl p-3 mb-4">
+                    <div className="text-orange-600">
+                      {step.icon}
                     </div>
-                    
-                    {/* Icon */}
-                    <div className="bg-gradient-to-br from-orange-100 to-amber-100 rounded-xl p-3">
-                      <div className="text-orange-600">
-                        {step.icon}
-                      </div>
-                    </div>
+                  </div>
 
-                    {/* Title */}
-                    <div>
-                      <h3 className="text-xl font-bold text-slate-900 text-headline">
-                        {step.title}
-                      </h3>
-                      <p className="text-orange-600 font-medium text-body">
-                        {step.subtitle}
-                      </p>
-                    </div>
+                  {/* Title */}
+                  <div className="mb-4">
+                    <h3 className="text-lg font-bold text-slate-900 text-headline mb-2">
+                      {step.title}
+                    </h3>
+                    <p className="text-orange-600 font-medium text-body text-sm">
+                      {step.subtitle}
+                    </p>
                   </div>
 
                   {/* Expand/Collapse indicator */}
                   <div className={`text-slate-400 transition-all duration-300 ${
                     expandedStep === index ? 'rotate-180 text-orange-500' : 'hover:text-slate-600'
                   }`}>
-                    <ChevronDown className="w-6 h-6" />
+                    <ChevronDown className="w-5 h-5" />
                   </div>
                 </div>
               </div>
@@ -152,6 +150,15 @@ const ThreeStepProcessSection = () => {
                   </div>
                 </div>
               </div>
+
+              {/* Arrow connecting to next step (only for first two steps) */}
+              {index < processSteps.length - 1 && (
+                <div className="absolute -right-3 top-1/3 transform -translate-y-1/2 hidden lg:block z-20">
+                  <div className="w-6 h-6 bg-orange-500 rounded-full flex items-center justify-center">
+                    <ArrowRight className="w-4 h-4 text-white" />
+                  </div>
+                </div>
+              )}
             </div>
           ))}
         </div>
