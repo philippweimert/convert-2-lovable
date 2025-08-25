@@ -171,7 +171,7 @@ const EmployerObligationsPage = () => {
                     <h3 className="text-2xl font-bold text-red-800">Ihre rechtlichen Pflichten</h3>
                   </div>
 
-                  <div className="space-y-6">
+                  <div className="space-y-6 relative z-10">
                     {/* Angebotspflicht */}
                     <div className="bg-white rounded-xl p-6 border-l-4 border-red-500">
                       <div className="flex items-start justify-between mb-3">
