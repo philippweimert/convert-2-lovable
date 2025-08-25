@@ -102,9 +102,57 @@
 # Testing Data - Main Agent and testing sub agent both should log testing data below this section
 #====================================================================================================
 
-user_problem_statement: "Test the current implementation of Acencia.de replica, specifically verifying the newly integrated Business Benefits Section and overall functionality"
+user_problem_statement: "Replace entire 'digitale bAV-Lösung' section with simplified challenges/solutions display and add new 3-step process section below Hero. Remove all 'Demo buchen' buttons."
 
 frontend:
+  - task: "Homepage Restructuring - Remove InteractiveMainSections"
+    implemented: false
+    working: false
+    file: "/app/frontend/src/components/Homepage.js"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: true
+    status_history:
+        - working: false
+          agent: "main"
+          comment: "About to remove the entire InteractiveMainSections component and replace with simplified challenges/solutions display"
+
+  - task: "New 3-Step Process Section"
+    implemented: false
+    working: false
+    file: "/app/frontend/src/components/ThreeStepProcessSection.js"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: true
+    status_history:
+        - working: false
+          agent: "main"
+          comment: "Creating new component with text 'Als Partner begleiten wir Sie entlang des gesamten bAV-Prozesses.' and 3 steps in horizontal layout"
+
+  - task: "New Challenges Solutions Section"
+    implemented: false
+    working: false
+    file: "/app/frontend/src/components/ChallengesSolutionsSection.js"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: true
+    status_history:
+        - working: false
+          agent: "main"
+          comment: "Creating simplified section showing challenges vs solutions from InteractiveMainSections herausforderung content"
+
+  - task: "Remove Demo Buchen Buttons"
+    implemented: false
+    working: false
+    file: "Multiple files"
+    stuck_count: 0
+    priority: "medium"
+    needs_retesting: true
+    status_history:
+        - working: false
+          agent: "main"
+          comment: "Need to remove all 'Demo buchen' buttons from HeroSection.js, ProcessSection.js, InteractiveMainSections.js, VorteilePage.js, CustomerSegments.js and mockData.js"
+
   - task: "Homepage Hero Section"
     implemented: true
     working: true
@@ -115,69 +163,24 @@ frontend:
     status_history:
         - working: true
           agent: "main"
-          comment: "Hero section with video integration working perfectly, displays 'Wir machen bAV einfach!' correctly"
-
-  - task: "Navigation Links"
-    implemented: true
-    working: true
-    file: "/app/frontend/src/components/Header.js"
-    stuck_count: 0
-    priority: "high"
-    needs_retesting: false
-    status_history:
-        - working: true
-          agent: "main"
-          comment: "All navigation links present and accessible: Über uns, Pflichten des Arbeitgebers, Kontakt, Login Portal"
-
-  - task: "Business Benefits Section"
-    implemented: true
-    working: true
-    file: "/app/frontend/src/components/BusinessBenefitsSection.js"
-    stuck_count: 0
-    priority: "high"
-    needs_retesting: false
-    status_history:
-        - working: true
-          agent: "main"
-          comment: "Business Benefits Section successfully integrated and found at scroll position 2000 on homepage"
-
-  - task: "Process Section"
-    implemented: true
-    working: true
-    file: "/app/frontend/src/components/ProcessSection.js"
-    stuck_count: 0
-    priority: "medium"
-    needs_retesting: false
-    status_history:
-        - working: true
-          agent: "main"
-          comment: "Process section displaying correctly with 'Vollautomatisierte Prozesse' content"
-
-  - task: "Video Integration"
-    implemented: true
-    working: true
-    file: "/app/frontend/src/components/HeroSection.js"
-    stuck_count: 0
-    priority: "medium"
-    needs_retesting: false
-    status_history:
-        - working: true
-          agent: "main"
-          comment: "User-provided video successfully embedded and displaying in hero section"
+          comment: "Hero section working, but needs Demo buchen button removal"
 
 metadata:
   created_by: "main_agent"
-  version: "1.0"
-  test_sequence: 1
+  version: "2.0"
+  test_sequence: 2
   run_ui: false
 
 test_plan:
   current_focus:
-    - "All major components tested successfully"
+    - "Homepage Restructuring - Remove InteractiveMainSections"
+    - "New 3-Step Process Section"
+    - "New Challenges Solutions Section"
+    - "Remove Demo Buchen Buttons"
   stuck_tasks: []
   test_all: false
-  test_priority: "completed"
+  test_priority: "high_first"
 
 agent_communication:
     - agent: "main"
-      message: "Initial testing completed successfully. All key components working: Hero section with video, navigation, Business Benefits Section, and Process section. Website loads correctly and all major functionality verified through screenshot testing."
+      message: "Starting major homepage restructuring: Replacing entire InteractiveMainSections with simplified challenges/solutions display, adding new 3-step process section below Hero, and removing all Demo buchen buttons as requested by user"
