@@ -79,7 +79,7 @@ const EmployerObligationsPage = () => {
                 </span>
               </h1>
               
-              <p className="text-xl text-slate-200 mb-12 max-w-4xl mx-auto leading-relaxed">
+              <p className="text-lg text-slate-200 mb-12 max-w-4xl mx-auto leading-relaxed">
                 Umfassender Überblick über Ihre gesetzlichen Verpflichtungen als Arbeitgeber
               </p>
 
