@@ -16,7 +16,9 @@ import {
   Lightbulb,
   ArrowRight,
   ChevronDown,
-  ChevronUp
+  ChevronUp,
+  ExternalLink,
+  Gavel
 } from "lucide-react";
 
 const EmployerObligationsPage = () => {
