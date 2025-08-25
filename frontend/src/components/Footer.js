@@ -78,14 +78,7 @@ const Footer = () => {
             <Link to="/impressum" className="text-slate-400 hover:text-orange-400 transition-colors duration-200">
               Impressum
             </Link>
-            <a 
-              href="https://outlook.office365.com/owa/calendar/ACENCIAde@acencia.de/bookings/" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="text-slate-400 hover:text-orange-400 transition-colors duration-200"
-            >
-              AGB
-            </a>
+
           </div>
         </div>
       </div>
