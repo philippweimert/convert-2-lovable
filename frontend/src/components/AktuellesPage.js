@@ -136,7 +136,7 @@ const AktuellesPage = () => {
 
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="text-center mb-12">
-              <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+              <h1 className="text-3xl lg:text-4xl font-bold text-white mb-6 leading-tight">
                 <span className="text-white">Aktuelles zur </span>
                 <span className="bg-gradient-to-r from-orange-400 via-orange-500 to-orange-600 bg-clip-text text-transparent">
                   betrieblichen Altersvorsorge
