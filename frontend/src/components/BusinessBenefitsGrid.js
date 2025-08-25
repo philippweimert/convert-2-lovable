@@ -130,7 +130,7 @@ const BusinessBenefitsGrid = () => {
           <h2 className="text-2xl lg:text-3xl font-bold text-white mb-6">
             Die konkreten <span className="text-orange-400">Vorteile für Sie</span>
           </h2>
-          <p className="text-slate-300 max-w-3xl mx-auto text-lg mb-8">
+          <p className="text-slate-300 max-w-3xl mx-auto text-base mb-8">
             Entdecken Sie die Vorteile unserer digitalen bAV-Lösung
           </p>
 
