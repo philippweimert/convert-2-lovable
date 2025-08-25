@@ -102,13 +102,6 @@ const Header = () => {
               bAV - rechtliche Grundlagen
             </Link>
             <Link
-              to="/der-service"
-              className="block px-6 py-3 text-white hover:text-orange-400 hover:bg-white/5 rounded-xl transition-all duration-300 font-medium"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Der Service
-            </Link>
-            <Link
               to="/aktuelles"
               className="block px-6 py-3 text-white hover:text-orange-400 hover:bg-white/5 rounded-xl transition-all duration-300 font-medium"
               onClick={() => setIsMenuOpen(false)}
