@@ -27,22 +27,22 @@ const BusinessBenefitsGrid = () => {
     setExpandedBenefit(expandedBenefit === index ? null : index);
   };
 
-  // Vorteile für Unternehmen (erweitert um die aktuellen)
+  // Vorteile für Unternehmen (zusammengefasst)
   const unternehmensvorteile = [
     {
       icon: <BarChart3 className="w-8 h-8" />,
-      title: "Kostenreduktion",
-      description: "Wir digitalisieren und vereinfachen Ihre laufenden Verwaltungsprozesse, auf Basis eines kostenneutralen Modells."
+      title: "Kostenreduktion & Steuervorteile",
+      description: "Erhebliche Einsparungen bei Lohnsteuer und Sozialversicherungsbeiträgen durch digitalisierte Verwaltungsprozesse und optimale bAV-Gestaltung auf kostenneutraler Basis."
     },
     {
       icon: <TrendingUp className="w-8 h-8" />,
-      title: "Effizienzsteigerung", 
-      description: "Wir übernehmen das 'Daily Business' Ihrer bAV-Verwaltung, dadurch können Sie sich stärker auf Ihr Kerngeschäft fokussieren."
+      title: "Effizienzsteigerung & Zeitersparnis", 
+      description: "Bis zu 80% weniger Verwaltungsaufwand durch vollautomatisierte Prozesse. Wir übernehmen das 'Daily Business' Ihrer bAV-Verwaltung für maximale Fokussierung auf Ihr Kerngeschäft."
     },
     {
-      icon: <Building2 className="w-8 h-8" />,
-      title: "Risikominimierung",
-      description: "Wir übernehmen komplexe rechtliche Prüfprozesse und minimieren Haftungsrisiken - heute und in Zukunft."
+      icon: <Shield className="w-8 h-8" />,
+      title: "Risikominimierung & Rechtssicherheit",
+      description: "Vollständige Compliance-Sicherstellung und Schutz vor rechtlichen Risiken durch komplexe rechtliche Prüfprozesse und permanente Überwachung aller Gesetzesänderungen."
     },
     {
       icon: <Network className="w-8 h-8" />,
@@ -58,21 +58,6 @@ const BusinessBenefitsGrid = () => {
       icon: <Coffee className="w-8 h-8" />,
       title: "HR-Entlastung", 
       description: "Unser persönlicher Support unterstützt Sie als Partner proaktiv bei Anpassungs- oder Veränderungsmaßnahmen."
-    },
-    {
-      icon: <DollarSign className="w-8 h-8" />,
-      title: "Steuervorteile",
-      description: "Erhebliche Einsparungen bei Lohnsteuer und Sozialversicherungsbeiträgen durch optimale Gestaltung der bAV."
-    },
-    {
-      icon: <Shield className="w-8 h-8" />,
-      title: "Rechtssicherheit",
-      description: "Vollständige Compliance-Sicherstellung und Schutz vor rechtlichen Risiken durch permanente Überwachung."
-    },
-    {
-      icon: <Clock className="w-8 h-8" />,
-      title: "Zeitersparnis",
-      description: "Bis zu 80% weniger Verwaltungsaufwand durch vollautomatisierte Prozesse und digitale Integration."
     }
   ];
 
