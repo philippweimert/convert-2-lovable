@@ -424,8 +424,22 @@ const EmployerObligationsPage = () => {
             </div>
 
             {/* Call to Action */}
-            <div className="text-center mt-16">
-              <div className="bg-gradient-to-r from-blue-50 to-green-50 rounded-2xl p-8">
+            <div className="text-center mt-16 relative">
+              {/* Subtle background design for white areas */}
+              <div className="absolute inset-0 opacity-[0.06]">
+                <svg className="absolute top-5 right-5 w-32 h-32" viewBox="0 0 400 400">
+                  <polygon points="200,60 280,120 280,180 200,240 120,180 120,120" 
+                           fill="none" stroke="#f97316" strokeWidth="1"/>
+                </svg>
+                <svg className="absolute bottom-5 left-5 w-28 h-28" viewBox="0 0 400 400">
+                  <polygon points="200,70 260,110 260,150 200,190 140,150 140,110" 
+                           fill="none" stroke="#10b981" strokeWidth="1"/>
+                </svg>
+                <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-blue-300 rounded-full animate-pulse"></div>
+                <div className="absolute bottom-1/3 right-1/3 w-1 h-1 bg-orange-300 rounded-full animate-ping"></div>
+              </div>
+              
+              <div className="bg-gradient-to-r from-blue-50 to-green-50 rounded-2xl p-8 relative z-10">
                 <h3 className="text-2xl font-bold text-slate-900 mb-4">
                   Verwandeln Sie Ihre Pflichten in <span className="text-green-600">Wettbewerbsvorteile</span>
                 </h3>
