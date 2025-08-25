@@ -13,35 +13,41 @@ import {
 import { Button } from './ui/button';
 
 const BusinessBenefitsGrid = () => {
+  const [expandedBenefit, setExpandedBenefit] = useState(null);
+
+  const toggleBenefit = (index) => {
+    setExpandedBenefit(expandedBenefit === index ? null : index);
+  };
+
   const benefits = [
     {
       icon: <BarChart3 className="w-8 h-8" />,
-      title: "Reduktion von Kosten und Aufwänden",
+      title: "Kostenreduktion",
       description: "Wir digitalisieren und vereinfachen Ihre laufenden Verwaltungsprozesse, auf Basis eines kostenneutralen Modells."
     },
     {
       icon: <TrendingUp className="w-8 h-8" />,
-      title: "Unternehmerische Effizienzsteigerung", 
+      title: "Effizienzsteigerung", 
       description: "Wir übernehmen das 'Daily Business' Ihrer bAV-Verwaltung, dadurch können Sie sich stärker auf Ihr Kerngeschäft fokussieren."
     },
     {
       icon: <Building2 className="w-8 h-8" />,
-      title: "Minimierung von Haftungsrisiken",
+      title: "Risikominimierung",
       description: "Wir übernehmen komplexe rechtliche Prüfprozesse und minimieren Haftungsrisiken - heute und in Zukunft."
     },
     {
       icon: <Network className="w-8 h-8" />,
-      title: "Erhöhte Bearbeitungsgeschwindigkeit",
+      title: "Schnellere Bearbeitung",
       description: "Wir automatisieren Ihre Workflows und übernehmen alle wichtigen Prozesse in der laufenden bAV-Verwaltung."
     },
     {
       icon: <Handshake className="w-8 h-8" />,
-      title: "Mitarbeiterbindung und -motivation",
+      title: "Mitarbeiterbindung",
       description: "Innovative Vorsorgemodelle sowie eine moderne Mitarbeiterkommunikation und -beratung bieten attraktive Benefits."
     },
     {
       icon: <Coffee className="w-8 h-8" />,
-      title: "Entlastung der Personalabteilung", 
+      title: "HR-Entlastung", 
       description: "Unser persönlicher Support unterstützt Sie als Partner proaktiv bei Anpassungs- oder Veränderungsmaßnahmen."
     }
   ];
