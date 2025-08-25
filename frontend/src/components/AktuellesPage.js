@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Header from './Header';
 import Footer from './Footer';
-import { Calendar, Clock, User, BookOpen, Scale, Gavel, TrendingUp, Filter, Search } from 'lucide-react';
+import { Calendar, Clock, User, BookOpen, Scale, Gavel, TrendingUp, Filter, Search, ArrowRight } from 'lucide-react';
 
 const AktuellesPage = () => {
   const [selectedCategory, setSelectedCategory] = useState('alle');
