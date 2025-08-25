@@ -18,10 +18,10 @@ def get_backend_url():
                 if line.startswith('REACT_APP_BACKEND_URL='):
                     base_url = line.split('=')[1].strip()
                     return f"{base_url}/api"
-        return "https://hr-benefits-platform.preview.emergentagent.com/api"
+        return "https://pension-portal-1.preview.emergentagent.com/api"
     except Exception as e:
         print(f"Error reading frontend .env: {e}")
-        return "https://hr-benefits-platform.preview.emergentagent.com/api"
+        return "https://pension-portal-1.preview.emergentagent.com/api"
 
 BASE_URL = get_backend_url()
 print(f"Testing backend API at: {BASE_URL}")
