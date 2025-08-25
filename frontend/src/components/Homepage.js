@@ -18,7 +18,6 @@ const Homepage = () => {
         <BusinessBenefitsGrid />
         <ChallengesSolutionsSection />
         <CustomerSegments />
-        <ExpertiseSection />
         <Footer />
       </div>
     </div>
