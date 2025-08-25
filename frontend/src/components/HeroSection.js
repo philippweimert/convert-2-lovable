@@ -97,30 +97,18 @@ const HeroSection = () => {
               {/* Video Container */}
               <div className="aspect-video bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl overflow-hidden border border-slate-600/50 hover:border-orange-400/50 transition-all duration-500 shadow-2xl backdrop-blur-sm relative">
                 
-                {/* Video Element */}
-                <video 
-                  className="w-full h-full object-cover rounded-2xl"
-                  controls
-                  preload="metadata"
-                  poster="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjQwIiBoZWlnaHQ9IjM2MCIgdmlld0JveD0iMCAwIDY0MCAzNjAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSI2NDAiIGhlaWdodD0iMzYwIiBmaWxsPSJ1cmwoI2dyYWRpZW50KSIvPgo8Y2lyY2xlIGN4PSIzMjAiIGN5PSIxODAiIHI9IjQwIiBmaWxsPSIjRjk3MzE2Ii8+Cjxwb2x5Z29uIHBvaW50cz0iMzEwLDE2NSAzNDUsMTgwIDMxMCwxOTUiIGZpbGw9IndoaXRlIi8+CjxkZWZzPgo8bGluZWFyR3JhZGllbnQgaWQ9ImdyYWRpZW50IiB4MT0iMCIgeTE9IjAiIHgyPSIxIiB5Mj0iMSI+CjxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiMxRTI5M0IiLz4KPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMEYxNzJBIi8+CjwvbGluZWFyR3JhZGllbnQ+CjwvZGVmcz4KPC9zdmc+"
-                >
-                  <source 
-                    src="https://customer-assets.emergentagent.com/job_better-acencia/artifacts/b3s3n0vk_Betriebliche%20Altersvorsorge%20einfach%20einrichten%20und%20verwalten%20Ace.mp4" 
-                    type="video/mp4" 
-                  />
-                  <p className="text-slate-300 text-center p-8">
-                    Ihr Browser unterstützt das Video-Format nicht. 
-                    <br />
-                    <a 
-                      href="https://customer-assets.emergentagent.com/job_better-acencia/artifacts/b3s3n0vk_Betriebliche%20Altersvorsorge%20einfach%20einrichten%20und%20verwalten%20Ace.mp4"
-                      className="text-orange-400 hover:text-orange-300 underline"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      Video direkt ansehen
-                    </a>
-                  </p>
-                </video>
+                {/* YouTube Video Embed */}
+                <iframe 
+                  className="w-full h-full rounded-2xl"
+                  width="560" 
+                  height="315" 
+                  src="https://www.youtube.com/embed/Dw1XYzzPTkY?si=xdaue75GVpcizewG" 
+                  title="YouTube video player" 
+                  frameBorder="0" 
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                  referrerPolicy="strict-origin-when-cross-origin" 
+                  allowFullScreen
+                ></iframe>
 
                 {/* Video Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-r from-orange-500/5 via-transparent to-orange-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
