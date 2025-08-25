@@ -83,21 +83,6 @@ const EmployerObligationsPage = () => {
           </div>
         </section>
 
-        {/* Rechtlicher Hinweis Section - Kompakt */}
-        <section className="bg-slate-800 py-8">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="bg-slate-700 rounded-xl p-6 border border-slate-600">
-              <div className="flex items-center space-x-3 mb-4">
-                <Gavel className="w-5 h-5 text-slate-300" />
-                <h2 className="text-lg font-bold text-white">Rechtlicher Hinweis</h2>
-              </div>
-              <p className="text-slate-300 text-sm leading-relaxed">
-                Die bereitgestellten Inhalte dienen der Information im Rahmen der Tätigkeit als Versicherungsmakler gemäß § 93 HGB. Sie stellen keine Rechts- oder Steuerberatung dar.
-              </p>
-            </div>
-          </div>
-        </section>
-
         {/* Wichtiger Hinweis zur gesetzlichen Verpflichtung - Kompakt */}
         <section className="bg-red-50 py-10 border-l-4 border-red-500">
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
