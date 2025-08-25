@@ -14,7 +14,7 @@ const AktuellesPage = () => {
       title: "Haftung des Arbeitgebers in der betrieblichen Altersversorgung und Minimierungsstrategien",
       excerpt: "Ein umfassender Überblick über die Haftungsrisiken von Arbeitgebern in der bAV und bewährte Strategien zur Risikominimierung. Rechtliche Grundlagen und praktische Lösungsansätze für Unternehmen.",
       date: "2024-12-20",
-      category: "Rechtsprechung",
+      category: "Expertenmeinung",
       author: "Rechtsanwalt Dr. Michael Weber",
       readTime: "12 Min.",
       image: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=400&h=240&fit=crop",
