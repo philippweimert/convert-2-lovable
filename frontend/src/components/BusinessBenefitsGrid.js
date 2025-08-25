@@ -83,7 +83,7 @@ const BusinessBenefitsGrid = () => {
         {/* Benefits Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {benefits.map((benefit, index) => (
-            <div key={index} className="text-center group">
+            <div key={index} className="text-center group cursor-pointer" onClick={() => toggleBenefit(index)}>
               {/* Hexagon-inspired container */}
               <div className="relative mb-6">
                 <div className="w-24 h-24 mx-auto bg-gradient-to-br from-slate-800 to-slate-700 rounded-2xl flex items-center justify-center group-hover:from-orange-600 group-hover:to-orange-700 transition-all duration-400 border border-slate-600 group-hover:border-orange-500 shadow-lg">
@@ -93,15 +93,33 @@ const BusinessBenefitsGrid = () => {
                 </div>
               </div>
 
-              {/* Title */}
-              <h3 className="text-lg font-bold text-white mb-4 leading-tight group-hover:text-orange-400 transition-colors duration-300">
-                {benefit.title}
-              </h3>
+              {/* Title and Chevron */}
+              <div className="flex items-center justify-center space-x-2 mb-4">
+                <h3 className="text-lg font-bold text-white group-hover:text-orange-400 transition-colors duration-300">
+                  {benefit.title}
+                </h3>
+                <div className={`text-slate-400 transition-all duration-300 ${
+                  expandedBenefit === index ? 'rotate-180 text-orange-400' : 'group-hover:text-orange-400'
+                }`}>
+                  <ChevronDown className="w-5 h-5" />
+                </div>
+              </div>
 
-              {/* Description */}
-              <p className="text-slate-300 text-sm leading-relaxed group-hover:text-slate-200 transition-colors duration-300">
-                {benefit.description}
-              </p>
+              {/* Expandable Description */}
+              <div className={`overflow-hidden transition-all duration-500 ${
+                expandedBenefit === index ? 'max-h-32 opacity-100' : 'max-h-0 opacity-0'
+              }`}>
+                <p className="text-slate-300 text-sm leading-relaxed group-hover:text-slate-200 transition-colors duration-300 px-4">
+                  {benefit.description}
+                </p>
+              </div>
+
+              {/* Click hint */}
+              <div className="mt-2">
+                <p className="text-xs text-slate-500">
+                  {expandedBenefit === index ? 'Klicken zum Einklappen' : 'Klicken für Details'}
+                </p>
+              </div>
             </div>
           ))}
         </div>
