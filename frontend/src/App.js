@@ -18,7 +18,6 @@ function App() {
           <Route path="/" element={<Homepage />} />
           <Route path="/ueber-uns" element={<AboutPage />} />
           <Route path="/arbeitgeber-pflichten" element={<EmployerObligationsPage />} />
-          <Route path="/der-service" element={<ServicePage />} />
           <Route path="/aktuelles" element={<AktuellesPage />} />
           <Route path="/kontakt" element={<ContactPage />} />
           <Route path="/datenschutz" element={<PrivacyPage />} />
