@@ -177,7 +177,7 @@ const CustomerSegments = () => {
             <div className="absolute bottom-0 left-1/4 w-64 h-64 bg-purple-500/10 rounded-full blur-3xl"></div>
             
             <div className="relative z-10">
-              <h3 className="text-3xl lg:text-4xl font-bold text-white mb-6 leading-tight">
+              <h3 className="text-2xl lg:text-3xl font-bold text-white mb-6 leading-tight">
                 Unsicher, welche Lösung für Sie die richtige ist?
               </h3>
               <p className="text-slate-300 mb-8 max-w-3xl mx-auto text-lg leading-relaxed">
