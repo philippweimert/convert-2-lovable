@@ -199,7 +199,7 @@ const BusinessBenefitsGrid = () => {
 
         {/* Benefits Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {benefits.map((benefit, index) => (
+          {currentBenefits.map((benefit, index) => (
             <div key={index} className="text-center group cursor-pointer" onClick={() => toggleBenefit(index)}>
               {/* Hexagon-inspired container */}
               <div className="relative mb-6">
