@@ -79,7 +79,7 @@ const ChallengesSolutionsSection = () => {
 
               {/* Title */}
               <div>
-                <h2 className="text-2xl lg:text-3xl font-bold text-white mb-2">
+                <h2 className="text-xl lg:text-2xl font-bold text-white mb-2">
                   bAV-Verwaltung ist <span className="text-red-400">komplex, zeitaufwendig</span><br/>
                   und <span className="text-red-400">fehleranfällig</span>
                 </h2>
