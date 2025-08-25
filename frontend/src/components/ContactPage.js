@@ -90,7 +90,7 @@ const ContactPage = () => {
             <h1 className="text-3xl lg:text-4xl font-bold text-white mb-6">
               <span className="text-orange-500">Kontakt</span> aufnehmen
             </h1>
-            <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-lg text-slate-300 mb-8 max-w-3xl mx-auto leading-relaxed">
               Haben Sie Fragen zur betrieblichen Altersvorsorge? Wir sind für Sie da!
             </p>
           </div>
