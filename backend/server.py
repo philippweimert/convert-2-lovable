@@ -113,6 +113,18 @@ async def get_status_checks():
     status_checks = await db.status_checks.find().to_list(1000)
     return [StatusCheck(**status_check) for status_check in status_checks]
 
+@api_router.post("/contact")
+async def submit_contact_form(contact_data: ContactForm):
+    """Handle contact form submission"""
+    try:
+        result = await send_email(contact_data)
+        return result
+    except HTTPException as e:
+        raise e
+    except Exception as e:
+        logger.error(f"Unexpected error in contact form: {str(e)}")
+        raise HTTPException(status_code=500, detail="Ein unerwarteter Fehler ist aufgetreten")
+
 # Include the router in the main app
 app.include_router(api_router)
 
