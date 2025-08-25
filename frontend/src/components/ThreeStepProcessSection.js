@@ -1,5 +1,5 @@
-import React from 'react';
-import { CheckCircle, Settings, Users, ArrowRight } from 'lucide-react';
+import React, { useState } from 'react';
+import { CheckCircle, Settings, Users, ArrowRight, ChevronDown, ChevronUp } from 'lucide-react';
 import { Button } from './ui/button';
 
 const ThreeStepProcessSection = () => {
