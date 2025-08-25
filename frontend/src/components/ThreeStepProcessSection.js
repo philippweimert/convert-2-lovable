@@ -75,7 +75,7 @@ const ThreeStepProcessSection = () => {
         {/* Section Header */}
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-3xl lg:text-5xl font-bold text-slate-900 mb-6 text-display">
-            Als Partner begleiten wir Sie entlang des gesamten 
+            Wir begleiten Sie entlang des gesamten 
             <span className="text-emphasis"> bAV-Prozesses</span>
           </h2>
           <p className="text-body-large text-slate-600 max-w-3xl mx-auto">
@@ -84,59 +84,73 @@ const ThreeStepProcessSection = () => {
           </p>
         </div>
 
-        {/* 3-Step Process - Horizontal Layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12 mb-16">
+        {/* 3-Step Process - Compact Expandable */}
+        <div className="max-w-4xl mx-auto space-y-4 mb-16">
           {processSteps.map((step, index) => (
-            <div key={index} className="relative stagger-item" style={{ animationDelay: `${index * 0.2}s` }}>
-              {/* Step Card */}
-              <div className="bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition-all duration-400 border border-slate-200 hover:border-orange-300 card-hover h-full">
-                
-                {/* Step Number */}
-                <div className="absolute -top-4 left-8">
-                  <div className="w-8 h-8 bg-orange-500 rounded-full flex items-center justify-center text-white font-bold text-sm">
-                    {index + 1}
-                  </div>
-                </div>
-
-                {/* Icon */}
-                <div className="bg-gradient-to-br from-orange-100 to-amber-100 rounded-2xl p-4 mb-6 inline-block icon-hover">
-                  <div className="text-orange-600">
-                    {step.icon}
-                  </div>
-                </div>
-
-                {/* Content */}
-                <h3 className="text-xl font-bold text-slate-900 mb-2 text-headline">
-                  {step.title}
-                </h3>
-                <p className="text-orange-600 font-medium mb-4 text-body">
-                  {step.subtitle}
-                </p>
-                <p className="text-slate-600 text-body-small leading-relaxed mb-6">
-                  {step.description}
-                </p>
-
-                {/* Key Points */}
-                <div className="space-y-2">
-                  <h4 className="text-caption text-slate-500 font-semibold uppercase tracking-wider mb-3">
-                    Zentrale Vorteile:
-                  </h4>
-                  {step.keyPoints.map((point, pointIndex) => (
-                    <div key={pointIndex} className="flex items-start space-x-2">
-                      <CheckCircle className="w-4 h-4 text-orange-500 flex-shrink-0 mt-0.5" />
-                      <span className="text-slate-700 text-body-small">{point}</span>
+            <div key={index} className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-400 border border-slate-200 hover:border-orange-300">
+              {/* Compact Header - Always visible */}
+              <div 
+                className="p-6 cursor-pointer"
+                onClick={() => toggleStep(index)}
+              >
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center space-x-4">
+                    {/* Step Number */}
+                    <div className="w-10 h-10 bg-orange-500 rounded-full flex items-center justify-center text-white font-bold text-sm">
+                      {index + 1}
                     </div>
-                  ))}
-                </div>
+                    
+                    {/* Icon */}
+                    <div className="bg-gradient-to-br from-orange-100 to-amber-100 rounded-xl p-3">
+                      <div className="text-orange-600">
+                        {step.icon}
+                      </div>
+                    </div>
 
-                {/* Arrow connecting to next step */}
-                {index < processSteps.length - 1 && (
-                  <div className="absolute -right-6 top-1/2 transform -translate-y-1/2 hidden lg:block">
-                    <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-orange-600 rounded-full flex items-center justify-center animate-pulse">
-                      <ArrowRight className="w-6 h-6 text-white" />
+                    {/* Title */}
+                    <div>
+                      <h3 className="text-xl font-bold text-slate-900 text-headline">
+                        {step.title}
+                      </h3>
+                      <p className="text-orange-600 font-medium text-body">
+                        {step.subtitle}
+                      </p>
                     </div>
                   </div>
-                )}
+
+                  {/* Expand/Collapse indicator */}
+                  <div className={`text-slate-400 transition-all duration-300 ${
+                    expandedStep === index ? 'rotate-180 text-orange-500' : 'hover:text-slate-600'
+                  }`}>
+                    <ChevronDown className="w-6 h-6" />
+                  </div>
+                </div>
+              </div>
+
+              {/* Expandable Content */}
+              <div className={`overflow-hidden transition-all duration-500 ${
+                expandedStep === index ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+              }`}>
+                <div className="px-6 pb-6 border-t border-slate-100">
+                  <div className="pt-6">
+                    <p className="text-slate-600 text-body-small leading-relaxed mb-6">
+                      {step.description}
+                    </p>
+
+                    {/* Key Points */}
+                    <div className="space-y-2">
+                      <h4 className="text-caption text-slate-500 font-semibold uppercase tracking-wider mb-3">
+                        Zentrale Vorteile:
+                      </h4>
+                      {step.keyPoints.map((point, pointIndex) => (
+                        <div key={pointIndex} className="flex items-start space-x-2">
+                          <CheckCircle className="w-4 h-4 text-orange-500 flex-shrink-0 mt-0.5" />
+                          <span className="text-slate-700 text-body-small">{point}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           ))}
