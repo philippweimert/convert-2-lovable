@@ -149,6 +149,9 @@ const AktuellesPage = () => {
           </div>
         </section>
 
+        {/* Smooth transition from slate-900 to slate-800 */}
+        <div className="h-12 bg-gradient-to-b from-slate-900 to-slate-800"></div>
+
         {/* Filter und Content Section */}
         <section className="bg-slate-800 py-16 relative overflow-hidden">
           {/* Subtle background elements */}
