@@ -83,7 +83,7 @@ const ChallengesSolutionsSection = () => {
                   bAV-Verwaltung ist <span className="text-red-400">komplex, zeitaufwendig</span><br/>
                   und <span className="text-red-400">fehleranfällig</span>
                 </h2>
-                <p className="text-slate-300 text-lg">
+                <p className="text-slate-300 text-base">
                   Die betriebliche Altersvorsorge ist für Unternehmen verpflichtend, aber die Verwaltung 
                   stellt HR-Teams vor große Herausforderungen.
                 </p>
