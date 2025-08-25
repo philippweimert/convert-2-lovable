@@ -8,21 +8,6 @@ import {
   Coffee,
   ArrowRight,
   ChevronDown,
-  ChevronUp
-} from 'lucide-react';
-import { Button } from './ui/button';
-
-import React, { useState } from 'react';
-import { 
-  BarChart3, 
-  TrendingUp, 
-  Building2, 
-  Network, 
-  Handshake, 
-  Coffee,
-  ArrowRight,
-  ChevronDown,
-  ChevronUp,
   Users,
   Shield,
   Clock,
@@ -201,7 +186,7 @@ const BusinessBenefitsGrid = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {currentBenefits.map((benefit, index) => (
             <div key={index} className="text-center group cursor-pointer" onClick={() => toggleBenefit(index)}>
-              {/* Hexagon-inspired container */}
+              {/* Icon container */}
               <div className="relative mb-6">
                 <div className="w-24 h-24 mx-auto bg-gradient-to-br from-slate-800 to-slate-700 rounded-2xl flex items-center justify-center group-hover:from-orange-600 group-hover:to-orange-700 transition-all duration-400 border border-slate-600 group-hover:border-orange-500 shadow-lg">
                   <div className="text-orange-400 group-hover:text-white transition-colors duration-400">
