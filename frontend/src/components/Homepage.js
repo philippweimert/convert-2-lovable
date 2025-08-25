@@ -1,6 +1,7 @@
 import React from "react";
 import Header from "./Header";
 import HeroSection from "./HeroSection";
+import ProcessSectionHomepage from "./ProcessSectionHomepage";
 import InteractiveMainSections from "./InteractiveMainSections";
 import CustomerSegments from "./CustomerSegments";
 import ExpertiseSection from "./ExpertiseSection";
@@ -13,6 +14,7 @@ const Homepage = () => {
       {/* Add padding-top to account for fixed header */}
       <div className="pt-20">
         <HeroSection />
+        <ProcessSectionHomepage />
         <InteractiveMainSections />
         <CustomerSegments />
         <ExpertiseSection />
