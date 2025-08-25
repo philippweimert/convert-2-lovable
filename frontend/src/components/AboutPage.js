@@ -151,6 +151,9 @@ const AboutPage = () => {
             </div>
           </div>
         </section>
+        
+        {/* Smooth transition to footer */}
+        <div className="h-12 bg-gradient-to-b from-slate-800 to-slate-900"></div>
       </div>
       
       <Footer />
