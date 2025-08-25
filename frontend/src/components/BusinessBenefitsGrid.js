@@ -158,11 +158,43 @@ const BusinessBenefitsGrid = () => {
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
-            Ihre <span className="text-orange-400">Vorteile</span> auf einen Blick
+            Die konkreten <span className="text-orange-400">Vorteile für Sie</span>
           </h2>
-          <p className="text-slate-300 max-w-3xl mx-auto text-lg">
-            Warum sich Unternehmen für unsere digitale bAV-Lösung entscheiden
+          <p className="text-slate-300 max-w-3xl mx-auto text-lg mb-8">
+            Entdecken Sie die Vorteile unserer digitalen bAV-Lösung
           </p>
+
+          {/* Tab Navigation */}
+          <div className="flex justify-center space-x-4 mb-8">
+            <button
+              onClick={() => {
+                setActiveTab('unternehmen');
+                setExpandedBenefit(null);
+              }}
+              className={`px-8 py-3 rounded-xl font-semibold transition-all duration-300 ${
+                activeTab === 'unternehmen'
+                  ? 'bg-orange-500 text-white shadow-lg'
+                  : 'bg-slate-800 text-slate-300 hover:bg-slate-700 hover:text-white'
+              }`}
+            >
+              <Building2 className="w-5 h-5 inline-block mr-2" />
+              Unternehmen
+            </button>
+            <button
+              onClick={() => {
+                setActiveTab('mitarbeitende');
+                setExpandedBenefit(null);
+              }}
+              className={`px-8 py-3 rounded-xl font-semibold transition-all duration-300 ${
+                activeTab === 'mitarbeitende'
+                  ? 'bg-orange-500 text-white shadow-lg'
+                  : 'bg-slate-800 text-slate-300 hover:bg-slate-700 hover:text-white'
+              }`}
+            >
+              <Users className="w-5 h-5 inline-block mr-2" />
+              Mitarbeitende
+            </button>
+          </div>
         </div>
 
         {/* Benefits Grid */}
