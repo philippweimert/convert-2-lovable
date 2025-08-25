@@ -52,7 +52,7 @@ const AboutPage = () => {
 
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="text-center mb-8">
-              <h1 className="text-3xl lg:text-5xl font-bold text-white mb-4">
+              <h1 className="text-3xl lg:text-4xl font-bold text-white mb-4">
                 Über <span className="bg-gradient-to-r from-orange-400 via-orange-500 to-orange-600 bg-clip-text text-transparent">ACENCIA</span>
               </h1>
               <p className="text-lg text-slate-200 max-w-4xl mx-auto">
