@@ -115,37 +115,39 @@ const EmployerObligationsPage = () => {
           </div>
         </section>
 
-        {/* Wichtiger Hinweis - Elegant gestaltet */}
-        <section className="bg-gradient-to-br from-red-900 via-red-800 to-red-900 py-16 relative overflow-hidden">
-          <div className="absolute inset-0 opacity-10">
-            <svg className="absolute top-0 right-0 w-96 h-96" viewBox="0 0 400 400">
+        {/* Wichtiger Hinweis - In blauem Schema integriert */}
+        <section className="bg-slate-800 py-12 relative overflow-hidden">
+          <div className="absolute inset-0 opacity-[0.04]">
+            <svg className="absolute top-0 right-0 w-80 h-80" viewBox="0 0 400 400">
               <polygon points="200,50 300,100 300,200 200,250 100,200 100,100" 
-                       fill="none" stroke="white" strokeWidth="1"/>
+                       fill="none" stroke="#f97316" strokeWidth="1"/>
             </svg>
+            <div className="absolute bottom-0 left-0 w-2 h-2 bg-orange-400 rounded-full animate-pulse"></div>
           </div>
 
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div className="bg-gradient-to-br from-white/95 to-red-50/95 backdrop-blur-sm rounded-3xl p-8 shadow-2xl border border-red-200">
-              <div className="flex items-start space-x-6">
-                <div className="w-16 h-16 bg-gradient-to-br from-red-500 to-red-600 rounded-2xl flex items-center justify-center flex-shrink-0 shadow-lg">
-                  <AlertTriangle className="w-8 h-8 text-white" />
+            <div className="bg-gradient-to-br from-slate-700 to-slate-600 rounded-2xl p-6 shadow-xl border border-slate-500">
+              <div className="flex items-start space-x-4">
+                <div className="w-10 h-10 bg-gradient-to-br from-red-500 to-red-600 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <AlertTriangle className="w-5 h-5 text-white" />
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-2xl font-bold text-red-900 mb-4">
+                  <h3 className="text-lg font-bold text-white mb-3">
                     Wichtiger Hinweis zur gesetzlichen Verpflichtung
                   </h3>
-                  <p className="text-red-800 leading-relaxed mb-6">
+                  <p className="text-slate-300 text-sm leading-relaxed mb-4">
                     Seit dem <strong>1. Januar 2002</strong> haben alle Arbeitnehmer einen{' '}
                     <strong>Rechtsanspruch auf Entgeltumwandlung</strong> (§ 1a BetrAVG). Als Arbeitgeber sind{' '}
                     Sie <strong>gesetzlich verpflichtet</strong>, diese anzubieten. Seit 2019/2022 müssen Sie zusätzlich einen <strong>Zuschuss von mindestens 15%</strong> leisten.
                   </p>
                   
                   <Button 
-                    className="bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white px-8 py-3 rounded-xl font-semibold transition-all duration-400 hover:scale-105 shadow-lg"
+                    size="sm"
+                    className="bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white px-6 py-2 rounded-lg font-semibold transition-all duration-400 hover:scale-105 shadow-lg"
                     onClick={() => window.open('https://outlook.office365.com/owa/calendar/ACENCIAde@acencia.de/bookings/', '_blank')}
                   >
                     Jetzt Compliance-Check vereinbaren
-                    <ArrowRight className="w-5 h-5 ml-2" />
+                    <ArrowRight className="w-4 h-4 ml-2" />
                   </Button>
                 </div>
               </div>
