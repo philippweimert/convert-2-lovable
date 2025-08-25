@@ -48,7 +48,7 @@ const HeroSection = () => {
               </span>
             </h1>
             
-            <p className="text-xl text-slate-200 mb-8 max-w-lg leading-relaxed font-light">
+            <p className="text-lg text-slate-200 mb-8 max-w-lg leading-relaxed font-light">
               Entlasten Sie Ihr HR-Team mit unserer vollautomatisierten, 
               digitalen All-in-One-Plattform für die betriebliche Altersvorsorge.
             </p>
