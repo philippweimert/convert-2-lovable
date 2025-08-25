@@ -12,14 +12,38 @@ import {
 } from 'lucide-react';
 import { Button } from './ui/button';
 
+import React, { useState } from 'react';
+import { 
+  BarChart3, 
+  TrendingUp, 
+  Building2, 
+  Network, 
+  Handshake, 
+  Coffee,
+  ArrowRight,
+  ChevronDown,
+  ChevronUp,
+  Users,
+  Shield,
+  Clock,
+  DollarSign,
+  Heart,
+  Briefcase,
+  CheckCircle,
+  PiggyBank
+} from 'lucide-react';
+import { Button } from './ui/button';
+
 const BusinessBenefitsGrid = () => {
   const [expandedBenefit, setExpandedBenefit] = useState(null);
+  const [activeTab, setActiveTab] = useState('unternehmen');
 
   const toggleBenefit = (index) => {
     setExpandedBenefit(expandedBenefit === index ? null : index);
   };
 
-  const benefits = [
+  // Vorteile für Unternehmen (erweitert um die aktuellen)
+  const unternehmensvorteile = [
     {
       icon: <BarChart3 className="w-8 h-8" />,
       title: "Kostenreduktion",
@@ -49,8 +73,69 @@ const BusinessBenefitsGrid = () => {
       icon: <Coffee className="w-8 h-8" />,
       title: "HR-Entlastung", 
       description: "Unser persönlicher Support unterstützt Sie als Partner proaktiv bei Anpassungs- oder Veränderungsmaßnahmen."
+    },
+    {
+      icon: <DollarSign className="w-8 h-8" />,
+      title: "Steuervorteile",
+      description: "Erhebliche Einsparungen bei Lohnsteuer und Sozialversicherungsbeiträgen durch optimale Gestaltung der bAV."
+    },
+    {
+      icon: <Shield className="w-8 h-8" />,
+      title: "Rechtssicherheit",
+      description: "Vollständige Compliance-Sicherstellung und Schutz vor rechtlichen Risiken durch permanente Überwachung."
+    },
+    {
+      icon: <Clock className="w-8 h-8" />,
+      title: "Zeitersparnis",
+      description: "Bis zu 80% weniger Verwaltungsaufwand durch vollautomatisierte Prozesse und digitale Integration."
     }
   ];
+
+  // Vorteile für Mitarbeitende
+  const mitarbeitervorteile = [
+    {
+      icon: <PiggyBank className="w-8 h-8" />,
+      title: "Zusätzliche Altersvorsorge",
+      description: "Aufbau einer zusätzlichen Rente durch Entgeltumwandlung mit staatlicher Förderung und Arbeitgeberzuschuss."
+    },
+    {
+      icon: <DollarSign className="w-8 h-8" />,
+      title: "Steuer- und Sozialabgaben-Ersparnis",
+      description: "Reduzierung der Steuerlast und Sozialversicherungsbeiträge durch steuerlich geförderte Beiträge zur bAV."
+    },
+    {
+      icon: <Heart className="w-8 h-8" />,
+      title: "Arbeitgeberfinanzierung",
+      description: "Mindestens 15% Zuschuss vom Arbeitgeber zusätzlich zur eigenen Entgeltumwandlung seit 2019/2022."
+    },
+    {
+      icon: <Shield className="w-8 h-8" />,
+      title: "Versorgungssicherheit",
+      description: "Garantierte Leistungen und Schutz der Anwartschaften durch gesetzliche Regelungen und Pensionssicherungsverein."
+    },
+    {
+      icon: <Briefcase className="w-8 h-8" />,
+      title: "Portabilität",
+      description: "Mitnahme der bAV-Anwartschaften bei Arbeitgeberwechsel - die Vorsorge bleibt erhalten."
+    },
+    {
+      icon: <CheckCircle className="w-8 h-8" />,
+      title: "Einfache Abwicklung",
+      description: "Vollautomatische Verwaltung ohne Aufwand für den Mitarbeitenden - alles läuft über die Lohnabrechnung."
+    },
+    {
+      icon: <Users className="w-8 h-8" />,
+      title: "Persönliche Beratung",
+      description: "Individuelle Beratung und Aufklärung über die optimale bAV-Gestaltung für die persönliche Situation."
+    },
+    {
+      icon: <TrendingUp className="w-8 h-8" />,
+      title: "Renditechancen",
+      description: "Attraktive Renditemöglichkeiten durch professionelle Kapitalanlage und moderne Versorgungskonzepte."
+    }
+  ];
+
+  const currentBenefits = activeTab === 'unternehmen' ? unternehmensvorteile : mitarbeitervorteile;
 
   return (
     <section className="bg-slate-900 py-20 relative overflow-hidden">
