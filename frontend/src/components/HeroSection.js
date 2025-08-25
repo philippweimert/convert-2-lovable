@@ -41,7 +41,7 @@ const HeroSection = () => {
               </span>
             </div>
             
-            <h1 className="text-4xl lg:text-7xl font-bold text-white mb-8 leading-tight">
+            <h1 className="text-3xl lg:text-5xl font-bold text-white mb-8 leading-tight">
               Wir machen<br />
               <span className="bg-gradient-to-r from-orange-400 via-orange-500 to-orange-600 bg-clip-text text-transparent animate-gradient-x">
                 bAV einfach!
