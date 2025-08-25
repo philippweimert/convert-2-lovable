@@ -114,8 +114,24 @@ const EmployerObligationsPage = () => {
         </section>
 
         {/* Pflichten und Chancen Section */}
-        <section className="bg-white py-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section className="bg-white py-20 relative overflow-hidden">
+          {/* Subtle white/light background elements inspired by hero section */}
+          <div className="absolute inset-0 opacity-[0.03]">
+            <svg className="absolute top-10 left-0 w-80 h-80" viewBox="0 0 400 400">
+              <polygon points="200,30 330,130 330,230 200,330 70,230 70,130" 
+                       fill="none" stroke="#f97316" strokeWidth="1"/>
+            </svg>
+            <svg className="absolute bottom-10 right-0 w-64 h-64" viewBox="0 0 400 400">
+              <polygon points="200,50 300,100 300,200 200,250 100,200 100,100" 
+                       fill="none" stroke="#3b82f6" strokeWidth="1"/>
+            </svg>
+            <div className="absolute top-1/3 left-1/5 w-2 h-2 bg-orange-300 rounded-full animate-pulse"></div>
+            <div className="absolute top-2/3 right-1/4 w-1 h-1 bg-blue-300 rounded-full animate-ping"></div>
+            <div className="absolute top-1/4 right-1/3 w-1 h-1 bg-slate-300 rounded-full animate-pulse"></div>
+            <div className="absolute bottom-1/3 left-1/3 w-1 h-1 bg-green-300 rounded-full animate-pulse"></div>
+          </div>
+          
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="text-center mb-16">
               <h2 className="text-3xl lg:text-4xl font-bold text-slate-900 mb-6">
                 Pflichten vs. <span className="text-green-600">Chancen</span>
