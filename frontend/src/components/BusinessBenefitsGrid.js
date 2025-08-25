@@ -168,7 +168,11 @@ const BusinessBenefitsGrid = () => {
         </div>
 
         {/* Benefits Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+        <div className={`gap-8 mb-16 ${
+          activeTab === 'mitarbeitende' 
+            ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4' 
+            : 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3'
+        }`}>
           {currentBenefits.map((benefit, index) => (
             <div key={index} className="text-center group cursor-pointer" onClick={() => toggleBenefit(index)}>
               {/* Icon container */}
