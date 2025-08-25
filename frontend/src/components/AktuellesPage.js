@@ -48,38 +48,27 @@ const AktuellesPage = () => {
       excerpt: "Der Bundesfinanzhof hat in einem aktuellen Urteil die Rechte von Arbeitnehmern bei der Direktversicherung gestärkt. Die Auswirkungen für die Praxis.",
       date: "2024-11-28",
       category: "Rechtsprechung",
-      author: "Dr. Klaus Hoffmann",
+      author: "Dr. Klaus Weber",
       readTime: "4 Min.",
       image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=240&fit=crop",
-      tags: ["BFH", "Direktversicherung", "Arbeitnehmerrechte"]
+      tags: ["BFH", "Direktversicherung", "Urteil"]
     },
     {
       id: 5,
-      title: "Nachhaltigkeit in der betrieblichen Altersvorsorge",
-      excerpt: "ESG-Kriterien gewinnen auch in der bAV an Bedeutung. Experten diskutieren über nachhaltige Anlagestrategien und regulatorische Entwicklungen.",
+      title: "Nachhaltige bAV: ESG-Kriterien im Fokus",
+      excerpt: "Immer mehr Unternehmen setzen bei der betrieblichen Altersvorsorge auf nachhaltige Anlagestrategien. Wie ESG-Kriterien die bAV verändern.",
       date: "2024-11-20",
       category: "Expertenmeinung",
-      author: "Dr. Anna Richter",
+      author: "Lisa Hoffmann",
       readTime: "7 Min.",
-      image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=400&h=240&fit=crop",
-      tags: ["ESG", "Nachhaltigkeit", "Anlagestrategie"]
-    },
-    {
-      id: 6,
-      title: "EU-Portabilitätsrichtlinie: Was Unternehmen wissen müssen",
-      excerpt: "Die neue EU-Richtlinie zur Portabilität von Zusatzrentenansprüchen bringt Änderungen für internationale Unternehmen. Ein Überblick über die wichtigsten Punkte.",
-      date: "2024-11-15",
-      category: "Gesetzgebung",
-      author: "Prof. Dr. Michael Ernst",
-      readTime: "9 Min.",
-      image: "https://images.unsplash.com/photo-1494790108755-2616c04af132?w=400&h=240&fit=crop",
-      tags: ["EU-Richtlinie", "Portabilität", "International"]
+      image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=400&h=240&fit=crop",
+      tags: ["ESG", "Nachhaltigkeit", "Investments"]
     }
   ];
 
   const categories = ['alle', 'Rechtsprechung', 'Gesetzgebung', 'Expertenmeinung'];
 
-  // Filter articles based on category and search term
+  // Filter articles
   const filteredArticles = articles.filter(article => {
     const matchesCategory = selectedCategory === 'alle' || article.category === selectedCategory;
     const matchesSearch = article.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -99,170 +88,173 @@ const AktuellesPage = () => {
 
   const getCategoryColor = (category) => {
     switch (category) {
-      case 'Rechtsprechung': return 'bg-red-100 text-red-800 border-red-200';
-      case 'Gesetzgebung': return 'bg-blue-100 text-blue-800 border-blue-200';
-      case 'Expertenmeinung': return 'bg-green-100 text-green-800 border-green-200';
-      default: return 'bg-gray-100 text-gray-800 border-gray-200';
+      case 'Rechtsprechung': return 'bg-red-900/30 text-red-300 border-red-700';
+      case 'Gesetzgebung': return 'bg-blue-900/30 text-blue-300 border-blue-700';
+      case 'Expertenmeinung': return 'bg-green-900/30 text-green-300 border-green-700';
+      default: return 'bg-slate-700 text-slate-300 border-slate-600';
     }
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800">
+    <div className="min-h-screen bg-slate-900">
       <Header />
       
-      {/* Header Spacing */}
-      <div className="pt-20"></div>
-      
-      {/* Hero Section */}
-      <div className="container mx-auto px-6 py-16">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="flex items-center justify-center space-x-3 mb-6">
-            <TrendingUp className="w-8 h-8 text-orange-400" />
-            <span className="text-orange-400 font-semibold text-lg tracking-wide">Immer aktuell informiert</span>
+      <div className="pt-20">
+        {/* Hero Section mit Hero-Design */}
+        <section className="bg-slate-900 py-20 relative overflow-hidden">
+          {/* Background design similar to hero section */}
+          <div className="absolute inset-0 opacity-[0.05]">
+            <svg className="absolute top-20 right-0 w-96 h-96" viewBox="0 0 400 400">
+              <polygon points="200,50 350,150 350,250 200,350 50,250 50,150" 
+                       fill="none" stroke="white" strokeWidth="2"/>
+            </svg>
+            <svg className="absolute bottom-20 left-0 w-80 h-80" viewBox="0 0 400 400">
+              <polygon points="200,30 320,120 320,200 200,290 80,200 80,120" 
+                       fill="none" stroke="#f97316" strokeWidth="1"/>
+            </svg>
+            <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-orange-400 rounded-full animate-ping"></div>
+            <div className="absolute top-3/4 right-1/3 w-1 h-1 bg-white rounded-full animate-pulse"></div>
+            <div className="absolute top-1/3 right-1/4 w-1 h-1 bg-orange-400 rounded-full animate-pulse"></div>
           </div>
-          
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
-            Aktuelles zur{' '}
-            <span className="text-orange-500">betrieblichen Altersvorsorge</span>
-          </h1>
-          <p className="text-xl text-gray-300 mb-12">
-            Rechtliche Entwicklungen, Expertenmeinungen und wichtige Urteile - 
-            bleiben Sie auf dem Laufenden mit unserem Fach-Blog.
-          </p>
-        </div>
-      </div>
 
-      {/* Filter and Search Section */}
-      <div className="container mx-auto px-6 mb-12">
-        <div className="max-w-6xl mx-auto">
-          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
-            <div className="flex flex-col md:flex-row gap-4 items-center justify-between">
-              
-              {/* Category Filter */}
-              <div className="flex items-center space-x-2">
-                <Filter className="w-5 h-5 text-gray-300" />
-                <span className="text-gray-300 font-medium">Kategorie:</span>
-                <div className="flex space-x-2">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div className="text-center mb-12">
+              <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+                <span className="text-white">Aktuelles zur </span>
+                <span className="bg-gradient-to-r from-orange-400 via-orange-500 to-orange-600 bg-clip-text text-transparent">
+                  betrieblichen Altersvorsorge
+                </span>
+              </h1>
+              <p className="text-xl text-slate-200 max-w-4xl mx-auto leading-relaxed">
+                Bleiben Sie informiert über die neuesten Entwicklungen, Gesetze und Trends in der bAV
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Filter und Content Section */}
+        <section className="bg-slate-800 py-16 relative overflow-hidden">
+          {/* Subtle background elements */}
+          <div className="absolute inset-0 opacity-[0.03]">
+            <svg className="absolute top-10 left-0 w-80 h-80" viewBox="0 0 400 400">
+              <polygon points="200,30 330,130 330,230 200,330 70,230 70,130" 
+                       fill="none" stroke="#f97316" strokeWidth="1"/>
+            </svg>
+            <svg className="absolute bottom-10 right-0 w-64 h-64" viewBox="0 0 400 400">
+              <polygon points="200,50 300,100 300,200 200,250 100,200 100,100" 
+                       fill="none" stroke="#3b82f6" strokeWidth="1"/>
+            </svg>
+          </div>
+
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            {/* Filter Section */}
+            <div className="bg-gradient-to-br from-slate-700 to-slate-600 rounded-2xl p-8 mb-12 shadow-xl">
+              <div className="flex flex-col md:flex-row gap-6 items-center">
+                {/* Search */}
+                <div className="flex-1 relative">
+                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-400 w-5 h-5" />
+                  <input
+                    type="text"
+                    placeholder="Artikel durchsuchen..."
+                    className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-slate-600 rounded-xl text-white placeholder-slate-400 focus:outline-none focus:border-orange-500 transition-colors"
+                    value={searchTerm}
+                    onChange={(e) => setSearchTerm(e.target.value)}
+                  />
+                </div>
+
+                {/* Category Filter */}
+                <div className="flex flex-wrap gap-2">
                   {categories.map((category) => (
                     <button
                       key={category}
                       onClick={() => setSelectedCategory(category)}
-                      className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
+                      className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 ${
                         selectedCategory === category
-                          ? 'bg-orange-500 text-white'
-                          : 'bg-white/10 text-gray-300 hover:bg-white/20'
+                          ? 'bg-orange-500 text-white shadow-lg'
+                          : 'bg-slate-800 text-slate-300 hover:bg-slate-700 hover:text-white'
                       }`}
                     >
-                      {category}
+                      {category === 'alle' ? 'Alle Kategorien' : category}
                     </button>
                   ))}
                 </div>
               </div>
-
-              {/* Search */}
-              <div className="relative">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
-                <input
-                  type="text"
-                  placeholder="Artikel durchsuchen..."
-                  value={searchTerm}
-                  onChange={(e) => setSearchTerm(e.target.value)}
-                  className="pl-10 pr-4 py-2 bg-white/10 border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent"
-                />
-              </div>
             </div>
-          </div>
-        </div>
-      </div>
 
-      {/* Articles Grid */}
-      <div className="container mx-auto px-6 pb-20">
-        <div className="max-w-6xl mx-auto">
-          {filteredArticles.length === 0 ? (
-            <div className="text-center py-16">
-              <BookOpen className="w-16 h-16 text-gray-400 mx-auto mb-4" />
-              <h3 className="text-xl text-gray-300 mb-2">Keine Artikel gefunden</h3>
-              <p className="text-gray-400">Versuchen Sie andere Suchbegriffe oder Filter.</p>
-            </div>
-          ) : (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Articles Grid */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               {filteredArticles.map((article, index) => (
-                <article 
-                  key={article.id}
-                  className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2"
-                  style={{ animationDelay: `${index * 100}ms` }}
-                >
-                  {/* Article Image */}
-                  <div className="relative overflow-hidden">
-                    <img
-                      src={article.image}
+                <article key={article.id} className="bg-gradient-to-br from-slate-700 to-slate-600 rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-400 hover:scale-105">
+                  <div className="aspect-w-16 aspect-h-9">
+                    <img 
+                      src={article.image} 
                       alt={article.title}
-                      className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500"
+                      className="w-full h-48 object-cover"
                     />
-                    <div className="absolute top-4 left-4">
-                      <span className={`inline-flex items-center space-x-1 px-3 py-1 rounded-full text-xs font-bold border ${getCategoryColor(article.category)}`}>
+                  </div>
+                  
+                  <div className="p-6">
+                    {/* Category Badge */}
+                    <div className="flex items-center gap-2 mb-4">
+                      <span className={`inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-medium border ${getCategoryColor(article.category)}`}>
                         {getCategoryIcon(article.category)}
-                        <span>{article.category}</span>
+                        {article.category}
                       </span>
                     </div>
-                  </div>
 
-                  {/* Article Content */}
-                  <div className="p-6">
-                    {/* Meta Information */}
-                    <div className="flex items-center space-x-4 text-sm text-gray-500 mb-3">
-                      <div className="flex items-center space-x-1">
-                        <Calendar className="w-4 h-4" />
-                        <span>{new Date(article.date).toLocaleDateString('de-DE')}</span>
-                      </div>
-                      <div className="flex items-center space-x-1">
-                        <Clock className="w-4 h-4" />
-                        <span>{article.readTime}</span>
-                      </div>
-                    </div>
-
-                    {/* Article Title */}
-                    <h3 className="text-lg font-bold text-slate-900 mb-3 leading-tight group-hover:text-orange-600 transition-colors">
+                    {/* Title */}
+                    <h3 className="text-xl font-bold text-white mb-3 leading-tight hover:text-orange-400 transition-colors cursor-pointer">
                       {article.title}
                     </h3>
 
-                    {/* Article Excerpt */}
-                    <p className="text-gray-600 text-sm leading-relaxed mb-4">
+                    {/* Excerpt */}
+                    <p className="text-slate-300 text-sm leading-relaxed mb-4">
                       {article.excerpt}
                     </p>
 
-                    {/* Author and Tags */}
-                    <div className="border-t border-gray-100 pt-4">
-                      <div className="flex items-center justify-between">
-                        <div className="flex items-center space-x-2">
-                          <User className="w-4 h-4 text-gray-400" />
-                          <span className="text-sm text-gray-600 font-medium">{article.author}</span>
+                    {/* Meta Info */}
+                    <div className="flex items-center justify-between text-xs text-slate-400 pt-4 border-t border-slate-600">
+                      <div className="flex items-center gap-4">
+                        <div className="flex items-center gap-1">
+                          <User className="w-4 h-4" />
+                          <span>{article.author}</span>
                         </div>
-                        <button className="text-orange-500 hover:text-orange-600 font-semibold text-sm transition-colors">
-                          Weiterlesen →
-                        </button>
+                        <div className="flex items-center gap-1">
+                          <Clock className="w-4 h-4" />
+                          <span>{article.readTime}</span>
+                        </div>
                       </div>
-                      
-                      {/* Tags */}
-                      <div className="mt-3 flex flex-wrap gap-2">
-                        {article.tags.map((tag, tagIndex) => (
-                          <span
-                            key={tagIndex}
-                            className="bg-gray-100 text-gray-600 px-2 py-1 rounded-full text-xs"
-                          >
-                            #{tag}
-                          </span>
-                        ))}
+                      <div className="flex items-center gap-1">
+                        <Calendar className="w-4 h-4" />
+                        <span>{new Date(article.date).toLocaleDateString('de-DE')}</span>
                       </div>
+                    </div>
+
+                    {/* Tags */}
+                    <div className="flex flex-wrap gap-2 mt-4">
+                      {article.tags.map((tag, tagIndex) => (
+                        <span key={tagIndex} className="px-2 py-1 bg-slate-800 text-slate-300 text-xs rounded-md">
+                          #{tag}
+                        </span>
+                      ))}
                     </div>
                   </div>
                 </article>
               ))}
             </div>
-          )}
-        </div>
-      </div>
 
+            {/* No Results */}
+            {filteredArticles.length === 0 && (
+              <div className="text-center py-12">
+                <BookOpen className="w-16 h-16 text-slate-600 mx-auto mb-4" />
+                <h3 className="text-xl font-semibold text-slate-400 mb-2">Keine Artikel gefunden</h3>
+                <p className="text-slate-500">Versuchen Sie andere Suchbegriffe oder wählen Sie eine andere Kategorie.</p>
+              </div>
+            )}
+          </div>
+        </section>
+      </div>
+      
       <Footer />
     </div>
   );
