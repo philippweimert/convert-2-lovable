@@ -14,8 +14,8 @@ const Homepage = () => {
       {/* Add padding-top to account for fixed header */}
       <div className="pt-20">
         <HeroSection />
-        <ProcessSectionHomepage />
-        <InteractiveMainSections />
+        <ThreeStepProcessSection />
+        <ChallengesSolutionsSection />
         <CustomerSegments />
         <ExpertiseSection />
         <Footer />
