@@ -524,7 +524,7 @@ const ServicePage = () => {
                 className="border-2 border-white text-white hover:bg-white hover:text-orange-600 px-8 py-3 rounded-xl font-semibold transition-all duration-300"
                 onClick={() => window.open('https://outlook.office365.com/owa/calendar/ACENCIAde@acencia.de/bookings/', '_blank')}
               >
-                Demo anfordern
+                Beratung anfordern
               </button>
             </div>
           </div>
