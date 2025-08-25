@@ -7,7 +7,17 @@ import {
   FileText, 
   ArrowRight,
   ExternalLink,
-  Gavel
+  Gavel,
+  CheckCircle,
+  Users,
+  Euro,
+  Shield,
+  Scale,
+  Clock,
+  TrendingUp,
+  Heart,
+  Award,
+  Calculator
 } from "lucide-react";
 
 const EmployerObligationsPage = () => {
