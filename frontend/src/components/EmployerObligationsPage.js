@@ -174,7 +174,7 @@ const EmployerObligationsPage = () => {
               <h2 className="text-2xl lg:text-3xl font-bold text-white mb-6">
                 Pflichten vs. <span className="text-green-400">Chancen</span>
               </h2>
-              <p className="text-xl text-slate-300 max-w-4xl mx-auto">
+              <p className="text-lg text-slate-300 max-w-4xl mx-auto">
                 Vollständige Übersicht Ihrer rechtlichen Verpflichtungen und der sich daraus ergebenden 
                 unternehmerischen Vorteile bei korrekter Umsetzung
               </p>
