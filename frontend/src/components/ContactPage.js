@@ -265,6 +265,9 @@ const ContactPage = () => {
         </div>
       </section>
 
+      {/* Smooth transition to footer */}
+      <div className="h-12 bg-gradient-to-b from-slate-100 to-slate-900"></div>
+
       <Footer />
       </div>
     </div>
