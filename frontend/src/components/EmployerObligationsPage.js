@@ -304,6 +304,7 @@ const EmployerObligationsPage = () => {
                   </div>
 
                   <div className="space-y-6 relative z-10">
+                    {/* Steuerliche Vorteile */}
                     <div className="bg-white rounded-xl p-6 border-l-4 border-green-500">
                       <div className="flex items-start space-x-3 mb-3">
                         <Calculator className="w-6 h-6 text-green-600 flex-shrink-0 mt-1" />
