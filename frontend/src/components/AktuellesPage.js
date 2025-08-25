@@ -142,7 +142,7 @@ const AktuellesPage = () => {
                   betrieblichen Altersvorsorge
                 </span>
               </h1>
-              <p className="text-xl text-slate-200 max-w-4xl mx-auto leading-relaxed">
+              <p className="text-lg text-slate-200 max-w-4xl mx-auto leading-relaxed">
                 Bleiben Sie informiert über die neuesten Entwicklungen, Gesetze und Trends in der bAV
               </p>
             </div>
