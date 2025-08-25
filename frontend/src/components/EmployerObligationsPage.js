@@ -115,6 +115,9 @@ const EmployerObligationsPage = () => {
           </div>
         </section>
 
+        {/* Smooth transition from slate-900 to slate-800 */}
+        <div className="h-12 bg-gradient-to-b from-slate-900 to-slate-800"></div>
+
         {/* Wichtiger Hinweis - In blauem Schema integriert */}
         <section className="bg-slate-800 py-12 relative overflow-hidden">
           <div className="absolute inset-0 opacity-[0.04]">
