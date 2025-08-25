@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { 
   BarChart3, 
   TrendingUp, 
@@ -6,7 +6,9 @@ import {
   Network, 
   Handshake, 
   Coffee,
-  ArrowRight
+  ArrowRight,
+  ChevronDown,
+  ChevronUp
 } from 'lucide-react';
 import { Button } from './ui/button';
 
