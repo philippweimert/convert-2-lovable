@@ -201,62 +201,76 @@ const AktuellesPage = () => {
             {/* Articles Grid */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               {filteredArticles.map((article, index) => (
-                <article key={article.id} className="bg-gradient-to-br from-slate-700 to-slate-600 rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-400 hover:scale-105">
-                  <div className="aspect-w-16 aspect-h-9">
-                    <img 
-                      src={article.image} 
-                      alt={article.title}
-                      className="w-full h-48 object-cover"
-                    />
-                  </div>
-                  
-                  <div className="p-6">
-                    {/* Category Badge */}
-                    <div className="flex items-center gap-2 mb-4">
-                      <span className={`inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-medium border ${getCategoryColor(article.category)}`}>
-                        {getCategoryIcon(article.category)}
-                        {article.category}
-                      </span>
+                <a 
+                  key={article.id}
+                  href={article.url}
+                  target={article.url !== '#' ? '_blank' : '_self'}
+                  rel={article.url !== '#' ? 'noopener noreferrer' : ''}
+                  className="block"
+                >
+                  <article className="bg-gradient-to-br from-slate-700 to-slate-600 rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-400 hover:scale-105 cursor-pointer">
+                    <div className="aspect-w-16 aspect-h-9">
+                      <img 
+                        src={article.image} 
+                        alt={article.title}
+                        className="w-full h-48 object-cover"
+                      />
                     </div>
-
-                    {/* Title */}
-                    <h3 className="text-xl font-bold text-white mb-3 leading-tight hover:text-orange-400 transition-colors cursor-pointer">
-                      {article.title}
-                    </h3>
-
-                    {/* Excerpt */}
-                    <p className="text-slate-300 text-sm leading-relaxed mb-4">
-                      {article.excerpt}
-                    </p>
-
-                    {/* Meta Info */}
-                    <div className="flex items-center justify-between text-xs text-slate-400 pt-4 border-t border-slate-600">
-                      <div className="flex items-center gap-4">
-                        <div className="flex items-center gap-1">
-                          <User className="w-4 h-4" />
-                          <span>{article.author}</span>
-                        </div>
-                        <div className="flex items-center gap-1">
-                          <Clock className="w-4 h-4" />
-                          <span>{article.readTime}</span>
-                        </div>
-                      </div>
-                      <div className="flex items-center gap-1">
-                        <Calendar className="w-4 h-4" />
-                        <span>{new Date(article.date).toLocaleDateString('de-DE')}</span>
-                      </div>
-                    </div>
-
-                    {/* Tags */}
-                    <div className="flex flex-wrap gap-2 mt-4">
-                      {article.tags.map((tag, tagIndex) => (
-                        <span key={tagIndex} className="px-2 py-1 bg-slate-800 text-slate-300 text-xs rounded-md">
-                          #{tag}
+                    
+                    <div className="p-6">
+                      {/* Category Badge */}
+                      <div className="flex items-center gap-2 mb-4">
+                        <span className={`inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-medium border ${getCategoryColor(article.category)}`}>
+                          {getCategoryIcon(article.category)}
+                          {article.category}
                         </span>
-                      ))}
+                        {article.url !== '#' && (
+                          <span className="inline-flex items-center gap-1 px-2 py-1 bg-blue-900/30 text-blue-300 text-xs rounded-full border border-blue-700">
+                            <ArrowRight className="w-3 h-3" />
+                            Extern
+                          </span>
+                        )}
+                      </div>
+
+                      {/* Title */}
+                      <h3 className="text-xl font-bold text-white mb-3 leading-tight hover:text-orange-400 transition-colors">
+                        {article.title}
+                      </h3>
+
+                      {/* Excerpt */}
+                      <p className="text-slate-300 text-sm leading-relaxed mb-4">
+                        {article.excerpt}
+                      </p>
+
+                      {/* Meta Info */}
+                      <div className="flex items-center justify-between text-xs text-slate-400 pt-4 border-t border-slate-600">
+                        <div className="flex items-center gap-4">
+                          <div className="flex items-center gap-1">
+                            <User className="w-4 h-4" />
+                            <span>{article.author}</span>
+                          </div>
+                          <div className="flex items-center gap-1">
+                            <Clock className="w-4 h-4" />
+                            <span>{article.readTime}</span>
+                          </div>
+                        </div>
+                        <div className="flex items-center gap-1">
+                          <Calendar className="w-4 h-4" />
+                          <span>{new Date(article.date).toLocaleDateString('de-DE')}</span>
+                        </div>
+                      </div>
+
+                      {/* Tags */}
+                      <div className="flex flex-wrap gap-2 mt-4">
+                        {article.tags.map((tag, tagIndex) => (
+                          <span key={tagIndex} className="px-2 py-1 bg-slate-800 text-slate-300 text-xs rounded-md">
+                            #{tag}
+                          </span>
+                        ))}
+                      </div>
                     </div>
-                  </div>
-                </article>
+                  </article>
+                </a>
               ))}
             </div>
 
