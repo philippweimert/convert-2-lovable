@@ -5,7 +5,6 @@ import ThreeStepProcessSection from "./ThreeStepProcessSection";
 import BusinessBenefitsGrid from "./BusinessBenefitsGrid";
 import ChallengesSolutionsSection from "./ChallengesSolutionsSection";
 import CustomerSegments from "./CustomerSegments";
-import ExpertiseSection from "./ExpertiseSection";
 import Footer from "./Footer";
 
 const Homepage = () => {
