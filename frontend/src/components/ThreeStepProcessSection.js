@@ -3,6 +3,11 @@ import { CheckCircle, Settings, Users, ArrowRight, ChevronDown, ChevronUp } from
 import { Button } from './ui/button';
 
 const ThreeStepProcessSection = () => {
+  const [expandedStep, setExpandedStep] = useState(null);
+
+  const toggleStep = (index) => {
+    setExpandedStep(expandedStep === index ? null : index);
+  };
   const processSteps = [
     {
       icon: <CheckCircle className="w-6 h-6" />,
