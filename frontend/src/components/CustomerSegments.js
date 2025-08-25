@@ -80,7 +80,7 @@ const CustomerSegments = () => {
             <span className="text-slate-900"> vertrauen uns</span>
           </h2>
           
-          <p className="text-xl text-slate-600 max-w-4xl mx-auto leading-relaxed font-light">
+          <p className="text-lg text-slate-600 max-w-4xl mx-auto leading-relaxed font-light">
             Von Start-ups bis zu Konzernen - unsere digitale bAV-Plattform ist 
             skalierbar und passt sich flexibel an Ihre individuellen Bedürfnisse an.
           </p>
