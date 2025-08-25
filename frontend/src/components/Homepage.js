@@ -16,6 +16,7 @@ const Homepage = () => {
       <div className="pt-20">
         <HeroSection />
         <ThreeStepProcessSection />
+        <BusinessBenefitsGrid />
         <ChallengesSolutionsSection />
         <CustomerSegments />
         <ExpertiseSection />
