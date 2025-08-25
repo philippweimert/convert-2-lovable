@@ -180,7 +180,7 @@ const CustomerSegments = () => {
               <h3 className="text-2xl lg:text-3xl font-bold text-white mb-6 leading-tight">
                 Unsicher, welche Lösung für Sie die richtige ist?
               </h3>
-              <p className="text-slate-300 mb-8 max-w-3xl mx-auto text-lg leading-relaxed">
+              <p className="text-slate-300 mb-8 max-w-3xl mx-auto text-base leading-relaxed">
                 Lassen Sie uns gemeinsam die optimale bAV-Lösung für Ihr Unternehmen finden. 
                 In einem kostenlosen Beratungsgespräch analysieren wir Ihre Anforderungen.
               </p>
