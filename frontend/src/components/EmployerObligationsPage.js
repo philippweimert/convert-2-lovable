@@ -400,7 +400,7 @@ const EmployerObligationsPage = () => {
                             </div>
                             <div className="flex items-center space-x-2">
                               <CheckCircle className="w-4 h-4 text-green-500" />
-                              <span className="text-sm text-slate-7700">HR-Teams können sich auf Kernaufgaben fokussieren</span>
+                              <span className="text-sm text-slate-700">HR-Teams können sich auf Kernaufgaben fokussieren</span>
                             </div>
                           </div>
                         </div>
