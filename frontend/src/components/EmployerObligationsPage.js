@@ -140,4 +140,5 @@ const EmployerObligationsPage = () => {
     </div>
   );
 };
+
 export default EmployerObligationsPage;
