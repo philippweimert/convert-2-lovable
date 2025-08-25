@@ -11,6 +11,18 @@ const AktuellesPage = () => {
   const articles = [
     {
       id: 1,
+      title: "Haftung des Arbeitgebers in der betrieblichen Altersversorgung und Minimierungsstrategien",
+      excerpt: "Ein umfassender Überblick über die Haftungsrisiken von Arbeitgebern in der bAV und bewährte Strategien zur Risikominimierung. Rechtliche Grundlagen und praktische Lösungsansätze für Unternehmen.",
+      date: "2024-12-20",
+      category: "Rechtsprechung",
+      author: "Rechtsanwalt Dr. Michael Weber",
+      readTime: "12 Min.",
+      image: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=400&h=240&fit=crop",
+      tags: ["Haftung", "Arbeitgeber", "Risikominimierung"],
+      url: "https://www.anwalt.de/rechtstipps/haftung-des-arbeitgebers-in-der-betrieblichen-altersversorgung-und-minimierungsstrategien_185184.html"
+    },
+    {
+      id: 2,
       title: "BAG-Urteil: Neue Pflichten bei der Entgeltumwandlung",
       excerpt: "Das Bundesarbeitsgericht hat in einem wegweisenden Urteil die Arbeitgeberpflichten bei der Entgeltumwandlung präzisiert. Unternehmen müssen künftig über steuerliche Auswirkungen informieren.",
       date: "2024-12-15",
@@ -18,10 +30,11 @@ const AktuellesPage = () => {
       author: "Dr. Maria Schmidt",
       readTime: "5 Min.",
       image: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=400&h=240&fit=crop",
-      tags: ["BAG", "Entgeltumwandlung", "Arbeitgeberpflichten"]
+      tags: ["BAG", "Entgeltumwandlung", "Arbeitgeberpflichten"],
+      url: "#"
     },
     {
-      id: 2,
+      id: 3,
       title: "Betriebsrentenstärkungsgesetz: Änderungen ab 2025",
       excerpt: "Mit dem neuen Jahr treten wichtige Änderungen des Betriebsrentenstärkungsgesetzes in Kraft. Wir erläutern die wichtigsten Neuerungen für Arbeitgeber und Arbeitnehmer.",
       date: "2024-12-10",
@@ -29,10 +42,11 @@ const AktuellesPage = () => {
       author: "Prof. Dr. Thomas Weber",
       readTime: "8 Min.",
       image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=400&h=240&fit=crop",
-      tags: ["BRSG", "Gesetzesänderung", "2025"]
+      tags: ["BRSG", "Gesetzesänderung", "2025"],
+      url: "#"
     },
     {
-      id: 3,
+      id: 4,
       title: "Digitalisierung der bAV: Chancen und Herausforderungen",
       excerpt: "Expertenmeinung zur fortschreitenden Digitalisierung in der betrieblichen Altersvorsorge. Welche Potentiale bieten moderne HR-Technologien?",
       date: "2024-12-05",
@@ -40,10 +54,11 @@ const AktuellesPage = () => {
       author: "Sarah Mueller",
       readTime: "6 Min.",
       image: "https://images.unsplash.com/photo-1551434678-e076c223a692?w=400&h=240&fit=crop",
-      tags: ["Digitalisierung", "HR-Tech", "Innovation"]
+      tags: ["Digitalisierung", "HR-Tech", "Innovation"],
+      url: "#"
     },
     {
-      id: 4,
+      id: 5,
       title: "BFH stärkt Arbeitnehmerrechte bei Direktversicherung",
       excerpt: "Der Bundesfinanzhof hat in einem aktuellen Urteil die Rechte von Arbeitnehmern bei der Direktversicherung gestärkt. Die Auswirkungen für die Praxis.",
       date: "2024-11-28",
@@ -51,10 +66,11 @@ const AktuellesPage = () => {
       author: "Dr. Klaus Weber",
       readTime: "4 Min.",
       image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=240&fit=crop",
-      tags: ["BFH", "Direktversicherung", "Urteil"]
+      tags: ["BFH", "Direktversicherung", "Urteil"],
+      url: "#"
     },
     {
-      id: 5,
+      id: 6,
       title: "Nachhaltige bAV: ESG-Kriterien im Fokus",
       excerpt: "Immer mehr Unternehmen setzen bei der betrieblichen Altersvorsorge auf nachhaltige Anlagestrategien. Wie ESG-Kriterien die bAV verändern.",
       date: "2024-11-20",
@@ -62,7 +78,8 @@ const AktuellesPage = () => {
       author: "Lisa Hoffmann",
       readTime: "7 Min.",
       image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=400&h=240&fit=crop",
-      tags: ["ESG", "Nachhaltigkeit", "Investments"]
+      tags: ["ESG", "Nachhaltigkeit", "Investments"],
+      url: "#"
     }
   ];
 
