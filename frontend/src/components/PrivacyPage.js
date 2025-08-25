@@ -26,6 +26,9 @@ const PrivacyPage = () => {
           </div>
         </section>
 
+        {/* Smooth transition from slate-900 to slate-100 */}
+        <div className="h-12 bg-gradient-to-b from-slate-900 to-slate-100"></div>
+
         {/* Privacy Content */}
         <section className="bg-slate-100 py-16">
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
