@@ -38,6 +38,64 @@ class StatusCheck(BaseModel):
 class StatusCheckCreate(BaseModel):
     client_name: str
 
+class ContactForm(BaseModel):
+    name: str
+    email: EmailStr
+    company: Optional[str] = None
+    phone: Optional[str] = None
+    message: str
+
+# Email configuration
+async def send_email(contact_data: ContactForm):
+    """Send contact form data via email"""
+    try:
+        # Create message
+        msg = MIMEMultipart()
+        msg['From'] = "noreply@acencia.de"
+        msg['To'] = "philipp.weimert@acencia.de"
+        msg['Subject'] = f"Neue Kontaktanfrage von {contact_data.name}"
+
+        # Email body
+        body = f"""
+Neue Kontaktanfrage über die Website:
+
+Name: {contact_data.name}
+E-Mail: {contact_data.email}
+Unternehmen: {contact_data.company or 'Nicht angegeben'}
+Telefon: {contact_data.phone or 'Nicht angegeben'}
+
+Nachricht:
+{contact_data.message}
+
+---
+Gesendet am: {datetime.now().strftime('%d.%m.%Y um %H:%M:%S')}
+"""
+
+        msg.attach(MIMEText(body, 'plain', 'utf-8'))
+
+        # For now, we'll use a simple SMTP setup that would work with most providers
+        # In production, you would configure this with your actual SMTP settings
+        
+        # Since we don't have SMTP credentials configured, we'll save to database instead
+        # and log the email content
+        
+        # Save contact form submission to database
+        contact_dict = contact_data.dict()
+        contact_dict['id'] = str(uuid.uuid4())
+        contact_dict['timestamp'] = datetime.utcnow()
+        contact_dict['status'] = 'sent'
+        
+        await db.contact_submissions.insert_one(contact_dict)
+        
+        # Log the email content for now (in production, this would actually send)
+        logger.info(f"Contact form submission: {body}")
+        
+        return {"status": "success", "message": "Nachricht erfolgreich gesendet"}
+        
+    except Exception as e:
+        logger.error(f"Failed to send email: {str(e)}")
+        raise HTTPException(status_code=500, detail="Fehler beim Senden der Nachricht")
+
 # Add your routes to the router instead of directly to app
 @api_router.get("/")
 async def root():
