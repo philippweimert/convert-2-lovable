@@ -13,7 +13,6 @@ const Homepage = () => {
       <div className="pt-32">
         <HeroSection />
         <ThreeStepProcessSection />
-        <BusinessBenefitsGrid />
         <CustomerSegments />
         <Footer />
       </div>
