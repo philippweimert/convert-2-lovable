@@ -13,6 +13,8 @@ import EmptyTemplatePage from "./components/EmptyTemplatePage";
 import DieBavPage from "./components/DieBavPage";
 import DieBavPageX from "./components/DieBavPageX";
 import DieBavPageY from "./components/DieBavPageY";
+import BkvPage from "./components/BkvPage";
+import BuvPage from "./components/BuvPage";
 import { Toaster } from "./components/ui/toaster";
 
 function App() {
