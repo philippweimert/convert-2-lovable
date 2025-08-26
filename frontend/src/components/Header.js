@@ -79,25 +79,75 @@ const Header = () => {
               </div>
             </div>
             
-            {/* bKV Link */}
-            <Link 
-              to="/bkv" 
-              className="relative text-white hover:text-orange-400 transition-all duration-400 font-medium group py-2 smooth-slide text-body"
+            {/* bKV Dropdown */}
+            <div 
+              className="relative group"
+              onMouseEnter={() => setIsBkvDropdownOpen(true)}
+              onMouseLeave={() => setIsBkvDropdownOpen(false)}
             >
-              <span>bKV</span>
-              <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-orange-400 to-orange-500 group-hover:w-full transition-all duration-400 ease-smooth"></div>
-            </Link>
+              <Link 
+                to="/bkv" 
+                className="relative text-white hover:text-orange-400 transition-all duration-400 font-medium group py-2 smooth-slide text-body flex items-center"
+              >
+                <span>bKV</span>
+                <ChevronDown className="ml-1 h-4 w-4 transition-transform duration-200" />
+                <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-orange-400 to-orange-500 group-hover:w-full transition-all duration-400 ease-smooth"></div>
+              </Link>
+              
+              {/* Dropdown Menu */}
+              <div className={`absolute top-full left-0 mt-2 w-48 bg-acencia-light/95 backdrop-blur-lg rounded-xl shadow-xl border border-acencia-light/50 py-2 transition-all duration-300 ${
+                isBkvDropdownOpen ? 'opacity-100 visible transform translate-y-0' : 'opacity-0 invisible transform -translate-y-2'
+              }`}>
+                <Link 
+                  to="/bkv/x" 
+                  className="block px-4 py-3 text-white hover:text-orange-400 hover:bg-white/5 transition-colors duration-200"
+                >
+                  bKV Option X
+                </Link>
+                <Link 
+                  to="/bkv/y" 
+                  className="block px-4 py-3 text-white hover:text-orange-400 hover:bg-white/5 transition-colors duration-200"
+                >
+                  bKV Option Y
+                </Link>
+              </div>
+            </div>
             
-            {/* bUV Link */}
-            <Link 
-              to="/buv" 
-              className="relative text-white hover:text-orange-400 transition-all duration-400 font-medium group py-2 smooth-slide text-body"
+            {/* bUV Dropdown */}
+            <div 
+              className="relative group"
+              onMouseEnter={() => setIsBuvDropdownOpen(true)}
+              onMouseLeave={() => setIsBuvDropdownOpen(false)}
             >
-              <span>bUV</span>
-              <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-orange-400 to-orange-500 group-hover:w-full transition-all duration-400 ease-smooth"></div>
-            </Link>
+              <Link 
+                to="/buv" 
+                className="relative text-white hover:text-orange-400 transition-all duration-400 font-medium group py-2 smooth-slide text-body flex items-center"
+              >
+                <span>bUV</span>
+                <ChevronDown className="ml-1 h-4 w-4 transition-transform duration-200" />
+                <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-orange-400 to-orange-500 group-hover:w-full transition-all duration-400 ease-smooth"></div>
+              </Link>
+              
+              {/* Dropdown Menu */}
+              <div className={`absolute top-full left-0 mt-2 w-48 bg-acencia-light/95 backdrop-blur-lg rounded-xl shadow-xl border border-acencia-light/50 py-2 transition-all duration-300 ${
+                isBuvDropdownOpen ? 'opacity-100 visible transform translate-y-0' : 'opacity-0 invisible transform -translate-y-2'
+              }`}>
+                <Link 
+                  to="/buv/x" 
+                  className="block px-4 py-3 text-white hover:text-orange-400 hover:bg-white/5 transition-colors duration-200"
+                >
+                  bUV Option X
+                </Link>
+                <Link 
+                  to="/buv/y" 
+                  className="block px-4 py-3 text-white hover:text-orange-400 hover:bg-white/5 transition-colors duration-200"
+                >
+                  bUV Option Y
+                </Link>
+              </div>
+            </div>
             
-            {/* Über uns Dropdown */}
+            {/* über uns Dropdown */}
             <div 
               className="relative group"
               onMouseEnter={() => setIsAboutDropdownOpen(true)}
@@ -107,7 +157,7 @@ const Header = () => {
                 to="/ueber-uns" 
                 className="relative text-white hover:text-orange-400 transition-all duration-400 font-medium group py-2 smooth-slide text-body flex items-center"
               >
-                <span>Über uns</span>
+                <span>über uns</span>
                 <ChevronDown className="ml-1 h-4 w-4 transition-transform duration-200" />
                 <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-orange-400 to-orange-500 group-hover:w-full transition-all duration-400 ease-smooth"></div>
               </Link>
@@ -120,7 +170,7 @@ const Header = () => {
                   to="/ueber-uns" 
                   className="block px-4 py-3 text-white hover:text-orange-400 hover:bg-white/5 transition-colors duration-200"
                 >
-                  Über uns
+                  über uns
                 </Link>
                 <Link 
                   to="/ueber-uns/service-team" 
@@ -130,13 +180,40 @@ const Header = () => {
                 </Link>
               </div>
             </div>
-            <Link 
-              to="/kontakt" 
-              className="relative text-white hover:text-orange-400 transition-all duration-400 font-medium group py-2 smooth-slide text-body"
+            
+            {/* Kontakt Dropdown */}
+            <div 
+              className="relative group"
+              onMouseEnter={() => setIsContactDropdownOpen(true)}
+              onMouseLeave={() => setIsContactDropdownOpen(false)}
             >
-              <span>Kontakt</span>
-              <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-orange-400 to-orange-500 group-hover:w-full transition-all duration-400 ease-smooth"></div>
-            </Link>
+              <Link 
+                to="/kontakt" 
+                className="relative text-white hover:text-orange-400 transition-all duration-400 font-medium group py-2 smooth-slide text-body flex items-center"
+              >
+                <span>Kontakt</span>
+                <ChevronDown className="ml-1 h-4 w-4 transition-transform duration-200" />
+                <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-orange-400 to-orange-500 group-hover:w-full transition-all duration-400 ease-smooth"></div>
+              </Link>
+              
+              {/* Dropdown Menu */}
+              <div className={`absolute top-full left-0 mt-2 w-48 bg-acencia-light/95 backdrop-blur-lg rounded-xl shadow-xl border border-acencia-light/50 py-2 transition-all duration-300 ${
+                isContactDropdownOpen ? 'opacity-100 visible transform translate-y-0' : 'opacity-0 invisible transform -translate-y-2'
+              }`}>
+                <Link 
+                  to="/kontakt" 
+                  className="block px-4 py-3 text-white hover:text-orange-400 hover:bg-white/5 transition-colors duration-200"
+                >
+                  Kontakt
+                </Link>
+                <Link 
+                  to="/kontakt/beratung" 
+                  className="block px-4 py-3 text-white hover:text-orange-400 hover:bg-white/5 transition-colors duration-200"
+                >
+                  Beratung
+                </Link>
+              </div>
+            </div>
             <Link 
               to="/leere-vorlage" 
               className="relative text-white hover:text-orange-400 transition-all duration-400 font-medium group py-2 smooth-slide text-body"
