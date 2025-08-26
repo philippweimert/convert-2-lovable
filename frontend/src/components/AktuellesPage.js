@@ -219,8 +219,8 @@ const AktuellesPage = () => {
                     
                     <div className="p-4">
                       {/* Category Badge */}
-                      <div className="flex items-center gap-2 mb-4">
-                        <span className={`inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-medium border ${getCategoryColor(article.category)}`}>
+                      <div className="flex items-center gap-2 mb-3">
+                        <span className={`inline-flex items-center gap-1 px-2 py-1 rounded-full text-xs font-medium border ${getCategoryColor(article.category)}`}>
                           {getCategoryIcon(article.category)}
                           {article.category}
                         </span>
@@ -232,30 +232,30 @@ const AktuellesPage = () => {
                         )}
                       </div>
 
-                      {/* Title */}
-                      <h3 className="text-xl font-bold text-white mb-3 leading-tight hover:text-orange-400 transition-colors">
+                      {/* Title - kleiner */}
+                      <h3 className="text-lg font-bold text-white mb-2 leading-tight hover:text-orange-400 transition-colors line-clamp-2">
                         {article.title}
                       </h3>
 
-                      {/* Excerpt */}
-                      <p className="text-slate-300 text-sm leading-relaxed mb-4">
+                      {/* Excerpt - kleiner */}
+                      <p className="text-slate-300 text-xs leading-relaxed mb-3 line-clamp-3">
                         {article.excerpt}
                       </p>
 
-                      {/* Meta Info */}
-                      <div className="flex items-center justify-between text-xs text-slate-400 pt-4 border-t border-slate-600">
-                        <div className="flex items-center gap-4">
+                      {/* Meta Info - kompakter */}
+                      <div className="flex items-center justify-between text-xs text-slate-400 pt-2 border-t border-slate-600">
+                        <div className="flex items-center gap-2">
                           <div className="flex items-center gap-1">
-                            <User className="w-4 h-4" />
-                            <span>{article.author}</span>
+                            <User className="w-3 h-3" />
+                            <span className="truncate max-w-20">{article.author}</span>
                           </div>
                           <div className="flex items-center gap-1">
-                            <Clock className="w-4 h-4" />
+                            <Clock className="w-3 h-3" />
                             <span>{article.readTime}</span>
                           </div>
                         </div>
                         <div className="flex items-center gap-1">
-                          <Calendar className="w-4 h-4" />
+                          <Calendar className="w-3 h-3" />
                           <span>{new Date(article.date).toLocaleDateString('de-DE')}</span>
                         </div>
                       </div>
