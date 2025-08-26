@@ -94,7 +94,12 @@ module.exports = {
   			acencia: {
   				DEFAULT: '#001f3c',
   				dark: '#001529',
-  				light: '#0d2847'
+  				light: '#0d2847',
+  				blue: '#98a9c3',
+  				'blue-light': '#e3ebf2',
+  				white: '#ffffff',
+  				orange: '#fa9939',
+  				'orange-light': '#f8dcbf'
   			}
   		},
   		animation: {
