@@ -227,7 +227,7 @@ const DieBavPage = () => {
                     to={box.link}
                     className="group block"
                   >
-                    <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:bg-white/15 transition-all duration-300 hover:scale-105 hover:shadow-xl h-full">
+                    <div className="bg-white/10 backdrop-blur-sm rounded-xl p-5 border border-white/20 hover:bg-white/15 transition-all duration-300 hover:scale-105 hover:shadow-xl h-full">
                       <div className={`w-12 h-12 bg-gradient-to-r ${box.color} rounded-xl flex items-center justify-center mb-4 text-white group-hover:scale-110 transition-transform duration-300`}>
                         {box.icon}
                       </div>
