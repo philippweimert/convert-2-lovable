@@ -18,7 +18,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Homepage />} />
           <Route path="/ueber-uns" element={<AboutPage />} />
-          <Route path="/arbeitgeber-pflichten" element={<EmployerObligationsPage />} />
+          <Route path="/bav-rechtliche-grundlagen" element={<EmployerObligationsPage />} />
           <Route path="/aktuelles" element={<AktuellesPage />} />
           <Route path="/kontakt" element={<ContactPage />} />
           <Route path="/leere-vorlage" element={<EmptyTemplatePage />} />
