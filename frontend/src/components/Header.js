@@ -62,6 +62,13 @@ const Header = () => {
               <span>Kontakt</span>
               <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-orange-400 to-orange-500 group-hover:w-full transition-all duration-400 ease-smooth"></div>
             </Link>
+            <Link 
+              to="/leere-vorlage" 
+              className="relative text-white hover:text-orange-400 transition-all duration-400 font-medium group py-2 smooth-slide text-body"
+            >
+              <span>Leere Vorlage</span>
+              <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-orange-400 to-orange-500 group-hover:w-full transition-all duration-400 ease-smooth"></div>
+            </Link>
             <Button 
               className="btn-primary bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-8 py-3 rounded-xl font-semibold transition-all duration-400 hover:scale-105 shadow-md micro-bounce text-body"
               onClick={() => window.open('https://www.smartcloudservices.de/acencia/login/login.do', '_blank')}
