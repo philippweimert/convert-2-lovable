@@ -146,21 +146,14 @@ const Header = () => {
                   Unterkategorie Y
                 </Link>
                 <Link
-                  to="/die-bav/z"
+                  to="/die-bav/aktuelles"
                   className="block px-6 py-2 text-sm text-slate-300 hover:text-orange-400 hover:bg-white/5 rounded-xl transition-all duration-300"
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  Unterkategorie Z
+                  Aktuelles
                 </Link>
               </div>
             </div>
-            <Link
-              to="/aktuelles"
-              className="block px-6 py-3 text-white hover:text-orange-400 hover:bg-white/5 rounded-xl transition-all duration-300 font-medium"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Aktuelles
-            </Link>
             <Link
               to="/ueber-uns"
               className="block px-6 py-3 text-white hover:text-orange-400 hover:bg-white/5 rounded-xl transition-all duration-300 font-medium"
