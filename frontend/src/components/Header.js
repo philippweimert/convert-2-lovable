@@ -36,7 +36,7 @@ const Header = () => {
 
           {/* Enhanced Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-6">
-            {/* die bAV Dropdown */}
+            {/* bAV Dropdown */}
             <div 
               className="relative group"
               onMouseEnter={() => setIsBavDropdownOpen(true)}
@@ -46,7 +46,7 @@ const Header = () => {
                 to="/die-bav" 
                 className="relative text-white hover:text-orange-400 transition-all duration-400 font-medium group py-2 smooth-slide text-body flex items-center"
               >
-                <span>die bAV</span>
+                <span>bAV</span>
                 <ChevronDown className="ml-1 h-4 w-4 transition-transform duration-200" />
                 <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-orange-400 to-orange-500 group-hover:w-full transition-all duration-400 ease-smooth"></div>
               </Link>
@@ -75,6 +75,24 @@ const Header = () => {
                 </Link>
               </div>
             </div>
+            
+            {/* bKV Link */}
+            <Link 
+              to="/bkv" 
+              className="relative text-white hover:text-orange-400 transition-all duration-400 font-medium group py-2 smooth-slide text-body"
+            >
+              <span>bKV</span>
+              <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-orange-400 to-orange-500 group-hover:w-full transition-all duration-400 ease-smooth"></div>
+            </Link>
+            
+            {/* bUV Link */}
+            <Link 
+              to="/buv" 
+              className="relative text-white hover:text-orange-400 transition-all duration-400 font-medium group py-2 smooth-slide text-body"
+            >
+              <span>bUV</span>
+              <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-orange-400 to-orange-500 group-hover:w-full transition-all duration-400 ease-smooth"></div>
+            </Link>
             
             {/* Über uns Dropdown */}
             <div 
