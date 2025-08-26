@@ -196,6 +196,18 @@ frontend:
           agent: "testing"
           comment: "COMPREHENSIVE FRONTEND TESTING COMPLETED: ✅ Open Sans font successfully implemented and verified across ALL pages and components (body, headings, buttons, navigation, content). ✅ Homepage functionality: Hero section with YouTube video integration working, 3-step process section displaying correctly, navigation menu functional, interactive elements (buttons, hover effects) working, mobile responsiveness confirmed. ✅ Cross-page navigation: 4/5 pages working correctly (bAV rechtliche Grundlagen, Über uns, Kontakt, Leere Vorlage) with consistent Open Sans font. ✅ Contact page form elements present and functional. ✅ Video integration: YouTube iframe properly embedded and sized (510x286). ✅ Responsive design: Mobile menu opens and functions correctly. ❌ ROUTING ISSUE FOUND: Aktuelles page redirects to homepage instead of showing Aktuelles content - component exists but route not working. Only minor console warnings about 'web-share' feature (normal). OVERALL: Font implementation 100% successful, all functionality working except Aktuelles page routing."
 
+  - task: "Aktuelles Page Routing Issue"
+    implemented: true
+    working: false
+    file: "/app/frontend/src/App.js, /app/frontend/src/components/AktuellesPage.js"
+    stuck_count: 1
+    priority: "high"
+    needs_retesting: true
+    status_history:
+        - working: false
+          agent: "testing"
+          comment: "CRITICAL ROUTING ISSUE: Aktuelles page component exists and is properly implemented with search functionality, category filtering, and article display, but the route /aktuelles redirects to homepage instead of showing the Aktuelles content. Navigation link exists in header but doesn't load the correct page. This prevents testing of Aktuelles page search and filtering functionality. Route configuration in App.js needs investigation."
+
   - task: "Homepage Hero Section"
     implemented: true
     working: true
