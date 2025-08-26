@@ -215,12 +215,12 @@ const DieBavPage = () => {
               </div>
             </div>
 
-            {/* Mehr erfahren Boxen */}
-            <div className="mb-16">
-              <h2 className="text-3xl font-bold text-white text-center mb-12">
+            {/* Mehr erfahren Boxen - kompakter */}
+            <div className="mb-12">
+              <h2 className="text-2xl font-bold text-white text-center mb-8">
                 Mehr erfahren
               </h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {moreInfoBoxes.map((box, index) => (
                   <Link 
                     key={index}
