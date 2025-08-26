@@ -89,7 +89,7 @@ const Header = () => {
         <div className={`md:hidden transition-all duration-300 overflow-hidden ${
           isMenuOpen ? 'max-h-[32rem] opacity-100' : 'max-h-0 opacity-0'
         }`}>
-          <div className="px-2 pt-2 pb-6 space-y-1 bg-slate-800/95 backdrop-blur-lg rounded-2xl mt-4 border border-slate-700/50 shadow-xl">
+          <div className="px-2 pt-2 pb-6 space-y-1 bg-acencia-light/95 backdrop-blur-lg rounded-2xl mt-4 border border-acencia-light/50 shadow-xl">
             <Link
               to="/arbeitgeber-pflichten"
               className="block px-6 py-3 text-white hover:text-orange-400 hover:bg-white/5 rounded-xl transition-all duration-300 font-medium"
