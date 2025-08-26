@@ -171,7 +171,7 @@ const CustomerSegments = () => {
         {/* Enhanced bottom section */}
         <div className="text-center">
           <div className="bg-gradient-to-br from-acencia via-acencia-light to-acencia rounded-3xl p-12 max-w-5xl mx-auto shadow-2xl relative overflow-hidden">
-            {/* Geometrische Hintergrundmuster in Weiß */}
+            {/* Geometrische Hintergrundmuster - hell auf dunklem Hintergrund */}
             <div className="absolute inset-0 opacity-[0.08]">
               <svg className="absolute top-10 right-0 w-64 h-64 animate-pulse" viewBox="0 0 400 400" style={{animationDuration: '6s'}}>
                 <polygon points="200,60 300,120 300,180 200,240 100,180 100,120" 
@@ -179,7 +179,7 @@ const CustomerSegments = () => {
               </svg>
               <svg className="absolute bottom-10 left-0 w-48 h-48 animate-bounce" viewBox="0 0 400 400" style={{animationDuration: '4s'}}>
                 <polygon points="200,80 280,140 280,200 200,260 120,200 120,140" 
-                         fill="none" stroke="white" strokeWidth="1"/>
+                         fill="none" stroke="#e3ebf2" strokeWidth="1"/>
               </svg>
             </div>
             
