@@ -35,7 +35,7 @@ const Header = () => {
           {/* Enhanced Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-10">
             <Link 
-              to="/arbeitgeber-pflichten" 
+              to="/bav-rechtliche-grundlagen" 
               className="relative text-white hover:text-orange-400 transition-all duration-400 font-medium group py-2 smooth-slide text-body"
             >
               <span>bAV - rechtliche Grundlagen</span>
