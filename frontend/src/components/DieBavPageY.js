@@ -184,24 +184,90 @@ const DieBavPageY = () => {
 
             {/* Beispielrechnung */}
             <div className="mt-16 bg-gradient-to-r from-green-600/20 to-blue-600/20 backdrop-blur-sm rounded-2xl p-8 border border-green-400/30">
-              <h2 className="text-2xl font-bold text-white mb-6 text-center">
-                💡 Beispielrechnung
+              <h2 className="text-2xl font-bold text-white mb-8 text-center">
+                💡 Berechnungsbeispiel: bAV mit 15% Arbeitgeberförderung
               </h2>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+              
+              {/* Hauptberechnung */}
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
                 <div className="bg-white/10 rounded-xl p-6">
-                  <div className="text-3xl font-bold text-acencia-orange mb-2">100 €</div>
-                  <div className="text-white font-semibold mb-2">Monatlicher bAV-Beitrag</div>
-                  <div className="text-slate-300 text-sm">aus Ihrem Bruttogehalt</div>
+                  <h3 className="text-lg font-bold text-white mb-4 text-center">Monatliche Beiträge</h3>
+                  <div className="space-y-4">
+                    <div className="flex justify-between items-center border-b border-white/20 pb-2">
+                      <span className="text-slate-200">Gesamtbeitrag bAV:</span>
+                      <span className="text-2xl font-bold text-acencia-orange">100 €</span>
+                    </div>
+                    <div className="flex justify-between items-center border-b border-white/20 pb-2">
+                      <span className="text-slate-200">Arbeitgeberzuschuss (15%):</span>
+                      <span className="text-xl font-bold text-green-400">+ 15 €</span>
+                    </div>
+                    <div className="flex justify-between items-center border-b border-white/20 pb-2">
+                      <span className="text-slate-200">Ihr Eigenbeitrag:</span>
+                      <span className="text-xl font-bold text-blue-400">85 €</span>
+                    </div>
+                    <div className="flex justify-between items-center">
+                      <span className="text-slate-200">Steuer-/Abgabenersparnis:</span>
+                      <span className="text-xl font-bold text-green-400">ca. 34 €</span>
+                    </div>
+                  </div>
                 </div>
+                
                 <div className="bg-white/10 rounded-xl p-6">
-                  <div className="text-3xl font-bold text-green-400 mb-2">~20 €</div>
-                  <div className="text-white font-semibold mb-2">Steuer-/Abgabenersparnis</div>
-                  <div className="text-slate-300 text-sm">weniger Netto-Verlust</div>
+                  <h3 className="text-lg font-bold text-white mb-4 text-center">Ihre Nettobelastung</h3>
+                  <div className="space-y-4">
+                    <div className="text-center">
+                      <div className="text-4xl font-bold text-acencia-orange mb-2">nur 51 €</div>
+                      <div className="text-white font-semibold">weniger Netto pro Monat</div>
+                    </div>
+                    <div className="bg-acencia-light/30 rounded-lg p-4 text-center">
+                      <div className="text-sm text-slate-200 mb-2">Aufgrund der Steuerersparnis zahlen Sie effektiv:</div>
+                      <div className="text-lg font-bold text-green-400">85 € - 34 € = 51 € Nettobelastung</div>
+                    </div>
+                    <div className="text-xs text-slate-300 text-center">
+                      *Bei einem Grenzsteuersatz von ca. 40% (Steuer + Sozialabgaben)
+                    </div>
+                  </div>
                 </div>
-                <div className="bg-white/10 rounded-xl p-6">
-                  <div className="text-3xl font-bold text-blue-400 mb-2">25.000 €</div>
+              </div>
+
+              {/* Langfristige Auswirkungen */}
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div className="bg-white/10 rounded-xl p-6 text-center">
+                  <div className="text-3xl font-bold text-blue-400 mb-2">100 €</div>
+                  <div className="text-white font-semibold mb-2">Gesamtbeitrag</div>
+                  <div className="text-slate-300 text-sm">monatlich in Ihre bAV</div>
+                  <div className="text-xs text-slate-400 mt-2">
+                    (85 € Eigenbeitrag + 15 € AG-Zuschuss)
+                  </div>
+                </div>
+                
+                <div className="bg-white/10 rounded-xl p-6 text-center">
+                  <div className="text-3xl font-bold text-green-400 mb-2">612 €</div>
+                  <div className="text-white font-semibold mb-2">Jährliche Ersparnis</div>
+                  <div className="text-slate-300 text-sm">durch AG-Zuschuss + Steuervorteile</div>
+                  <div className="text-xs text-slate-400 mt-2">
+                    (180 € AG-Zuschuss + 408 € Steuerersparnis)
+                  </div>
+                </div>
+                
+                <div className="bg-white/10 rounded-xl p-6 text-center">
+                  <div className="text-3xl font-bold text-acencia-orange mb-2">≈ 31.000 €</div>
                   <div className="text-white font-semibold mb-2">Nach 20 Jahren</div>
-                  <div className="text-slate-300 text-sm">plus Rendite und Zuschüsse</div>
+                  <div className="text-slate-300 text-sm">Kapital bei 2% Zinssatz</div>
+                  <div className="text-xs text-slate-400 mt-2">
+                    Ihre Nettobelastung: nur ≈ 12.240 €
+                  </div>
+                </div>
+              </div>
+
+              {/* Aufklärung */}
+              <div className="mt-6 bg-acencia-orange/20 rounded-xl p-4 border border-orange-400/30">
+                <div className="text-center">
+                  <div className="text-white font-semibold mb-2">🎯 Das Beste für Sie:</div>
+                  <div className="text-slate-200 text-sm">
+                    Sie bekommen eine Altersvorsorge von 31.000 €, zahlen aber netto nur 12.240 € selbst! 
+                    Der Rest kommt vom Arbeitgeberzuschuss und Ihren Steuervorteilen.
+                  </div>
                 </div>
               </div>
             </div>
