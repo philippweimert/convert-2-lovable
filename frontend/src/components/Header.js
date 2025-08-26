@@ -123,6 +123,13 @@ const Header = () => {
             >
               Kontakt
             </Link>
+            <Link
+              to="/leere-vorlage"
+              className="block px-6 py-3 text-white hover:text-orange-400 hover:bg-white/5 rounded-xl transition-all duration-300 font-medium"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Leere Vorlage
+            </Link>
             <div className="pt-2">
               <Button 
                 className="w-full bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-semibold rounded-xl py-3 transition-all duration-300"
