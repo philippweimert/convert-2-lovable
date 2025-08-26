@@ -21,8 +21,8 @@ const DieBavPageY = () => {
           icon: <Euro className="w-6 h-6" />
         },
         {
-          title: "Zusätzliche Leistungen vom Arbeitgeber möglich",
-          description: "Arbeitgeberzuschuss oder -beiträge erhöhen Ihre Altersvorsorge ohne Mehrkosten",
+          title: "15% Arbeitgeberförderung plus zusätzliche Leistungen möglich",
+          description: "Seit 2022 gesetzlich garantierte 15% Förderung der Entgeltumwandlung - zusätzliche Arbeitgeberzuschüsse oder -beiträge erhöhen Ihre Altersvorsorge noch weiter",
           icon: <Gift className="w-6 h-6" />
         },
         {
