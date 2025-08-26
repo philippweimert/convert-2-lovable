@@ -65,11 +65,6 @@ const ChallengesSolutionsSection = () => {
         </svg>
       </div>
       
-      {/* Floating elements */}
-      <div className="absolute top-1/5 right-1/5 w-2 h-2 bg-white rounded-full animate-ping opacity-60"></div>
-      <div className="absolute top-3/5 left-1/5 w-1.5 h-1.5 bg-acencia-orange rounded-full animate-pulse opacity-50"></div>
-      <div className="absolute bottom-1/4 right-1/3 w-1 h-1 bg-acencia-orange-light rounded-full animate-ping opacity-40"></div>
-      
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Compact Expandable Header */}
         <div 
