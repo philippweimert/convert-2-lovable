@@ -48,22 +48,28 @@ const ChallengesSolutionsSection = () => {
   ];
 
   return (
-    <section className="bg-acencia py-20 relative overflow-hidden">
-      {/* Background design similar to hero section */}
-      <div className="absolute inset-0 opacity-[0.05]">
-        <svg className="absolute top-20 right-0 w-96 h-96" viewBox="0 0 400 400">
-          <polygon points="200,50 350,150 350,250 200,350 50,250 50,150" 
+    <section className="bg-gradient-to-br from-acencia via-acencia-blue to-acencia py-20 relative overflow-hidden">
+      {/* Geometrische Hintergrundmuster in Weiß */}
+      <div className="absolute inset-0 opacity-[0.08]">
+        <svg className="absolute top-16 left-0 w-72 h-72 animate-pulse" viewBox="0 0 400 400" style={{animationDuration: '5s'}}>
+          <polygon points="200,40 320,110 320,190 200,260 80,190 80,110" 
                    fill="none" stroke="white" strokeWidth="2"/>
         </svg>
-        <svg className="absolute bottom-20 left-0 w-80 h-80" viewBox="0 0 400 400">
-          <polygon points="200,30 320,120 320,200 200,290 80,200 80,120" 
-                   fill="none" stroke="#f97316" strokeWidth="1"/>
+        <svg className="absolute bottom-16 right-0 w-80 h-80 animate-bounce" viewBox="0 0 400 400" style={{animationDuration: '7s'}}>
+          <polygon points="200,50 340,140 340,240 200,330 60,240 60,140" 
+                   fill="none" stroke="white" strokeWidth="1"/>
         </svg>
-        <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-orange-400 rounded-full animate-ping"></div>
-        <div className="absolute top-3/4 right-1/3 w-1 h-1 bg-white rounded-full animate-pulse"></div>
-        <div className="absolute top-1/3 right-1/4 w-1 h-1 bg-orange-400 rounded-full animate-pulse"></div>
+        <svg className="absolute top-1/2 right-1/4 w-56 h-56" viewBox="0 0 400 400">
+          <polygon points="200,70 290,130 290,190 200,250 110,190 110,130" 
+                   fill="none" stroke="#e3ebf2" strokeWidth="1" opacity="0.5"/>
+        </svg>
       </div>
-
+      
+      {/* Floating elements */}
+      <div className="absolute top-1/5 right-1/5 w-2 h-2 bg-white rounded-full animate-ping opacity-60"></div>
+      <div className="absolute top-3/5 left-1/5 w-1.5 h-1.5 bg-acencia-orange rounded-full animate-pulse opacity-50"></div>
+      <div className="absolute bottom-1/4 right-1/3 w-1 h-1 bg-acencia-orange-light rounded-full animate-ping opacity-40"></div>
+      
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Compact Expandable Header */}
         <div 
