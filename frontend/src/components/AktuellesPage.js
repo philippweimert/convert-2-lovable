@@ -149,8 +149,8 @@ const AktuellesPage = () => {
           </div>
         </section>
 
-        {/* Filter und Content Section */}
-        <section className="bg-gradient-to-b from-acencia-blue to-acencia py-10 relative overflow-hidden">
+        {/* Filter und Content Section - erst hier Farbwechsel */}
+        <section className="bg-gradient-to-b from-acencia via-acencia-light to-acencia-blue py-16 relative overflow-hidden">
           {/* Subtle background elements */}
           <div className="absolute inset-0 opacity-[0.03]">
             <svg className="absolute top-10 left-0 w-80 h-80" viewBox="0 0 400 400">
