@@ -170,7 +170,7 @@ const CustomerSegments = () => {
 
         {/* Enhanced bottom section */}
         <div className="text-center">
-          <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 rounded-3xl p-12 max-w-5xl mx-auto shadow-2xl relative overflow-hidden">
+          <div className="bg-gradient-to-br from-acencia via-acencia-light to-acencia rounded-3xl p-12 max-w-5xl mx-auto shadow-2xl relative overflow-hidden">
             {/* Animated background */}
             <div className="absolute inset-0 bg-gradient-to-r from-orange-500/5 via-purple-500/5 to-blue-500/5"></div>
             <div className="absolute top-0 right-1/4 w-72 h-72 bg-orange-500/10 rounded-full blur-3xl animate-pulse"></div>
