@@ -96,7 +96,7 @@ const Header = () => {
         }`}>
           <div className="px-2 pt-2 pb-6 space-y-1 bg-acencia-light/95 backdrop-blur-lg rounded-2xl mt-4 border border-acencia-light/50 shadow-xl">
             <Link
-              to="/arbeitgeber-pflichten"
+              to="/bav-rechtliche-grundlagen"
               className="block px-6 py-3 text-white hover:text-orange-400 hover:bg-white/5 rounded-xl transition-all duration-300 font-medium"
               onClick={() => setIsMenuOpen(false)}
             >
