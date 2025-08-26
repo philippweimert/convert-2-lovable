@@ -11,27 +11,28 @@ const HeroSection = () => {
 
   return (
     <section className="relative bg-gradient-to-br from-acencia via-acencia-light to-acencia-blue min-h-[85vh] flex items-center overflow-hidden">
-      {/* Enhanced geometric background patterns - dezent */}
+      {/* Enhanced geometric background patterns - wie zuvor mit Bewegung */}
       <div className="absolute inset-0">
-        {/* Subtle hexagonal pattern */}
-        <div className="absolute inset-0 opacity-[0.03]">
-          <svg className="absolute top-20 right-0 w-96 h-96" viewBox="0 0 400 400">
-            <defs>
-              <pattern id="hexPattern" x="0" y="0" width="60" height="60" patternUnits="userSpaceOnUse">
-                <polygon points="30,5 50,20 50,40 30,55 10,40 10,20" 
-                         fill="none" stroke="currentColor" strokeWidth="1" className="text-acencia-blue" />
-              </pattern>
-            </defs>
-            <rect width="400" height="400" fill="url(#hexPattern)" />
+        {/* Animated geometric SVG patterns */}
+        <div className="absolute inset-0 opacity-[0.07]">
+          <svg className="absolute top-20 right-0 w-96 h-96 animate-pulse" viewBox="0 0 400 400">
+            <polygon points="200,50 350,150 350,250 200,350 50,250 50,150" 
+                     fill="none" stroke="white" strokeWidth="2"/>
+            <polygon points="150,100 250,100 300,173 250,247 150,247 100,173" 
+                     fill="none" stroke="white" strokeWidth="1"/>
+          </svg>
+          <svg className="absolute bottom-20 left-0 w-64 h-64 animate-bounce" viewBox="0 0 300 300" style={{animationDuration: '3s'}}>
+            <polygon points="150,30 270,120 270,180 150,270 30,180 30,120" 
+                     fill="none" stroke="white" strokeWidth="1"/>
           </svg>
         </div>
         
-        {/* Existing animated elements - refined */}
-        <div className="absolute top-1/4 left-1/4 w-3 h-3 bg-acencia-orange rounded-full animate-pulse opacity-60"></div>
-        <div className="absolute top-1/3 right-1/3 w-2 h-2 bg-acencia-blue rounded-full animate-bounce opacity-40 animation-delay-1000"></div>
-        <div className="absolute bottom-1/4 left-1/3 w-4 h-4 bg-acencia-orange-light rounded-full animate-pulse opacity-30 animation-delay-2000"></div>
+        {/* Additional floating geometric elements */}
+        <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-acencia-orange rounded-full animate-ping"></div>
+        <div className="absolute top-3/4 right-1/3 w-1 h-1 bg-white rounded-full animate-pulse"></div>
+        <div className="absolute top-1/2 left-1/6 w-1.5 h-1.5 bg-acencia-orange-light rounded-full animate-ping" style={{animationDelay: '1s'}}></div>
         
-        {/* Geometric shapes with new colors */}
+        {/* Geometric shapes */}
         <div className="absolute top-1/2 right-10 opacity-[0.08]">
           <svg className="w-32 h-32" viewBox="0 0 100 100">
             <polygon points="50,5 85,25 85,75 50,95 15,75 15,25" 
