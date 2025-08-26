@@ -34,23 +34,25 @@ const AboutPage = () => {
       
       <div className="pt-28 bg-acencia">
         {/* Kompakte Hero Section */}
-        <section className="bg-gradient-to-br from-acencia via-acencia-light to-acencia py-16 relative overflow-hidden">
-          {/* Background design similar to hero section */}
-          <div className="absolute inset-0 opacity-[0.05]">
-            <svg className="absolute top-20 right-0 w-96 h-96" viewBox="0 0 400 400">
+        <section className="bg-gradient-to-br from-acencia via-acencia-light to-acencia-blue py-16 relative overflow-hidden">
+          {/* Geometrische Hintergrundmuster in Weiß */}
+          <div className="absolute inset-0 opacity-[0.08]">
+            <svg className="absolute top-20 right-0 w-96 h-96 animate-pulse" viewBox="0 0 400 400" style={{animationDuration: '5s'}}>
               <polygon points="200,50 350,150 350,250 200,350 50,250 50,150" 
                        fill="none" stroke="white" strokeWidth="2"/>
             </svg>
-            <svg className="absolute bottom-20 left-0 w-80 h-80" viewBox="0 0 400 400">
-              <polygon points="200,30 320,120 320,200 200,290 80,200 80,120" 
-                       fill="none" stroke="#f97316" strokeWidth="1"/>
+            <svg className="absolute bottom-20 left-0 w-64 h-64 animate-bounce" viewBox="0 0 300 300" style={{animationDuration: '4s'}}>
+              <polygon points="150,30 270,120 270,180 150,270 30,180 30,120" 
+                       fill="none" stroke="white" strokeWidth="1"/>
             </svg>
-            <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-orange-400 rounded-full animate-ping"></div>
-            <div className="absolute top-3/4 right-1/3 w-1 h-1 bg-white rounded-full animate-pulse"></div>
-            <div className="absolute top-1/3 right-1/4 w-1 h-1 bg-orange-400 rounded-full animate-pulse"></div>
           </div>
-
-          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          
+          {/* Floating elements */}
+          <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-white rounded-full animate-ping opacity-50"></div>
+          <div className="absolute top-3/4 right-1/3 w-1 h-1 bg-acencia-orange rounded-full animate-pulse opacity-40"></div>
+          <div className="absolute top-1/2 left-1/6 w-1.5 h-1.5 bg-acencia-orange-light rounded-full animate-ping opacity-30"></div>
+          
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="text-center mb-8">
               <h1 className="text-3xl lg:text-4xl font-bold text-white mb-4">
                 Über <span className="bg-gradient-to-r from-orange-400 via-orange-500 to-orange-600 bg-clip-text text-transparent">ACENCIA</span>
