@@ -9,6 +9,20 @@ const DieBavPage = () => {
   
   useEffect(() => {
     window.scrollTo(0, 0);
+    
+    // Check if URL has hash for challenges section
+    if (window.location.hash === '#herausforderungen') {
+      setTimeout(() => {
+        setIsChallengesExpanded(true);
+        // Scroll to challenges section after a short delay
+        setTimeout(() => {
+          const challengesElement = document.getElementById('herausforderungen');
+          if (challengesElement) {
+            challengesElement.scrollIntoView({ behavior: 'smooth' });
+          }
+        }, 100);
+      }, 500);
+    }
   }, []);
 
   const challenges = [
