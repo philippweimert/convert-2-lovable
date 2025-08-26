@@ -45,32 +45,19 @@ const ThreeStepProcessSection = () => {
   ];
 
   return (
-    <section className="bg-white py-20 relative overflow-hidden">
-      {/* Subtle background design for white areas */}
-      <div className="absolute inset-0 opacity-[0.08]">
-        <svg className="absolute top-10 left-0 w-80 h-80" viewBox="0 0 400 400">
-          <polygon points="200,30 330,130 330,230 200,330 70,230 70,130" 
-                   fill="none" stroke="#f97316" strokeWidth="2"/>
-        </svg>
-        <svg className="absolute bottom-10 right-0 w-64 h-64" viewBox="0 0 400 400">
-          <polygon points="200,50 300,100 300,200 200,250 100,200 100,100" 
-                   fill="none" stroke="#3b82f6" strokeWidth="2"/>
-        </svg>
-        <svg className="absolute top-1/2 left-1/2 w-48 h-48 transform -translate-x-1/2 -translate-y-1/2" viewBox="0 0 400 400">
-          <polygon points="200,80 280,140 280,220 200,280 120,220 120,140" 
-                   fill="none" stroke="#10b981" strokeWidth="1"/>
+    <section className="bg-gradient-to-br from-acencia-blue-light via-white to-acencia-blue-light py-20 relative overflow-hidden">
+      {/* Subtle geometric background pattern */}
+      <div className="absolute inset-0 opacity-[0.02]">
+        <svg className="absolute top-10 right-10 w-80 h-80" viewBox="0 0 400 400">
+          <defs>
+            <pattern id="processPattern" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+              <circle cx="20" cy="20" r="15" fill="none" stroke="currentColor" strokeWidth="0.5" className="text-acencia" />
+            </pattern>
+          </defs>
+          <rect width="400" height="400" fill="url(#processPattern)" />
         </svg>
       </div>
       
-      {/* Animated dots */}
-      <div className="absolute inset-0 opacity-30">
-        <div className="absolute top-1/4 left-1/5 w-3 h-3 bg-orange-400 rounded-full animate-pulse"></div>
-        <div className="absolute top-2/3 right-1/4 w-2 h-2 bg-blue-400 rounded-full animate-ping"></div>
-        <div className="absolute top-1/3 right-1/3 w-2 h-2 bg-slate-400 rounded-full animate-pulse"></div>
-        <div className="absolute bottom-1/3 left-1/3 w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
-        <div className="absolute top-1/6 right-1/6 w-1 h-1 bg-orange-300 rounded-full animate-ping"></div>
-      </div>
-
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
         <div className="text-center mb-16 animate-fade-in">
