@@ -40,9 +40,9 @@ const EmployerObligationsPage = () => {
     <div className="min-h-screen bg-slate-900">
       <Header />
       
-      <div className="pt-20">
-        {/* Hero Section - Visuell anspruchsvoller */}
-        <section className="bg-slate-900 py-20 relative overflow-hidden">
+      <div className="pt-20 bg-acencia">
+        {/* Hero Section mit kompakterem Layout */}
+        <section className="bg-gradient-to-br from-acencia via-acencia-light to-acencia py-20 relative overflow-hidden">
           {/* Enhanced background design */}
           <div className="absolute inset-0">
             <div className="absolute inset-0 opacity-[0.08]">
