@@ -58,7 +58,7 @@ const Header = () => {
                   to="/die-bav/x" 
                   className="block px-4 py-3 text-white hover:text-orange-400 hover:bg-white/5 transition-colors duration-200"
                 >
-                  Unterkategorie X
+                  Für Unternehmen
                 </Link>
                 <Link 
                   to="/die-bav/y" 
