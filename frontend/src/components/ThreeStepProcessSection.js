@@ -73,86 +73,89 @@ const ThreeStepProcessSection = () => {
           </p>
         </div>
 
-        {/* Flache Steps mit Schrittzahlen zwischen den Boxen */}
-        <div className="grid grid-cols-1 lg:grid-cols-5 gap-6 items-center">
+        {/* Kompakte horizontale Steps von Links nach Rechts */}
+        <div className="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-12">
           
           {/* Schritt 1 */}
-          <div className="lg:col-span-2">
-            <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 h-full border border-slate-100">
-              <div className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-br from-acencia to-acencia-blue rounded-xl flex items-center justify-center mb-4 mx-auto">
-                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <div className="flex-1 max-w-sm">
+            <div className="bg-white rounded-2xl p-5 shadow-lg hover:shadow-xl transition-all duration-300 h-full border border-slate-100 relative">
+              {/* Schrittzahl als Badge */}
+              <div className="absolute -top-3 -left-3 w-8 h-8 bg-acencia-orange text-white rounded-full flex items-center justify-center font-bold text-sm font-heading">
+                1
+              </div>
+              
+              <div className="text-center pt-2">
+                <div className="w-12 h-12 bg-gradient-to-br from-acencia to-acencia-blue rounded-lg flex items-center justify-center mb-3 mx-auto">
+                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                 </div>
-                <h3 className="text-lg font-semibold text-slate-900 mb-2 font-heading">Rechtliche Prüfung</h3>
-                <p className="text-sm text-acencia-orange font-medium mb-3">& Einrichtung bAV</p>
-                <p className="text-slate-600 text-sm leading-relaxed font-body">
+                <h3 className="text-base font-semibold text-slate-900 mb-1 font-heading">Rechtliche Prüfung</h3>
+                <p className="text-xs text-acencia-orange font-medium mb-2">& Einrichtung bAV</p>
+                <p className="text-slate-600 text-xs leading-relaxed font-body">
                   Vollständige rechtliche Analyse und compliant Einrichtung Ihrer betrieblichen Altersvorsorge.
                 </p>
               </div>
             </div>
           </div>
 
-          {/* Schrittzahl 1 */}
-          <div className="lg:col-span-1 flex justify-center">
-            <div className="w-12 h-12 bg-acencia-orange text-white rounded-full flex items-center justify-center font-bold text-lg font-heading">
-              1
-            </div>
+          {/* Pfeil 1 - nur auf Desktop sichtbar */}
+          <div className="hidden lg:block">
+            <svg className="w-8 h-8 text-acencia-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
           </div>
 
           {/* Schritt 2 */}
-          <div className="lg:col-span-2">
-            <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 h-full border border-slate-100">
-              <div className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-br from-acencia to-acencia-blue rounded-xl flex items-center justify-center mb-4 mx-auto">
-                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <div className="flex-1 max-w-sm">
+            <div className="bg-white rounded-2xl p-5 shadow-lg hover:shadow-xl transition-all duration-300 h-full border border-slate-100 relative">
+              {/* Schrittzahl als Badge */}
+              <div className="absolute -top-3 -left-3 w-8 h-8 bg-acencia-orange text-white rounded-full flex items-center justify-center font-bold text-sm font-heading">
+                2
+              </div>
+              
+              <div className="text-center pt-2">
+                <div className="w-12 h-12 bg-gradient-to-br from-acencia to-acencia-blue rounded-lg flex items-center justify-center mb-3 mx-auto">
+                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                   </svg>
                 </div>
-                <h3 className="text-lg font-semibold text-slate-900 mb-2 font-heading">Digitale bAV-Verwaltung</h3>
-                <p className="text-sm text-acencia-orange font-medium mb-3">& laufender Support</p>
-                <p className="text-slate-600 text-sm leading-relaxed font-body">
+                <h3 className="text-base font-semibold text-slate-900 mb-1 font-heading">Digitale bAV-Verwaltung</h3>
+                <p className="text-xs text-acencia-orange font-medium mb-2">& laufender Support</p>
+                <p className="text-slate-600 text-xs leading-relaxed font-body">
                   Vollautomatisierte Verwaltung mit unserer digitalen Plattform und kontinuierlicher Betreuung.
                 </p>
               </div>
             </div>
           </div>
 
-        </div>
-
-        {/* Zweite Reihe */}
-        <div className="grid grid-cols-1 lg:grid-cols-5 gap-6 items-center mt-6">
-          
-          {/* Schrittzahl 2 */}
-          <div className="lg:col-span-1 lg:col-start-2 flex justify-center">
-            <div className="w-12 h-12 bg-acencia-orange text-white rounded-full flex items-center justify-center font-bold text-lg font-heading">
-              2
-            </div>
+          {/* Pfeil 2 - nur auf Desktop sichtbar */}
+          <div className="hidden lg:block">
+            <svg className="w-8 h-8 text-acencia-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
           </div>
 
           {/* Schritt 3 */}
-          <div className="lg:col-span-2">
-            <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 h-full border border-slate-100">
-              <div className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-br from-acencia to-acencia-blue rounded-xl flex items-center justify-center mb-4 mx-auto">
-                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <div className="flex-1 max-w-sm">
+            <div className="bg-white rounded-2xl p-5 shadow-lg hover:shadow-xl transition-all duration-300 h-full border border-slate-100 relative">
+              {/* Schrittzahl als Badge */}
+              <div className="absolute -top-3 -left-3 w-8 h-8 bg-acencia-orange text-white rounded-full flex items-center justify-center font-bold text-sm font-heading">
+                3
+              </div>
+              
+              <div className="text-center pt-2">
+                <div className="w-12 h-12 bg-gradient-to-br from-acencia to-acencia-blue rounded-lg flex items-center justify-center mb-3 mx-auto">
+                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
                   </svg>
                 </div>
-                <h3 className="text-lg font-semibold text-slate-900 mb-2 font-heading">Mitarbeiterkommunikation</h3>
-                <p className="text-sm text-acencia-orange font-medium mb-3">& (digitale) Beratung</p>
-                <p className="text-slate-600 text-sm leading-relaxed font-body">
+                <h3 className="text-base font-semibold text-slate-900 mb-1 font-heading">Mitarbeiterkommunikation</h3>
+                <p className="text-xs text-acencia-orange font-medium mb-2">& (digitale) Beratung</p>
+                <p className="text-slate-600 text-xs leading-relaxed font-body">
                   Professionelle Kommunikation und individuelle Beratung für Ihre Mitarbeitenden.
                 </p>
               </div>
-            </div>
-          </div>
-
-          {/* Schrittzahl 3 */}
-          <div className="lg:col-span-1 flex justify-center">
-            <div className="w-12 h-12 bg-acencia-orange text-white rounded-full flex items-center justify-center font-bold text-lg font-heading">
-              3
             </div>
           </div>
 
