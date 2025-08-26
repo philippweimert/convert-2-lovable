@@ -119,7 +119,7 @@ const EmployerObligationsPage = () => {
         <div className="h-12 bg-gradient-to-b from-slate-900 to-slate-800"></div>
 
         {/* Wichtiger Hinweis - In blauem Schema integriert */}
-        <section className="bg-slate-800 py-12 relative overflow-hidden">
+        <section className="bg-acencia-light py-12 relative overflow-hidden">
           <div className="absolute inset-0 opacity-[0.04]">
             <svg className="absolute top-0 right-0 w-80 h-80" viewBox="0 0 400 400">
               <polygon points="200,50 300,100 300,200 200,250 100,200 100,100" 
