@@ -42,7 +42,7 @@ const EmployerObligationsPage = () => {
       
       <div className="pt-20 bg-acencia">
         {/* Hero Section mit kompakterem Layout */}
-        <section className="bg-gradient-to-br from-acencia via-acencia-light to-acencia-blue py-20 relative overflow-hidden">
+        <section className="bg-gradient-to-b from-acencia via-acencia to-acencia-blue py-12 relative overflow-hidden">
           {/* Geometrische Hintergrundmuster in Weiß */}
           <div className="absolute inset-0 opacity-[0.08]">
             <svg className="absolute top-20 right-0 w-96 h-96 animate-pulse" viewBox="0 0 400 400" style={{animationDuration: '6s'}}>
