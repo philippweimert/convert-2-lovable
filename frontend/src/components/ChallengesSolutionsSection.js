@@ -48,7 +48,7 @@ const ChallengesSolutionsSection = () => {
   ];
 
   return (
-    <section className="bg-gradient-to-b from-acencia-light via-acencia via-acencia to-acencia py-12 relative overflow-hidden">
+    <section className="bg-gradient-to-b from-acencia via-acencia-light to-acencia py-12 relative overflow-hidden">
       {/* Geometrische Hintergrundmuster in Weiß */}
       <div className="absolute inset-0 opacity-[0.08]">
         <svg className="absolute top-16 left-0 w-72 h-72 animate-pulse" viewBox="0 0 400 400" style={{animationDuration: '5s'}}>
