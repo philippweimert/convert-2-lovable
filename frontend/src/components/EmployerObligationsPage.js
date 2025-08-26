@@ -40,7 +40,7 @@ const EmployerObligationsPage = () => {
     <div className="min-h-screen bg-acencia">
       <Header />
       
-      <div className="pt-20 bg-acencia">
+      <div className="pt-16 bg-acencia">
         {/* Hero Section mit kompakterem Layout */}
         <section className="bg-gradient-to-b from-acencia via-acencia to-acencia-blue py-12 relative overflow-hidden">
           {/* Geometrische Hintergrundmuster in Weiß */}
