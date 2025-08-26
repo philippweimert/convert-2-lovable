@@ -18,8 +18,8 @@ const DieBavPage = () => {
       color: "from-blue-500 to-blue-600"
     },
     {
-      title: "Unterkategorie Y", 
-      description: "Vertiefen Sie Ihr Wissen zu wichtigen Themenbereichen in Unterkategorie Y.",
+      title: "Für Arbeitnehmer", 
+      description: "Erfahren Sie, wie Sie von steuerlichen Vorteilen profitieren und Ihre Altersvorsorge optimieren.",
       icon: <Users className="w-6 h-6" />,
       link: "/die-bav/y",
       color: "from-green-500 to-green-600"
