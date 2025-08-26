@@ -59,8 +59,8 @@ const AboutPage = () => {
           </div>
         </section>
 
-        {/* Smooth transition from slate-900 to slate-800 */}
-        <div className="h-12 bg-gradient-to-b from-slate-900 to-slate-800"></div>
+        {/* Sanfter Übergang von Hero zu Content */}
+        <div className="h-16 bg-gradient-to-b from-acencia-blue via-acencia-blue-light to-acencia-light"></div>
 
         {/* Kompakter Hauptinhalt */}
         <section className="bg-acencia-light py-16 relative overflow-hidden">
