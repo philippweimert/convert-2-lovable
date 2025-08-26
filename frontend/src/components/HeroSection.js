@@ -27,11 +27,6 @@ const HeroSection = () => {
           </svg>
         </div>
         
-        {/* Additional floating geometric elements */}
-        <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-acencia-orange rounded-full animate-ping"></div>
-        <div className="absolute top-3/4 right-1/3 w-1 h-1 bg-white rounded-full animate-pulse"></div>
-        <div className="absolute top-1/2 left-1/6 w-1.5 h-1.5 bg-acencia-orange-light rounded-full animate-ping" style={{animationDelay: '1s'}}></div>
-        
         {/* Geometric shapes */}
         <div className="absolute top-1/2 right-10 opacity-[0.08]">
           <svg className="w-32 h-32" viewBox="0 0 100 100">
