@@ -34,14 +34,46 @@ const Header = () => {
           </Link>
 
           {/* Enhanced Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-10">
-            <Link 
-              to="/bav-rechtliche-grundlagen" 
-              className="relative text-white hover:text-orange-400 transition-all duration-400 font-medium group py-2 smooth-slide text-body"
+          <div className="hidden md:flex items-center space-x-6">
+            {/* die bAV Dropdown */}
+            <div 
+              className="relative group"
+              onMouseEnter={() => setIsBavDropdownOpen(true)}
+              onMouseLeave={() => setIsBavDropdownOpen(false)}
             >
-              <span>bAV - rechtliche Grundlagen</span>
-              <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-orange-400 to-orange-500 group-hover:w-full transition-all duration-400 ease-smooth"></div>
-            </Link>
+              <Link 
+                to="/die-bav" 
+                className="relative text-white hover:text-orange-400 transition-all duration-400 font-medium group py-2 smooth-slide text-body flex items-center"
+              >
+                <span>die bAV</span>
+                <ChevronDown className="ml-1 h-4 w-4 transition-transform duration-200" />
+                <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-orange-400 to-orange-500 group-hover:w-full transition-all duration-400 ease-smooth"></div>
+              </Link>
+              
+              {/* Dropdown Menu */}
+              <div className={`absolute top-full left-0 mt-2 w-48 bg-acencia-light/95 backdrop-blur-lg rounded-xl shadow-xl border border-acencia-light/50 py-2 transition-all duration-300 ${
+                isBavDropdownOpen ? 'opacity-100 visible transform translate-y-0' : 'opacity-0 invisible transform -translate-y-2'
+              }`}>
+                <Link 
+                  to="/die-bav/x" 
+                  className="block px-4 py-3 text-white hover:text-orange-400 hover:bg-white/5 transition-colors duration-200"
+                >
+                  Unterkategorie X
+                </Link>
+                <Link 
+                  to="/die-bav/y" 
+                  className="block px-4 py-3 text-white hover:text-orange-400 hover:bg-white/5 transition-colors duration-200"
+                >
+                  Unterkategorie Y
+                </Link>
+                <Link 
+                  to="/die-bav/z" 
+                  className="block px-4 py-3 text-white hover:text-orange-400 hover:bg-white/5 transition-colors duration-200"
+                >
+                  Unterkategorie Z
+                </Link>
+              </div>
+            </div>
             <Link 
               to="/aktuelles" 
               className="relative text-white hover:text-orange-400 transition-all duration-400 font-medium group py-2 smooth-slide text-body"
