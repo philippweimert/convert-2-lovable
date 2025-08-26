@@ -10,9 +10,9 @@ const Footer = () => {
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center mb-4">
               <img 
-                src="/acencia-logo.png" 
+                src="/acencia-logo-new.png" 
                 alt="ACENCIA - Wir machen bAV einfach" 
-                className="h-10 w-auto object-contain"
+                className="h-12 w-auto object-contain"
               />
             </div>
             <p className="text-slate-300 mb-4 max-w-md">
