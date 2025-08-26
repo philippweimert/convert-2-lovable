@@ -164,8 +164,8 @@ const AktuellesPage = () => {
           </div>
 
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            {/* Filter Section */}
-            <div className="bg-gradient-to-br from-slate-700 to-slate-600 rounded-2xl p-8 mb-12 shadow-xl">
+            {/* Filter Section - reduzierter Abstand */}
+            <div className="bg-gradient-to-br from-slate-700 to-slate-600 rounded-2xl p-8 mb-6 shadow-xl">
               <div className="flex flex-col md:flex-row gap-6 items-center">
                 {/* Search */}
                 <div className="flex-1 relative">
