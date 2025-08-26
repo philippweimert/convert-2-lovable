@@ -9,7 +9,7 @@ const PrivacyPage = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-slate-900">
+    <div className="min-h-screen bg-acencia">
       <Header />
       
       <div className="pt-28 bg-acencia">
