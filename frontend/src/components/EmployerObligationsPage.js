@@ -116,9 +116,9 @@ const EmployerObligationsPage = () => {
       <Header />
       
       <div className="pt-16 bg-acencia">
-        {/* Hero Section mit kompakterem Layout */}
-        <section className="bg-gradient-to-b from-acencia via-acencia to-acencia-blue py-12 relative overflow-hidden">
-          {/* Geometrische Hintergrundmuster in Weiß */}
+        {/* Modern Hero Section */}
+        <section className="bg-gradient-to-b from-acencia via-acencia via-acencia to-acencia-light py-16 relative overflow-hidden">
+          {/* Geometric background patterns */}
           <div className="absolute inset-0 opacity-[0.08]">
             <svg className="absolute top-20 right-0 w-96 h-96 animate-pulse" viewBox="0 0 400 400" style={{animationDuration: '6s'}}>
               <polygon points="200,50 350,150 350,250 200,350 50,250 50,150" 
@@ -128,306 +128,137 @@ const EmployerObligationsPage = () => {
               <polygon points="200,30 320,120 320,200 200,290 80,200 80,120" 
                        fill="none" stroke="white" strokeWidth="1"/>
             </svg>
-            <svg className="absolute top-1/2 left-1/3 w-64 h-64" viewBox="0 0 400 400">
-              <polygon points="200,70 290,130 290,190 200,250 110,190 110,130" 
-                       fill="none" stroke="#e3ebf2" strokeWidth="1" opacity="0.6"/>
-            </svg>
           </div>
           
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div className="text-center mb-12">              
-              <h1 className="text-3xl lg:text-4xl font-bold text-white mb-8 leading-tight">
-                <span className="text-white">Rechtliche Grundlagen </span>
-                <span className="bg-gradient-to-r from-orange-400 via-orange-500 to-orange-600 bg-clip-text text-transparent">
-                  der bAV
-                </span>
+            <div className="text-center mb-8">
+              <div className="inline-flex items-center px-4 py-2 bg-acencia-orange rounded-full text-white text-sm font-medium mb-6">
+                <Scale className="w-4 h-4 mr-2" />
+                Rechtliche Grundlagen
+              </div>
+              
+              <h1 className="text-3xl lg:text-4xl font-bold text-white mb-6 leading-tight font-heading">
+                <span className="text-white">bAV - </span>
+                <span className="text-acencia-orange">rechtliche Grundlagen</span>
               </h1>
               
-              <p className="text-lg text-slate-200 mb-12 max-w-4xl mx-auto leading-relaxed">
-                Umfassender Überblick über Ihre gesetzlichen Verpflichtungen als Arbeitgeber
+              <p className="text-lg text-slate-200 max-w-4xl mx-auto leading-relaxed font-body mb-8">
+                Verstehen Sie Ihre Pflichten und Chancen als Arbeitgeber bei der betrieblichen Altersvorsorge. 
+                Wir unterstützen Sie bei der rechtssicheren Umsetzung.
               </p>
 
-              {/* Enhanced CTA Buttons */}
-              <div className="flex flex-col sm:flex-row gap-6 justify-center mb-8">
+              {/* Quick action buttons */}
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button 
-                  size="lg"
-                  className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-10 py-4 text-lg font-semibold rounded-xl transition-all duration-400 hover:scale-105 shadow-xl hover:shadow-2xl"
+                  className="bg-acencia-orange hover:bg-orange-600 text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300"
                   onClick={() => window.open('https://outlook.office365.com/owa/calendar/ACENCIAde@acencia.de/bookings/', '_blank')}
                 >
-                  Kostenloses Erstgespräch
-                  <ArrowRight className="w-5 h-5 ml-2" />
+                  <Target className="w-4 h-4 mr-2" />
+                  Kostenlose Beratung
                 </Button>
                 <Button 
-                  size="lg"
-                  className="bg-blue-600 hover:bg-blue-700 text-white px-10 py-4 text-lg font-semibold rounded-xl transition-all duration-400 hover:scale-105 shadow-xl hover:shadow-2xl border border-blue-500"
-                  onClick={() => window.open('https://www.gesetze-im-internet.de/betravg/', '_blank')}
+                  variant="outline" 
+                  className="border-2 border-slate-300 text-slate-200 hover:border-acencia-orange hover:text-acencia-orange px-6 py-3 rounded-xl font-semibold transition-all duration-300"
+                  onClick={() => window.open('https://outlook.office365.com/owa/calendar/ACENCIAde@acencia.de/bookings/', '_blank')}
                 >
-                  <FileText className="w-5 h-5 mr-2" />
-                  Gesetzestext BetrAVG
-                  <ExternalLink className="w-4 h-4 ml-2" />
+                  <BookOpen className="w-4 h-4 mr-2" />
+                  Mehr erfahren
                 </Button>
               </div>
+            </div>
 
-              {/* Kompakter rechtlicher Hinweis */}
-              <div className="inline-flex items-center space-x-2 bg-slate-800 border border-slate-600 rounded-full px-6 py-3">
-                <Gavel className="w-4 h-4 text-slate-400" />
-                <p className="text-sm text-slate-400">
-                  Information im Rahmen der Tätigkeit als Versicherungsmakler gemäß § 93 HGB
-                </p>
+            {/* Important notice - compact and integrated */}
+            <div className="max-w-3xl mx-auto">
+              <div className="bg-slate-800/60 backdrop-blur-sm rounded-2xl p-6 border border-slate-600/50">
+                <div className="flex items-start space-x-4">
+                  <div className="flex-shrink-0">
+                    <AlertTriangle className="w-6 h-6 text-red-400" />
+                  </div>
+                  <div>
+                    <h3 className="text-white font-semibold mb-2 font-heading">Wichtiger Hinweis zur gesetzlichen Verpflichtung</h3>
+                    <p className="text-slate-300 text-sm leading-relaxed font-body">
+                      Seit 2019 sind Arbeitgeber verpflichtet, ihre Mitarbeitenden jährlich über die Möglichkeiten 
+                      der betrieblichen Altersvorsorge zu informieren. Eine rechtssichere Umsetzung schützt vor Haftungsrisiken.
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Wichtiger Hinweis - In blauem Schema integriert */}
-        <section className="bg-gradient-to-b from-acencia-blue via-acencia to-acencia py-10 relative overflow-hidden">
+        {/* Main Content Section */}
+        <section className="bg-gradient-to-b from-acencia-light via-white to-acencia-blue-light py-16 relative overflow-hidden">
+          {/* Background patterns for light section */}
           <div className="absolute inset-0 opacity-[0.04]">
-            <svg className="absolute top-0 right-0 w-80 h-80" viewBox="0 0 400 400">
-              <polygon points="200,50 300,100 300,200 200,250 100,200 100,100" 
-                       fill="none" stroke="#f97316" strokeWidth="1"/>
-            </svg>
-            <div className="absolute bottom-0 left-0 w-2 h-2 bg-orange-400 rounded-full animate-pulse"></div>
-          </div>
-
-          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div className="bg-gradient-to-br from-slate-700 to-slate-600 rounded-2xl p-6 shadow-xl border border-slate-500">
-              <div className="flex items-start space-x-4">
-                <div className="w-10 h-10 bg-gradient-to-br from-red-500 to-red-600 rounded-xl flex items-center justify-center flex-shrink-0">
-                  <AlertTriangle className="w-5 h-5 text-white" />
-                </div>
-                <div className="flex-1">
-                  <h3 className="text-lg font-bold text-white mb-3">
-                    Wichtiger Hinweis zur gesetzlichen Verpflichtung
-                  </h3>
-                  <p className="text-slate-300 text-sm leading-relaxed mb-4">
-                    Seit dem <strong>1. Januar 2002</strong> haben alle Arbeitnehmer einen{' '}
-                    <strong>Rechtsanspruch auf Entgeltumwandlung</strong> (§ 1a BetrAVG). Als Arbeitgeber sind{' '}
-                    Sie <strong>gesetzlich verpflichtet</strong>, diese anzubieten. Seit 2019/2022 müssen Sie zusätzlich einen <strong>Zuschuss von mindestens 15%</strong> leisten.
-                  </p>
-                  
-                  <Button 
-                    size="sm"
-                    className="bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white px-6 py-2 rounded-lg font-semibold transition-all duration-400 hover:scale-105 shadow-lg"
-                    onClick={() => window.open('https://outlook.office365.com/owa/calendar/ACENCIAde@acencia.de/bookings/', '_blank')}
-                  >
-                    Jetzt Compliance-Check vereinbaren
-                    <ArrowRight className="w-4 h-4 ml-2" />
-                  </Button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Pflichten und Chancen - Komplett neu gestaltet */}
-        <section className="bg-slate-800 py-20 relative overflow-hidden">
-          {/* Enhanced background */}
-          <div className="absolute inset-0 opacity-[0.06]">
-            <svg className="absolute top-20 left-20 w-80 h-80" viewBox="0 0 400 400">
+            <svg className="absolute top-10 left-0 w-80 h-80" viewBox="0 0 400 400">
               <polygon points="200,30 330,130 330,230 200,330 70,230 70,130" 
-                       fill="none" stroke="#f97316" strokeWidth="2"/>
+                       fill="none" stroke="#001f3c" strokeWidth="2"/>
             </svg>
-            <svg className="absolute bottom-20 right-20 w-64 h-64" viewBox="0 0 400 400">
+            <svg className="absolute bottom-10 right-0 w-64 h-64 animate-pulse" viewBox="0 0 400 400" style={{animationDuration: '5s'}}>
               <polygon points="200,50 300,100 300,200 200,250 100,200 100,100" 
-                       fill="none" stroke="#3b82f6" strokeWidth="2"/>
+                       fill="none" stroke="#98a9c3" strokeWidth="1"/>
             </svg>
           </div>
 
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div className="text-center mb-16">
-              <h2 className="text-2xl lg:text-3xl font-bold text-white mb-6">
-                Pflichten vs. <span className="text-green-400">Chancen</span>
-              </h2>
-              <p className="text-lg text-slate-300 max-w-4xl mx-auto">
-                Vollständige Übersicht Ihrer rechtlichen Verpflichtungen und der sich daraus ergebenden 
-                unternehmerischen Vorteile bei korrekter Umsetzung
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 xl:grid-cols-2 gap-12">
-              
-              {/* Pflichten des Arbeitgebers - Eleganter */}
-              <div className="space-y-6">
-                <div className="text-center mb-8">
-                  <div className="inline-flex items-center space-x-3 bg-gradient-to-r from-red-600 to-red-700 rounded-full px-6 py-3 mb-4">
-                    <Scale className="w-6 h-6 text-white" />
-                    <h3 className="text-xl font-bold text-white">Ihre rechtlichen Pflichten</h3>
-                  </div>
-                </div>
-
-                {/* Ausklappbare Pflichten */}
-                {[
-                  {
-                    icon: <FileText className="w-6 h-6" />,
-                    title: "1. Rechtsanspruch auf Entgeltumwandlung",
-                    description: "Gesetzliche Verpflichtung zur Bereitstellung mindestens einer Form der betrieblichen Altersvorsorge für alle Mitarbeiter.",
-                    legal: "§ 1a BetrAVG",
-                    detail: "Der Arbeitnehmer kann verlangen, dass von seinem Arbeitslohn bis zu 4 vom Hundert der Beitragsbemessungsgrenze [...] durch Entgeltumwandlung für seine betriebliche Altersversorgung verwendet werden.",
-                    link: "https://www.gesetze-im-internet.de/betravg/__1a.html"
-                  },
-                  {
-                    icon: <Euro className="w-6 h-6" />,
-                    title: "2. Arbeitgeberzuschuss von 15%",
-                    description: "Verpflichtende Bezuschussung von mindestens 15% des umgewandelten Betrags bei Sozialversicherungsersparnis.",
-                    legal: "§ 1a Abs. 1a BetrAVG (seit 2019/2022)",
-                    detail: "Der Arbeitgeber ist verpflichtet, [...] den umgewandelten Betrag um 15 vom Hundert zu erhöhen, soweit er durch die Entgeltumwandlung Sozialversicherungsbeiträge einspart.",
-                    link: "https://www.gesetze-im-internet.de/betravg/__1a.html"
-                  },
-                  {
-                    icon: <Users className="w-6 h-6" />,
-                    title: "3. Informations- und Aufklärungspflicht",
-                    description: "Umfassende Aufklärung der Mitarbeiter über bAV-Möglichkeiten, steuerliche Auswirkungen und Förderungen.",
-                    legal: "§ 1 BetrAVG + Arbeitsrecht",
-                    detail: "Arbeitgeber müssen über Durchführungswege, steuerliche Behandlung und Auswirkungen informieren.",
-                    link: "https://www.gesetze-im-internet.de/betravg/__1.html"
-                  },
-                  {
-                    icon: <Scale className="w-6 h-6" />,
-                    title: "4. Gleichbehandlungsgrundsatz",
-                    description: "Alle Mitarbeitergruppen müssen gleichen Zugang zu bAV-Angeboten erhalten - keine Benachteiligung.",
-                    legal: "§ 1b BetrAVG",
-                    detail: "Werden mehreren Arbeitnehmern Leistungen der betrieblichen Altersversorgung zugesagt, dürfen dabei einzelne Arbeitnehmer nicht ohne sachlichen Grund schlechter behandelt werden als andere.",
-                    link: "https://www.gesetze-im-internet.de/betravg/__1b.html"
-                  },
-                  {
-                    icon: <FileText className="w-6 h-6" />,
-                    title: "5. Verwaltungs- und Dokumentationspflicht",
-                    description: "Ordnungsgemäße Verwaltung, Meldungen an Versorgungsträger und lückenlose Dokumentation aller Prozesse.",
-                    legal: "§ 8a BetrAVG + DRV-Richtlinien",
-                    detail: "Führung von Versorgungsregistern, ordnungsgemäße Meldungen und Dokumentation von Anwartschaften.",
-                    link: "https://www.deutsche-rentenversicherung.de/DRV/DE/Rente/Betriebsrente/betriebsrente.html"
-                  }
-                ].map((obligation, index) => (
-                  <div key={index} className="bg-gradient-to-br from-slate-700 to-slate-600 rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-400">
-                    <div 
-                      className="p-6 cursor-pointer"
-                      onClick={() => toggleObligation(index)}
-                    >
-                      <div className="flex items-center justify-between">
-                        <div className="flex items-center space-x-4">
-                          <div className="w-12 h-12 bg-gradient-to-br from-red-500 to-red-600 rounded-xl flex items-center justify-center">
-                            <div className="text-white">
-                              {obligation.icon}
-                            </div>
-                          </div>
-                          <div>
-                            <h4 className="text-lg font-bold text-white mb-1">{obligation.title}</h4>
-                            <p className="text-slate-300 text-sm">{obligation.description}</p>
-                          </div>
-                        </div>
-                        <div className={`text-slate-400 transition-all duration-300 ${
-                          expandedObligation === index ? 'rotate-180 text-orange-400' : 'hover:text-orange-400'
-                        }`}>
-                          <ChevronDown className="w-6 h-6" />
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* Expandable Content */}
-                    <div className={`overflow-hidden transition-all duration-500 ${
-                      expandedObligation === index ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
-                    }`}>
-                      <div className="px-6 pb-6 border-t border-slate-600">
-                        <div className="pt-6">
-                          <div className="bg-slate-800 rounded-lg p-4 mb-4">
-                            <p className="text-xs text-slate-400 font-semibold mb-2">{obligation.legal}</p>
-                            <p className="text-sm text-slate-300 italic">"{obligation.detail}"</p>
-                          </div>
-                          <a 
-                            href={obligation.link}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="inline-flex items-center text-blue-400 hover:text-blue-300 text-sm transition-colors"
-                          >
-                            <ExternalLink className="w-4 h-4 mr-2" />
-                            Gesetzestext aufrufen
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                ))}
+            
+            {/* Legal Obligations Section */}
+            <div className="mb-16">
+              <div className="text-center mb-12">
+                <h2 className="text-2xl lg:text-3xl font-bold text-slate-900 mb-4 font-heading">
+                  <span className="text-slate-900">Ihre </span>
+                  <span className="text-acencia">Pflichten</span>
+                  <span className="text-slate-900"> als Arbeitgeber</span>
+                </h2>
+                <p className="text-slate-600 max-w-3xl mx-auto font-body">
+                  Diese rechtlichen Verpflichtungen müssen Sie bei der bAV beachten
+                </p>
               </div>
 
-              {/* Chancen und Vorteile - Eleganter */}
-              <div className="space-y-6">
-                <div className="text-center mb-8">
-                  <div className="inline-flex items-center space-x-3 bg-gradient-to-r from-green-600 to-green-700 rounded-full px-6 py-3 mb-4">
-                    <TrendingUp className="w-6 h-6 text-white" />
-                    <h3 className="text-xl font-bold text-white">Ihre unternehmerischen Chancen</h3>
-                  </div>
-                </div>
-
-                {/* Ausklappbare Chancen */}
-                {[
-                  {
-                    icon: <Calculator className="w-6 h-6" />,
-                    title: "Erhebliche Steuervorteile",
-                    description: "Einsparungen bei Lohnsteuer und Sozialversicherungsbeiträgen für das Unternehmen.",
-                    benefits: ["Bis zu 20% Ersparnis bei Sozialversicherung", "Reduzierte Lohnnebenkosten", "Steuerliche Absetzbarkeit der Zuschüsse"]
-                  },
-                  {
-                    icon: <Heart className="w-6 h-6" />,
-                    title: "Höhere Mitarbeiterzufriedenheit",
-                    description: "Attraktive Zusatzleistung steigert Bindung und Motivation der Belegschaft.",
-                    benefits: ["Reduktion der Personalfluktuation", "Höhere Motivation und Produktivität", "Geringere Rekrutierungskosten"]
-                  },
-                  {
-                    icon: <Award className="w-6 h-6" />,
-                    title: "Wettbewerbsvorteile im Arbeitsmarkt",
-                    description: "Positionierung als attraktiver und verantwortungsvoller Arbeitgeber.",
-                    benefits: ["Bessere Personalakquise", "Employer Branding Verbesserung", "Soziale Verantwortung demonstrieren"]
-                  },
-                  {
-                    icon: <Shield className="w-6 h-6" />,
-                    title: "Vollständige Rechtssicherheit",
-                    description: "Schutz vor rechtlichen Risiken und Compliance-Problemen.",
-                    benefits: ["Vermeidung von Haftungsrisiken", "Keine Nachzahlungen oder Bußgelder", "Automatische Gesetzeskonformität"]
-                  },
-                  {
-                    icon: <Clock className="w-6 h-6" />,
-                    title: "Operative Effizienzgewinne",
-                    description: "Digitale Automatisierung reduziert Verwaltungsaufwand erheblich.",
-                    benefits: ["Bis zu 80% weniger Verwaltungsaufwand", "Automatisierte Prozesse und Meldungen", "HR-Teams können sich auf Kernaufgaben fokussieren"]
-                  }
-                ].map((chance, index) => (
-                  <div key={index} className="bg-gradient-to-br from-slate-700 to-slate-600 rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-400">
-                    <div 
-                      className="p-6 cursor-pointer"
-                      onClick={() => toggleChance(index)}
-                    >
-                      <div className="flex items-center justify-between">
-                        <div className="flex items-center space-x-4">
-                          <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-green-600 rounded-xl flex items-center justify-center">
-                            <div className="text-white">
-                              {chance.icon}
-                            </div>
-                          </div>
-                          <div>
-                            <h4 className="text-lg font-bold text-white mb-1">{chance.title}</h4>
-                            <p className="text-slate-300 text-sm">{chance.description}</p>
-                          </div>
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                {obligations.map((obligation, index) => (
+                  <div key={index} className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-slate-100">
+                    <div className="p-6">
+                      <div className="flex items-start space-x-4 mb-4">
+                        <div className="flex-shrink-0 p-3 bg-gradient-to-br from-acencia to-acencia-blue rounded-xl text-white">
+                          {obligation.icon}
                         </div>
-                        <div className={`text-slate-400 transition-all duration-300 ${
-                          expandedChance === index ? 'rotate-180 text-orange-400' : 'hover:text-orange-400'
-                        }`}>
-                          <ChevronDown className="w-6 h-6" />
+                        <div className="flex-1">
+                          <h3 className="text-lg font-semibold text-slate-900 mb-2 font-heading">
+                            {obligation.title}
+                          </h3>
+                          <p className="text-slate-600 text-sm font-body">
+                            {obligation.summary}
+                          </p>
                         </div>
+                        <button
+                          onClick={() => toggleSection(`obligation-${index}`)}
+                          className="flex-shrink-0 w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center hover:bg-slate-200 transition-colors"
+                        >
+                          <ChevronDown className={`w-4 h-4 text-slate-600 transition-transform duration-300 ${
+                            expandedSection === `obligation-${index}` ? 'rotate-180' : ''
+                          }`} />
+                        </button>
                       </div>
-                    </div>
 
-                    {/* Expandable Content */}
-                    <div className={`overflow-hidden transition-all duration-500 ${
-                      expandedChance === index ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
-                    }`}>
-                      <div className="px-6 pb-6 border-t border-slate-600">
-                        <div className="pt-6 space-y-3">
-                          {chance.benefits.map((benefit, benefitIndex) => (
-                            <div key={benefitIndex} className="flex items-center space-x-3">
-                              <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
-                              <span className="text-slate-300 text-sm">{benefit}</span>
-                            </div>
-                          ))}
+                      {/* Expandable content */}
+                      <div className={`overflow-hidden transition-all duration-300 ${
+                        expandedSection === `obligation-${index}` ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+                      }`}>
+                        <div className="pt-4 border-t border-slate-100">
+                          <ul className="space-y-2 mb-4">
+                            {obligation.details.map((detail, detailIndex) => (
+                              <li key={detailIndex} className="flex items-start space-x-3">
+                                <CheckCircle className="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0" />
+                                <span className="text-slate-600 text-sm font-body">{detail}</span>
+                              </li>
+                            ))}
+                          </ul>
+                          <div className="flex items-center space-x-2 text-xs text-slate-500">
+                            <Gavel className="w-3 h-3" />
+                            <span className="font-mono">{obligation.legal}</span>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -436,41 +267,61 @@ const EmployerObligationsPage = () => {
               </div>
             </div>
 
-            {/* Enhanced Call to Action */}
-            <div className="text-center mt-20">
-              <div className="bg-gradient-to-br from-slate-700 via-slate-600 to-slate-700 rounded-3xl p-12 shadow-2xl relative overflow-hidden">
-                <div className="absolute inset-0 opacity-10">
-                  <svg className="absolute top-0 right-0 w-64 h-64" viewBox="0 0 400 400">
-                    <polygon points="200,50 300,100 300,200 200,250 100,200 100,100" 
-                             fill="none" stroke="#f97316" strokeWidth="2"/>
-                  </svg>
-                </div>
-                <div className="relative z-10">
-                  <h3 className="text-3xl font-bold text-white mb-6">
-                    Verwandeln Sie Ihre Pflichten in <span className="text-green-400">Wettbewerbsvorteile</span>
-                  </h3>
-                  <p className="text-slate-300 mb-10 max-w-3xl mx-auto text-lg">
-                    Mit der richtigen Umsetzung wird die gesetzliche Verpflichtung zur betrieblichen Altersvorsorge 
-                    zu einem strategischen Vorteil für Ihr Unternehmen.
-                  </p>
-                  <div className="flex flex-col sm:flex-row gap-6 justify-center">
-                    <Button 
-                      className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-10 py-4 rounded-xl font-semibold transition-all duration-400 hover:scale-105 shadow-xl text-lg"
-                      onClick={() => window.open('https://outlook.office365.com/owa/calendar/ACENCIAde@acencia.de/bookings/', '_blank')}
-                    >
-                      Kostenfreie Potenzialanalyse vereinbaren
-                      <ArrowRight className="w-5 h-5 ml-2" />
-                    </Button>
-                    <Button 
-                      variant="outline"
-                      className="border-2 border-slate-400 text-slate-300 hover:bg-slate-600 hover:text-white px-10 py-4 rounded-xl font-semibold transition-all duration-400 text-lg"
-                      onClick={() => window.open('https://www.bmas.de/DE/Arbeit/Rente-und-Altersvorsorge/Betriebsrente/betriebsrente.html', '_blank')}
-                    >
-                      <FileText className="w-5 h-5 mr-2" />
-                      Mehr Informationen (BMAS)
-                    </Button>
+            {/* Opportunities Section */}
+            <div className="mb-12">
+              <div className="text-center mb-12">
+                <h2 className="text-2xl lg:text-3xl font-bold text-slate-900 mb-4 font-heading">
+                  <span className="text-slate-900">Ihre </span>
+                  <span className="text-acencia-orange">Chancen</span>
+                  <span className="text-slate-900"> mit bAV</span>
+                </h2>
+                <p className="text-slate-600 max-w-3xl mx-auto font-body">
+                  Diese Vorteile bietet die betriebliche Altersvorsorge für Ihr Unternehmen
+                </p>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                {opportunities.map((opportunity, index) => (
+                  <div key={index} className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-slate-100 hover:border-acencia-orange/30">
+                    <div className="text-center">
+                      <div className="w-16 h-16 bg-gradient-to-br from-acencia-orange to-orange-600 rounded-2xl flex items-center justify-center mb-4 mx-auto">
+                        <div className="text-white">
+                          {opportunity.icon}
+                        </div>
+                      </div>
+                      <h3 className="text-lg font-semibold text-slate-900 mb-3 font-heading">
+                        {opportunity.title}
+                      </h3>
+                      <p className="text-slate-600 text-sm mb-4 font-body">
+                        {opportunity.summary}
+                      </p>
+                      <div className="bg-gradient-to-r from-acencia-orange/10 to-orange-100 rounded-xl p-3">
+                        <p className="text-acencia text-xs font-semibold font-body">
+                          {opportunity.benefit}
+                        </p>
+                      </div>
+                    </div>
                   </div>
-                </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Call to Action */}
+            <div className="text-center bg-gradient-to-r from-acencia via-acencia-light to-acencia rounded-3xl p-8 text-white">
+              <div className="max-w-3xl mx-auto">
+                <h3 className="text-xl lg:text-2xl font-bold mb-4 font-heading">
+                  Lassen Sie sich rechtssicher beraten
+                </h3>
+                <p className="text-slate-200 mb-6 font-body">
+                  Unsere Experten unterstützen Sie bei der compliant Umsetzung Ihrer bAV-Strategie
+                </p>
+                <Button 
+                  className="bg-acencia-orange hover:bg-orange-600 text-white px-8 py-3 rounded-xl font-semibold transition-all duration-300"
+                  onClick={() => window.open('https://outlook.office365.com/owa/calendar/ACENCIAde@acencia.de/bookings/', '_blank')}
+                >
+                  <ArrowRight className="w-4 h-4 mr-2" />
+                  Jetzt Beratungstermin vereinbaren
+                </Button>
               </div>
             </div>
           </div>
