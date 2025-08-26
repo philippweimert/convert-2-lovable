@@ -244,7 +244,7 @@ const Header = () => {
 
         {/* Enhanced Mobile Navigation */}
         <div className={`md:hidden transition-all duration-300 overflow-hidden ${
-          isMenuOpen ? 'max-h-[32rem] opacity-100' : 'max-h-0 opacity-0'
+          isMenuOpen ? 'max-h-[40rem] opacity-100' : 'max-h-0 opacity-0'
         }`}>
           <div className="px-2 pt-2 pb-6 space-y-1 bg-acencia-light/95 backdrop-blur-lg rounded-2xl mt-4 border border-acencia-light/50 shadow-xl">
             {/* bAV with submenu in mobile */}
@@ -281,32 +281,68 @@ const Header = () => {
               </div>
             </div>
             
-            {/* bKV Link */}
-            <Link
-              to="/bkv"
-              className="block px-6 py-3 text-white hover:text-orange-400 hover:bg-white/5 rounded-xl transition-all duration-300 font-medium"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              bKV
-            </Link>
+            {/* bKV with submenu in mobile */}
+            <div className="space-y-1">
+              <Link
+                to="/bkv"
+                className="block px-6 py-3 text-white hover:text-orange-400 hover:bg-white/5 rounded-xl transition-all duration-300 font-medium"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                bKV
+              </Link>
+              <div className="pl-4 space-y-1">
+                <Link
+                  to="/bkv/x"
+                  className="block px-6 py-2 text-sm text-slate-300 hover:text-orange-400 hover:bg-white/5 rounded-xl transition-all duration-300"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  bKV Option X
+                </Link>
+                <Link
+                  to="/bkv/y"
+                  className="block px-6 py-2 text-sm text-slate-300 hover:text-orange-400 hover:bg-white/5 rounded-xl transition-all duration-300"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  bKV Option Y
+                </Link>
+              </div>
+            </div>
             
-            {/* bUV Link */}
-            <Link
-              to="/buv"
-              className="block px-6 py-3 text-white hover:text-orange-400 hover:bg-white/5 rounded-xl transition-all duration-300 font-medium"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              bUV
-            </Link>
+            {/* bUV with submenu in mobile */}
+            <div className="space-y-1">
+              <Link
+                to="/buv"
+                className="block px-6 py-3 text-white hover:text-orange-400 hover:bg-white/5 rounded-xl transition-all duration-300 font-medium"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                bUV
+              </Link>
+              <div className="pl-4 space-y-1">
+                <Link
+                  to="/buv/x"
+                  className="block px-6 py-2 text-sm text-slate-300 hover:text-orange-400 hover:bg-white/5 rounded-xl transition-all duration-300"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  bUV Option X
+                </Link>
+                <Link
+                  to="/buv/y"
+                  className="block px-6 py-2 text-sm text-slate-300 hover:text-orange-400 hover:bg-white/5 rounded-xl transition-all duration-300"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  bUV Option Y
+                </Link>
+              </div>
+            </div>
             
-            {/* Über uns with submenu in mobile */}
+            {/* über uns with submenu in mobile */}
             <div className="space-y-1">
               <Link
                 to="/ueber-uns"
                 className="block px-6 py-3 text-white hover:text-orange-400 hover:bg-white/5 rounded-xl transition-all duration-300 font-medium"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Über uns
+                über uns
               </Link>
               <div className="pl-4 space-y-1">
                 <Link
@@ -319,13 +355,26 @@ const Header = () => {
               </div>
             </div>
             
-            <Link
-              to="/kontakt"
-              className="block px-6 py-3 text-white hover:text-orange-400 hover:bg-white/5 rounded-xl transition-all duration-300 font-medium"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Kontakt
-            </Link>
+            {/* Kontakt with submenu in mobile */}
+            <div className="space-y-1">
+              <Link
+                to="/kontakt"
+                className="block px-6 py-3 text-white hover:text-orange-400 hover:bg-white/5 rounded-xl transition-all duration-300 font-medium"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Kontakt
+              </Link>
+              <div className="pl-4 space-y-1">
+                <Link
+                  to="/kontakt/beratung"
+                  className="block px-6 py-2 text-sm text-slate-300 hover:text-orange-400 hover:bg-white/5 rounded-xl transition-all duration-300"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Beratung
+                </Link>
+              </div>
+            </div>
+            
             <Link
               to="/leere-vorlage"
               className="block px-6 py-3 text-white hover:text-orange-400 hover:bg-white/5 rounded-xl transition-all duration-300 font-medium"
