@@ -90,26 +90,31 @@ const DieBavPage = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-acencia via-acencia to-acencia-light">
+    <div className="min-h-screen bg-acencia">
       <Header />
       
-      {/* Doubled spacing from header */}
-      <main className="pt-56">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-5xl mx-auto">
-            
-            {/* Hero Section - kompakter */}
-            <div className="text-center mb-12">
-              <h1 className="text-3xl lg:text-4xl font-bold text-white mb-2">
-                die <span className="text-acencia-orange">bAV</span>
-              </h1>
-              <p className="text-xs text-slate-400 mb-6 max-w-2xl mx-auto">
-                Informationen aus dem Geschäftsbetrieb des Versicherungsmaklers gemäß §93 HGB, keine Rechtsberatung, keine Steuerberatung
-              </p>
-              <p className="text-base text-slate-200 leading-relaxed max-w-3xl mx-auto">
-                Umfassende Informationen zur betrieblichen Altersvorsorge
-              </p>
-            </div>
+      {/* Doubled spacing from header to first section */}
+      <div className="pt-32">
+        <HeroSection />
+        <ThreeStepProcessSection />
+        
+        {/* Original die bAV content starts here */}
+        <div className="bg-gradient-to-b from-acencia via-acencia to-acencia-light py-16">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-5xl mx-auto">
+              
+              {/* Hero Section - kompakter */}
+              <div className="text-center mb-12">
+                <h1 className="text-3xl lg:text-4xl font-bold text-white mb-2">
+                  die <span className="text-acencia-orange">bAV</span>
+                </h1>
+                <p className="text-xs text-slate-400 mb-6 max-w-2xl mx-auto">
+                  Informationen aus dem Geschäftsbetrieb des Versicherungsmaklers gemäß §93 HGB, keine Rechtsberatung, keine Steuerberatung
+                </p>
+                <p className="text-base text-slate-200 leading-relaxed max-w-3xl mx-auto">
+                  Umfassende Informationen zur betrieblichen Altersvorsorge
+                </p>
+              </div>
 
             {/* Definition der betrieblichen Altersvorsorge - jetzt volle Breite */}
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 mb-12">
