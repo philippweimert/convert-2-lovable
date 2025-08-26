@@ -15,7 +15,6 @@ const Homepage = () => {
         <HeroSection />
         <ThreeStepProcessSection />
         <BusinessBenefitsGrid />
-        <ChallengesSolutionsSection />
         <CustomerSegments />
         <Footer />
       </div>
