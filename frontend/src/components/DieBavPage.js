@@ -140,7 +140,7 @@ const DieBavPage = () => {
             </div>
 
             {/* Herausforderungen Ausklapp-Element */}
-            <div id="herausforderungen" className="mb-16">
+            <div id="herausforderungen" className="mb-12">
               <div 
                 className="cursor-pointer bg-gradient-to-br from-red-600/20 to-red-700/20 rounded-2xl p-6 border border-red-500/30 hover:border-red-400/50 transition-all duration-300"
                 onClick={() => setIsChallengesExpanded(!isChallengesExpanded)}
