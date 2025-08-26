@@ -1,13 +1,53 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Header from "./Header";
 import Footer from "./Footer";
-import { Shield, Users, TrendingUp, ArrowRight, Scale, Building2 } from "lucide-react";
+import { Shield, Users, TrendingUp, ArrowRight, Scale, Building2, AlertTriangle, CheckCircle, ChevronDown, ChevronUp } from "lucide-react";
 
 const DieBavPage = () => {
+  const [isChallengesExpanded, setIsChallengesExpanded] = useState(false);
+  
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  const challenges = [
+    {
+      title: "Komplexe Verwaltung",
+      description: "bAV-Verwaltung ist administrativ sehr komplex und fehleranfällig"
+    },
+    {
+      title: "Zeitaufwand", 
+      description: "Manuelle Prozesse binden wertvolle HR-Ressourcen"
+    },
+    {
+      title: "Rechtsunsicherheit",
+      description: "Ständige Gesetzesänderungen erfordern permanente Überwachung"
+    },
+    {
+      title: "Systembrüche",
+      description: "Fehlende Integration führt zu Medienbrüchen und Doppelerfassung"
+    }
+  ];
+
+  const solutions = [
+    {
+      title: "Digitale Automatisierung",
+      description: "Vollautomatisierte Abwicklung eliminiert Fehlerquellen"
+    },
+    {
+      title: "HR-Entlastung",
+      description: "Bis zu 80% Zeitersparnis durch intelligente Automatisierung" 
+    },
+    {
+      title: "Compliance-Sicherheit",
+      description: "Immer aktuell und rechtssicher durch permanente Updates"
+    },
+    {
+      title: "Nahtlose Integration", 
+      description: "Durchgängiger Datenfluss in bestehende HR-Systeme"
+    }
+  ];
 
   const moreInfoBoxes = [
     {
