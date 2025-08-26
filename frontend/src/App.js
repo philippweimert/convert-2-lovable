@@ -35,10 +35,14 @@ function App() {
           <Route path="/die-bav/y" element={<DieBavPageY />} />
           <Route path="/die-bav/aktuelles" element={<AktuellesPage />} />
           <Route path="/bkv" element={<BkvPage />} />
+          <Route path="/bkv/x" element={<BkvPageX />} />
+          <Route path="/bkv/y" element={<BkvPageY />} />
           <Route path="/buv" element={<BuvPage />} />
-          <Route path="/aktuelles" element={<AktuellesPage />} />
+          <Route path="/buv/x" element={<BuvPageX />} />
+          <Route path="/buv/y" element={<BuvPageY />} />
           <Route path="/kontakt" element={<ContactPage />} />
-          <Route path="/leere-vorlage" element={<EmptyTemplatePage />} />
+          <Route path="/kontakt/beratung" element={<KontaktBeratungPage />} />
+          <Route path="/aktuelles" element={<AktuellesPage />} />
           <Route path="/datenschutz" element={<PrivacyPage />} />
           <Route path="/datenschutzerklaerung" element={<PrivacyPage />} />
           <Route path="/impressum" element={<ImprintPage />} />
