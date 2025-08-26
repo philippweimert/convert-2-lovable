@@ -21,6 +21,7 @@ function App() {
           <Route path="/arbeitgeber-pflichten" element={<EmployerObligationsPage />} />
           <Route path="/aktuelles" element={<AktuellesPage />} />
           <Route path="/kontakt" element={<ContactPage />} />
+          <Route path="/leere-vorlage" element={<EmptyTemplatePage />} />
           <Route path="/datenschutz" element={<PrivacyPage />} />
           <Route path="/datenschutzerklaerung" element={<PrivacyPage />} />
           <Route path="/impressum" element={<ImprintPage />} />
