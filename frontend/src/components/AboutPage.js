@@ -59,11 +59,8 @@ const AboutPage = () => {
           </div>
         </section>
 
-        {/* Sanfter Übergang von Hero zu Content */}
-        <div className="h-16 bg-gradient-to-b from-acencia-blue via-acencia-blue-light to-acencia-light"></div>
-
         {/* Kompakter Hauptinhalt */}
-        <section className="bg-acencia-light py-16 relative overflow-hidden">
+        <section className="bg-gradient-to-b from-acencia-blue to-acencia py-10 relative overflow-hidden">
           {/* Subtle background elements */}
           <div className="absolute inset-0 opacity-[0.03]">
             <svg className="absolute top-10 left-0 w-80 h-80" viewBox="0 0 400 400">
