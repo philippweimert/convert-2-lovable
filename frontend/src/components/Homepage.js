@@ -17,7 +17,7 @@ const HomePage = () => {
               Willkommen bei <span className="text-acencia-orange">ACENCIA</span>
             </h1>
             <p className="text-xl text-slate-200 max-w-3xl mx-auto leading-relaxed">
-              Ihre Experten für betriebliche Altersvorsorge
+              Ihre Experten für betriebliche Vorsorge
             </p>
           </div>
         </div>
