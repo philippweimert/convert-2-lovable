@@ -11,8 +11,8 @@ const DieBavPage = () => {
 
   const moreInfoBoxes = [
     {
-      title: "Unterkategorie X",
-      description: "Erfahren Sie mehr über spezielle Aspekte der betrieblichen Altersvorsorge in Unterkategorie X.",
+      title: "Für Unternehmen",
+      description: "Alles Wichtige über Pflichten, Herausforderungen, Chancen und Vorteile der bAV für Arbeitgeber.",
       icon: <Building2 className="w-6 h-6" />,
       link: "/die-bav/x",
       color: "from-blue-500 to-blue-600"
