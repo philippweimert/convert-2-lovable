@@ -250,53 +250,6 @@ const DieBavPage = () => {
                   ))}
                 </div>
               </div>
-                        <div key={index} className="flex items-start space-x-3">
-                          <CheckCircle className="w-4 h-4 text-green-400 mt-1 flex-shrink-0" />
-                          <div>
-                            <h5 className="text-white font-semibold text-sm mb-1">{solution.title}</h5>
-                            <p className="text-slate-300 text-xs">{solution.description}</p>
-                          </div>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Mehr erfahren Boxen - kompakter */}
-            <div className="mb-12">
-              <h2 className="text-2xl font-bold text-white text-center mb-8">
-                Mehr erfahren
-              </h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {moreInfoBoxes.map((box, index) => (
-                  <Link 
-                    key={index}
-                    to={box.link}
-                    className="group block"
-                  >
-                    <div className="bg-white/10 backdrop-blur-sm rounded-xl p-5 border border-white/20 hover:bg-white/15 transition-all duration-300 hover:scale-105 hover:shadow-xl h-full">
-                      <div className={`w-10 h-10 bg-gradient-to-r ${box.color} rounded-lg flex items-center justify-center mb-3 text-white group-hover:scale-110 transition-transform duration-300`}>
-                        {box.icon}
-                      </div>
-                      
-                      <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-acencia-orange transition-colors duration-300">
-                        {box.title}
-                      </h3>
-                      
-                      <p className="text-slate-200 leading-relaxed mb-3 text-sm">
-                        {box.description}
-                      </p>
-                      
-                      <div className="flex items-center text-acencia-orange group-hover:text-orange-300 transition-colors duration-300">
-                        <span className="text-xs font-medium">Mehr erfahren</span>
-                        <ArrowRight className="w-3 h-3 ml-1 group-hover:translate-x-1 transition-transform duration-300" />
-                      </div>
-                    </div>
-                  </Link>
-                ))}
-              </div>
             </div>
           </div>
         </div>
