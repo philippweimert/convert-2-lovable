@@ -46,11 +46,11 @@ const ThreeStepProcessSection = () => {
 
   return (
     <section className="bg-gradient-to-b from-acencia-light via-acencia-light via-white to-acencia-blue py-8 relative overflow-hidden">
-      {/* Geometrische Hintergrundmuster in Blau */}
+      {/* Geometrische Hintergrundmuster - dunkel auf hellem Hintergrund */}
       <div className="absolute inset-0 opacity-[0.08]">
         <svg className="absolute top-10 left-0 w-80 h-80" viewBox="0 0 400 400">
           <polygon points="200,30 330,130 330,230 200,330 70,230 70,130" 
-                   fill="none" stroke="#98a9c3" strokeWidth="2"/>
+                   fill="none" stroke="#001f3c" strokeWidth="2"/>
         </svg>
         <svg className="absolute bottom-10 right-0 w-64 h-64 animate-pulse" viewBox="0 0 400 400" style={{animationDuration: '4s'}}>
           <polygon points="200,50 300,100 300,200 200,250 100,200 100,100" 
@@ -58,7 +58,7 @@ const ThreeStepProcessSection = () => {
         </svg>
         <svg className="absolute top-1/2 left-1/2 w-48 h-48 transform -translate-x-1/2 -translate-y-1/2 animate-bounce" viewBox="0 0 400 400" style={{animationDuration: '5s'}}>
           <polygon points="200,80 280,140 280,220 200,280 120,220 120,140" 
-                   fill="none" stroke="#e3ebf2" strokeWidth="1"/>
+                   fill="none" stroke="#001f3c" strokeWidth="1"/>
         </svg>
       </div>
       
