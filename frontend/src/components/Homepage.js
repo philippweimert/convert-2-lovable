@@ -11,8 +11,8 @@ const Homepage = () => {
   return (
     <div className="min-h-screen bg-acencia">
       <Header />
-      {/* Reduced padding-top for smaller gap to navigation */}
-      <div className="pt-28">
+      {/* Reduced padding-top for closer gap to navigation */}
+      <div className="pt-20">
         <HeroSection />
         <ThreeStepProcessSection />
         <BusinessBenefitsGrid />
