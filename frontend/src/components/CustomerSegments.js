@@ -183,10 +183,6 @@ const CustomerSegments = () => {
               </svg>
             </div>
             
-            {/* Floating elements */}
-            <div className="absolute top-1/4 right-1/4 w-2 h-2 bg-white rounded-full animate-ping opacity-50"></div>
-            <div className="absolute bottom-1/3 left-1/4 w-1 h-1 bg-acencia-orange rounded-full animate-pulse opacity-60"></div>
-            
             <div className="relative z-10">
               <h3 className="text-2xl lg:text-3xl font-bold text-white mb-6 leading-tight">
                 Unsicher, welche Lösung für Sie die richtige ist?
