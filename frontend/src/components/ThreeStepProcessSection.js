@@ -45,7 +45,7 @@ const ThreeStepProcessSection = () => {
   ];
 
   return (
-    <section className="bg-gradient-to-b from-acencia-blue via-white to-acencia-blue-light py-12 relative overflow-hidden">
+    <section className="bg-gradient-to-b from-white via-acencia-blue-light to-acencia-blue py-12 relative overflow-hidden">
       {/* Geometrische Hintergrundmuster in Blau */}
       <div className="absolute inset-0 opacity-[0.08]">
         <svg className="absolute top-10 left-0 w-80 h-80" viewBox="0 0 400 400">
