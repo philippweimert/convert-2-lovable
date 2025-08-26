@@ -2,7 +2,6 @@ import React from "react";
 import Header from "./Header";
 import HeroSection from "./HeroSection";
 import ThreeStepProcessSection from "./ThreeStepProcessSection";
-import BusinessBenefitsGrid from "./BusinessBenefitsGrid";
 import CustomerSegments from "./CustomerSegments";
 import Footer from "./Footer";
 
