@@ -103,7 +103,7 @@ const ContactPage = () => {
       
       <div className="pt-28 bg-acencia">
         {/* Hero Section */}
-        <section className="bg-slate-900 py-20 relative overflow-hidden">
+        <section className="bg-gradient-to-br from-acencia via-acencia-light to-acencia py-20 relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <svg className="absolute top-20 right-0 w-96 h-96" viewBox="0 0 400 400">
             <polygon points="200,50 350,150 350,250 200,350 50,250 50,150" 
