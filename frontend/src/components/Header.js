@@ -23,15 +23,13 @@ const Header = () => {
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-28">
-          {/* Logo */}
+          {/* Logo - fließender Übergang ohne Rand */}
           <Link to="/" className="flex items-center group smooth-slide py-2">
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-2 group-hover:bg-white/20 transition-all duration-400">
-              <img 
-                src="/acencia-logo.png" 
-                alt="ACENCIA - Wir machen bAV einfach" 
-                className="h-16 w-auto object-contain transition-all duration-400 group-hover:scale-105 filter brightness-110"
-              />
-            </div>
+            <img 
+              src="/acencia-logo-new.png" 
+              alt="ACENCIA - Wir machen bAV einfach" 
+              className="h-20 w-auto object-contain transition-all duration-400 group-hover:scale-105"
+            />
           </Link>
 
           {/* Enhanced Desktop Navigation */}
