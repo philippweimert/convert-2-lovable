@@ -6,6 +6,7 @@ import { Menu, X, ChevronDown } from "lucide-react";
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isBavDropdownOpen, setIsBavDropdownOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
