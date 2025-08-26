@@ -32,9 +32,9 @@ const AboutPage = () => {
     <div className="min-h-screen bg-slate-900">
       <Header />
       
-      <div className="pt-20">
+      <div className="pt-20 bg-acencia">
         {/* Kompakte Hero Section */}
-        <section className="bg-slate-900 py-16 relative overflow-hidden">
+        <section className="bg-gradient-to-br from-acencia via-acencia-light to-acencia py-16 relative overflow-hidden">
           {/* Background design similar to hero section */}
           <div className="absolute inset-0 opacity-[0.05]">
             <svg className="absolute top-20 right-0 w-96 h-96" viewBox="0 0 400 400">
