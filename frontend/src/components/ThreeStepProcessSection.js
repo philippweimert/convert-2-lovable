@@ -61,7 +61,7 @@ const ThreeStepProcessSection = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
         <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-2xl lg:text-3xl font-bold text-slate-900 mb-6 text-display">
+          <h2 className="text-2xl lg:text-3xl font-bold text-slate-900 mb-6 font-heading">
             Wir begleiten Sie entlang des gesamten 
             <span className="text-emphasis"> bAV-Prozesses</span>
           </h2>
