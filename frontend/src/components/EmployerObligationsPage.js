@@ -25,16 +25,91 @@ import {
 } from "lucide-react";
 
 const EmployerObligationsPage = () => {
-  const [expandedObligation, setExpandedObligation] = useState(null);
-  const [expandedChance, setExpandedChance] = useState(null);
+  const [expandedSection, setExpandedSection] = useState(null);
 
-  const toggleObligation = (index) => {
-    setExpandedObligation(expandedObligation === index ? null : index);
+  const toggleSection = (index) => {
+    setExpandedSection(expandedSection === index ? null : index);
   };
 
-  const toggleChance = (index) => {
-    setExpandedChance(expandedChance === index ? null : index);
-  };
+  // Legal obligations data
+  const obligations = [
+    {
+      icon: <FileText className="w-6 h-6" />,
+      title: "Informationspflichten",
+      summary: "Umfassende Aufklärung der Mitarbeitenden über bAV-Optionen",
+      details: [
+        "Jährliche Information über bAV-Möglichkeiten nach § 3a BetrAVG",
+        "Aufklärung über steuerliche Auswirkungen und Sozialversicherungsfreiheit",
+        "Information über Portabilität und Unverfallbarkeit",
+        "Dokumentation der Beratungsgespräche"
+      ],
+      legal: "§ 3a BetrAVG, § 4a BetrAVG"
+    },
+    {
+      icon: <Shield className="w-6 h-6" />,
+      title: "Haftungsrisiken",
+      summary: "Rechtssichere Umsetzung zur Minimierung von Haftungsrisiken",
+      details: [
+        "Haftung bei unzureichender Information der Mitarbeitenden",
+        "Risiken bei fehlerhafter Beratung oder Durchführung",
+        "Schadensersatzansprüche bei Pflichtverletzungen",
+        "Absicherung durch professionelle Beratung und Dokumentation"
+      ],
+      legal: "§ 280 BGB, § 823 BGB"
+    },
+    {
+      icon: <Users className="w-6 h-6" />,
+      title: "Gleichbehandlung",
+      summary: "Faire und diskriminierungsfreie bAV-Angebote für alle Mitarbeitenden",
+      details: [
+        "Gleichbehandlung aller berechtigten Arbeitnehmer",
+        "Berücksichtigung von Teilzeitbeschäftigten",
+        "Vermeidung mittelbarer Diskriminierung",
+        "Transparente Kommunikation der Auswahlkriterien"
+      ],
+      legal: "§ 1b BetrAVG, AGG"
+    },
+    {
+      icon: <Calendar className="w-6 h-6" />,
+      title: "Verwaltungspflichten",
+      summary: "Ordnungsgemäße Verwaltung und laufende Betreuung der bAV",
+      details: [
+        "Beitragszahlung und Verwaltung der Anwartschaften",
+        "Jährliche Standmitteilungen an die Mitarbeitenden",
+        "Bearbeitung von Leistungsfällen und Kündigungen",
+        "Archivierung und Dokumentation über gesetzliche Fristen"
+      ],
+      legal: "§ 4a BetrAVG, § 155 VVG"
+    }
+  ];
+
+  // Opportunities data
+  const opportunities = [
+    {
+      icon: <TrendingUp className="w-6 h-6" />,
+      title: "Mitarbeiterbindung",
+      summary: "Stärkung der Loyalität durch attraktive Zusatzleistungen",
+      benefit: "Langfristige Kostenersparnis durch reduzierte Fluktuation"
+    },
+    {
+      icon: <Euro className="w-6 h-6" />,
+      title: "Steuervorteile",
+      summary: "Optimierung der Lohnnebenkosten durch Entgeltumwandlung",
+      benefit: "Einsparung von Sozialversicherungsbeiträgen"
+    },
+    {
+      icon: <Heart className="w-6 h-6" />,
+      title: "Employer Branding",
+      summary: "Verbesserung der Arbeitgeberattraktivität im Wettbewerb",
+      benefit: "Leichtere Gewinnung qualifizierter Fachkräfte"
+    },
+    {
+      icon: <Building2 className="w-6 h-6" />,
+      title: "Unternehmenskultur",
+      summary: "Stärkung des Verantwortungsbewusstseins für Mitarbeitende",
+      benefit: "Verbesserung der Mitarbeiterzufriedenheit und Produktivität"
+    }
+  ];
 
   return (
     <div className="min-h-screen bg-acencia">
