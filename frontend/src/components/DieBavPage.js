@@ -98,42 +98,38 @@ const DieBavPage = () => {
             
             {/* Hero Section - kompakter */}
             <div className="text-center mb-12">
-              <h1 className="text-3xl lg:text-4xl font-bold text-white mb-6">
+              <h1 className="text-3xl lg:text-4xl font-bold text-white mb-2">
                 die <span className="text-acencia-orange">bAV</span>
               </h1>
+              <p className="text-xs text-slate-400 mb-6 max-w-2xl mx-auto">
+                Informationen aus dem Geschäftsbetrieb des Versicherungsmaklers gemäß §93 HGB, keine Rechtsberatung, keine Steuerberatung
+              </p>
               <p className="text-base text-slate-200 leading-relaxed max-w-3xl mx-auto">
                 Umfassende Informationen zur betrieblichen Altersvorsorge
               </p>
             </div>
 
-            {/* Kompakte 2-Spalten-Layout für Definition und Rechtsstellung */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-12">
-              {/* Definition der betrieblichen Altersvorsorge */}
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-                <div className="flex items-center mb-4">
-                  <Shield className="w-6 h-6 text-acencia-orange mr-2" />
-                  <h2 className="text-lg font-semibold text-white">
-                    Was ist betriebliche Altersvorsorge?
-                  </h2>
-                </div>
-                <p className="text-slate-200 leading-relaxed text-sm mb-3">
-                  Die betriebliche Altersvorsorge (bAV) ist eine Form der privaten Altersvorsorge, die über den Arbeitgeber organisiert wird. 
-                  Sie ergänzt die gesetzliche Rente und bietet Arbeitnehmern die Möglichkeit, zusätzliche Rentenansprüche aufzubauen.
-                </p>
-                <p className="text-slate-200 leading-relaxed text-sm">
-                  Seit 2002 haben alle Arbeitnehmer einen Rechtsanspruch auf betriebliche Altersvorsorge durch Entgeltumwandlung.
-                </p>
+            {/* Definition der betrieblichen Altersvorsorge - jetzt volle Breite */}
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 mb-12">
+              <div className="flex items-center mb-4">
+                <Shield className="w-6 h-6 text-acencia-orange mr-2" />
+                <h2 className="text-lg font-semibold text-white">
+                  Was ist betriebliche Altersvorsorge?
+                </h2>
               </div>
-
-              {/* Rechtliche Stellung des Versicherungsmaklers nach HGB §93 - kompakt */}
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-                <h3 className="text-lg font-semibold text-white mb-2 flex items-center">
-                  <Scale className="w-5 h-5 text-acencia-orange mr-2" />
-                  Rechtliche Stellung (HGB §93)
-                </h3>
-                <p className="text-slate-300 text-xs leading-relaxed">
-                  Informationen aus dem Geschäftsbetrieb des Versicherungsmaklers gemäß §93 HGB, keine Rechtsberatung, keine Steuerberatung
-                </p>
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                <div>
+                  <p className="text-slate-200 leading-relaxed text-sm mb-3">
+                    Die betriebliche Altersvorsorge (bAV) ist eine Form der privaten Altersvorsorge, die über den Arbeitgeber organisiert wird. 
+                    Sie ergänzt die gesetzliche Rente und bietet Arbeitnehmern die Möglichkeit, zusätzliche Rentenansprüche aufzubauen.
+                  </p>
+                </div>
+                <div>
+                  <p className="text-slate-200 leading-relaxed text-sm">
+                    Seit 2002 haben alle Arbeitnehmer einen Rechtsanspruch auf betriebliche Altersvorsorge durch Entgeltumwandlung. 
+                    Dabei wird ein Teil des Bruttogehalts für die Altersvorsorge verwendet, wodurch sich die Steuer- und Sozialabgabenlast reduziert.
+                  </p>
+                </div>
               </div>
             </div>
 
