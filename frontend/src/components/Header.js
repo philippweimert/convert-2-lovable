@@ -182,13 +182,27 @@ const Header = () => {
                 </Link>
               </div>
             </div>
-            <Link
-              to="/ueber-uns"
-              className="block px-6 py-3 text-white hover:text-orange-400 hover:bg-white/5 rounded-xl transition-all duration-300 font-medium"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Über uns
-            </Link>
+            
+            {/* Über uns with submenu in mobile */}
+            <div className="space-y-1">
+              <Link
+                to="/ueber-uns"
+                className="block px-6 py-3 text-white hover:text-orange-400 hover:bg-white/5 rounded-xl transition-all duration-300 font-medium"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Über uns
+              </Link>
+              <div className="pl-4 space-y-1">
+                <Link
+                  to="/ueber-uns/service-team"
+                  className="block px-6 py-2 text-sm text-slate-300 hover:text-orange-400 hover:bg-white/5 rounded-xl transition-all duration-300"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Service-Team
+                </Link>
+              </div>
+            </div>
+            
             <Link
               to="/kontakt"
               className="block px-6 py-3 text-white hover:text-orange-400 hover:bg-white/5 rounded-xl transition-all duration-300 font-medium"
