@@ -142,6 +142,82 @@ const DieBavPage = () => {
 
               {/* Herausforderungen Ausklapp-Element */}
               <div id="herausforderungen" className="mb-12">
+                <div 
+                  className="cursor-pointer bg-gradient-to-br from-red-600/20 to-red-700/20 rounded-2xl p-6 border border-red-500/30 hover:border-red-400/50 transition-all duration-300"
+                  onClick={() => setIsChallengesExpanded(!isChallengesExpanded)}
+                >
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center space-x-4">
+                      <div className="w-12 h-12 bg-gradient-to-br from-red-600 to-red-700 rounded-xl flex items-center justify-center">
+                        <AlertTriangle className="w-6 h-6 text-white" />
+                      </div>
+                      <div>
+                        <h3 className="text-xl font-bold text-white mb-1">
+                          bAV-Verwaltung ist komplex, zeitaufwendig und fehleranfällig
+                        </h3>
+                        <p className="text-slate-300 text-sm">
+                          Klicken Sie hier, um die Herausforderungen und unsere Lösungen zu sehen
+                        </p>
+                      </div>
+                    </div>
+                    <div className="text-white">
+                      {isChallengesExpanded ? (
+                        <ChevronUp className="w-6 h-6" />
+                      ) : (
+                        <ChevronDown className="w-6 h-6" />
+                      )}
+                    </div>
+                  </div>
+                </div>
+
+                {/* Ausklappbarer Inhalt */}
+                <div className={`transition-all duration-500 overflow-hidden ${
+                  isChallengesExpanded ? 'max-h-[2000px] opacity-100 mt-6' : 'max-h-0 opacity-0'
+                }`}>
+                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    {/* Herausforderungen */}
+                    <div className="bg-gradient-to-br from-red-600/10 to-red-700/10 rounded-xl p-6 border border-red-500/20">
+                      <h4 className="text-lg font-bold text-white mb-4 flex items-center">
+                        <AlertTriangle className="w-5 h-5 text-red-400 mr-2" />
+                        Herausforderungen
+                      </h4>
+                      <div className="space-y-4">
+                        {challenges.map((challenge, index) => (
+                          <div key={index} className="flex items-start space-x-3">
+                            <div className="w-2 h-2 bg-red-400 rounded-full mt-2 flex-shrink-0"></div>
+                            <div>
+                              <h5 className="text-white font-semibold text-sm mb-1">{challenge.title}</h5>
+                              <p className="text-slate-300 text-xs">{challenge.description}</p>
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+
+                    {/* Lösungen */}
+                    <div className="bg-gradient-to-br from-green-600/10 to-green-700/10 rounded-xl p-6 border border-green-500/20">
+                      <h4 className="text-lg font-bold text-white mb-4 flex items-center">
+                        <CheckCircle className="w-5 h-5 text-green-400 mr-2" />
+                        Unsere Lösungen
+                      </h4>
+                      <div className="space-y-4">
+                        {solutions.map((solution, index) => (
+                          <div key={index} className="flex items-start space-x-3">
+                            <CheckCircle className="w-4 h-4 text-green-400 mt-1 flex-shrink-0" />
+                            <div>
+                              <h5 className="text-white font-semibold text-sm mb-1">{solution.title}</h5>
+                              <p className="text-slate-300 text-xs">{solution.description}</p>
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Mehr erfahren Boxen - kompakter */}
+              <div className="mb-12">
               <div 
                 className="cursor-pointer bg-gradient-to-br from-red-600/20 to-red-700/20 rounded-2xl p-6 border border-red-500/30 hover:border-red-400/50 transition-all duration-300"
                 onClick={() => setIsChallengesExpanded(!isChallengesExpanded)}
