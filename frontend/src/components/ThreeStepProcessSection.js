@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { CheckCircle, Settings, Users, ArrowRight, ChevronDown, ChevronUp } from 'lucide-react';
+import { Link } from "react-router-dom";
+import { CheckCircle, Settings, Users, ArrowRight, ChevronDown, ChevronUp, AlertTriangle } from 'lucide-react';
 import { Button } from './ui/button';
 
 const ThreeStepProcessSection = () => {
