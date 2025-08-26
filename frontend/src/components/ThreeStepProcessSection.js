@@ -65,10 +65,10 @@ const ThreeStepProcessSection = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header - kompakter */}
         <div className="text-center mb-12 animate-fade-in">
-          <h2 className="text-2xl lg:text-3xl font-bold text-slate-900 mb-4 font-heading">
+          <h2 className="text-2xl lg:text-3xl font-bold text-white mb-4 font-heading">
             Wir begleiten Sie entlang des gesamten <span className="text-acencia-orange">bAV-Prozesses</span>
           </h2>
-          <p className="text-slate-600 max-w-3xl mx-auto text-base leading-relaxed font-body">
+          <p className="text-slate-200 max-w-3xl mx-auto text-base leading-relaxed font-body">
             Von der rechtlichen Einrichtung bis zur vollständigen Digitalisierung - wir machen bAV einfach und effizient.
           </p>
         </div>
