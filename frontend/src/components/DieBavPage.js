@@ -116,32 +116,32 @@ const DieBavPage = () => {
                 </p>
               </div>
 
-            {/* Definition der betrieblichen Altersvorsorge - jetzt volle Breite */}
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 mb-12">
-              <div className="flex items-center mb-4">
-                <Shield className="w-6 h-6 text-acencia-orange mr-2" />
-                <h2 className="text-lg font-semibold text-white">
-                  Was ist betriebliche Altersvorsorge?
-                </h2>
-              </div>
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                <div>
-                  <p className="text-slate-200 leading-relaxed text-sm mb-3">
-                    Die betriebliche Altersvorsorge (bAV) ist eine Form der privaten Altersvorsorge, die über den Arbeitgeber organisiert wird. 
-                    Sie ergänzt die gesetzliche Rente und bietet Arbeitnehmern die Möglichkeit, zusätzliche Rentenansprüche aufzubauen.
-                  </p>
+              {/* Definition der betrieblichen Altersvorsorge - jetzt volle Breite */}
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 mb-12">
+                <div className="flex items-center mb-4">
+                  <Shield className="w-6 h-6 text-acencia-orange mr-2" />
+                  <h2 className="text-lg font-semibold text-white">
+                    Was ist betriebliche Altersvorsorge?
+                  </h2>
                 </div>
-                <div>
-                  <p className="text-slate-200 leading-relaxed text-sm">
-                    Seit 2002 haben alle Arbeitnehmer einen Rechtsanspruch auf betriebliche Altersvorsorge durch Entgeltumwandlung. 
-                    Dabei wird ein Teil des Bruttogehalts für die Altersvorsorge verwendet, wodurch sich die Steuer- und Sozialabgabenlast reduziert.
-                  </p>
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                  <div>
+                    <p className="text-slate-200 leading-relaxed text-sm mb-3">
+                      Die betriebliche Altersvorsorge (bAV) ist eine Form der privaten Altersvorsorge, die über den Arbeitgeber organisiert wird. 
+                      Sie ergänzt die gesetzliche Rente und bietet Arbeitnehmern die Möglichkeit, zusätzliche Rentenansprüche aufzubauen.
+                    </p>
+                  </div>
+                  <div>
+                    <p className="text-slate-200 leading-relaxed text-sm">
+                      Seit 2002 haben alle Arbeitnehmer einen Rechtsanspruch auf betriebliche Altersvorsorge durch Entgeltumwandlung. 
+                      Dabei wird ein Teil des Bruttogehalts für die Altersvorsorge verwendet, wodurch sich die Steuer- und Sozialabgabenlast reduziert.
+                    </p>
+                  </div>
                 </div>
               </div>
-            </div>
 
-            {/* Herausforderungen Ausklapp-Element */}
-            <div id="herausforderungen" className="mb-12">
+              {/* Herausforderungen Ausklapp-Element */}
+              <div id="herausforderungen" className="mb-12">
               <div 
                 className="cursor-pointer bg-gradient-to-br from-red-600/20 to-red-700/20 rounded-2xl p-6 border border-red-500/30 hover:border-red-400/50 transition-all duration-300"
                 onClick={() => setIsChallengesExpanded(!isChallengesExpanded)}
