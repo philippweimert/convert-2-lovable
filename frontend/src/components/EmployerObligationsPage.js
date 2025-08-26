@@ -115,7 +115,7 @@ const EmployerObligationsPage = () => {
     <div className="min-h-screen bg-acencia">
       <Header />
       
-      <div className="pt-16 bg-acencia">
+      <div className="pt-32 bg-acencia">
         {/* Modern Hero Section */}
         <section className="bg-gradient-to-b from-acencia via-acencia via-acencia to-acencia-light py-16 relative overflow-hidden">
           {/* Geometric background patterns */}
