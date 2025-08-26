@@ -42,33 +42,27 @@ const EmployerObligationsPage = () => {
       
       <div className="pt-28 bg-acencia">
         {/* Hero Section mit kompakterem Layout */}
-        <section className="bg-gradient-to-br from-acencia via-acencia-light to-acencia py-20 relative overflow-hidden">
-          {/* Enhanced background design */}
-          <div className="absolute inset-0">
-            <div className="absolute inset-0 opacity-[0.08]">
-              <svg className="absolute top-10 right-10 w-96 h-96" viewBox="0 0 400 400">
-                <polygon points="200,50 350,150 350,250 200,350 50,250 50,150" 
-                         fill="none" stroke="white" strokeWidth="3"/>
-              </svg>
-              <svg className="absolute bottom-10 left-10 w-80 h-80" viewBox="0 0 400 400">
-                <polygon points="200,30 320,120 320,200 200,290 80,200 80,120" 
-                         fill="none" stroke="#f97316" strokeWidth="2"/>
-              </svg>
-              <svg className="absolute top-1/2 right-1/3 w-64 h-64" viewBox="0 0 400 400">
-                <polygon points="200,60 300,120 300,180 200,240 100,180 100,120" 
-                         fill="none" stroke="#3b82f6" strokeWidth="1"/>
-              </svg>
-            </div>
-            
-            {/* Enhanced animated elements */}
-            <div className="absolute inset-0 opacity-40">
-              <div className="absolute top-1/4 left-1/5 w-3 h-3 bg-orange-400 rounded-full animate-ping"></div>
-              <div className="absolute top-2/3 right-1/4 w-2 h-2 bg-blue-400 rounded-full animate-pulse"></div>
-              <div className="absolute top-1/3 right-1/6 w-2 h-2 bg-white rounded-full animate-ping"></div>
-              <div className="absolute bottom-1/4 left-1/3 w-1 h-1 bg-orange-300 rounded-full animate-pulse"></div>
-              <div className="absolute top-1/6 left-2/3 w-1 h-1 bg-blue-300 rounded-full animate-ping"></div>
-            </div>
+        <section className="bg-gradient-to-br from-acencia via-acencia-light to-acencia-blue py-20 relative overflow-hidden">
+          {/* Geometrische Hintergrundmuster in Weiß */}
+          <div className="absolute inset-0 opacity-[0.08]">
+            <svg className="absolute top-20 right-0 w-96 h-96 animate-pulse" viewBox="0 0 400 400" style={{animationDuration: '6s'}}>
+              <polygon points="200,50 350,150 350,250 200,350 50,250 50,150" 
+                       fill="none" stroke="white" strokeWidth="2"/>
+            </svg>
+            <svg className="absolute bottom-20 left-0 w-80 h-80 animate-bounce" viewBox="0 0 400 400" style={{animationDuration: '4s'}}>
+              <polygon points="200,30 320,120 320,200 200,290 80,200 80,120" 
+                       fill="none" stroke="white" strokeWidth="1"/>
+            </svg>
+            <svg className="absolute top-1/2 left-1/3 w-64 h-64" viewBox="0 0 400 400">
+              <polygon points="200,70 290,130 290,190 200,250 110,190 110,130" 
+                       fill="none" stroke="#e3ebf2" strokeWidth="1" opacity="0.6"/>
+            </svg>
           </div>
+          
+          {/* Floating elements */}
+          <div className="absolute top-1/5 right-1/5 w-2 h-2 bg-white rounded-full animate-ping opacity-60"></div>
+          <div className="absolute top-3/5 left-1/5 w-1.5 h-1.5 bg-acencia-orange rounded-full animate-pulse opacity-50"></div>
+          <div className="absolute bottom-1/4 right-1/3 w-1 h-1 bg-acencia-orange-light rounded-full animate-ping opacity-40"></div>
           
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="text-center mb-12">              
