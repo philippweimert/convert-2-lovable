@@ -23,6 +23,10 @@ function App() {
           <Route path="/" element={<Homepage />} />
           <Route path="/ueber-uns" element={<AboutPage />} />
           <Route path="/bav-rechtliche-grundlagen" element={<EmployerObligationsPage />} />
+          <Route path="/die-bav" element={<DieBavPage />} />
+          <Route path="/die-bav/x" element={<DieBavPageX />} />
+          <Route path="/die-bav/y" element={<DieBavPageY />} />
+          <Route path="/die-bav/z" element={<DieBavPageZ />} />
           <Route path="/aktuelles" element={<AktuellesPage />} />
           <Route path="/kontakt" element={<ContactPage />} />
           <Route path="/leere-vorlage" element={<EmptyTemplatePage />} />
