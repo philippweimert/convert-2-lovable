@@ -26,7 +26,7 @@ function App() {
           <Route path="/die-bav" element={<DieBavPage />} />
           <Route path="/die-bav/x" element={<DieBavPageX />} />
           <Route path="/die-bav/y" element={<DieBavPageY />} />
-          <Route path="/die-bav/z" element={<DieBavPageZ />} />
+          <Route path="/die-bav/aktuelles" element={<AktuellesPage />} />
           <Route path="/aktuelles" element={<AktuellesPage />} />
           <Route path="/kontakt" element={<ContactPage />} />
           <Route path="/leere-vorlage" element={<EmptyTemplatePage />} />
