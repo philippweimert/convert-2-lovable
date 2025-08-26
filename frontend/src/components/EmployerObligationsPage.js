@@ -9,7 +9,7 @@ import {
   Scale, 
   Shield, 
   Users,
-  Calculator,
+  Calendar,
   ArrowRight,
   ChevronDown,
   ExternalLink,
@@ -20,8 +20,8 @@ import {
   Heart,
   Award,
   Building2,
-  Network,
-  Coffee
+  BookOpen,
+  Target
 } from "lucide-react";
 
 const EmployerObligationsPage = () => {
