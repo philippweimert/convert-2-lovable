@@ -90,6 +90,11 @@ module.exports = {
   				'3': 'hsl(var(--chart-3))',
   				'4': 'hsl(var(--chart-4))',
   				'5': 'hsl(var(--chart-5))'
+  			},
+  			acencia: {
+  				DEFAULT: '#001f3c',
+  				dark: '#001529',
+  				light: '#0d2847'
   			}
   		},
   		animation: {
