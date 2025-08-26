@@ -24,12 +24,14 @@ const Header = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center group smooth-slide">
-            <img 
-              src="/acencia-logo.png" 
-              alt="ACENCIA - Wir machen bAV einfach" 
-              className="h-12 w-auto object-contain transition-all duration-400 group-hover:scale-105"
-            />
+          <Link to="/" className="flex items-center group smooth-slide py-2">
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-2 group-hover:bg-white/20 transition-all duration-400">
+              <img 
+                src="/acencia-logo.png" 
+                alt="ACENCIA - Wir machen bAV einfach" 
+                className="h-16 w-auto object-contain transition-all duration-400 group-hover:scale-105 filter brightness-110"
+              />
+            </div>
           </Link>
 
           {/* Enhanced Desktop Navigation */}
