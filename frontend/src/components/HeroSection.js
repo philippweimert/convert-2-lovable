@@ -151,8 +151,8 @@ const HeroSection = () => {
         </div>
       </div>
 
-      {/* Enhanced gradient overlay */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-slate-100 to-transparent"></div>
+      {/* Enhanced gradient overlay für nahtlosen Übergang */}
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-acencia-blue to-transparent"></div>
     </section>
   );
 };
