@@ -167,14 +167,14 @@ const Header = () => {
           isMenuOpen ? 'max-h-[32rem] opacity-100' : 'max-h-0 opacity-0'
         }`}>
           <div className="px-2 pt-2 pb-6 space-y-1 bg-acencia-light/95 backdrop-blur-lg rounded-2xl mt-4 border border-acencia-light/50 shadow-xl">
-            {/* die bAV with submenu in mobile */}
+            {/* bAV with submenu in mobile */}
             <div className="space-y-1">
               <Link
                 to="/die-bav"
                 className="block px-6 py-3 text-white hover:text-orange-400 hover:bg-white/5 rounded-xl transition-all duration-300 font-medium"
                 onClick={() => setIsMenuOpen(false)}
               >
-                die bAV
+                bAV
               </Link>
               <div className="pl-4 space-y-1">
                 <Link
@@ -200,6 +200,24 @@ const Header = () => {
                 </Link>
               </div>
             </div>
+            
+            {/* bKV Link */}
+            <Link
+              to="/bkv"
+              className="block px-6 py-3 text-white hover:text-orange-400 hover:bg-white/5 rounded-xl transition-all duration-300 font-medium"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              bKV
+            </Link>
+            
+            {/* bUV Link */}
+            <Link
+              to="/buv"
+              className="block px-6 py-3 text-white hover:text-orange-400 hover:bg-white/5 rounded-xl transition-all duration-300 font-medium"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              bUV
+            </Link>
             
             {/* Über uns with submenu in mobile */}
             <div className="space-y-1">
