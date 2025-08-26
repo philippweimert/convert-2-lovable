@@ -252,9 +252,9 @@ const DieBavPage = () => {
             </div>
           </div>
         </div>
-      </main>
-      
-      <Footer />
+        
+        <Footer />
+      </div>
     </div>
   );
 };
