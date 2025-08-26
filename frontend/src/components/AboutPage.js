@@ -47,11 +47,6 @@ const AboutPage = () => {
             </svg>
           </div>
           
-          {/* Floating elements */}
-          <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-white rounded-full animate-ping opacity-50"></div>
-          <div className="absolute top-3/4 right-1/3 w-1 h-1 bg-acencia-orange rounded-full animate-pulse opacity-40"></div>
-          <div className="absolute top-1/2 left-1/6 w-1.5 h-1.5 bg-acencia-orange-light rounded-full animate-ping opacity-30"></div>
-          
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="text-center mb-8">
               <h1 className="text-3xl lg:text-4xl font-bold text-white mb-4">
