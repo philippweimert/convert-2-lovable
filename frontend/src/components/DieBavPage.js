@@ -127,14 +127,12 @@ const DieBavPage = () => {
 
               {/* Rechtliche Stellung des Versicherungsmaklers nach HGB §93 - kompakt */}
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-                <h3 className="text-lg font-semibold text-white mb-3 flex items-center">
+                <h3 className="text-lg font-semibold text-white mb-2 flex items-center">
                   <Scale className="w-5 h-5 text-acencia-orange mr-2" />
                   Rechtliche Stellung (HGB §93)
                 </h3>
-                <p className="text-slate-200 leading-relaxed text-sm">
-                  Nach § 93 HGB ist ein Versicherungsmakler ein gewerbsmäßiger Vermittler, der von dem Versicherungsnehmer beauftragt wird, 
-                  für ihn einen Versicherungsvertrag zu vermitteln oder abzuschließen. Der Makler ist rechtlich dem Kunden verpflichtet 
-                  und muss dessen Interessen vertreten.
+                <p className="text-slate-300 text-xs leading-relaxed">
+                  Informationen aus dem Geschäftsbetrieb des Versicherungsmaklers gemäß §93 HGB, keine Rechtsberatung, keine Steuerberatung
                 </p>
               </div>
             </div>
