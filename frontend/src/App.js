@@ -5,16 +5,20 @@ import Homepage from "./components/Homepage";
 import AboutPage from "./components/AboutPage";
 import ServiceTeamPage from "./components/ServiceTeamPage";
 import ContactPage from "./components/ContactPage";
+import KontaktBeratungPage from "./components/KontaktBeratungPage";
 import PrivacyPage from "./components/PrivacyPage";
 import ImprintPage from "./components/ImprintPage";
 import EmployerObligationsPage from "./components/EmployerObligationsPage";
 import AktuellesPage from "./components/AktuellesPage";
-import EmptyTemplatePage from "./components/EmptyTemplatePage";
 import DieBavPage from "./components/DieBavPage";
 import DieBavPageX from "./components/DieBavPageX";
 import DieBavPageY from "./components/DieBavPageY";
 import BkvPage from "./components/BkvPage";
+import BkvPageX from "./components/BkvPageX";
+import BkvPageY from "./components/BkvPageY";
 import BuvPage from "./components/BuvPage";
+import BuvPageX from "./components/BuvPageX";
+import BuvPageY from "./components/BuvPageY";
 import { Toaster } from "./components/ui/toaster";
 
 function App() {
