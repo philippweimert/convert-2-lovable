@@ -8,14 +8,12 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="col-span-1 md:col-span-2">
-            <div className="flex items-center space-x-2 mb-4">
-              <div className="flex flex-col text-white">
-                <span className="text-xs tracking-wider">≡</span>
-              </div>
-              <div className="text-white">
-                <span className="text-xl font-bold tracking-wider">ACENCIA</span>
-                <div className="text-xs text-slate-400 tracking-widest">WIR MACHEN bAV EINFACH</div>
-              </div>
+            <div className="flex items-center mb-4">
+              <img 
+                src="/acencia-logo.png" 
+                alt="ACENCIA - Wir machen bAV einfach" 
+                className="h-10 w-auto object-contain"
+              />
             </div>
             <p className="text-slate-300 mb-4 max-w-md">
               Über 30 Jahre Erfahrung in der betrieblichen Altersvorsorge. 
