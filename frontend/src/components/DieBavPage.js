@@ -228,21 +228,21 @@ const DieBavPage = () => {
                     className="group block"
                   >
                     <div className="bg-white/10 backdrop-blur-sm rounded-xl p-5 border border-white/20 hover:bg-white/15 transition-all duration-300 hover:scale-105 hover:shadow-xl h-full">
-                      <div className={`w-12 h-12 bg-gradient-to-r ${box.color} rounded-xl flex items-center justify-center mb-4 text-white group-hover:scale-110 transition-transform duration-300`}>
+                      <div className={`w-10 h-10 bg-gradient-to-r ${box.color} rounded-lg flex items-center justify-center mb-3 text-white group-hover:scale-110 transition-transform duration-300`}>
                         {box.icon}
                       </div>
                       
-                      <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-acencia-orange transition-colors duration-300">
+                      <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-acencia-orange transition-colors duration-300">
                         {box.title}
                       </h3>
                       
-                      <p className="text-slate-200 leading-relaxed mb-4">
+                      <p className="text-slate-200 leading-relaxed mb-3 text-sm">
                         {box.description}
                       </p>
                       
                       <div className="flex items-center text-acencia-orange group-hover:text-orange-300 transition-colors duration-300">
-                        <span className="text-sm font-medium">Mehr erfahren</span>
-                        <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+                        <span className="text-xs font-medium">Mehr erfahren</span>
+                        <ArrowRight className="w-3 h-3 ml-1 group-hover:translate-x-1 transition-transform duration-300" />
                       </div>
                     </div>
                   </Link>
