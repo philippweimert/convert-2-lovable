@@ -123,8 +123,8 @@ const ContactPage = () => {
         </div>
       </section>
 
-      {/* Contact Section - weiterhin dominantes #001f3c */}
-      <section className="bg-gradient-to-b from-acencia via-acencia to-acencia-light py-20">
+      {/* Contact Section - identischer Farbverlauf wie About Page */}
+      <section className="bg-gradient-to-b from-acencia via-acencia-light to-acencia-blue py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             
