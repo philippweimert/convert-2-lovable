@@ -28,8 +28,8 @@ const DieBavPageX = () => {
           description: "Führung ordnungsgemäßer Unterlagen und Nachweis der Compliance"
         },
         {
-          title: "Haftungsfragen bei Auswahl und Beratung",
-          description: "Rechtliche Verantwortung bei der Produktauswahl und Mitarbeiterberatung"
+          title: "Pflicht zur 15% Förderung seit 2022",
+          description: "Gesetzliche Verpflichtung zur Bezuschussung der Entgeltumwandlung mit mindestens 15%"
         }
       ]
     },
