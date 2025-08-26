@@ -57,7 +57,7 @@ const CustomerSegments = () => {
   ];
 
   return (
-    <section className="bg-gradient-to-b from-white to-slate-50 py-24 relative overflow-hidden">
+    <section className="bg-gradient-to-b from-acencia to-acencia-light py-12 relative overflow-hidden">
       {/* Enhanced background elements */}
       <div className="absolute inset-0 opacity-[0.03]">
         <div className="absolute top-20 right-20 w-80 h-80 bg-gradient-to-br from-purple-400 to-pink-400 rounded-full blur-3xl"></div>
