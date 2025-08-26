@@ -45,7 +45,7 @@ const ThreeStepProcessSection = () => {
   ];
 
   return (
-    <section className="bg-gradient-to-br from-acencia-blue-light via-white to-acencia-blue-light py-20 relative overflow-hidden">
+    <section className="bg-gradient-to-b from-acencia-blue via-white to-acencia-blue-light py-12 relative overflow-hidden">
       {/* Geometrische Hintergrundmuster in Blau */}
       <div className="absolute inset-0 opacity-[0.08]">
         <svg className="absolute top-10 left-0 w-80 h-80" viewBox="0 0 400 400">
@@ -63,97 +63,100 @@ const ThreeStepProcessSection = () => {
       </div>
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        {/* Section Header */}
-        <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-2xl lg:text-3xl font-bold text-slate-900 mb-6 font-heading">
-            Wir begleiten Sie entlang des gesamten 
-            <span className="text-emphasis"> bAV-Prozesses</span>
+        {/* Section Header - kompakter */}
+        <div className="text-center mb-12 animate-fade-in">
+          <h2 className="text-2xl lg:text-3xl font-bold text-slate-900 mb-4 font-heading">
+            Wir begleiten Sie entlang des gesamten <span className="text-acencia-orange">bAV-Prozesses</span>
           </h2>
-          <p className="text-body-large text-slate-600 max-w-3xl mx-auto">
-            Von der rechtlichen Einrichtung bis zur vollständigen Digitalisierung - 
-            wir machen bAV einfach und effizient.
+          <p className="text-slate-600 max-w-3xl mx-auto text-base leading-relaxed font-body">
+            Von der rechtlichen Einrichtung bis zur vollständigen Digitalisierung - wir machen bAV einfach und effizient.
           </p>
         </div>
 
-        {/* 3-Step Process - Horizontal Expandable */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-16">
-          {processSteps.map((step, index) => (
-            <div key={index} className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-400 border border-slate-200 hover:border-orange-300">
-              {/* Compact Header - Always visible */}
-              <div 
-                className="p-6 cursor-pointer"
-                onClick={() => toggleStep(index)}
-              >
-                <div className="flex flex-col items-center text-center">
-                  {/* Step Number */}
-                  <div className="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center text-white font-bold text-lg mb-4">
-                    {index + 1}
-                  </div>
-                  
-                  {/* Icon */}
-                  <div className="bg-gradient-to-br from-orange-100 to-amber-100 rounded-xl p-3 mb-4">
-                    <div className="text-orange-600">
-                      {step.icon}
-                    </div>
-                  </div>
-
-                  {/* Title */}
-                  <div className="mb-4">
-                    <h3 className="text-lg font-bold text-slate-900 text-headline mb-2">
-                      {step.title}
-                    </h3>
-                    <p className="text-orange-600 font-medium text-body text-sm">
-                      {step.subtitle}
-                    </p>
-                  </div>
-
-                  {/* Expand/Collapse indicator */}
-                  <div className={`text-slate-400 transition-all duration-300 ${
-                    expandedStep === index ? 'rotate-180 text-orange-500' : 'hover:text-slate-600'
-                  }`}>
-                    <ChevronDown className="w-5 h-5" />
-                  </div>
+        {/* Flache Steps mit Schrittzahlen zwischen den Boxen */}
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-6 items-center">
+          
+          {/* Schritt 1 */}
+          <div className="lg:col-span-2">
+            <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 h-full border border-slate-100">
+              <div className="text-center">
+                <div className="w-16 h-16 bg-gradient-to-br from-acencia to-acencia-blue rounded-xl flex items-center justify-center mb-4 mx-auto">
+                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
                 </div>
+                <h3 className="text-lg font-semibold text-slate-900 mb-2 font-heading">Rechtliche Prüfung</h3>
+                <p className="text-sm text-acencia-orange font-medium mb-3">& Einrichtung bAV</p>
+                <p className="text-slate-600 text-sm leading-relaxed font-body">
+                  Vollständige rechtliche Analyse und compliant Einrichtung Ihrer betrieblichen Altersvorsorge.
+                </p>
               </div>
-
-              {/* Expandable Content */}
-              <div className={`overflow-hidden transition-all duration-500 ${
-                expandedStep === index ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
-              }`}>
-                <div className="px-6 pb-6 border-t border-slate-100">
-                  <div className="pt-6">
-                    <p className="text-slate-600 text-body-small leading-relaxed mb-6">
-                      {step.description}
-                    </p>
-
-                    {/* Key Points */}
-                    <div className="space-y-2">
-                      <h4 className="text-caption text-slate-500 font-semibold uppercase tracking-wider mb-3">
-                        Zentrale Vorteile:
-                      </h4>
-                      {step.keyPoints.map((point, pointIndex) => (
-                        <div key={pointIndex} className="flex items-start space-x-2">
-                          <CheckCircle className="w-4 h-4 text-orange-500 flex-shrink-0 mt-0.5" />
-                          <span className="text-slate-700 text-body-small">{point}</span>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Arrow connecting to next step (only for first two steps) */}
-              {index < processSteps.length - 1 && (
-                <div className="absolute -right-3 top-1/3 transform -translate-y-1/2 hidden lg:block z-20">
-                  <div className="w-6 h-6 bg-orange-500 rounded-full flex items-center justify-center">
-                    <ArrowRight className="w-4 h-4 text-white" />
-                  </div>
-                </div>
-              )}
             </div>
-          ))}
+          </div>
+
+          {/* Schrittzahl 1 */}
+          <div className="lg:col-span-1 flex justify-center">
+            <div className="w-12 h-12 bg-acencia-orange text-white rounded-full flex items-center justify-center font-bold text-lg font-heading">
+              1
+            </div>
+          </div>
+
+          {/* Schritt 2 */}
+          <div className="lg:col-span-2">
+            <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 h-full border border-slate-100">
+              <div className="text-center">
+                <div className="w-16 h-16 bg-gradient-to-br from-acencia to-acencia-blue rounded-xl flex items-center justify-center mb-4 mx-auto">
+                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                  </svg>
+                </div>
+                <h3 className="text-lg font-semibold text-slate-900 mb-2 font-heading">Digitale bAV-Verwaltung</h3>
+                <p className="text-sm text-acencia-orange font-medium mb-3">& laufender Support</p>
+                <p className="text-slate-600 text-sm leading-relaxed font-body">
+                  Vollautomatisierte Verwaltung mit unserer digitalen Plattform und kontinuierlicher Betreuung.
+                </p>
+              </div>
+            </div>
+          </div>
+
         </div>
 
+        {/* Zweite Reihe */}
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-6 items-center mt-6">
+          
+          {/* Schrittzahl 2 */}
+          <div className="lg:col-span-1 lg:col-start-2 flex justify-center">
+            <div className="w-12 h-12 bg-acencia-orange text-white rounded-full flex items-center justify-center font-bold text-lg font-heading">
+              2
+            </div>
+          </div>
+
+          {/* Schritt 3 */}
+          <div className="lg:col-span-2">
+            <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 h-full border border-slate-100">
+              <div className="text-center">
+                <div className="w-16 h-16 bg-gradient-to-br from-acencia to-acencia-blue rounded-xl flex items-center justify-center mb-4 mx-auto">
+                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                  </svg>
+                </div>
+                <h3 className="text-lg font-semibold text-slate-900 mb-2 font-heading">Mitarbeiterkommunikation</h3>
+                <p className="text-sm text-acencia-orange font-medium mb-3">& (digitale) Beratung</p>
+                <p className="text-slate-600 text-sm leading-relaxed font-body">
+                  Professionelle Kommunikation und individuelle Beratung für Ihre Mitarbeitenden.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Schrittzahl 3 */}
+          <div className="lg:col-span-1 flex justify-center">
+            <div className="w-12 h-12 bg-acencia-orange text-white rounded-full flex items-center justify-center font-bold text-lg font-heading">
+              3
+            </div>
+          </div>
+
+        </div>
       </div>
     </section>
   );
