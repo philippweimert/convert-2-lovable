@@ -62,15 +62,6 @@ const ThreeStepProcessSection = () => {
         </svg>
       </div>
       
-      {/* Animated dots in Acencia colors */}
-      <div className="absolute inset-0 opacity-30">
-        <div className="absolute top-1/4 left-1/5 w-3 h-3 bg-acencia-blue rounded-full animate-pulse"></div>
-        <div className="absolute top-2/3 right-1/4 w-2 h-2 bg-acencia rounded-full animate-ping"></div>
-        <div className="absolute top-1/3 right-1/3 w-2 h-2 bg-acencia-blue-light rounded-full animate-pulse"></div>
-        <div className="absolute bottom-1/3 left-1/3 w-2 h-2 bg-acencia-orange rounded-full animate-pulse"></div>
-        <div className="absolute top-1/6 right-1/6 w-1 h-1 bg-acencia-orange-light rounded-full animate-ping"></div>
-      </div>
-      
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
         <div className="text-center mb-16 animate-fade-in">
