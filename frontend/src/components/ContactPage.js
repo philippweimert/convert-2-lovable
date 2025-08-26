@@ -229,7 +229,7 @@ const ContactPage = () => {
             {/* Contact Information */}
             <div className="space-y-6">
               <div>
-                <h2 className="text-2xl font-bold text-slate-900 mb-6">
+                <h2 className="text-2xl font-bold text-white mb-6">
                   Kontaktinformationen
                 </h2>
                 <div className="space-y-4">
