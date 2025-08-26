@@ -108,22 +108,24 @@ const BusinessBenefitsGrid = () => {
   const currentBenefits = activeTab === 'unternehmen' ? unternehmensvorteile : mitarbeitervorteile;
 
   return (
-    <section className="bg-acencia py-20 relative overflow-hidden">
-      {/* Background design similar to hero section */}
-      <div className="absolute inset-0 opacity-[0.05]">
+    <section className="bg-gradient-to-br from-acencia via-acencia-blue to-acencia py-20 relative overflow-hidden">
+      {/* Subtle geometric background - refined */}
+      <div className="absolute inset-0 opacity-[0.04]">
         <svg className="absolute top-20 right-0 w-96 h-96" viewBox="0 0 400 400">
-          <polygon points="200,50 350,150 350,250 200,350 50,250 50,150" 
-                   fill="none" stroke="white" strokeWidth="2"/>
+          <defs>
+            <pattern id="benefitsPattern" x="0" y="0" width="50" height="50" patternUnits="userSpaceOnUse">
+              <polygon points="25,8 42,18 42,32 25,42 8,32 8,18" 
+                       fill="none" stroke="currentColor" strokeWidth="0.5" className="text-acencia-orange-light" />
+            </pattern>
+          </defs>
+          <rect width="400" height="400" fill="url(#benefitsPattern)" />
         </svg>
-        <svg className="absolute bottom-20 left-0 w-80 h-80" viewBox="0 0 400 400">
-          <polygon points="200,30 320,120 320,200 200,290 80,200 80,120" 
-                   fill="none" stroke="#f97316" strokeWidth="1"/>
-        </svg>
-        <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-orange-400 rounded-full animate-ping"></div>
-        <div className="absolute top-3/4 right-1/3 w-1 h-1 bg-white rounded-full animate-pulse"></div>
-        <div className="absolute top-1/3 right-1/4 w-1 h-1 bg-orange-400 rounded-full animate-pulse"></div>
       </div>
-
+      
+      {/* Floating accent elements */}
+      <div className="absolute top-1/4 left-1/4 w-3 h-3 bg-acencia-orange rounded-full animate-pulse opacity-30"></div>
+      <div className="absolute bottom-1/3 right-1/4 w-2 h-2 bg-acencia-orange-light rounded-full animate-bounce opacity-40"></div>
+      
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
         <div className="text-center mb-16">
