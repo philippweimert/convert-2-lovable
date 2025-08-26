@@ -9,7 +9,7 @@ import Footer from "./Footer";
 
 const Homepage = () => {
   return (
-    <div className="min-h-screen bg-slate-900">
+    <div className="min-h-screen bg-acencia">
       <Header />
       {/* Add padding-top to account for fixed header */}
       <div className="pt-20">
