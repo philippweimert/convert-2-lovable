@@ -73,11 +73,11 @@ const CustomerSegments = () => {
           </div>
           
           <h2 className="text-3xl lg:text-4xl font-bold mb-8 leading-tight">
-            <span className="text-slate-900">Unsere </span>
+            <span className="text-white">Unsere </span>
             <span className="bg-gradient-to-r from-orange-500 via-orange-600 to-red-500 bg-clip-text text-transparent">
               Kunden
             </span>
-            <span className="text-slate-900"> vertrauen uns</span>
+            <span className="text-white"> vertrauen uns</span>
           </h2>
           
           <p className="text-lg text-slate-600 max-w-4xl mx-auto leading-relaxed font-light">
