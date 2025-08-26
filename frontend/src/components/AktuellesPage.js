@@ -198,8 +198,8 @@ const AktuellesPage = () => {
               </div>
             </div>
 
-            {/* Articles Grid */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {/* Articles Grid - 3x3 Format mit kleineren Boxen */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {filteredArticles.map((article, index) => (
                 <a 
                   key={article.id}
@@ -208,16 +208,16 @@ const AktuellesPage = () => {
                   rel={article.url !== '#' ? 'noopener noreferrer' : ''}
                   className="block"
                 >
-                  <article className="bg-gradient-to-br from-slate-700 to-slate-600 rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-400 hover:scale-105 cursor-pointer">
+                  <article className="bg-gradient-to-br from-slate-700 to-slate-600 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 cursor-pointer h-full">
                     <div className="aspect-w-16 aspect-h-9">
                       <img 
                         src={article.image} 
                         alt={article.title}
-                        className="w-full h-48 object-cover"
+                        className="w-full h-32 object-cover"
                       />
                     </div>
                     
-                    <div className="p-6">
+                    <div className="p-4">
                       {/* Category Badge */}
                       <div className="flex items-center gap-2 mb-4">
                         <span className={`inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-medium border ${getCategoryColor(article.category)}`}>
