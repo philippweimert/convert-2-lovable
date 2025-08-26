@@ -3,7 +3,6 @@ import Header from "./Header";
 import HeroSection from "./HeroSection";
 import ThreeStepProcessSection from "./ThreeStepProcessSection";
 import BusinessBenefitsGrid from "./BusinessBenefitsGrid";
-import ChallengesSolutionsSection from "./ChallengesSolutionsSection";
 import CustomerSegments from "./CustomerSegments";
 import Footer from "./Footer";
 
