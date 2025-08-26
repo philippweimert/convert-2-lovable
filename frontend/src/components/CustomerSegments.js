@@ -171,10 +171,21 @@ const CustomerSegments = () => {
         {/* Enhanced bottom section */}
         <div className="text-center">
           <div className="bg-gradient-to-br from-acencia via-acencia-light to-acencia rounded-3xl p-12 max-w-5xl mx-auto shadow-2xl relative overflow-hidden">
-            {/* Animated background */}
-            <div className="absolute inset-0 bg-gradient-to-r from-orange-500/5 via-purple-500/5 to-blue-500/5"></div>
-            <div className="absolute top-0 right-1/4 w-72 h-72 bg-orange-500/10 rounded-full blur-3xl animate-pulse"></div>
-            <div className="absolute bottom-0 left-1/4 w-64 h-64 bg-purple-500/10 rounded-full blur-3xl"></div>
+            {/* Geometrische Hintergrundmuster in Weiß */}
+            <div className="absolute inset-0 opacity-[0.08]">
+              <svg className="absolute top-10 right-0 w-64 h-64 animate-pulse" viewBox="0 0 400 400" style={{animationDuration: '6s'}}>
+                <polygon points="200,60 300,120 300,180 200,240 100,180 100,120" 
+                         fill="none" stroke="white" strokeWidth="2"/>
+              </svg>
+              <svg className="absolute bottom-10 left-0 w-48 h-48 animate-bounce" viewBox="0 0 400 400" style={{animationDuration: '4s'}}>
+                <polygon points="200,80 280,140 280,200 200,260 120,200 120,140" 
+                         fill="none" stroke="white" strokeWidth="1"/>
+              </svg>
+            </div>
+            
+            {/* Floating elements */}
+            <div className="absolute top-1/4 right-1/4 w-2 h-2 bg-white rounded-full animate-ping opacity-50"></div>
+            <div className="absolute bottom-1/3 left-1/4 w-1 h-1 bg-acencia-orange rounded-full animate-pulse opacity-60"></div>
             
             <div className="relative z-10">
               <h3 className="text-2xl lg:text-3xl font-bold text-white mb-6 leading-tight">
