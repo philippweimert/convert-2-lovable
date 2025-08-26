@@ -10,7 +10,7 @@ const HeroSection = () => {
   ];
 
   return (
-    <section className="relative bg-gradient-to-br from-acencia via-acencia-light to-acencia min-h-[85vh] flex items-center overflow-hidden">
+    <section className="relative bg-gradient-to-br from-acencia via-acencia-light to-acencia-blue min-h-[85vh] flex items-center overflow-hidden">
       {/* Enhanced animated background patterns */}
       <div className="absolute inset-0 opacity-[0.07]">
         <svg className="absolute top-20 right-0 w-96 h-96 animate-pulse" viewBox="0 0 400 400">
