@@ -125,12 +125,6 @@ const BusinessBenefitsGrid = () => {
         </svg>
       </div>
       
-      {/* Floating accent elements */}
-      <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-acencia-orange rounded-full animate-ping"></div>
-      <div className="absolute top-3/4 right-1/3 w-1 h-1 bg-white rounded-full animate-pulse"></div>
-      <div className="absolute top-1/3 right-1/4 w-1 h-1 bg-acencia-orange-light rounded-full animate-pulse"></div>
-      <div className="absolute bottom-1/3 right-1/4 w-2 h-2 bg-white rounded-full animate-bounce opacity-40"></div>
-      
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
         <div className="text-center mb-16">
