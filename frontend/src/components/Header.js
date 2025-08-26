@@ -67,20 +67,13 @@ const Header = () => {
                   Unterkategorie Y
                 </Link>
                 <Link 
-                  to="/die-bav/z" 
+                  to="/die-bav/aktuelles" 
                   className="block px-4 py-3 text-white hover:text-orange-400 hover:bg-white/5 transition-colors duration-200"
                 >
-                  Unterkategorie Z
+                  Aktuelles
                 </Link>
               </div>
             </div>
-            <Link 
-              to="/aktuelles" 
-              className="relative text-white hover:text-orange-400 transition-all duration-400 font-medium group py-2 smooth-slide text-body"
-            >
-              <span>Aktuelles</span>
-              <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-orange-400 to-orange-500 group-hover:w-full transition-all duration-400 ease-smooth"></div>
-            </Link>
             <Link 
               to="/ueber-uns" 
               className="relative text-white hover:text-orange-400 transition-all duration-400 font-medium group py-2 smooth-slide text-body"
