@@ -400,9 +400,6 @@ const EmployerObligationsPage = () => {
             </div>
           </div>
         </section>
-        
-        {/* Sanfter Übergang zu Footer */}
-        <div className="h-16 bg-gradient-to-b from-acencia-light via-slate-200 to-acencia"></div>
       </div>
       
       <Footer />
