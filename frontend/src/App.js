@@ -9,6 +9,10 @@ import ImprintPage from "./components/ImprintPage";
 import EmployerObligationsPage from "./components/EmployerObligationsPage";
 import AktuellesPage from "./components/AktuellesPage";
 import EmptyTemplatePage from "./components/EmptyTemplatePage";
+import DieBavPage from "./components/DieBavPage";
+import DieBavPageX from "./components/DieBavPageX";
+import DieBavPageY from "./components/DieBavPageY";
+import DieBavPageZ from "./components/DieBavPageZ";
 import { Toaster } from "./components/ui/toaster";
 
 function App() {
