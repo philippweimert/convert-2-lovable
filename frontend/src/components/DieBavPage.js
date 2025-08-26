@@ -94,47 +94,49 @@ const DieBavPage = () => {
       {/* Doubled spacing from header */}
       <main className="pt-56">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-6xl mx-auto">
+          <div className="max-w-5xl mx-auto">
             
-            {/* Hero Section */}
-            <div className="text-center mb-16">
-              <h1 className="text-4xl lg:text-5xl font-bold text-white mb-8">
+            {/* Hero Section - kompakter */}
+            <div className="text-center mb-12">
+              <h1 className="text-3xl lg:text-4xl font-bold text-white mb-6">
                 die <span className="text-acencia-orange">bAV</span>
               </h1>
-              <p className="text-lg text-slate-200 leading-relaxed max-w-4xl mx-auto">
+              <p className="text-base text-slate-200 leading-relaxed max-w-3xl mx-auto">
                 Umfassende Informationen zur betrieblichen Altersvorsorge
               </p>
             </div>
 
-            {/* Definition der betrieblichen Altersvorsorge */}
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 mb-12">
-              <div className="flex items-center mb-6">
-                <Shield className="w-8 h-8 text-acencia-orange mr-3" />
-                <h2 className="text-2xl font-semibold text-white">
-                  Was ist betriebliche Altersvorsorge?
-                </h2>
+            {/* Kompakte 2-Spalten-Layout für Definition und Rechtsstellung */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-12">
+              {/* Definition der betrieblichen Altersvorsorge */}
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+                <div className="flex items-center mb-4">
+                  <Shield className="w-6 h-6 text-acencia-orange mr-2" />
+                  <h2 className="text-lg font-semibold text-white">
+                    Was ist betriebliche Altersvorsorge?
+                  </h2>
+                </div>
+                <p className="text-slate-200 leading-relaxed text-sm mb-3">
+                  Die betriebliche Altersvorsorge (bAV) ist eine Form der privaten Altersvorsorge, die über den Arbeitgeber organisiert wird. 
+                  Sie ergänzt die gesetzliche Rente und bietet Arbeitnehmern die Möglichkeit, zusätzliche Rentenansprüche aufzubauen.
+                </p>
+                <p className="text-slate-200 leading-relaxed text-sm">
+                  Seit 2002 haben alle Arbeitnehmer einen Rechtsanspruch auf betriebliche Altersvorsorge durch Entgeltumwandlung.
+                </p>
               </div>
-              <p className="text-slate-200 leading-relaxed mb-4">
-                Die betriebliche Altersvorsorge (bAV) ist eine Form der privaten Altersvorsorge, die über den Arbeitgeber organisiert wird. 
-                Sie ergänzt die gesetzliche Rente und bietet Arbeitnehmern die Möglichkeit, zusätzliche Rentenansprüche aufzubauen.
-              </p>
-              <p className="text-slate-200 leading-relaxed">
-                Seit 2002 haben alle Arbeitnehmer einen Rechtsanspruch auf betriebliche Altersvorsorge durch Entgeltumwandlung. 
-                Dabei wird ein Teil des Bruttogehalts für die Altersvorsorge verwendet, wodurch sich die Steuer- und Sozialabgabenlast reduziert.
-              </p>
-            </div>
 
-            {/* Rechtliche Stellung des Versicherungsmaklers nach HGB §93 - kompakter */}
-            <div className="mb-16">
-              <h3 className="text-lg font-semibold text-white mb-3 flex items-center">
-                <Scale className="w-5 h-5 text-acencia-orange mr-2" />
-                Rechtliche Stellung des Versicherungsmaklers (HGB §93)
-              </h3>
-              <p className="text-slate-200 leading-relaxed text-sm">
-                Nach § 93 HGB ist ein Versicherungsmakler ein gewerbsmäßiger Vermittler, der von dem Versicherungsnehmer beauftragt wird, 
-                für ihn einen Versicherungsvertrag zu vermitteln oder abzuschließen. Der Makler ist rechtlich dem Kunden verpflichtet 
-                und muss dessen Interessen vertreten.
-              </p>
+              {/* Rechtliche Stellung des Versicherungsmaklers nach HGB §93 - kompakt */}
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+                <h3 className="text-lg font-semibold text-white mb-3 flex items-center">
+                  <Scale className="w-5 h-5 text-acencia-orange mr-2" />
+                  Rechtliche Stellung (HGB §93)
+                </h3>
+                <p className="text-slate-200 leading-relaxed text-sm">
+                  Nach § 93 HGB ist ein Versicherungsmakler ein gewerbsmäßiger Vermittler, der von dem Versicherungsnehmer beauftragt wird, 
+                  für ihn einen Versicherungsvertrag zu vermitteln oder abzuschließen. Der Makler ist rechtlich dem Kunden verpflichtet 
+                  und muss dessen Interessen vertreten.
+                </p>
+              </div>
             </div>
 
             {/* Herausforderungen Ausklapp-Element */}
