@@ -128,13 +128,39 @@ const Header = () => {
           isMenuOpen ? 'max-h-[32rem] opacity-100' : 'max-h-0 opacity-0'
         }`}>
           <div className="px-2 pt-2 pb-6 space-y-1 bg-acencia-light/95 backdrop-blur-lg rounded-2xl mt-4 border border-acencia-light/50 shadow-xl">
-            <Link
-              to="/bav-rechtliche-grundlagen"
-              className="block px-6 py-3 text-white hover:text-orange-400 hover:bg-white/5 rounded-xl transition-all duration-300 font-medium"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              bAV - rechtliche Grundlagen
-            </Link>
+            {/* die bAV with submenu in mobile */}
+            <div className="space-y-1">
+              <Link
+                to="/die-bav"
+                className="block px-6 py-3 text-white hover:text-orange-400 hover:bg-white/5 rounded-xl transition-all duration-300 font-medium"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                die bAV
+              </Link>
+              <div className="pl-4 space-y-1">
+                <Link
+                  to="/die-bav/x"
+                  className="block px-6 py-2 text-sm text-slate-300 hover:text-orange-400 hover:bg-white/5 rounded-xl transition-all duration-300"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Unterkategorie X
+                </Link>
+                <Link
+                  to="/die-bav/y"
+                  className="block px-6 py-2 text-sm text-slate-300 hover:text-orange-400 hover:bg-white/5 rounded-xl transition-all duration-300"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Unterkategorie Y
+                </Link>
+                <Link
+                  to="/die-bav/z"
+                  className="block px-6 py-2 text-sm text-slate-300 hover:text-orange-400 hover:bg-white/5 rounded-xl transition-all duration-300"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Unterkategorie Z
+                </Link>
+              </div>
+            </div>
             <Link
               to="/aktuelles"
               className="block px-6 py-3 text-white hover:text-orange-400 hover:bg-white/5 rounded-xl transition-all duration-300 font-medium"
