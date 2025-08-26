@@ -136,7 +136,7 @@ const Header = () => {
                   className="block px-6 py-2 text-sm text-slate-300 hover:text-orange-400 hover:bg-white/5 rounded-xl transition-all duration-300"
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  Unterkategorie X
+                  Für Unternehmen
                 </Link>
                 <Link
                   to="/die-bav/y"
