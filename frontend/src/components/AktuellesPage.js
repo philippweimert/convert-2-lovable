@@ -118,7 +118,7 @@ const AktuellesPage = () => {
       
       <div className="pt-20 bg-acencia">
         {/* Hero Section mit Hero-Design */}
-        <section className="bg-gradient-to-b from-acencia via-acencia to-acencia-blue py-12 relative overflow-hidden">
+        <section className="bg-gradient-to-b from-acencia via-acencia to-acencia py-20 relative overflow-hidden">
           {/* Background design similar to hero section */}
           <div className="absolute inset-0 opacity-[0.05]">
             <svg className="absolute top-20 right-0 w-96 h-96" viewBox="0 0 400 400">
