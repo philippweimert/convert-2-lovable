@@ -46,8 +46,8 @@ const Homepage = () => {
       
       {/* Vergrößerter Abstand zur Navigation */}
       <div className="pt-44">
-        {/* Kompakte Hero Section */}
-        <div className="min-h-[50vh] flex items-center justify-center relative overflow-hidden">
+        {/* Sehr kompakte Hero Section */}
+        <div className="min-h-[40vh] flex items-center justify-center relative overflow-hidden">
           {/* Background Pattern */}
           <div className="absolute inset-0 opacity-[0.05]">
             <svg className="absolute top-10 right-10 w-96 h-96 animate-pulse" viewBox="0 0 400 400">
