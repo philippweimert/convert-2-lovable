@@ -180,8 +180,8 @@ const Header = () => {
             </div>
           </div>
 
-          {/* Rechter Bereich - über uns + Login Portal - ganz rechts an der roten Linie */}
-          <div className="hidden md:flex items-center space-x-4 flex-shrink-0 pr-2">
+          {/* Rechter Bereich - über uns + Login Portal */}
+          <div className="hidden md:flex items-center space-x-4 flex-shrink-0">
             {/* über uns Dropdown */}
             <div 
               className="relative group"
