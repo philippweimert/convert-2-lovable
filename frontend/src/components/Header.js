@@ -26,7 +26,7 @@ const Header = () => {
         ? 'bg-acencia/95 backdrop-blur-lg border-b border-acencia-light/50 shadow-lg' 
         : 'bg-acencia/90 backdrop-blur-sm'
     }`}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-2">
         <div className="flex items-center justify-between h-32">
           {/* Logo - weiter nach links positioniert */}
           <Link to="/" className="flex items-center group smooth-slide py-2 mr-12">
