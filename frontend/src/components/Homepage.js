@@ -63,19 +63,19 @@ const Homepage = () => {
           <div className="relative z-10 text-center px-4">
 
             
-            {/* Kompakte Key Message */}
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 max-w-4xl mx-auto mb-8 border border-white/20">
-              <h2 className="text-xl lg:text-2xl font-bold text-white mb-4">
+            {/* Sehr kompakte Key Message */}
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-5 max-w-3xl mx-auto mb-6 border border-white/20">
+              <h2 className="text-lg lg:text-xl font-bold text-white mb-3">
                 Wir helfen Unternehmen dabei, alle Herausforderungen in der 
                 <span className="text-acencia-orange"> bAV, bKV und bUV</span> zu meistern
               </h2>
               
-              {/* Kompakte Benefits Grid */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-6">
+              {/* Sehr kompakte Benefits Grid */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-2 mb-4">
                 {benefits.map((benefit, index) => (
                   <div key={index} className="flex items-center space-x-2">
-                    <CheckCircle className="w-5 h-5 text-acencia-orange flex-shrink-0" />
-                    <span className="text-slate-200 text-sm">{benefit}</span>
+                    <CheckCircle className="w-4 h-4 text-acencia-orange flex-shrink-0" />
+                    <span className="text-slate-200 text-xs">{benefit}</span>
                   </div>
                 ))}
               </div>
