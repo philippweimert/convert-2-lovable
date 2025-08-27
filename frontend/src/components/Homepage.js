@@ -44,8 +44,8 @@ const Homepage = () => {
     <div className="min-h-screen bg-gradient-to-b from-acencia via-acencia to-acencia-light">
       <Header />
       
-      {/* Kompakter Abstand zur Navigation */}
-      <div className="pt-36">
+      {/* Vergrößerter Abstand zur Navigation */}
+      <div className="pt-44">
         {/* Kompakte Hero Section */}
         <div className="min-h-[50vh] flex items-center justify-center relative overflow-hidden">
           {/* Background Pattern */}
