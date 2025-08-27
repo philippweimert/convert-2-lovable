@@ -202,12 +202,6 @@ const Header = () => {
                 isAboutDropdownOpen ? 'opacity-100 visible transform translate-y-0' : 'opacity-0 invisible transform -translate-y-2'
               }`}>
                 <Link 
-                  to="/ueber-uns" 
-                  className="block px-4 py-3 text-white hover:text-orange-400 hover:bg-white/5 transition-colors duration-200"
-                >
-                  über uns
-                </Link>
-                <Link 
                   to="/ueber-uns/service-team" 
                   className="block px-4 py-3 text-white hover:text-orange-400 hover:bg-white/5 transition-colors duration-200"
                 >
