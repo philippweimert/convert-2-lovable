@@ -81,34 +81,34 @@ const Homepage = () => {
               </div>
             </div>
 
-            {/* Expertise Areas */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {/* Kompakte Expertise Areas */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
               {expertiseAreas.map((area, index) => (
                 <Link 
                   key={index}
                   to={area.link}
                   className="group block"
                 >
-                  <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-300 hover:scale-105 hover:shadow-2xl h-full">
-                    <div className={`w-16 h-16 bg-gradient-to-r ${area.color} rounded-2xl flex items-center justify-center mb-6 text-white group-hover:scale-110 transition-transform duration-300 mx-auto shadow-lg`}>
+                  <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/15 transition-all duration-300 hover:scale-105 hover:shadow-xl h-full">
+                    <div className={`w-12 h-12 bg-gradient-to-r ${area.color} rounded-xl flex items-center justify-center mb-4 text-white group-hover:scale-110 transition-transform duration-300 mx-auto shadow-lg`}>
                       {area.icon}
                     </div>
                     
-                    <h3 className="text-3xl font-bold text-white mb-2 group-hover:text-acencia-orange transition-colors duration-300 text-center">
+                    <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-acencia-orange transition-colors duration-300 text-center">
                       {area.title}
                     </h3>
                     
-                    <h4 className="text-lg text-slate-300 mb-4 text-center font-medium">
+                    <h4 className="text-base text-slate-300 mb-3 text-center font-medium">
                       {area.subtitle}
                     </h4>
                     
-                    <p className="text-slate-200 leading-relaxed mb-6 text-center">
+                    <p className="text-slate-200 leading-relaxed mb-4 text-center text-sm">
                       {area.description}
                     </p>
                     
                     <div className="flex items-center justify-center text-acencia-orange group-hover:text-orange-300 transition-colors duration-300">
-                      <span className="font-medium">Mehr erfahren</span>
-                      <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-2 transition-transform duration-300" />
+                      <span className="font-medium text-sm">Mehr erfahren</span>
+                      <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-2 transition-transform duration-300" />
                     </div>
                   </div>
                 </Link>
