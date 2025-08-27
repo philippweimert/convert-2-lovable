@@ -38,7 +38,7 @@ const Header = () => {
           </Link>
 
           {/* Enhanced Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-4">
             {/* bAV Dropdown */}
             <div 
               className="relative group"
