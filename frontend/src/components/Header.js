@@ -259,9 +259,14 @@ const Header = () => {
             <div className="space-y-1">
               <Link
                 to="/die-bav"
-                className="block px-6 py-3 text-white hover:text-orange-400 hover:bg-white/5 rounded-xl transition-all duration-300 font-medium"
+                className="block px-6 py-3 text-white hover:text-orange-400 hover:bg-white/5 rounded-xl transition-all duration-300 font-medium flex items-center"
                 onClick={() => setIsMenuOpen(false)}
               >
+                <img 
+                  src="/bav-icon.png" 
+                  alt="bAV" 
+                  className="h-5 w-auto mr-2 object-contain"
+                />
                 bAV
               </Link>
               <div className="pl-4 space-y-1">
