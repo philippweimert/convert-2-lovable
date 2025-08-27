@@ -214,39 +214,7 @@ const Header = () => {
               </div>
             </div>
             
-            {/* Kontakt Dropdown */}
-            <div 
-              className="relative group"
-              onMouseEnter={() => setIsContactDropdownOpen(true)}
-              onMouseLeave={() => setIsContactDropdownOpen(false)}
-            >
-              <Link 
-                to="/kontakt" 
-                className="relative text-white hover:text-orange-400 transition-all duration-400 font-medium group py-2 smooth-slide text-body flex items-center"
-              >
-                <span>Kontakt</span>
-                <ChevronDown className="ml-1 h-4 w-4 transition-transform duration-200" />
-                <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-orange-400 to-orange-500 group-hover:w-full transition-all duration-400 ease-smooth"></div>
-              </Link>
-              
-              {/* Dropdown Menu */}
-              <div className={`absolute top-full left-0 mt-2 w-48 bg-acencia-light/95 backdrop-blur-lg rounded-xl shadow-xl border border-acencia-light/50 py-2 transition-all duration-300 ${
-                isContactDropdownOpen ? 'opacity-100 visible transform translate-y-0' : 'opacity-0 invisible transform -translate-y-2'
-              }`}>
-                <Link 
-                  to="/kontakt" 
-                  className="block px-4 py-3 text-white hover:text-orange-400 hover:bg-white/5 transition-colors duration-200"
-                >
-                  Kontakt
-                </Link>
-                <Link 
-                  to="/kontakt/beratung" 
-                  className="block px-4 py-3 text-white hover:text-orange-400 hover:bg-white/5 transition-colors duration-200"
-                >
-                  Beratung
-                </Link>
-              </div>
-            </div>
+
             <Button 
               className="btn-primary bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-8 py-3 rounded-xl font-semibold transition-all duration-400 hover:scale-105 shadow-md micro-bounce text-body"
               onClick={() => window.open('https://www.smartcloudservices.de/acencia/login/login.do', '_blank')}
