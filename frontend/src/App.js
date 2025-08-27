@@ -5,7 +5,7 @@ import Homepage from "./components/Homepage";
 import AboutPage from "./components/AboutPage";
 import ServiceTeamPage from "./components/ServiceTeamPage";
 import ContactPage from "./components/ContactPage";
-import KontaktBeratungPage from "./components/KontaktBeratungPage";
+
 import PrivacyPage from "./components/PrivacyPage";
 import ImprintPage from "./components/ImprintPage";
 import EmployerObligationsPage from "./components/EmployerObligationsPage";
