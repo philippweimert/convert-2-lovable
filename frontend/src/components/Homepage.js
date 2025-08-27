@@ -61,18 +61,7 @@ const Homepage = () => {
           </div>
 
           <div className="relative z-10 text-center px-4">
-            {/* Expertise Badge */}
-            <div className="inline-flex items-center px-8 py-4 bg-acencia-orange rounded-full text-white text-sm font-medium mb-8 shadow-lg">
-              <Sparkles className="w-5 h-5 mr-3 animate-pulse" />
-              <span className="text-lg font-bold">Über 30 Jahre Expertise</span>
-            </div>
 
-            <h1 className="text-4xl lg:text-6xl font-bold text-white mb-8 leading-tight">
-              Willkommen bei <span className="text-acencia-orange">ACENCIA</span>
-            </h1>
-            <p className="text-xl text-slate-200 max-w-4xl mx-auto leading-relaxed mb-8">
-              Ihre Experten für betriebliche Vorsorge
-            </p>
             
             {/* Key Message */}
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 max-w-5xl mx-auto mb-12 border border-white/20">
