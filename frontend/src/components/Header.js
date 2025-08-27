@@ -155,7 +155,7 @@ const Header = () => {
                   <line x1="230" y1="384" x2="538" y2="384" stroke="#ffffff" strokeWidth="3"/>
                   <text x="384" y="435" textAnchor="middle" className="fill-white text-[28px] font-bold">Unfallversicherung</text>
                 </svg>
-                <ChevronDown className="ml-1 h-4 w-4 text-white transition-transform duration-200" />
+                <ChevronDown className="absolute top-2 right-2 h-4 w-4 text-white transition-transform duration-200 pointer-events-none" />
               </Link>
               
               {/* Dropdown Menu */}
