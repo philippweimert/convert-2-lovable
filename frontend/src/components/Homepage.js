@@ -44,10 +44,10 @@ const Homepage = () => {
     <div className="min-h-screen bg-gradient-to-b from-acencia via-acencia to-acencia-light">
       <Header />
       
-      {/* Doubled spacing from header */}
-      <div className="pt-32">
-        {/* Hero Section - 30+ Jahre Expertise */}
-        <div className="min-h-[70vh] flex items-center justify-center relative overflow-hidden">
+      {/* Kompakter Abstand zur Navigation */}
+      <div className="pt-36">
+        {/* Kompakte Hero Section */}
+        <div className="min-h-[50vh] flex items-center justify-center relative overflow-hidden">
           {/* Background Pattern */}
           <div className="absolute inset-0 opacity-[0.05]">
             <svg className="absolute top-10 right-10 w-96 h-96 animate-pulse" viewBox="0 0 400 400">
