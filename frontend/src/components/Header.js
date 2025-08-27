@@ -139,16 +139,20 @@ const Header = () => {
             >
               <Link 
                 to="/buv" 
-                className="relative text-white hover:text-orange-400 transition-all duration-400 font-medium group py-2 smooth-slide text-body flex items-center"
+                className="relative transition-all duration-400 group py-2 smooth-slide flex items-center"
+                title="betriebliche Unfallversicherung"
               >
-                <img 
-                  src="/buv-icon.png" 
-                  alt="bUV" 
-                  className="h-6 w-auto mr-2 object-contain transition-all duration-400"
-                />
-                <span>bUV</span>
-                <ChevronDown className="ml-1 h-4 w-4 transition-transform duration-200" />
-                <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-orange-400 to-orange-500 group-hover:w-full transition-all duration-400 ease-smooth"></div>
+                <svg 
+                  className="h-12 w-auto cursor-pointer transition-all duration-200 hover:transform hover:-translate-y-0.5" 
+                  viewBox="150 250 468 268"
+                  style={{ borderRadius: '8px', overflow: 'hidden' }}
+                >
+                  <rect x="150" y="250" width="468" height="268" fill="#001f3c"/>
+                  <text x="384" y="335" textAnchor="middle" className="fill-white text-[50px] font-bold">bUV</text>
+                  <line x1="230" y1="384" x2="538" y2="384" stroke="#ffffff" strokeWidth="3"/>
+                  <text x="384" y="435" textAnchor="middle" className="fill-white text-[28px] font-bold">Unfallversicherung</text>
+                </svg>
+                <ChevronDown className="ml-1 h-4 w-4 text-white transition-transform duration-200" />
               </Link>
               
               {/* Dropdown Menu */}
