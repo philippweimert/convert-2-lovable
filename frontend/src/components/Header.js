@@ -143,7 +143,7 @@ const Header = () => {
                 title="betriebliche Unfallversicherung"
               >
                 <svg 
-                  className="h-12 w-auto cursor-pointer transition-all duration-200 hover:transform hover:-translate-y-0.5" 
+                  className="h-20 w-auto cursor-pointer transition-all duration-200 hover:transform hover:-translate-y-0.5" 
                   viewBox="150 250 468 268"
                   style={{ borderRadius: '8px', overflow: 'hidden' }}
                 >
