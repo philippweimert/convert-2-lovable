@@ -177,6 +177,11 @@ const Header = () => {
               </div>
             </div>
             
+            </div>
+          </div>
+
+          {/* Rechter Bereich - über uns + Login Portal */}
+          <div className="hidden md:flex items-center space-x-4 flex-shrink-0">
             {/* über uns Dropdown */}
             <div 
               className="relative group"
@@ -193,7 +198,7 @@ const Header = () => {
               </Link>
               
               {/* Dropdown Menu */}
-              <div className={`absolute top-full left-0 mt-2 w-48 bg-acencia-light/95 backdrop-blur-lg rounded-xl shadow-xl border border-acencia-light/50 py-2 transition-all duration-300 ${
+              <div className={`absolute top-full right-0 mt-2 w-48 bg-acencia-light/95 backdrop-blur-lg rounded-xl shadow-xl border border-acencia-light/50 py-2 transition-all duration-300 ${
                 isAboutDropdownOpen ? 'opacity-100 visible transform translate-y-0' : 'opacity-0 invisible transform -translate-y-2'
               }`}>
                 <Link 
@@ -216,14 +221,10 @@ const Header = () => {
                 </Link>
               </div>
             </div>
-            
 
-          </div>
-
-          {/* Login Portal - separiert und nach rechts abgesetzt */}
-          <div className="hidden md:flex">
+            {/* Login Portal */}
             <Button 
-              className="btn-primary bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-8 py-3 rounded-xl font-semibold transition-all duration-400 hover:scale-105 shadow-md micro-bounce text-body ml-8"
+              className="btn-primary bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-8 py-3 rounded-xl font-semibold transition-all duration-400 hover:scale-105 shadow-md micro-bounce text-body"
               onClick={() => window.open('https://www.smartcloudservices.de/acencia/login/login.do', '_blank')}
             >
               Login Portal
