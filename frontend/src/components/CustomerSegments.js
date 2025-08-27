@@ -84,17 +84,17 @@ const CustomerSegments = () => {
               {/* Enhanced card */}
               <div className="bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 border border-slate-100 hover:border-slate-200 h-full group-hover:-translate-y-3 transform">
                 
-                {/* Enhanced header with gradient */}
-                <div className={`bg-gradient-to-br ${segment.gradient} p-8 relative overflow-hidden`}>
+                {/* Kompakter header with gradient */}
+                <div className={`bg-gradient-to-br ${segment.gradient} p-6 relative overflow-hidden`}>
                   {/* Animated background elements */}
-                  <div className="absolute top-0 right-0 w-24 h-24 bg-white/10 rounded-full -mr-12 -mt-12 group-hover:scale-150 transition-transform duration-700"></div>
-                  <div className="absolute bottom-0 left-0 w-16 h-16 bg-white/5 rounded-full -ml-8 -mb-8 group-hover:scale-125 transition-transform duration-500"></div>
+                  <div className="absolute top-0 right-0 w-16 h-16 bg-white/10 rounded-full -mr-8 -mt-8 group-hover:scale-150 transition-transform duration-700"></div>
+                  <div className="absolute bottom-0 left-0 w-12 h-12 bg-white/5 rounded-full -ml-6 -mb-6 group-hover:scale-125 transition-transform duration-500"></div>
                   
                   <div className="relative z-10">
-                    <div className="text-white mb-6 group-hover:scale-110 transition-transform duration-300">
+                    <div className="text-white mb-4 group-hover:scale-110 transition-transform duration-300">
                       {segment.icon}
                     </div>
-                    <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-yellow-100 transition-colors duration-300">
+                    <h3 className="text-xl font-bold text-white mb-1 group-hover:text-yellow-100 transition-colors duration-300">
                       {segment.title}
                     </h3>
                     <p className="text-white/90 text-sm font-medium">
@@ -103,17 +103,17 @@ const CustomerSegments = () => {
                   </div>
                 </div>
 
-                {/* Enhanced content - Kernfunktionen entfernt */}
-                <div className="p-8">
+                {/* Kompakter content */}
+                <div className="p-6">
                   {/* Highlight badge */}
-                  <div className={`bg-gradient-to-r ${segment.bgGradient} rounded-xl px-4 py-2 inline-block mb-6 shadow-sm`}>
-                    <span className="text-slate-700 font-bold text-sm flex items-center">
-                      <Sparkles className="w-4 h-4 mr-2" />
+                  <div className={`bg-gradient-to-r ${segment.bgGradient} rounded-lg px-3 py-1 inline-block mb-4 shadow-sm`}>
+                    <span className="text-slate-700 font-bold text-xs flex items-center">
+                      <Sparkles className="w-3 h-3 mr-1" />
                       {segment.highlight}
                     </span>
                   </div>
                   
-                  <p className="text-slate-600 leading-relaxed mb-8 group-hover:text-slate-700 transition-colors duration-300">
+                  <p className="text-slate-600 leading-relaxed mb-6 group-hover:text-slate-700 transition-colors duration-300 text-sm">
                     {segment.description}
                   </p>
 
