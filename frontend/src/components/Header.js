@@ -215,8 +215,12 @@ const Header = () => {
             </div>
             
 
+          </div>
+
+          {/* Login Portal - separiert und nach rechts abgesetzt */}
+          <div className="hidden md:flex">
             <Button 
-              className="btn-primary bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-8 py-3 rounded-xl font-semibold transition-all duration-400 hover:scale-105 shadow-md micro-bounce text-body"
+              className="btn-primary bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-8 py-3 rounded-xl font-semibold transition-all duration-400 hover:scale-105 shadow-md micro-bounce text-body ml-8"
               onClick={() => window.open('https://www.smartcloudservices.de/acencia/login/login.do', '_blank')}
             >
               Login Portal
