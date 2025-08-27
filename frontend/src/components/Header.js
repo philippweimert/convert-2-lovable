@@ -317,13 +317,18 @@ const Header = () => {
                 to="/bkv"
                 className="block px-6 py-3 text-white hover:text-orange-400 hover:bg-white/5 rounded-xl transition-all duration-300 font-medium flex items-center"
                 onClick={() => setIsMenuOpen(false)}
+                title="betriebliche Krankenversicherung"
               >
-                <img 
-                  src="/bkv-icon.png" 
-                  alt="bKV" 
-                  className="h-5 w-auto mr-2 object-contain"
-                />
-                bKV
+                <svg 
+                  className="h-8 w-auto mr-3" 
+                  viewBox="150 250 468 268"
+                  style={{ borderRadius: '4px' }}
+                >
+                  <rect x="150" y="250" width="468" height="268" fill="#001f3c"/>
+                  <text x="384" y="335" textAnchor="middle" className="fill-white text-[50px] font-bold">bKV</text>
+                  <line x1="230" y1="384" x2="538" y2="384" stroke="#ffffff" strokeWidth="3"/>
+                  <text x="384" y="435" textAnchor="middle" className="fill-white text-[28px] font-bold">Krankenversicherung</text>
+                </svg>
               </Link>
               <div className="pl-4 space-y-1">
                 <Link
