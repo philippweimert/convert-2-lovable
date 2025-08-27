@@ -28,8 +28,8 @@ const Header = () => {
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-28">
-          {/* Logo - zurück zur alten Größe */}
-          <Link to="/" className="flex items-center group smooth-slide py-2 mr-8">
+          {/* Logo - weiter nach links positioniert */}
+          <Link to="/" className="flex items-center group smooth-slide py-2 mr-12">
             <img 
               src="/acencia-logo-new.png" 
               alt="ACENCIA - Wir machen bAV einfach" 
