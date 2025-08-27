@@ -205,6 +205,12 @@ const Header = () => {
                 >
                   Service-Team
                 </Link>
+                <Link 
+                  to="/kontakt" 
+                  className="block px-4 py-3 text-white hover:text-orange-400 hover:bg-white/5 transition-colors duration-200"
+                >
+                  Kontakt
+                </Link>
               </div>
             </div>
             
