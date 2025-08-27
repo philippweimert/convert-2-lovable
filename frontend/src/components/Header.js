@@ -26,10 +26,10 @@ const Header = () => {
         ? 'bg-acencia/95 backdrop-blur-lg border-b border-acencia-light/50 shadow-lg' 
         : 'bg-acencia/90 backdrop-blur-sm'
     }`}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-2">
-        <div className="flex items-center h-32">
-          {/* Logo - ganz links positioniert */}
-          <div className="flex-shrink-0">
+      <div className="w-full px-2 pt-2">
+        <div className="flex items-center justify-between h-32">
+          {/* Logo - ganz links an der roten Linie */}
+          <div className="flex-shrink-0 pl-2">
             <Link to="/" className="flex items-center group smooth-slide py-2">
               <img 
                 src="/acencia-logo-new.png" 
