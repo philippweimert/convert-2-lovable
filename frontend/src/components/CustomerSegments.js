@@ -71,8 +71,8 @@ const CustomerSegments = () => {
           </p>
         </div>
 
-        {/* Enhanced segments grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
+        {/* Kompakte segments grid */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
           {segments.map((segment, index) => (
             <div 
               key={index} 
