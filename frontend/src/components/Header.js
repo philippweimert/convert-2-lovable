@@ -27,18 +27,21 @@ const Header = () => {
         : 'bg-acencia/90 backdrop-blur-sm'
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-2">
-        <div className="flex items-center justify-between h-32">
-          {/* Logo - noch weiter nach links positioniert */}
-          <Link to="/" className="flex items-center group smooth-slide py-2 mr-20">
-            <img 
-              src="/acencia-logo-new.png" 
-              alt="ACENCIA - Wir machen bAV einfach" 
-              className="h-12 w-auto object-contain transition-all duration-400 group-hover:scale-105"
-            />
-          </Link>
+        <div className="flex items-center h-32">
+          {/* Logo - ganz links positioniert */}
+          <div className="flex-shrink-0">
+            <Link to="/" className="flex items-center group smooth-slide py-2">
+              <img 
+                src="/acencia-logo-new.png" 
+                alt="ACENCIA - Wir machen bAV einfach" 
+                className="h-12 w-auto object-contain transition-all duration-400 group-hover:scale-105"
+              />
+            </Link>
+          </div>
 
-          {/* Enhanced Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-6">
+          {/* Mittige Navigation - nur bAV, bKV, bUV */}
+          <div className="hidden md:flex items-center justify-center flex-1">
+            <div className="flex items-center space-x-6">
             {/* bAV Dropdown */}
             <div 
               className="relative group"
