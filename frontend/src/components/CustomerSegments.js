@@ -50,14 +50,14 @@ const CustomerSegments = () => {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        {/* Kompakte section header */}
-        <div className="text-center mb-12">
-          <div className="inline-flex items-center space-x-3 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full mb-6 border border-white/20">
-            <Users className="w-4 h-4 text-acencia-orange animate-pulse" />
+        {/* Sehr kompakte section header */}
+        <div className="text-center mb-8">
+          <div className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-sm px-3 py-1 rounded-full mb-4 border border-white/20">
+            <Users className="w-3 h-3 text-acencia-orange animate-pulse" />
             <span className="text-white font-semibold text-xs tracking-wide uppercase">Für jede Unternehmensgröße</span>
           </div>
           
-          <h2 className="text-2xl lg:text-3xl font-bold mb-6 leading-tight">
+          <h2 className="text-xl lg:text-2xl font-bold mb-4 leading-tight">
             <span className="text-white">Unsere </span>
             <span className="bg-gradient-to-r from-orange-500 via-orange-600 to-red-500 bg-clip-text text-transparent">
               Kunden
@@ -65,7 +65,7 @@ const CustomerSegments = () => {
             <span className="text-white"> vertrauen uns</span>
           </h2>
           
-          <p className="text-base text-slate-200 max-w-3xl mx-auto leading-relaxed font-light">
+          <p className="text-sm text-slate-200 max-w-2xl mx-auto leading-relaxed font-light">
             Von Start-ups bis zu Konzernen - unsere digitale bAV-Plattform ist 
             skalierbar und passt sich flexibel an Ihre individuellen Bedürfnisse an.
           </p>
