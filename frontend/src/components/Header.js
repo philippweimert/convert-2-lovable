@@ -320,7 +320,7 @@ const Header = () => {
                 title="betriebliche Krankenversicherung"
               >
                 <svg 
-                  className="h-8 w-auto mr-3" 
+                  className="h-12 w-auto mr-3" 
                   viewBox="150 250 468 268"
                   style={{ borderRadius: '4px' }}
                 >
