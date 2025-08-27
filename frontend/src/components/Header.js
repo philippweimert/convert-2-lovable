@@ -193,7 +193,7 @@ const Header = () => {
                 className="relative text-white hover:text-orange-400 transition-all duration-400 font-medium group py-2 smooth-slide text-body flex items-center"
               >
                 <span>über uns</span>
-                <ChevronDown className="ml-1 h-4 w-4 transition-transform duration-200" />
+                <ChevronDown className="absolute -top-1 -right-3 h-4 w-4 transition-transform duration-200 pointer-events-none" />
                 <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-orange-400 to-orange-500 group-hover:w-full transition-all duration-400 ease-smooth"></div>
               </Link>
               
