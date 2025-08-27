@@ -36,7 +36,7 @@ const CustomerSegments = () => {
   ];
 
   return (
-    <section className="bg-gradient-to-b from-acencia via-acencia-light to-acencia py-12 relative overflow-hidden">
+    <section className="bg-gradient-to-b from-acencia via-acencia-light to-acencia py-8 relative overflow-hidden">
       {/* Simplified background elements */}
       <div className="absolute inset-0 opacity-[0.05]">
         <svg className="absolute top-20 right-20 w-80 h-80 animate-pulse" viewBox="0 0 400 400">
