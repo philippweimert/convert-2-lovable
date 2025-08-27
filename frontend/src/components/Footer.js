@@ -73,7 +73,7 @@ const Footer = () => {
           {/* LinkedIn Button */}
           <div className="flex justify-center items-center mb-4 md:mb-0">
             <button
-              onClick={() => window.open('https://www.linkedin.com/company/acencia-de/', '_blank')}
+              onClick={() => window.open('https://www.linkedin.com/company/acencia/', '_blank')}
               className="group flex justify-center p-2 rounded-md drop-shadow-xl bg-[#0077b5] text-white font-semibold hover:translate-y-3 hover:rounded-[50%] transition-all duration-500 hover:bg-gradient-to-br hover:from-[#331029] hover:to-[#310413] cursor-pointer"
             >
               <svg
