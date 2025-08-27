@@ -41,7 +41,7 @@ function App() {
           <Route path="/buv/x" element={<BuvPageX />} />
           <Route path="/buv/y" element={<BuvPageY />} />
           <Route path="/kontakt" element={<ContactPage />} />
-          <Route path="/kontakt/beratung" element={<KontaktBeratungPage />} />
+
           <Route path="/aktuelles" element={<AktuellesPage />} />
           <Route path="/datenschutz" element={<PrivacyPage />} />
           <Route path="/datenschutzerklaerung" element={<PrivacyPage />} />
