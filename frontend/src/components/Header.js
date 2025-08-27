@@ -386,25 +386,7 @@ const Header = () => {
               </div>
             </div>
             
-            {/* Kontakt with submenu in mobile */}
-            <div className="space-y-1">
-              <Link
-                to="/kontakt"
-                className="block px-6 py-3 text-white hover:text-orange-400 hover:bg-white/5 rounded-xl transition-all duration-300 font-medium"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Kontakt
-              </Link>
-              <div className="pl-4 space-y-1">
-                <Link
-                  to="/kontakt/beratung"
-                  className="block px-6 py-2 text-sm text-slate-300 hover:text-orange-400 hover:bg-white/5 rounded-xl transition-all duration-300"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  Beratung
-                </Link>
-              </div>
-            </div>
+
             
             <div className="pt-2">
               <Button 
