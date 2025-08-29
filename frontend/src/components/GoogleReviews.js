@@ -113,11 +113,11 @@ const GoogleReviews = () => {
           <div className="flex items-center justify-center space-x-2 mb-4">
             <div className="flex items-center space-x-1">
               {[1,2,3,4,5].map((star) => (
-                <Star key={star} className="w-6 h-6 text-yellow-400 fill-yellow-400 animate-wave-star" 
-                      style={{animationDelay: `${star * 0.2}s`}} />
+                <Star key={star} className="w-7 h-7 text-yellow-400 fill-yellow-400 animate-wave-star-header" 
+                      style={{animationDelay: `${star * 0.3}s`}} />
               ))}
             </div>
-            <span className="text-white font-semibold text-lg">4.9</span>
+            <span className="text-white font-semibold text-lg ml-2">4.9</span>
             <span className="text-slate-300 text-sm">• Google Bewertungen</span>
           </div>
           
