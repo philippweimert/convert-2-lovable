@@ -126,16 +126,13 @@ const GoogleReviews = () => {
           </p>
         </div>
 
-        {/* Scrolling Reviews Container */}
-        <div className="relative">
-          <div className="flex space-x-6 animate-scroll">
+        {/* Scrolling Reviews Container - Dauerhaft in Bewegung */}
+        <div className="relative overflow-hidden">
+          <div className="flex space-x-6 animate-scroll-continuous">
             {duplicatedReviews.map((review, index) => (
               <div
                 key={`${review.id}-${index}`}
                 className="flex-shrink-0 w-80 bg-white rounded-2xl p-6 shadow-lg border border-slate-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
-                style={{
-                  animationDelay: `${index * 0.5}s`
-                }}
               >
                 {/* Review Header */}
                 <div className="flex items-center justify-between mb-4">
@@ -155,12 +152,13 @@ const GoogleReviews = () => {
                   />
                 </div>
 
-                {/* Star Rating */}
+                {/* Star Rating mit individueller Bewertung */}
                 <div className="flex items-center space-x-1 mb-3">
                   {[1,2,3,4,5].map((star) => (
                     <Star 
                       key={star} 
-                      className="w-4 h-4 text-yellow-400 fill-yellow-400" 
+                      className={`w-4 h-4 ${star <= review.rating ? 'text-yellow-400 fill-yellow-400' : 'text-gray-300'} animate-wave-star`}
+                      style={{animationDelay: `${star * 0.1}s`}}
                     />
                   ))}
                 </div>
@@ -175,10 +173,6 @@ const GoogleReviews = () => {
               </div>
             ))}
           </div>
-
-          {/* Gradient Overlays for smooth edges */}
-          <div className="absolute top-0 left-0 w-20 h-full bg-gradient-to-r from-acencia-light to-transparent pointer-events-none z-10"></div>
-          <div className="absolute top-0 right-0 w-20 h-full bg-gradient-to-l from-acencia to-transparent pointer-events-none z-10"></div>
         </div>
 
         {/* Google Link */}
