@@ -157,19 +157,13 @@ const CustomerSegments = () => {
                 Lassen Sie uns gemeinsam die optimale bAV-Lösung für Ihr Unternehmen finden. 
                 In einem kostenlosen Beratungsgespräch analysieren wir Ihre Anforderungen.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex justify-center">
                 <button 
                   className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-10 py-4 rounded-xl font-semibold transition-all duration-300 hover:scale-105 shadow-lg text-lg group"
                   onClick={() => window.open('https://outlook.office365.com/owa/calendar/ACENCIAde@acencia.de/bookings/', '_blank')}
                 >
                   <span>Kostenlose Erstberatung</span>
                   <Sparkles className="w-5 h-5 ml-2 inline group-hover:animate-spin" />
-                </button>
-                <button 
-                  className="border-2 border-slate-300 text-slate-200 hover:bg-white/10 hover:text-white hover:border-white/50 px-10 py-4 rounded-xl font-semibold transition-all duration-300 backdrop-blur-sm text-lg"
-                  onClick={() => window.open('https://outlook.office365.com/owa/calendar/ACENCIAde@acencia.de/bookings/', '_blank')}
-                >
-                  Kostenlose Erstberatung
                 </button>
               </div>
             </div>
