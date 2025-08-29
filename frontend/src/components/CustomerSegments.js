@@ -160,9 +160,9 @@ const CustomerSegments = () => {
               <div className="flex justify-center">
                 <button 
                   className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-10 py-4 rounded-xl font-semibold transition-all duration-300 hover:scale-105 shadow-lg text-lg group"
-                  onClick={() => window.open('https://outlook.office365.com/owa/calendar/ACENCIAde@acencia.de/bookings/', '_blank')}
+                  onClick={() => window.location.href = '/kontakt'}
                 >
-                  <span>Kostenlose Erstberatung</span>
+                  <span>Sprechen Sie uns an!</span>
                   <Sparkles className="w-5 h-5 ml-2 inline group-hover:animate-spin" />
                 </button>
               </div>
