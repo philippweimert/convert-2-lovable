@@ -343,13 +343,13 @@ const Header = () => {
               >
                 <svg 
                   className="h-12 w-auto mr-3" 
-                  viewBox="150 250 468 268"
+                  viewBox="0 0 468 268"
                   style={{ borderRadius: '4px' }}
                 >
-                  <rect x="150" y="250" width="468" height="268" fill="#001f3c"/>
-                  <text x="384" y="335" textAnchor="middle" className="fill-white text-[50px] font-bold">bAV</text>
-                  <line x1="230" y1="384" x2="538" y2="384" stroke="#ffffff" strokeWidth="3"/>
-                  <text x="384" y="435" textAnchor="middle" className="fill-white text-[28px] font-bold">Alters Versorgung</text>
+                  <rect x="0" y="0" width="468" height="268" fill="#001f3c" rx="8"/>
+                  <text x="234" y="90" textAnchor="middle" fill="#ffffff" fontFamily="DejaVu Serif, Times New Roman, serif" fontSize="80" fontWeight="bold">bAV</text>
+                  <line x1="80" y1="134" x2="388" y2="134" stroke="#ffffff" strokeWidth="3"/>
+                  <text x="234" y="190" textAnchor="middle" fill="#ffffff" fontFamily="DejaVu Serif, Times New Roman, serif" fontSize="36" fontWeight="bold">Alters Versorgung</text>
                 </svg>
               </Link>
               <div className="pl-4 space-y-1">
