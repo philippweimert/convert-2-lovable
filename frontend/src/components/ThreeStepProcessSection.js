@@ -131,23 +131,45 @@ const ThreeStepProcessSection = () => {
 
           {/* Schritt 2 */}
           <div className="flex-1 max-w-sm">
-            <div className="bg-white rounded-2xl p-5 shadow-lg hover:shadow-xl transition-all duration-300 h-full border border-slate-100 relative">
+            <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 h-full border border-slate-100 relative cursor-pointer"
+                 onClick={() => toggleStep(1)}>
               {/* Schrittzahl als Badge */}
               <div className="absolute -top-3 -left-3 w-8 h-8 bg-acencia-orange text-white rounded-full flex items-center justify-center font-bold text-sm font-heading">
                 2
               </div>
               
               <div className="text-center pt-2">
-                <div className="w-12 h-12 bg-gradient-to-br from-acencia to-acencia-blue rounded-lg flex items-center justify-center mb-3 mx-auto">
+                <div className="w-12 h-12 bg-gradient-to-br from-acencia to-acencia-blue rounded-lg flex items-center justify-center mb-4 mx-auto">
                   <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                   </svg>
                 </div>
-                <h3 className="text-base font-semibold text-slate-900 mb-1 font-heading">Digitale bAV-Verwaltung</h3>
-                <p className="text-xs text-acencia-orange font-medium mb-2">& laufender Support</p>
-                <p className="text-slate-600 text-xs leading-relaxed font-body">
-                  Vollautomatisierte Verwaltung mit unserer digitalen Plattform und kontinuierlicher Betreuung.
-                </p>
+                <h3 className="text-lg font-semibold text-slate-900 mb-2 font-heading">Digitale bAV-Verwaltung</h3>
+                <p className="text-sm text-acencia-orange font-medium mb-3">& laufender Support</p>
+                
+                {/* Expandable Content */}
+                <div className={`transition-all duration-300 overflow-hidden ${expandedStep === 1 ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}>
+                  <p className="text-slate-600 text-sm leading-relaxed mb-4">
+                    {processSteps[1].description}
+                  </p>
+                  <ul className="space-y-2">
+                    {processSteps[1].keyPoints.map((point, index) => (
+                      <li key={index} className="flex items-center text-sm text-slate-700">
+                        <CheckCircle className="w-4 h-4 text-acencia-orange mr-2 flex-shrink-0" />
+                        {point}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                
+                {/* Expand/Collapse Indicator */}
+                <div className="flex justify-center mt-3">
+                  {expandedStep === 1 ? (
+                    <ChevronUp className="w-5 h-5 text-acencia-orange" />
+                  ) : (
+                    <ChevronDown className="w-5 h-5 text-acencia-orange" />
+                  )}
+                </div>
               </div>
             </div>
           </div>
