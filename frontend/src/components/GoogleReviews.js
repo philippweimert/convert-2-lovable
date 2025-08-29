@@ -13,11 +13,11 @@ const GoogleReviews = () => {
     },
     {
       id: 2,
-      name: "Sandra Hoffmann",
+      name: "Dr. Petra Schneider",
       rating: 5,
-      text: "Professionelle Beratung und reibungslose Abwicklung. Die digitale Plattform macht alles so viel einfacher. Top Service!",
-      initials: "SH",
-      date: "vor 1 Monat"
+      text: "Endlich eine bAV-Lösung, die wirklich funktioniert! ACENCIA hat unser HR-Team entlastet und unsere Mitarbeiter sind begeistert.",
+      initials: "PS",
+      date: "vor 6 Wochen"
     },
     {
       id: 3,
@@ -29,6 +29,22 @@ const GoogleReviews = () => {
     },
     {
       id: 4,
+      name: "Sandra Hoffmann",
+      rating: 4,
+      text: "Professionelle Beratung und reibungslose Abwicklung. Die digitale Plattform macht alles so viel einfacher. Kleinere Startschwierigkeiten, aber insgesamt top!",
+      initials: "SH",
+      date: "vor 1 Monat"
+    },
+    {
+      id: 5,
+      name: "Jürgen Maier",
+      rating: 5,
+      text: "Als Geschäftsführer kann ich ACENCIA nur empfehlen. Die rechtssichere Umsetzung und der digitale Ansatz überzeugen vollständig.",
+      initials: "JM",
+      date: "vor 5 Tagen"
+    },
+    {
+      id: 6,
       name: "Lisa Wagner",
       rating: 5,
       text: "ACENCIA überzeugt durch Kompetenz und Innovation. Die bAV-Lösung ist genau das, was wir gesucht haben. Perfekt!",
@@ -36,7 +52,7 @@ const GoogleReviews = () => {
       date: "vor 2 Wochen"
     },
     {
-      id: 5,
+      id: 7,
       name: "Robert Klein",
       rating: 5,
       text: "Fantastische Zusammenarbeit! Das Team von ACENCIA hat uns bei jedem Schritt perfekt begleitet. Sehr empfehlenswert!",
@@ -44,12 +60,28 @@ const GoogleReviews = () => {
       date: "vor 1 Woche"
     },
     {
-      id: 6,
+      id: 8,
+      name: "Christine Bauer",
+      rating: 4,
+      text: "Sehr gute digitale Lösung für unsere bAV. Der Implementierungsprozess war durchdacht und das Support-Team hilfsbereit.",
+      initials: "CB",
+      date: "vor 8 Tagen"
+    },
+    {
+      id: 9,
       name: "Anna Schmidt",
       rating: 5,
       text: "Die digitale bAV-Verwaltung von ACENCIA ist ein Gamechanger. Effizient, modern und sehr benutzerfreundlich!",
       initials: "AS",
       date: "vor 4 Tagen"
+    },
+    {
+      id: 10,
+      name: "Markus Richter",
+      rating: 5,
+      text: "30 Jahre Erfahrung spürt man in jedem Beratungsgespräch. ACENCIA macht bAV wirklich einfach und verständlich.",
+      initials: "MR",
+      date: "vor 3 Tagen"
     }
   ];
 
