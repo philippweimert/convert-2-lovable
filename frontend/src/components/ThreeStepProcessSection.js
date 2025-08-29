@@ -214,12 +214,12 @@ const ThreeStepProcessSection = () => {
                   </ul>
                 </div>
                 
-                {/* Expand/Collapse Indicator */}
-                <div className="flex justify-center mt-3">
+                {/* Expand/Collapse Indicator - größer und fetter */}
+                <div className="flex justify-center mt-4">
                   {expandedStep === 2 ? (
-                    <ChevronUp className="w-5 h-5 text-acencia-orange" />
+                    <ChevronUp className="w-8 h-8 text-acencia-orange stroke-[3] font-bold" />
                   ) : (
-                    <ChevronDown className="w-5 h-5 text-acencia-orange" />
+                    <ChevronDown className="w-8 h-8 text-acencia-orange stroke-[3] font-bold" />
                   )}
                 </div>
               </div>
