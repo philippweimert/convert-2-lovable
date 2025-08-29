@@ -104,13 +104,13 @@ const Header = () => {
               >
                 <svg 
                   className="h-20 w-auto cursor-pointer transition-all duration-200 hover:transform hover:-translate-y-0.5" 
-                  viewBox="150 250 468 268"
+                  viewBox="0 0 468 268"
                   style={{ borderRadius: '8px', overflow: 'hidden' }}
                 >
-                  <rect x="150" y="250" width="468" height="268" fill="#001f3c"/>
-                  <text x="384" y="335" textAnchor="middle" className="fill-white text-[50px] font-bold">bKV</text>
-                  <line x1="230" y1="384" x2="538" y2="384" stroke="#ffffff" strokeWidth="3"/>
-                  <text x="384" y="435" textAnchor="middle" className="fill-white text-[28px] font-bold">Krankenversicherung</text>
+                  <rect x="0" y="0" width="468" height="268" fill="#001f3c" rx="8"/>
+                  <text x="234" y="90" textAnchor="middle" fill="#ffffff" fontFamily="DejaVu Serif, Times New Roman, serif" fontSize="80" fontWeight="bold">bKV</text>
+                  <line x1="80" y1="134" x2="388" y2="134" stroke="#ffffff" strokeWidth="3"/>
+                  <text x="234" y="190" textAnchor="middle" fill="#ffffff" fontFamily="DejaVu Serif, Times New Roman, serif" fontSize="36" fontWeight="bold">Krankenversicherung</text>
                 </svg>
                 <ChevronDown className="absolute top-2 right-2 h-4 w-4 text-white transition-transform duration-200 pointer-events-none" />
               </Link>
