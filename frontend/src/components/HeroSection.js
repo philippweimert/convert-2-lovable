@@ -86,14 +86,7 @@ const HeroSection = () => {
                 <span>Jetzt starten</span>
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
               </Button>
-              <Button 
-                size="lg"
-                variant="outline"
-                className="border-2 border-slate-300/50 text-slate-200 hover:bg-white/10 hover:text-white hover:border-white/50 px-10 py-4 text-lg font-semibold rounded-xl transition-all duration-300 backdrop-blur-sm"
-                onClick={() => window.open('https://outlook.office365.com/owa/calendar/ACENCIAde@acencia.de/bookings/', '_blank')}
-              >
-                Jetzt beraten lassen
-              </Button>
+
             </div>
           </div>
 
