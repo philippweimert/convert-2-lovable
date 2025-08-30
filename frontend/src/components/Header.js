@@ -380,16 +380,7 @@ const Header = () => {
                 onClick={() => setIsMenuOpen(false)}
                 title="betriebliche Unfallversicherung"
               >
-                <svg 
-                  className="h-12 w-auto mr-3" 
-                  viewBox="0 0 468 268"
-                  style={{ borderRadius: '4px' }}
-                >
-                  <rect x="0" y="0" width="468" height="268" fill="#001f3c" rx="8"/>
-                  <text x="234" y="90" textAnchor="middle" fill="#ffffff" fontFamily="DejaVu Serif, Times New Roman, serif" fontSize="80" fontWeight="bold">bUV</text>
-                  <line x1="80" y1="134" x2="388" y2="134" stroke="#ffffff" strokeWidth="3"/>
-                  <text x="234" y="190" textAnchor="middle" fill="#ffffff" fontFamily="DejaVu Serif, Times New Roman, serif" fontSize="42" fontWeight="bold">Unfallversicherung</text>
-                </svg>
+                <span className="text-lg font-semibold">bUV</span>
               </Link>
               <div className="pl-4 space-y-1">
                 <Link
