@@ -90,20 +90,11 @@ const Header = () => {
             >
               <Link 
                 to="/bkv" 
-                className="relative transition-all duration-400 group py-2 smooth-slide flex items-center"
-                title="betriebliche Krankenversicherung"
+                className="relative text-white hover:text-orange-400 transition-all duration-400 font-medium group py-2 smooth-slide text-body flex items-center"
               >
-                <svg 
-                  className="h-20 w-auto cursor-pointer transition-all duration-200 hover:transform hover:-translate-y-0.5" 
-                  viewBox="0 0 468 268"
-                  style={{ borderRadius: '8px', overflow: 'hidden' }}
-                >
-                  <rect x="0" y="0" width="468" height="268" fill="#001f3c" rx="8"/>
-                  <text x="234" y="90" textAnchor="middle" fill="#ffffff" fontFamily="DejaVu Serif, Times New Roman, serif" fontSize="80" fontWeight="bold">bKV</text>
-                  <line x1="80" y1="134" x2="388" y2="134" stroke="#ffffff" strokeWidth="3"/>
-                  <text x="234" y="190" textAnchor="middle" fill="#ffffff" fontFamily="DejaVu Serif, Times New Roman, serif" fontSize="42" fontWeight="bold">Krankenversicherung</text>
-                </svg>
-                <ChevronDown className="absolute top-2 right-2 h-4 w-4 text-white transition-transform duration-200 pointer-events-none" />
+                <span>bKV</span>
+                <ChevronDown className="absolute -top-1 -right-3 h-4 w-4 transition-transform duration-200 pointer-events-none" />
+                <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-orange-400 to-orange-500 group-hover:w-full transition-all duration-400 ease-smooth"></div>
               </Link>
               
               {/* Dropdown Menu */}
