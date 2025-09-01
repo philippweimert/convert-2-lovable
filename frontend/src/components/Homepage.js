@@ -182,7 +182,7 @@ const Homepage = () => {
               <div className="flex justify-center lg:justify-end">
                 <div className="text-center">
                   <h3 className="text-lg font-semibold text-white mb-4">Unsere Lösungen</h3>
-                  <div className="grid grid-cols-1 gap-4 max-w-sm w-full">
+                  <div className="grid grid-cols-1 gap-5 max-w-md w-full">
                     {expertiseAreas.map((area, index) => (
                       <Link 
                         key={index}
