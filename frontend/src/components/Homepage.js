@@ -211,28 +211,28 @@ const Homepage = () => {
                           className="group block transform hover:scale-105 transition-all duration-300"
                           style={{animationDelay: `${index * 100}ms`}}
                         >
-                          <div className="bg-white/10 backdrop-blur-lg rounded-lg p-4 border border-white/20 hover:bg-white/20 hover:border-white/40 transition-all duration-300 hover:shadow-lg relative overflow-hidden">
+                          <div className="bg-white/10 backdrop-blur-lg rounded-lg p-4 border border-white/20 hover:bg-white/20 hover:border-white/40 transition-all duration-300 hover:shadow-lg relative overflow-hidden h-20 flex items-center">
                             
                             {/* Gradient overlay on hover */}
                             <div className="absolute inset-0 bg-gradient-to-r from-white/0 to-white/0 group-hover:from-white/5 group-hover:to-white/5 transition-all duration-500 rounded-lg"></div>
                             
-                            <div className="relative z-10 flex items-center justify-between">
-                              <div className="flex items-center space-x-3">
-                                <div className={`w-10 h-10 bg-gradient-to-r ${area.color} rounded-lg flex items-center justify-center text-white group-hover:rotate-12 group-hover:scale-110 transition-all duration-300 shadow-md`}>
+                            <div className="relative z-10 flex items-center justify-between w-full">
+                              <div className="flex items-center space-x-3 flex-1">
+                                <div className={`w-10 h-10 bg-gradient-to-r ${area.color} rounded-lg flex items-center justify-center text-white group-hover:rotate-12 group-hover:scale-110 transition-all duration-300 shadow-md flex-shrink-0`}>
                                   {area.icon}
                                 </div>
                                 
-                                <div>
-                                  <h4 className="text-lg font-bold text-white group-hover:text-slate-200 transition-colors duration-300">
+                                <div className="flex-1 min-w-0">
+                                  <h4 className="text-lg font-bold text-white group-hover:text-slate-200 transition-colors duration-300 truncate">
                                     {area.title}
                                   </h4>
-                                  <p className="text-xs text-slate-400 group-hover:text-slate-300 transition-colors duration-300">
+                                  <p className="text-xs text-slate-400 group-hover:text-slate-300 transition-colors duration-300 truncate">
                                     {area.subtitle}
                                   </p>
                                 </div>
                               </div>
                               
-                              <ArrowRight className="w-5 h-5 text-slate-400 group-hover:text-white group-hover:translate-x-1 transition-all duration-300" />
+                              <ArrowRight className="w-5 h-5 text-slate-400 group-hover:text-white group-hover:translate-x-1 transition-all duration-300 flex-shrink-0 ml-2" />
                             </div>
                           </div>
                         </Link>
