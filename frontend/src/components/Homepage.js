@@ -58,7 +58,7 @@ const Homepage = () => {
       <Header />
       
       {/* Moderne Interaktive Hero Section */}
-      <div className="pt-16">
+      <div className="pt-36">
         <section className="min-h-[85vh] flex items-center relative overflow-hidden">
           {/* Erweiterte animierte Background Patterns */}
           <div className="absolute inset-0">
