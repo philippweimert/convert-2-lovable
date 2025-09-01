@@ -109,9 +109,9 @@ const Homepage = () => {
 
                 {/* Main Headline */}
                 <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-                  Digitale <span className="bg-gradient-to-r from-orange-400 via-orange-500 to-orange-600 bg-clip-text text-transparent animate-gradient-x">Verwaltungs-Lösungen</span>
-                  <br />
-                  <span className="text-3xl lg:text-5xl text-slate-200">für moderne Unternehmen</span>
+                  <span className="bg-gradient-to-r from-orange-400 via-orange-500 to-orange-600 bg-clip-text text-transparent animate-gradient-x">Digital.</span>{" "}
+                  <span className="text-white">Einfach.</span>{" "}
+                  <span className="text-slate-200">Modern.</span>
                 </h1>
 
                 {/* Subtitle */}
