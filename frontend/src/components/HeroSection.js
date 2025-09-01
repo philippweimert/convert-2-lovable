@@ -161,12 +161,12 @@ const HeroSection = () => {
               {/* Video Container */}
               <div className="aspect-video bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl overflow-hidden border border-slate-600/50 hover:border-orange-400/50 transition-all duration-500 shadow-2xl backdrop-blur-sm relative">
                 
-                {/* YouTube Video Embed */}
                 <iframe 
+                  id="youtube-player"
                   className="w-full h-full rounded-2xl"
                   width="560" 
                   height="315" 
-                  src={`https://www.youtube.com/embed/Dw1XYzzPTkY?si=xdaue75GVpcizewG${autoplay ? '&autoplay=1' : ''}`}
+                  src={`https://www.youtube.com/embed/Dw1XYzzPTkY?si=xdaue75GVpcizewG&enablejsapi=1${autoplay ? '&autoplay=1' : ''}`}
                   title="YouTube video player" 
                   frameBorder="0" 
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
@@ -174,7 +174,42 @@ const HeroSection = () => {
                   allowFullScreen
                 ></iframe>
 
-                {/* Video Overlay */}
+                {/* Video End Overlay - appears after video ends */}
+                {showVideoOverlay && (
+                  <div className="absolute inset-0 bg-gradient-to-br from-acencia/95 via-acencia-light/95 to-acencia/95 backdrop-blur-lg rounded-2xl flex items-center justify-center animate-in fade-in duration-500">
+                    <div className="text-center p-8 max-w-md">
+                      {/* Overlay Header */}
+                      <div className="mb-6">
+                        <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-orange-600 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                          <CheckCircle className="w-8 h-8 text-white" />
+                        </div>
+                        <h3 className="text-2xl font-bold text-white mb-2">Video beendet</h3>
+                        <p className="text-slate-300 text-sm">Was möchten Sie als nächstes tun?</p>
+                      </div>
+
+                      {/* Action Buttons */}
+                      <div className="space-y-3">
+                        <button
+                          onClick={handleReplay}
+                          className="w-full bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 hover:scale-105 shadow-lg flex items-center justify-center space-x-2"
+                        >
+                          <Play className="w-5 h-5" />
+                          <span>Erneut ansehen</span>
+                        </button>
+                        
+                        <Link
+                          to="/die-bav/arbeitgeber-verpflichtungen"
+                          className="w-full bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 hover:scale-105 flex items-center justify-center space-x-2"
+                        >
+                          <Shield className="w-5 h-5" />
+                          <span>Gesetzliche Pflichten - bAV</span>
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
+                )}
+
+                {/* Video Hover Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-r from-orange-500/5 via-transparent to-orange-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
                 
                 {/* Corner decorations */}
