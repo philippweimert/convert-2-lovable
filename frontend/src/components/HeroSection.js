@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Button } from "./ui/button";
-import { CheckCircle, Clock, Shield, ArrowRight } from "lucide-react";
-import { useLocation } from "react-router-dom";
+import { CheckCircle, Clock, Shield, ArrowRight, Play } from "lucide-react";
+import { useLocation, Link } from "react-router-dom";
 
 const HeroSection = () => {
   const location = useLocation();
