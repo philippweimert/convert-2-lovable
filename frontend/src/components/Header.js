@@ -40,23 +40,23 @@ const Header = () => {
                 
                 {/* Wordmark: ACENCIA */}
                 <g id="wordmark">
-                  <text x="100" y="10" className="fill-white group-hover:fill-orange-400 transition-all duration-400" style={{
+                  <text x="100" y="20" className="fill-white group-hover:fill-orange-400 transition-all duration-400" style={{
                     fontFamily: 'Tenor Sans, serif',
                     fontSize: '52px',
                     fontWeight: '400',
                     letterSpacing: '0.12em',
-                    dominantBaseline: 'hanging'
+                    dominantBaseline: 'middle'
                   }}>ACENCIA</text>
                 </g>
                 
                 {/* Tagline: WIR MACHEN BAV EINFACH */}
                 <g id="tagline">
-                  <text x="100" y="75" className="fill-white group-hover:fill-orange-400 transition-all duration-400" style={{
+                  <text x="100" y="78" className="fill-white group-hover:fill-orange-400 transition-all duration-400" style={{
                     fontFamily: 'Tenor Sans, serif',
                     fontSize: '18px',
                     fontWeight: '400',
                     letterSpacing: '0.25em',
-                    dominantBaseline: 'hanging'
+                    dominantBaseline: 'middle'
                   }}>WIR MACHEN BAV EINFACH</text>
                 </g>
               </svg>
