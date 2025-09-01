@@ -150,9 +150,9 @@ const Homepage = () => {
                 </div>
               </div>
 
-              {/* Right Content - Interactive Service Cards */}
+              {/* Right Content - Interactive Service Cards (kompakter) */}
               <div className="flex justify-center lg:justify-end">
-                <div className="grid grid-cols-1 gap-6 max-w-md w-full">
+                <div className="grid grid-cols-1 gap-4 max-w-sm w-full">
                   {expertiseAreas.map((area, index) => (
                     <Link 
                       key={index}
@@ -160,28 +160,28 @@ const Homepage = () => {
                       className="group block transform hover:scale-105 transition-all duration-300"
                       style={{animationDelay: `${index * 200}ms`}}
                     >
-                      <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:bg-white/20 hover:border-orange-400/50 transition-all duration-300 hover:shadow-2xl relative overflow-hidden">
+                      <div className="bg-white/10 backdrop-blur-lg rounded-xl p-4 border border-white/20 hover:bg-white/20 hover:border-orange-400/50 transition-all duration-300 hover:shadow-2xl relative overflow-hidden">
                         
                         {/* Gradient overlay on hover */}
-                        <div className="absolute inset-0 bg-gradient-to-r from-orange-500/0 to-orange-600/0 group-hover:from-orange-500/10 group-hover:to-orange-600/10 transition-all duration-500 rounded-2xl"></div>
+                        <div className="absolute inset-0 bg-gradient-to-r from-orange-500/0 to-orange-600/0 group-hover:from-orange-500/10 group-hover:to-orange-600/10 transition-all duration-500 rounded-xl"></div>
                         
                         <div className="relative z-10">
-                          <div className="flex items-center justify-between mb-4">
-                            <div className={`w-12 h-12 bg-gradient-to-r ${area.color} rounded-xl flex items-center justify-center text-white group-hover:rotate-12 group-hover:scale-110 transition-all duration-300 shadow-lg`}>
+                          <div className="flex items-center justify-between mb-3">
+                            <div className={`w-10 h-10 bg-gradient-to-r ${area.color} rounded-lg flex items-center justify-center text-white group-hover:rotate-12 group-hover:scale-110 transition-all duration-300 shadow-lg`}>
                               {area.icon}
                             </div>
-                            <ArrowRight className="w-5 h-5 text-slate-400 group-hover:text-orange-400 group-hover:translate-x-1 transition-all duration-300" />
+                            <ArrowRight className="w-4 h-4 text-slate-400 group-hover:text-orange-400 group-hover:translate-x-1 transition-all duration-300" />
                           </div>
                           
-                          <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-orange-300 transition-colors duration-300">
+                          <h3 className="text-lg font-bold text-white mb-1 group-hover:text-orange-300 transition-colors duration-300">
                             {area.title}
                           </h3>
                           
-                          <h4 className="text-sm text-slate-400 mb-3 font-medium">
+                          <h4 className="text-xs text-slate-400 mb-2 font-medium">
                             {area.subtitle}
                           </h4>
                           
-                          <p className="text-slate-300 leading-relaxed text-sm group-hover:text-slate-200 transition-colors duration-300">
+                          <p className="text-slate-300 leading-relaxed text-xs group-hover:text-slate-200 transition-colors duration-300">
                             {area.description}
                           </p>
                         </div>
