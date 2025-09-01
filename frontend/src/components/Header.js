@@ -30,23 +30,34 @@ const Header = () => {
           {/* Logo - links positioniert */}
           <div className="flex-shrink-0">
             <Link to="/" className="flex items-center group smooth-slide py-2">
-              <svg viewBox="0 0 400 80" className="h-10 w-auto transition-all duration-400 group-hover:scale-105" role="img" aria-label="ACENCIA">
-                {/* Icon: Three pill-frame rectangles (scaled down) */}
+              <svg viewBox="0 0 600 120" className="h-14 w-auto transition-all duration-400 group-hover:scale-105" role="img" aria-label="ACENCIA – Wir machen bAV einfach">
+                {/* Icon: Three pill-frame rectangles */}
                 <g id="icon">
-                  <rect x="8" y="10" width="50" height="12" rx="3" ry="3" fill="none" stroke="#FFFFFF" stroke-width="4"/>
-                  <rect x="8" y="30" width="50" height="12" rx="3" ry="3" fill="none" stroke="#FFFFFF" stroke-width="4"/>
-                  <rect x="8" y="50" width="50" height="12" rx="3" ry="3" fill="none" stroke="#FFFFFF" stroke-width="4"/>
+                  <rect x="12" y="15" width="70" height="18" rx="4" ry="4" fill="none" stroke="#FFFFFF" stroke-width="5"/>
+                  <rect x="12" y="42" width="70" height="18" rx="4" ry="4" fill="none" stroke="#FFFFFF" stroke-width="5"/>
+                  <rect x="12" y="69" width="70" height="18" rx="4" ry="4" fill="none" stroke="#FFFFFF" stroke-width="5"/>
                 </g>
                 
                 {/* Wordmark: ACENCIA */}
                 <g id="wordmark">
-                  <text x="70" y="15" className="fill-white group-hover:fill-orange-400 transition-all duration-400" style={{
+                  <text x="100" y="10" className="fill-white group-hover:fill-orange-400 transition-all duration-400" style={{
                     fontFamily: 'Tenor Sans, serif',
-                    fontSize: '42px',
+                    fontSize: '52px',
                     fontWeight: '400',
                     letterSpacing: '0.12em',
                     dominantBaseline: 'hanging'
                   }}>ACENCIA</text>
+                </g>
+                
+                {/* Tagline: WIR MACHEN BAV EINFACH */}
+                <g id="tagline">
+                  <text x="100" y="75" className="fill-white group-hover:fill-orange-400 transition-all duration-400" style={{
+                    fontFamily: 'Tenor Sans, serif',
+                    fontSize: '18px',
+                    fontWeight: '400',
+                    letterSpacing: '0.25em',
+                    dominantBaseline: 'hanging'
+                  }}>WIR MACHEN BAV EINFACH</text>
                 </g>
               </svg>
             </Link>
