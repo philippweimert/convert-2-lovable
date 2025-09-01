@@ -10,19 +10,19 @@ const Footer = () => {
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center justify-between mb-4">
               <Link to="/" className="block">
-                <svg viewBox="0 0 1000 170" className="h-12 w-auto" role="img" aria-label="ACENCIA – Wir machen bAV einfach">
+                <svg viewBox="0 0 2000 340" className="h-12 w-auto" role="img" aria-label="ACENCIA – Wir machen bAV einfach">
                   {/* Icon: Three pill-frame rectangles */}
                   <g id="icon">
-                    <rect x="32" y="20" width="140" height="33" rx="9" ry="9" fill="none" stroke="#FFFFFF" stroke-width="12"/>
-                    <rect x="32" y="70" width="140" height="33" rx="9" ry="9" fill="none" stroke="#FFFFFF" stroke-width="12"/>
-                    <rect x="32" y="120" width="140" height="33" rx="9" ry="9" fill="none" stroke="#FFFFFF" stroke-width="12"/>
+                    <rect x="63" y="40" width="280" height="67" rx="18" ry="18" fill="none" stroke="#FFFFFF" strokeWidth="24"/>
+                    <rect x="63" y="139" width="280" height="67" rx="18" ry="18" fill="none" stroke="#FFFFFF" strokeWidth="24"/>
+                    <rect x="63" y="238" width="280" height="67" rx="18" ry="18" fill="none" stroke="#FFFFFF" strokeWidth="24"/>
                   </g>
                   
                   {/* Wordmark: ACENCIA */}
                   <g id="wordmark">
-                    <text x="195" y="15" style={{
+                    <text x="390" y="30" style={{
                       fontFamily: 'Tenor Sans, serif',
-                      fontSize: '117px',
+                      fontSize: '235px',
                       fontWeight: '400',
                       letterSpacing: '0.12em',
                       fill: '#FFFFFF',
@@ -32,9 +32,9 @@ const Footer = () => {
                   
                   {/* Tagline: WIR MACHEN BAV EINFACH */}
                   <g id="tagline">
-                    <text x="195" y="128" style={{
+                    <text x="390" y="255" style={{
                       fontFamily: 'Tenor Sans, serif',
-                      fontSize: '32px',
+                      fontSize: '65px',
                       fontWeight: '400',
                       letterSpacing: '0.25em',
                       fill: '#FFFFFF',
