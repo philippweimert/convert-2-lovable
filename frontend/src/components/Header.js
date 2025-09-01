@@ -31,11 +31,9 @@ const Header = () => {
           {/* Logo - weiter nach links positioniert */}
           <div className="flex-shrink-0 mr-16">
             <Link to="/" className="flex items-center group smooth-slide py-2">
-              <img 
-                src="/acencia-logo-new.png" 
-                alt="ACENCIA - Wir machen bAV einfach" 
-                className="h-12 w-auto object-contain transition-all duration-400 group-hover:scale-105"
-              />
+              <span className="text-white text-2xl font-bold tracking-wider transition-all duration-400 group-hover:text-orange-400 group-hover:scale-105">
+                ACENCIA
+              </span>
             </Link>
           </div>
 
