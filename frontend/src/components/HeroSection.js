@@ -198,7 +198,7 @@ const HeroSection = () => {
                         </button>
                         
                         <Link
-                          to="/die-bav/arbeitgeber-verpflichtungen"
+                          to="/bav-rechtliche-grundlagen"
                           className="w-full bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 hover:scale-105 flex items-center justify-center space-x-2"
                         >
                           <Shield className="w-5 h-5" />
