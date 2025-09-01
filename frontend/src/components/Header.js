@@ -291,7 +291,6 @@ const Header = () => {
               </div>
             </div>
           </div>
-          </div>
 
           {/* Enhanced Mobile menu button */}
           <div className="md:hidden">
