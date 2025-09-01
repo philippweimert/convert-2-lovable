@@ -125,11 +125,13 @@ const Homepage = () => {
                       className="group flex items-center space-x-3 p-3 rounded-lg hover:bg-white/10 transition-all duration-300 hover:scale-105"
                       style={{animationDelay: `${index * 150}ms`}}
                     >
-                      <div className="w-8 h-8 bg-gradient-to-r from-orange-500 to-orange-600 rounded-full flex items-center justify-center group-hover:rotate-12 transition-transform duration-300">
-                        <CheckCircle className="w-4 h-4 text-white" />
+                      <div className="w-8 h-8 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full flex items-center justify-center group-hover:rotate-12 group-hover:bg-white/20 transition-all duration-300">
+                        <div className="text-white group-hover:scale-110 transition-transform duration-300">
+                          {benefit.icon}
+                        </div>
                       </div>
                       <span className="text-slate-200 font-medium group-hover:text-white transition-colors duration-300">
-                        {benefit}
+                        {benefit.text}
                       </span>
                     </div>
                   ))}
