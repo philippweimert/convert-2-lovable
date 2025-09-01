@@ -28,8 +28,8 @@ const Header = () => {
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-2">
         <div className="flex items-center h-20">
-          {/* Logo - weiter nach links positioniert */}
-          <div className="flex-shrink-0 mr-16">
+          {/* Logo - links positioniert */}
+          <div className="flex-shrink-0">
             <Link to="/" className="flex items-center group smooth-slide py-2">
               <span className="text-white text-2xl font-bold tracking-wider transition-all duration-400 group-hover:text-orange-400 group-hover:scale-105">
                 ACENCIA
@@ -37,9 +37,12 @@ const Header = () => {
             </Link>
           </div>
 
-          {/* Mittige Navigation - nur bAV, bKV, bUV */}
-          <div className="hidden md:flex items-center justify-center flex-1">
-            <div className="flex items-center space-x-6">
+          {/* Flexible Spacer */}
+          <div className="flex-1"></div>
+
+          {/* Rechtsbündige Navigation - bAV, bKV, bUV, über uns */}
+          <div className="hidden md:flex items-center">
+            <div className="flex items-center space-x-10 mr-8">
             {/* bAV Dropdown */}
             <div 
               className="relative group"
