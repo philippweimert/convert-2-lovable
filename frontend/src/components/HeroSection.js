@@ -4,6 +4,15 @@ import { CheckCircle, Clock, Shield, ArrowRight } from "lucide-react";
 import { useLocation } from "react-router-dom";
 
 const HeroSection = () => {
+  const location = useLocation();
+  const [autoplay, setAutoplay] = useState(false);
+
+  useEffect(() => {
+    const urlParams = new URLSearchParams(location.search);
+    if (urlParams.get('autoplay') === 'true') {
+      setAutoplay(true);
+    }
+  }, [location]);
   const quickBenefits = [
     { icon: <CheckCircle className="w-5 h-5" />, text: "100% digitale Verwaltung" },
     { icon: <Clock className="w-5 h-5" />, text: "Vollautomatisierte Prozesse" },
