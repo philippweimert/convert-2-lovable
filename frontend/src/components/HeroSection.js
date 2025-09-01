@@ -19,7 +19,7 @@ const HeroSection = () => {
   useEffect(() => {
     // Load YouTube Player API
     const loadYouTubeAPI = () => {
-      if (window.YT) {
+      if (window.YT && window.YT.Player) {
         initializePlayer();
         return;
       }
@@ -35,24 +35,38 @@ const HeroSection = () => {
     };
 
     const initializePlayer = () => {
-      const ytPlayer = new window.YT.Player('youtube-player', {
-        events: {
-          onStateChange: (event) => {
-            // Video ended
-            if (event.data === window.YT.PlayerState.ENDED) {
-              setShowVideoOverlay(true);
+      // Wait a bit for iframe to be fully loaded
+      setTimeout(() => {
+        try {
+          const ytPlayer = new window.YT.Player('youtube-player', {
+            videoId: 'Dw1XYzzPTkY',
+            events: {
+              onReady: (event) => {
+                setPlayer(event.target);
+              },
+              onStateChange: (event) => {
+                // Video ended
+                if (event.data === window.YT.PlayerState.ENDED) {
+                  setShowVideoOverlay(true);
+                }
+                // Video playing - hide overlay
+                if (event.data === window.YT.PlayerState.PLAYING) {
+                  setShowVideoOverlay(false);
+                }
+              }
             }
-            // Video playing - hide overlay
-            if (event.data === window.YT.PlayerState.PLAYING) {
-              setShowVideoOverlay(false);
-            }
-          }
+          });
+        } catch (error) {
+          console.error('YouTube Player initialization failed:', error);
         }
-      });
-      setPlayer(ytPlayer);
+      }, 1000);
     };
 
-    loadYouTubeAPI();
+    // Only load API if we have the iframe
+    const iframe = document.getElementById('youtube-player');
+    if (iframe) {
+      loadYouTubeAPI();
+    }
 
     return () => {
       if (window.onYouTubeIframeAPIReady) {
@@ -62,10 +76,19 @@ const HeroSection = () => {
   }, []);
 
   const handleReplay = () => {
-    if (player) {
-      player.seekTo(0, true);
-      player.playVideo();
-      setShowVideoOverlay(false);
+    if (player && typeof player.seekTo === 'function') {
+      try {
+        player.seekTo(0, true);
+        player.playVideo();
+        setShowVideoOverlay(false);
+      } catch (error) {
+        console.error('Error replaying video:', error);
+        // Fallback: reload the iframe
+        window.location.reload();
+      }
+    } else {
+      // Fallback: reload the page to restart video
+      window.location.reload();
     }
   };
   const quickBenefits = [
