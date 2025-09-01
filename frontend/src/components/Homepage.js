@@ -35,10 +35,22 @@ const Homepage = () => {
   ];
 
   const benefits = [
-    "Über 30 Jahre Marktexpertise",
-    "Komplette Digitalisierung aller Prozesse", 
-    "Individuelle Lösungen für jede Unternehmensgröße",
-    "Rechtssichere Implementierung"
+    {
+      text: "Über 30 Jahre Marktexpertise",
+      icon: <Trophy className="w-4 h-4" />
+    },
+    {
+      text: "Komplette Digitalisierung aller Prozesse",
+      icon: <Zap className="w-4 h-4" />
+    },
+    {
+      text: "Individuelle Lösungen für jede Unternehmensgröße",
+      icon: <Building className="w-4 h-4" />
+    },
+    {
+      text: "Rechtssichere Implementierung",
+      icon: <Shield className="w-4 h-4" />
+    }
   ];
 
   return (
