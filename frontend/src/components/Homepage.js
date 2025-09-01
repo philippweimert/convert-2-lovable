@@ -201,9 +201,14 @@ const Homepage = () => {
                                 {area.icon}
                               </div>
                               
-                              <h4 className="text-xl font-bold text-white group-hover:text-orange-300 transition-colors duration-300">
-                                {area.title}
-                              </h4>
+                              <div>
+                                <h4 className="text-xl font-bold text-white group-hover:text-orange-300 transition-colors duration-300">
+                                  {area.title}
+                                </h4>
+                                <p className="text-sm text-slate-400 group-hover:text-slate-300 transition-colors duration-300">
+                                  {area.subtitle}
+                                </p>
+                              </div>
                             </div>
                             
                             <ArrowRight className="w-6 h-6 text-slate-400 group-hover:text-orange-400 group-hover:translate-x-1 transition-all duration-300" />
