@@ -152,10 +152,9 @@ const Header = () => {
             </div>
             
             </div>
-          </div>
-
-          {/* Rechter Bereich - über uns + Login Portal + Support */}
-          <div className="hidden md:flex items-center space-x-6 flex-shrink-0">
+          
+          {/* Login Portal + Support als Anker rechts */}
+          <div className="hidden md:flex items-center flex-shrink-0">
             {/* über uns Dropdown */}
             <div 
               className="relative group"
