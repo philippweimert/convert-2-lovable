@@ -86,24 +86,6 @@ const Homepage = () => {
               
               {/* Left Content - Hero Text */}
               <div className="text-left">
-                {/* Compact Onboarding Offer Badge */}
-                <div className="mb-6 group">
-                  <div className="inline-flex items-center space-x-3 bg-gradient-to-r from-green-500/20 to-emerald-500/20 backdrop-blur-sm border border-green-400/40 rounded-full px-5 py-3 group-hover:scale-105 transition-all duration-300 shadow-lg">
-                    
-                    {/* Check icon */}
-                    <div className="w-6 h-6 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center">
-                      <CheckCircle className="w-4 h-4 text-white" />
-                    </div>
-                    
-                    <div className="text-center">
-                      <span className="text-green-400 font-bold text-lg">0,00 €</span>
-                      <span className="text-white font-medium text-sm ml-2">Onboarding bis 01.01.2027</span>
-                    </div>
-                    
-                    <Sparkles className="w-4 h-4 text-green-400 animate-pulse" />
-                  </div>
-                </div>
-
                 {/* Main Headline */}
                 <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 leading-tight">
                   <span className="bg-gradient-to-r from-orange-400 via-orange-500 to-orange-600 bg-clip-text text-transparent animate-gradient-x">Digital.</span>{" "}
