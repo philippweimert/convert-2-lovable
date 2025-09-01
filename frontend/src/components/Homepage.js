@@ -4,7 +4,7 @@ import Header from "./Header";
 import CustomerSegments from "./CustomerSegments";
 import GoogleReviews from "./GoogleReviews";
 import Footer from "./Footer";
-import { Award, Users, TrendingUp, ArrowRight, Sparkles, CheckCircle } from "lucide-react";
+import { Award, Users, TrendingUp, ArrowRight, Sparkles, CheckCircle, Trophy, Zap, Building, Shield } from "lucide-react";
 
 const Homepage = () => {
   const expertiseAreas = [
