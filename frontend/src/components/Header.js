@@ -40,7 +40,7 @@ const Header = () => {
                 
                 {/* Wordmark: ACENCIA */}
                 <g id="wordmark">
-                  <text x="100" y="8" className="fill-white group-hover:fill-orange-400 transition-all duration-400" style={{
+                  <text x="100" y="15" className="fill-white group-hover:fill-orange-400 transition-all duration-400" style={{
                     fontFamily: 'Tenor Sans, serif',
                     fontSize: '52px',
                     fontWeight: '400',
