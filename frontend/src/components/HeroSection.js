@@ -83,12 +83,23 @@ const HeroSection = () => {
         setShowVideoOverlay(false);
       } catch (error) {
         console.error('Error replaying video:', error);
-        // Fallback: reload the iframe
-        window.location.reload();
+        // Fallback: reload iframe with autoplay
+        const iframe = document.getElementById('youtube-player');
+        if (iframe) {
+          const currentSrc = iframe.src;
+          const newSrc = currentSrc.includes('autoplay=1') ? currentSrc : currentSrc + '&autoplay=1';
+          iframe.src = newSrc;
+          setShowVideoOverlay(false);
+        }
       }
     } else {
-      // Fallback: reload the page to restart video
-      window.location.reload();
+      // Alternative: directly manipulate iframe src to restart with autoplay
+      const iframe = document.getElementById('youtube-player');
+      if (iframe) {
+        const baseSrc = `https://www.youtube.com/embed/Dw1XYzzPTkY?enablejsapi=1&origin=${window.location.origin}&autoplay=1`;
+        iframe.src = baseSrc;
+        setShowVideoOverlay(false);
+      }
     }
   };
   const quickBenefits = [
