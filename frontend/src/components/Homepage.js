@@ -160,42 +160,45 @@ const Homepage = () => {
               </div>
 
               {/* Right Content - Onboarding Offer + Solutions */}
-              <div className="flex justify-center lg:justify-end">
-                <div className="max-w-sm w-full space-y-6">
+              <div className="flex justify-center lg:justify-end lg:mt-0 mt-8">
+                <div className="max-w-sm w-full space-y-4">
                   
-                  {/* Onboarding Offer Box - Größer */}
+                  {/* Onboarding Offer Box - Flacher */}
                   <div className="group">
-                    <div className="bg-gradient-to-r from-green-500/20 via-emerald-500/20 to-green-600/20 backdrop-blur-lg border-2 border-green-400/40 rounded-xl p-5 relative overflow-hidden group-hover:scale-105 transition-all duration-300 shadow-xl">
+                    <div className="bg-gradient-to-r from-green-500/20 via-emerald-500/20 to-green-600/20 backdrop-blur-lg border-2 border-green-400/40 rounded-xl p-3 relative overflow-hidden group-hover:scale-105 transition-all duration-300 shadow-xl">
                       
                       {/* Animated background glow */}
                       <div className="absolute inset-0 bg-gradient-to-r from-green-400/10 to-emerald-400/10 animate-pulse"></div>
                       
                       {/* Floating sparkles */}
-                      <div className="absolute top-2 right-2">
-                        <Sparkles className="w-5 h-5 text-green-400 animate-bounce" style={{animationDelay: '0.5s'}} />
+                      <div className="absolute top-1 right-2">
+                        <Sparkles className="w-4 h-4 text-green-400 animate-bounce" style={{animationDelay: '0.5s'}} />
                       </div>
-                      <div className="absolute bottom-2 left-2">
+                      <div className="absolute bottom-1 left-2">
                         <Sparkles className="w-3 h-3 text-emerald-400 animate-pulse" style={{animationDelay: '1s'}} />
                       </div>
                       
-                      <div className="relative z-10 text-center">
-                        <div className="flex items-center justify-center mb-3">
-                          <div className="w-8 h-8 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center">
-                            <CheckCircle className="w-5 h-5 text-white" />
+                      <div className="relative z-10 flex items-center justify-between">
+                        <div className="flex items-center space-x-3">
+                          <div className="w-6 h-6 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center">
+                            <CheckCircle className="w-4 h-4 text-white" />
+                          </div>
+                          
+                          <div>
+                            <h3 className="text-lg font-bold text-white">
+                              <span className="text-green-400">0,00 €</span> Onboarding
+                            </h3>
+                            <p className="text-slate-300 text-xs">
+                              Bis zum <span className="text-green-400 font-bold">01.01.2027</span>
+                            </p>
                           </div>
                         </div>
                         
-                        <h3 className="text-xl lg:text-2xl font-bold text-white mb-2">
-                          <span className="text-green-400">0,00 €</span> Onboarding
-                        </h3>
-                        
-                        <p className="text-slate-200 font-medium text-sm">
-                          Bis zum <span className="text-green-400 font-bold">01.01.2027</span>
-                        </p>
-                        
-                        <p className="text-slate-400 text-xs mt-2">
-                          Jetzt kostenfrei einsteigen
-                        </p>
+                        <div className="text-right">
+                          <p className="text-slate-400 text-xs">
+                            Jetzt kostenfrei
+                          </p>
+                        </div>
                       </div>
                     </div>
                   </div>
