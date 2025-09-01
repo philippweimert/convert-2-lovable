@@ -30,9 +30,25 @@ const Header = () => {
           {/* Logo - links positioniert */}
           <div className="flex-shrink-0">
             <Link to="/" className="flex items-center group smooth-slide py-2">
-              <span className="text-white text-2xl font-bold tracking-wider transition-all duration-400 group-hover:text-orange-400 group-hover:scale-105">
-                ACENCIA
-              </span>
+              <svg viewBox="0 0 400 80" className="h-10 w-auto transition-all duration-400 group-hover:scale-105" role="img" aria-label="ACENCIA">
+                {/* Icon: Three pill-frame rectangles (scaled down) */}
+                <g id="icon">
+                  <rect x="8" y="10" width="50" height="12" rx="3" ry="3" fill="none" stroke="#FFFFFF" stroke-width="4"/>
+                  <rect x="8" y="30" width="50" height="12" rx="3" ry="3" fill="none" stroke="#FFFFFF" stroke-width="4"/>
+                  <rect x="8" y="50" width="50" height="12" rx="3" ry="3" fill="none" stroke="#FFFFFF" stroke-width="4"/>
+                </g>
+                
+                {/* Wordmark: ACENCIA */}
+                <g id="wordmark">
+                  <text x="70" y="15" className="fill-white group-hover:fill-orange-400 transition-all duration-400" style={{
+                    fontFamily: 'Tenor Sans, serif',
+                    fontSize: '42px',
+                    fontWeight: '400',
+                    letterSpacing: '0.12em',
+                    dominantBaseline: 'hanging'
+                  }}>ACENCIA</text>
+                </g>
+              </svg>
             </Link>
           </div>
 
