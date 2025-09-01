@@ -13,7 +13,7 @@ const Homepage = () => {
       subtitle: "Betriebliche Altersvorsorge",
       description: "Komplexe bAV-Herausforderungen einfach gelöst - mit über 30 Jahren Expertise",
       link: "/die-bav",
-      color: "from-orange-500 to-orange-600",
+      color: "from-slate-600 to-slate-700",
       icon: <TrendingUp className="w-8 h-8" />
     },
     {
@@ -21,7 +21,7 @@ const Homepage = () => {
       subtitle: "Betriebliche Krankenversicherung",
       description: "Gesundheitsvorsorge als Mitarbeiterbenefit - professionell implementiert",
       link: "/bkv",
-      color: "from-acencia to-acencia-light", 
+      color: "from-blue-600 to-blue-700", 
       icon: <Users className="w-8 h-8" />
     },
     {
@@ -29,7 +29,7 @@ const Homepage = () => {
       subtitle: "Betriebliche Unfallversicherung", 
       description: "Umfassender Schutz für Ihre Mitarbeitenden - über das Gesetz hinaus",
       link: "/buv",
-      color: "from-orange-600 to-orange-700",
+      color: "from-indigo-600 to-indigo-700",
       icon: <Award className="w-8 h-8" />
     }
   ];
