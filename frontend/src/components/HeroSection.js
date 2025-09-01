@@ -6,6 +6,8 @@ import { useLocation } from "react-router-dom";
 const HeroSection = () => {
   const location = useLocation();
   const [autoplay, setAutoplay] = useState(false);
+  const [showVideoOverlay, setShowVideoOverlay] = useState(false);
+  const [player, setPlayer] = useState(null);
 
   useEffect(() => {
     const urlParams = new URLSearchParams(location.search);
@@ -13,6 +15,59 @@ const HeroSection = () => {
       setAutoplay(true);
     }
   }, [location]);
+
+  useEffect(() => {
+    // Load YouTube Player API
+    const loadYouTubeAPI = () => {
+      if (window.YT) {
+        initializePlayer();
+        return;
+      }
+
+      const script = document.createElement('script');
+      script.src = 'https://www.youtube.com/iframe_api';
+      script.async = true;
+      document.body.appendChild(script);
+
+      window.onYouTubeIframeAPIReady = () => {
+        initializePlayer();
+      };
+    };
+
+    const initializePlayer = () => {
+      const ytPlayer = new window.YT.Player('youtube-player', {
+        events: {
+          onStateChange: (event) => {
+            // Video ended
+            if (event.data === window.YT.PlayerState.ENDED) {
+              setShowVideoOverlay(true);
+            }
+            // Video playing - hide overlay
+            if (event.data === window.YT.PlayerState.PLAYING) {
+              setShowVideoOverlay(false);
+            }
+          }
+        }
+      });
+      setPlayer(ytPlayer);
+    };
+
+    loadYouTubeAPI();
+
+    return () => {
+      if (window.onYouTubeIframeAPIReady) {
+        window.onYouTubeIframeAPIReady = null;
+      }
+    };
+  }, []);
+
+  const handleReplay = () => {
+    if (player) {
+      player.seekTo(0, true);
+      player.playVideo();
+      setShowVideoOverlay(false);
+    }
+  };
   const quickBenefits = [
     { icon: <CheckCircle className="w-5 h-5" />, text: "100% digitale Verwaltung" },
     { icon: <Clock className="w-5 h-5" />, text: "Vollautomatisierte Prozesse" },
