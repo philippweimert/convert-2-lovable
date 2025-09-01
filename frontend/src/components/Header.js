@@ -30,19 +30,19 @@ const Header = () => {
           {/* Logo - links positioniert */}
           <div className="flex-shrink-0">
             <Link to="/" className="flex items-center group smooth-slide py-2">
-              <svg viewBox="0 0 600 120" className="h-14 w-auto transition-all duration-400 group-hover:scale-105" role="img" aria-label="ACENCIA – Wir machen bAV einfach">
+              <svg viewBox="0 0 2000 340" className="h-20 w-auto transition-all duration-400 group-hover:scale-105" role="img" aria-label="ACENCIA – Wir machen bAV einfach">
                 {/* Icon: Three pill-frame rectangles */}
                 <g id="icon">
-                  <rect x="12" y="15" width="70" height="18" rx="4" ry="4" fill="none" stroke="#FFFFFF" stroke-width="5"/>
-                  <rect x="12" y="42" width="70" height="18" rx="4" ry="4" fill="none" stroke="#FFFFFF" stroke-width="5"/>
-                  <rect x="12" y="69" width="70" height="18" rx="4" ry="4" fill="none" stroke="#FFFFFF" stroke-width="5"/>
+                  <rect x="63" y="40" width="280" height="67" rx="18" ry="18" fill="none" stroke="#FFFFFF" strokeWidth="24"/>
+                  <rect x="63" y="139" width="280" height="67" rx="18" ry="18" fill="none" stroke="#FFFFFF" strokeWidth="24"/>
+                  <rect x="63" y="238" width="280" height="67" rx="18" ry="18" fill="none" stroke="#FFFFFF" strokeWidth="24"/>
                 </g>
                 
                 {/* Wordmark: ACENCIA */}
                 <g id="wordmark">
-                  <text x="100" y="15" className="fill-white group-hover:fill-orange-400 transition-all duration-400" style={{
+                  <text x="390" y="30" className="fill-white group-hover:fill-orange-400 transition-all duration-400" style={{
                     fontFamily: 'Tenor Sans, serif',
-                    fontSize: '52px',
+                    fontSize: '235px',
                     fontWeight: '400',
                     letterSpacing: '0.12em',
                     dominantBaseline: 'hanging'
@@ -51,9 +51,9 @@ const Header = () => {
                 
                 {/* Tagline: WIR MACHEN BAV EINFACH */}
                 <g id="tagline">
-                  <text x="100" y="75" className="fill-white group-hover:fill-orange-400 transition-all duration-400" style={{
+                  <text x="390" y="255" className="fill-white group-hover:fill-orange-400 transition-all duration-400" style={{
                     fontFamily: 'Tenor Sans, serif',
-                    fontSize: '18px',
+                    fontSize: '65px',
                     fontWeight: '400',
                     letterSpacing: '0.25em',
                     dominantBaseline: 'hanging'
