@@ -178,35 +178,44 @@ const Homepage = () => {
                 </div>
               </div>
 
-              {/* Right Content - Small Square Solution Boxes */}
+              {/* Right Content - Solution Boxes */}
               <div className="flex justify-center lg:justify-end">
                 <div className="text-center">
                   <h3 className="text-lg font-semibold text-white mb-4">Unsere Lösungen</h3>
-                  <div className="grid grid-cols-3 gap-3 max-w-xs">
+                  <div className="grid grid-cols-1 gap-4 max-w-sm w-full">
                     {expertiseAreas.map((area, index) => (
                       <Link 
                         key={index}
                         to={area.link}
-                        className="group block transform hover:scale-110 transition-all duration-300"
+                        className="group block transform hover:scale-105 transition-all duration-300"
                         style={{animationDelay: `${index * 100}ms`}}
                       >
-                        <div className="bg-white/10 backdrop-blur-lg rounded-lg p-3 border border-white/20 hover:bg-white/20 hover:border-orange-400/50 transition-all duration-300 hover:shadow-xl relative overflow-hidden aspect-square flex flex-col items-center justify-center">
+                        <div className="bg-white/10 backdrop-blur-lg rounded-lg p-4 border border-white/20 hover:bg-white/20 hover:border-orange-400/50 transition-all duration-300 hover:shadow-xl relative overflow-hidden">
                           
                           {/* Gradient overlay on hover */}
                           <div className="absolute inset-0 bg-gradient-to-r from-orange-500/0 to-orange-600/0 group-hover:from-orange-500/10 group-hover:to-orange-600/10 transition-all duration-500 rounded-lg"></div>
                           
-                          <div className="relative z-10 text-center">
-                            <div className={`w-8 h-8 bg-gradient-to-r ${area.color} rounded-lg flex items-center justify-center text-white group-hover:rotate-12 group-hover:scale-110 transition-all duration-300 shadow-lg mb-2 mx-auto`}>
-                              {area.icon}
+                          <div className="relative z-10 flex items-center justify-between">
+                            <div className="flex items-center space-x-3">
+                              <div className={`w-10 h-10 bg-gradient-to-r ${area.color} rounded-lg flex items-center justify-center text-white group-hover:rotate-12 group-hover:scale-110 transition-all duration-300 shadow-lg`}>
+                                {area.icon}
+                              </div>
+                              
+                              <h4 className="text-lg font-bold text-white group-hover:text-orange-300 transition-colors duration-300">
+                                {area.title}
+                              </h4>
                             </div>
                             
-                            <h4 className="text-sm font-bold text-white group-hover:text-orange-300 transition-colors duration-300">
-                              {area.title}
-                            </h4>
+                            <ArrowRight className="w-5 h-5 text-slate-400 group-hover:text-orange-400 group-hover:translate-x-1 transition-all duration-300" />
                           </div>
                         </div>
                       </Link>
                     ))}
+                  </div>
+                  
+                  {/* Mehr erfahren Text */}
+                  <div className="mt-4">
+                    <p className="text-slate-400 text-sm">mehr erfahren</p>
                   </div>
                 </div>
               </div>
