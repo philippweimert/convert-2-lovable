@@ -74,36 +74,21 @@ const Homepage = () => {
               
               {/* Left Content - Hero Text */}
               <div className="text-left">
-                {/* Simplified Onboarding Offer Banner */}
-                <div className="mb-8 group">
-                  <div className="bg-gradient-to-r from-green-500/20 via-emerald-500/20 to-green-600/20 backdrop-blur-lg border-2 border-green-400/40 rounded-2xl p-6 relative overflow-hidden group-hover:scale-105 transition-all duration-300 shadow-2xl">
+                {/* Compact Onboarding Offer Badge */}
+                <div className="mb-6 group">
+                  <div className="inline-flex items-center space-x-3 bg-gradient-to-r from-green-500/20 to-emerald-500/20 backdrop-blur-sm border border-green-400/40 rounded-full px-5 py-3 group-hover:scale-105 transition-all duration-300 shadow-lg">
                     
-                    {/* Animated background glow */}
-                    <div className="absolute inset-0 bg-gradient-to-r from-green-400/10 to-emerald-400/10 animate-pulse"></div>
-                    
-                    {/* Floating sparkles */}
-                    <div className="absolute top-2 right-2">
-                      <Sparkles className="w-6 h-6 text-green-400 animate-bounce" style={{animationDelay: '0.5s'}} />
-                    </div>
-                    <div className="absolute bottom-2 left-2">
-                      <Sparkles className="w-4 h-4 text-emerald-400 animate-pulse" style={{animationDelay: '1s'}} />
+                    {/* Check icon */}
+                    <div className="w-6 h-6 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center">
+                      <CheckCircle className="w-4 h-4 text-white" />
                     </div>
                     
-                    <div className="relative z-10 text-center">
-                      <div className="flex items-center justify-center mb-2">
-                        <div className="w-8 h-8 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center">
-                          <CheckCircle className="w-5 h-5 text-white" />
-                        </div>
-                      </div>
-                      
-                      <h2 className="text-2xl lg:text-3xl font-bold text-white mb-2">
-                        <span className="text-green-400">0,00 €</span> Onboarding-Kosten
-                      </h2>
-                      
-                      <p className="text-slate-200 font-medium">
-                        Bis zum <span className="text-green-400 font-bold">01.01.2027</span>
-                      </p>
+                    <div className="text-center">
+                      <span className="text-green-400 font-bold text-lg">0,00 €</span>
+                      <span className="text-white font-medium text-sm ml-2">Onboarding bis 01.01.2027</span>
                     </div>
+                    
+                    <Sparkles className="w-4 h-4 text-green-400 animate-pulse" />
                   </div>
                 </div>
 
