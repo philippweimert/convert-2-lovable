@@ -87,7 +87,7 @@ const Homepage = () => {
               {/* Left Content - Hero Text */}
               <div className="text-left">
                 {/* Main Headline */}
-                <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+                <h1 className="text-3xl lg:text-4xl font-bold text-white mb-6 leading-tight">
                   <span className="bg-gradient-to-r from-orange-400 via-orange-500 to-orange-600 bg-clip-text text-transparent animate-gradient-x">Digital.</span>{" "}
                   <span className="text-white">Einfach.</span>{" "}
                   <span className="text-slate-200">Modern.</span>
