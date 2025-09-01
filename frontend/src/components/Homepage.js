@@ -131,15 +131,15 @@ const Homepage = () => {
                     <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300 relative z-10" />
                   </button>
                   
-                  <button 
-                    onClick={() => window.open('https://www.youtube.com/embed/Dw1XYzzPTkY', '_blank')}
+                  <Link 
+                    to="/die-bav?autoplay=true"
                     className="group bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 hover:scale-105 flex items-center justify-center space-x-2"
                   >
                     <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M8 5v14l11-7z"/>
                     </svg>
                     <span>Video ansehen</span>
-                  </button>
+                  </Link>
                 </div>
 
                 {/* Stats */}
