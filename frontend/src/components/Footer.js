@@ -9,11 +9,40 @@ const Footer = () => {
           {/* Company Info */}
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center justify-between mb-4">
-              <img 
-                src="/acencia-logo-new.png" 
-                alt="ACENCIA - Wir machen bAV einfach" 
-                className="h-12 w-auto object-contain"
-              />
+              <Link to="/" className="block">
+                <svg viewBox="0 0 1000 170" className="h-12 w-auto" role="img" aria-label="ACENCIA – Wir machen bAV einfach">
+                  {/* Icon: Three pill-frame rectangles */}
+                  <g id="icon">
+                    <rect x="32" y="20" width="140" height="33" rx="9" ry="9" fill="none" stroke="#FFFFFF" stroke-width="12"/>
+                    <rect x="32" y="70" width="140" height="33" rx="9" ry="9" fill="none" stroke="#FFFFFF" stroke-width="12"/>
+                    <rect x="32" y="120" width="140" height="33" rx="9" ry="9" fill="none" stroke="#FFFFFF" stroke-width="12"/>
+                  </g>
+                  
+                  {/* Wordmark: ACENCIA */}
+                  <g id="wordmark">
+                    <text x="195" y="15" style={{
+                      fontFamily: 'Tenor Sans, serif',
+                      fontSize: '117px',
+                      fontWeight: '400',
+                      letterSpacing: '0.12em',
+                      fill: '#FFFFFF',
+                      dominantBaseline: 'hanging'
+                    }}>ACENCIA</text>
+                  </g>
+                  
+                  {/* Tagline: WIR MACHEN BAV EINFACH */}
+                  <g id="tagline">
+                    <text x="195" y="128" style={{
+                      fontFamily: 'Tenor Sans, serif',
+                      fontSize: '32px',
+                      fontWeight: '400',
+                      letterSpacing: '0.25em',
+                      fill: '#FFFFFF',
+                      dominantBaseline: 'hanging'
+                    }}>WIR MACHEN BAV EINFACH</text>
+                  </g>
+                </svg>
+              </Link>
               {/* Social Media Buttons */}
               <div className="flex items-center space-x-3">
                 {/* LinkedIn Button */}
