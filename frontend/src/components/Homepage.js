@@ -74,14 +74,7 @@ const Homepage = () => {
               
               {/* Left Content - Hero Text */}
               <div className="text-left">
-                {/* Badge */}
-                <div className="inline-flex items-center space-x-3 bg-gradient-to-r from-orange-500/20 to-orange-600/20 backdrop-blur-sm border border-orange-400/30 rounded-full px-6 py-3 mb-6 group hover:scale-105 transition-all duration-300">
-                  <div className="w-3 h-3 bg-orange-400 rounded-full animate-pulse"></div>
-                  <span className="text-orange-300 font-semibold text-sm">30+ Jahre Expertise in betrieblicher Vorsorge</span>
-                  <Sparkles className="w-4 h-4 text-orange-400 animate-bounce" />
-                </div>
-
-                {/* Prominent Onboarding Offer Banner */}
+                {/* Simplified Onboarding Offer Banner */}
                 <div className="mb-8 group">
                   <div className="bg-gradient-to-r from-green-500/20 via-emerald-500/20 to-green-600/20 backdrop-blur-lg border-2 border-green-400/40 rounded-2xl p-6 relative overflow-hidden group-hover:scale-105 transition-all duration-300 shadow-2xl">
                     
@@ -97,25 +90,18 @@ const Homepage = () => {
                     </div>
                     
                     <div className="relative z-10 text-center">
-                      <div className="flex items-center justify-center space-x-3 mb-2">
+                      <div className="flex items-center justify-center mb-2">
                         <div className="w-8 h-8 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center">
                           <CheckCircle className="w-5 h-5 text-white" />
                         </div>
-                        <span className="bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent font-bold text-lg">
-                          LIMITIERTES ANGEBOT
-                        </span>
                       </div>
                       
                       <h2 className="text-2xl lg:text-3xl font-bold text-white mb-2">
                         <span className="text-green-400">0,00 €</span> Onboarding-Kosten
                       </h2>
                       
-                      <p className="text-slate-200 font-medium mb-1">
+                      <p className="text-slate-200 font-medium">
                         Bis zum <span className="text-green-400 font-bold">01.01.2027</span>
-                      </p>
-                      
-                      <p className="text-slate-300 text-sm">
-                        Sparen Sie <span className="text-green-400 font-semibold">Tausende von Euro</span> bei der Einrichtung
                       </p>
                     </div>
                   </div>
@@ -123,7 +109,7 @@ const Homepage = () => {
 
                 {/* Main Headline */}
                 <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-                  Digitale <span className="bg-gradient-to-r from-orange-400 via-orange-500 to-orange-600 bg-clip-text text-transparent animate-gradient-x">bAV-Plattform</span>
+                  Digitale <span className="bg-gradient-to-r from-orange-400 via-orange-500 to-orange-600 bg-clip-text text-transparent animate-gradient-x">Verwaltungs-Lösungen</span>
                   <br />
                   <span className="text-3xl lg:text-5xl text-slate-200">für moderne Unternehmen</span>
                 </h1>
