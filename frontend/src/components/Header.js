@@ -33,9 +33,9 @@ const Header = () => {
               <svg viewBox="0 0 600 120" className="h-14 w-auto transition-all duration-400 group-hover:scale-105" role="img" aria-label="ACENCIA – Wir machen bAV einfach">
                 {/* Icon: Three pill-frame rectangles */}
                 <g id="icon">
-                  <rect x="12" y="10" width="70" height="16" rx="4" ry="4" fill="none" stroke="#FFFFFF" stroke-width="4"/>
-                  <rect x="12" y="35" width="70" height="16" rx="4" ry="4" fill="none" stroke="#FFFFFF" stroke-width="4"/>
-                  <rect x="12" y="85" width="70" height="16" rx="4" ry="4" fill="none" stroke="#FFFFFF" stroke-width="4"/>
+                  <rect x="12" y="15" width="70" height="18" rx="4" ry="4" fill="none" stroke="#FFFFFF" stroke-width="5"/>
+                  <rect x="12" y="42" width="70" height="18" rx="4" ry="4" fill="none" stroke="#FFFFFF" stroke-width="5"/>
+                  <rect x="12" y="69" width="70" height="18" rx="4" ry="4" fill="none" stroke="#FFFFFF" stroke-width="5"/>
                 </g>
                 
                 {/* Wordmark: ACENCIA */}
@@ -51,7 +51,7 @@ const Header = () => {
                 
                 {/* Tagline: WIR MACHEN BAV EINFACH */}
                 <g id="tagline">
-                  <text x="100" y="85" className="fill-white group-hover:fill-orange-400 transition-all duration-400" style={{
+                  <text x="100" y="75" className="fill-white group-hover:fill-orange-400 transition-all duration-400" style={{
                     fontFamily: 'Tenor Sans, serif',
                     fontSize: '18px',
                     fontWeight: '400',
