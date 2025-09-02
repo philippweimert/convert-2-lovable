@@ -102,8 +102,8 @@ const Homepage = () => {
                       className="group flex items-center space-x-3 p-3 rounded-lg hover:bg-white/10 transition-all duration-300 hover:scale-105"
                       style={{animationDelay: `${index * 150}ms`}}
                     >
-                      <div className="w-8 h-8 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full flex items-center justify-center group-hover:rotate-12 group-hover:bg-orange-400/20 group-hover:border-orange-400/40 transition-all duration-300 flex-shrink-0">
-                        <div className="text-slate-400 group-hover:text-orange-400 group-hover:scale-110 transition-all duration-300">
+                      <div className="w-8 h-8 bg-orange-500/20 backdrop-blur-sm border border-orange-400/50 rounded-full flex items-center justify-center group-hover:rotate-12 group-hover:bg-orange-400/30 group-hover:border-orange-400/70 transition-all duration-300 flex-shrink-0">
+                        <div className="text-orange-400 group-hover:text-orange-300 group-hover:scale-110 transition-all duration-300">
                           {benefit.icon}
                         </div>
                       </div>
