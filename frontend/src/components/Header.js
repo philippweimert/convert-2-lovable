@@ -22,7 +22,7 @@ const Header = () => {
   return (
     <header className={`w-full z-50 transition-all duration-500 bg-acencia/95 backdrop-blur-lg border-b border-acencia-light/50 shadow-lg`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-2">
-        <div className="flex items-center h-32">
+        <div className="flex items-center h-20">
           {/* Logo - links positioniert */}
           <div className="flex-shrink-0">
             <Link to="/" className="flex items-center group smooth-slide py-2">
