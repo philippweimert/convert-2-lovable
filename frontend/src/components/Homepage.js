@@ -95,20 +95,16 @@ const Homepage = () => {
                 </p>
 
                 {/* Interactive Benefits */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-10">
+                <div className="space-y-3 mb-10">
                   {benefits.map((benefit, index) => (
                     <div 
                       key={index} 
                       className="group flex items-center space-x-3 p-3 rounded-lg hover:bg-white/10 transition-all duration-300 hover:scale-105"
                       style={{animationDelay: `${index * 150}ms`}}
                     >
-                      <div className="w-8 h-8 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full flex items-center justify-center group-hover:rotate-12 group-hover:bg-white/20 transition-all duration-300">
-                        <div className="text-white group-hover:scale-110 transition-transform duration-300">
-                          {benefit.icon}
-                        </div>
-                      </div>
+                      <div className="w-2 h-2 bg-orange-400 rounded-full group-hover:scale-125 transition-all duration-300 flex-shrink-0"></div>
                       <span className="text-slate-200 font-medium group-hover:text-white transition-colors duration-300">
-                        {benefit.text}
+                        - {benefit.text}
                       </span>
                     </div>
                   ))}
