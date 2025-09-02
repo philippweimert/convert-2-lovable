@@ -26,7 +26,7 @@ const Header = () => {
           {/* Logo - links positioniert */}
           <div className="flex-shrink-0">
             <Link to="/" className="flex items-center group smooth-slide py-2">
-              <svg viewBox="0 0 2000 340" className="h-20 w-auto transition-all duration-400 group-hover:scale-105" role="img" aria-label="ACENCIA – Wir machen bAV einfach">
+              <svg viewBox="0 0 2000 340" className="h-12 w-auto transition-all duration-400 group-hover:scale-105" role="img" aria-label="ACENCIA – Wir machen bAV einfach">
                 {/* Icon: Three pill-frame rectangles */}
                 <g id="icon">
                   <rect x="63" y="40" width="280" height="67" rx="18" ry="18" fill="none" stroke="#FFFFFF" strokeWidth="24"/>
