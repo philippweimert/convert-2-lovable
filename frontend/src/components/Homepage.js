@@ -140,8 +140,8 @@ const Homepage = () => {
 
               </div>
 
-              {/* Right Content - Solutions + Onboarding (aligned with left content) */}
-              <div className="lg:mt-0 mt-8">
+              {/* Right Content - Solutions + Onboarding (shifted down for video placeholder) */}
+              <div className="lg:mt-48 mt-8">
                 <div className="max-w-lg w-full space-y-6">
                   
                   {/* Solutions Section - Horizontal Layout (größer) */}
