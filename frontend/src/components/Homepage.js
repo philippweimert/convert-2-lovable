@@ -95,8 +95,7 @@ const Homepage = () => {
 
                 {/* Subtitle */}
                 <p className="text-xl text-slate-300 mb-8 max-w-lg leading-relaxed">
-                  Automatisieren Sie Ihre betriebliche Altersvorsorge komplett. 
-                  <span className="text-orange-300 font-semibold"> DSGVO-konform, rechtssicher und vollständig digital.</span>
+                  Automatisieren Sie Ihre betriebliche Altersvorsorge komplett
                 </p>
 
                 {/* Interactive Benefits */}
