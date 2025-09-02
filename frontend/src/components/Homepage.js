@@ -133,21 +133,7 @@ const Homepage = () => {
                   </Link>
                 </div>
 
-                {/* Stats */}
-                <div className="flex items-center space-x-8 mt-12 pt-8 border-t border-white/20">
-                  <div className="text-center">
-                    <div className="text-2xl font-bold text-orange-400">30+</div>
-                    <div className="text-slate-400 text-sm">Jahre Erfahrung</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-2xl font-bold text-orange-400">100%</div>
-                    <div className="text-slate-400 text-sm">Digital</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-2xl font-bold text-orange-400">DSGVO</div>
-                    <div className="text-slate-400 text-sm">Konform</div>
-                  </div>
-                </div>
+
               </div>
 
               {/* Right Content - Onboarding Offer + Solutions */}
