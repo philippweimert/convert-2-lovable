@@ -64,7 +64,7 @@ const Header = () => {
 
           {/* Rechtsbündige Navigation - bAV, bKV, bUV, über uns */}
           <div className="hidden md:flex items-center">
-            <div className="flex items-center space-x-10 mr-8">
+            <div className="flex items-center space-x-16 mr-8">
               {/* bAV Dropdown */}
               <div 
                 className="relative group"
