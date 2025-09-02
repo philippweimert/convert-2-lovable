@@ -140,11 +140,41 @@ const Homepage = () => {
 
               </div>
 
-              {/* Right Content - Onboarding Offer + Solutions */}
-              <div className="flex justify-center lg:justify-end lg:mt-0 mt-8">
-                <div className="max-w-md w-full space-y-4">
+              {/* Right Content - Solutions + Onboarding (aligned with left content) */}
+              <div className="lg:mt-0 mt-8">
+                <div className="max-w-lg w-full space-y-6">
                   
-                  {/* Onboarding Offer Box - Flacher */}
+                  {/* Solutions Section - Horizontal Layout (größer) */}
+                  <div>
+                    <h3 className="text-lg font-semibold text-white mb-4">Unsere Lösungen</h3>
+                    <div className="flex gap-4">
+                      {expertiseAreas.map((area, index) => (
+                        <Link 
+                          key={index}
+                          to={area.link}
+                          className="group block transform hover:scale-105 transition-all duration-300 flex-1"
+                          style={{animationDelay: `${index * 100}ms`}}
+                        >
+                          <div className="bg-white/10 backdrop-blur-lg rounded-lg p-4 border border-white/20 hover:bg-white/20 hover:border-white/40 transition-all duration-300 hover:shadow-lg relative overflow-hidden h-20 flex items-center justify-center">
+                            
+                            {/* Gradient overlay on hover */}
+                            <div className="absolute inset-0 bg-gradient-to-r from-white/0 to-white/0 group-hover:from-white/5 group-hover:to-white/5 transition-all duration-500 rounded-lg"></div>
+                            
+                            <div className="relative z-10 text-center">
+                              <h4 className="text-base font-bold text-white group-hover:text-slate-200 transition-colors duration-300">
+                                {area.title}
+                              </h4>
+                              <p className="text-xs text-slate-400 group-hover:text-slate-300 transition-colors duration-300 mt-1">
+                                {area.subtitle}
+                              </p>
+                            </div>
+                          </div>
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Onboarding Offer Box - Unter den Lösungen */}
                   <div className="group">
                     <div className="bg-gradient-to-r from-green-500/20 via-emerald-500/20 to-green-600/20 backdrop-blur-lg border-2 border-green-400/40 rounded-xl p-3 relative overflow-hidden group-hover:scale-105 transition-all duration-300 shadow-xl">
                       
@@ -181,36 +211,6 @@ const Homepage = () => {
                           </p>
                         </div>
                       </div>
-                    </div>
-                  </div>
-
-                  {/* Solutions Section - Horizontal Layout */}
-                  <div className="text-center">
-                    <h3 className="text-lg font-semibold text-white mb-4">Unsere Lösungen</h3>
-                    <div className="flex gap-3 justify-center">
-                      {expertiseAreas.map((area, index) => (
-                        <Link 
-                          key={index}
-                          to={area.link}
-                          className="group block transform hover:scale-105 transition-all duration-300 flex-1"
-                          style={{animationDelay: `${index * 100}ms`}}
-                        >
-                          <div className="bg-white/10 backdrop-blur-lg rounded-lg p-3 border border-white/20 hover:bg-white/20 hover:border-white/40 transition-all duration-300 hover:shadow-lg relative overflow-hidden h-16 flex items-center justify-center">
-                            
-                            {/* Gradient overlay on hover */}
-                            <div className="absolute inset-0 bg-gradient-to-r from-white/0 to-white/0 group-hover:from-white/5 group-hover:to-white/5 transition-all duration-500 rounded-lg"></div>
-                            
-                            <div className="relative z-10 text-center">
-                              <h4 className="text-sm font-bold text-white group-hover:text-slate-200 transition-colors duration-300">
-                                {area.title}
-                              </h4>
-                              <p className="text-xs text-slate-400 group-hover:text-slate-300 transition-colors duration-300 mt-1">
-                                {area.subtitle}
-                              </p>
-                            </div>
-                          </div>
-                        </Link>
-                      ))}
                     </div>
                   </div>
                 </div>
